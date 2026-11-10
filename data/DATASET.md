@@ -1,3 +1,9 @@
+
+- Licence: UNVERIFIED. The Hugging Face page lists CC BY-SA 3.0, but the loader script itself marks
+  that as an assumption. Check the original sources (Mendeley Data / Kaggle / the paper) and
+  record the licence and the date checked here: ____
+
+
 - Source used: Hugging Face `TSY-0408/PlantVillage` (loader script; data files fetched from
   `mohanty/PlantVillage`), config `default` (= color).
 
