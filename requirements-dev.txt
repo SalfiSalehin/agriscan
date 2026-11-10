@@ -1,0 +1,6 @@
+
+pyyaml>=6.0
+pydantic>=2.6
+pytest>=8.0
+ruff>=0.5
+black>=24.0

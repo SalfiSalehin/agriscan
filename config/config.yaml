@@ -1,0 +1,45 @@
+project:
+  name: AgriScan
+  seed: 42
+
+paths:
+  raw_dir: data/raw
+  splits_dir: data/splits
+  field_dir: data/field
+  nonleaf_dir: data/nonleaf
+  models_dir: models
+  reports_dir: reports
+  treatments_file: data/treatments.json
+
+data:
+  split: { train: 0.70, val: 0.15, test: 0.15 }
+  image_size: 224
+  group_by: leaf_id          # fall back to a grouping method if unavailable
+
+inference:
+  confidence_threshold: 0.70 # PLACEHOLDER: calibrated on validation data in Phase 3
+  min_brightness: null       # set in Phase 4 from real examples
+  min_sharpness: null        # set in Phase 4 from real examples
+
+# raw_name = folder name in the spMohanty/PlantVillage-Dataset naming.
+# These are from memory: verify each against your actual download in Phase 1.
+classes:
+  - { id: potato_early_blight,    crop: Potato, disease: Early blight,  raw_name: "Potato___Early_blight" }
+  - { id: potato_late_blight,     crop: Potato, disease: Late blight,   raw_name: "Potato___Late_blight" }
+  - { id: potato_healthy,         crop: Potato, disease: Healthy,       raw_name: "Potato___healthy" }
+  - { id: tomato_bacterial_spot,  crop: Tomato, disease: Bacterial spot, raw_name: "Tomato___Bacterial_spot" }
+  - { id: tomato_early_blight,    crop: Tomato, disease: Early blight,  raw_name: "Tomato___Early_blight" }
+  - { id: tomato_late_blight,     crop: Tomato, disease: Late blight,   raw_name: "Tomato___Late_blight" }
+  - { id: tomato_leaf_mold,       crop: Tomato, disease: Leaf mold,     raw_name: "Tomato___Leaf_Mold" }
+  - { id: tomato_septoria,        crop: Tomato, disease: Septoria leaf spot, raw_name: "Tomato___Septoria_leaf_spot" }
+  - { id: tomato_spider_mites,    crop: Tomato, disease: Spider mites,  raw_name: "Tomato___Spider_mites Two-spotted_spider_mite" }
+  - { id: tomato_target_spot,     crop: Tomato, disease: Target spot,   raw_name: "Tomato___Target_Spot" }
+  - { id: tomato_yellow_leaf_curl, crop: Tomato, disease: Yellow leaf curl virus, raw_name: "Tomato___Tomato_Yellow_Leaf_Curl_Virus" }
+  - { id: tomato_mosaic_virus,    crop: Tomato, disease: Mosaic virus,  raw_name: "Tomato___Tomato_mosaic_virus" }
+  - { id: tomato_healthy,         crop: Tomato, disease: Healthy,       raw_name: "Tomato___healthy" }
+  - { id: corn_gray_leaf_spot,    crop: Corn,   disease: Gray leaf spot, raw_name: "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot" }
+  - { id: corn_common_rust,       crop: Corn,   disease: Common rust,   raw_name: "Corn_(maize)___Common_rust_" }
+  - { id: corn_northern_leaf_blight, crop: Corn, disease: Northern leaf blight, raw_name: "Corn_(maize)___Northern_Leaf_Blight" }
+  - { id: corn_healthy,           crop: Corn,   disease: Healthy,       raw_name: "Corn_(maize)___healthy" }
+  - { id: pepper_bacterial_spot,  crop: Pepper, disease: Bacterial spot, raw_name: "Pepper,_bell___Bacterial_spot" }
+  - { id: pepper_healthy,         crop: Pepper, disease: Healthy,       raw_name: "Pepper,_bell___healthy" }

@@ -1,0 +1,25 @@
+
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+
+# Datasets and images (never commit)
+data/raw/
+data/field/*
+data/nonleaf/*
+!data/field/labels.csv
+!data/nonleaf/labels.csv
+
+# Weights and training artefacts (the small deployed .onnx is allowed)
+*.pt
+*.pth
+*.ckpt
+runs/
+models/*
+!models/.gitkeep
+!models/agriscan.onnx
+
+.vscode/
