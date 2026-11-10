@@ -43,3 +43,16 @@ classes:
   - { id: corn_healthy,           crop: Corn,   disease: Healthy,       raw_name: "Corn_(maize)___healthy" }
   - { id: pepper_bacterial_spot,  crop: Pepper, disease: Bacterial spot, raw_name: "Pepper,_bell___Bacterial_spot" }
   - { id: pepper_healthy,         crop: Pepper, disease: Healthy,       raw_name: "Pepper,_bell___healthy" }
+
+
+dataset:
+  hf_repo: TSY-0408/PlantVillage
+  data_file: data.zip
+  leaf_map_file: leaf_grouping/leaf-map.json
+  variant: color
+  export_dir: data/raw/plantvillage
+  licence: "UNVERIFIED: see data/DATASET.md"
+test_sets:
+  field_min_per_class: 5
+  field_min_total: 50
+  nonleaf_min_total: 100

@@ -1,0 +1,177 @@
+{
+  "source": {
+    "hf_repo": "TSY-0408/PlantVillage",
+    "variant": "color",
+    "licence": "UNVERIFIED: see data/DATASET.md"
+  },
+  "seed": 42,
+  "ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "images_total": 26639,
+  "leaf_groups_total": 13578,
+  "leaf_id_fallback_share": 0.398,
+  "leaf_id_fallback_share_per_class": {
+    "corn_common_rust": 1.0,
+    "corn_gray_leaf_spot": 1.0,
+    "corn_healthy": 1.0,
+    "corn_northern_leaf_blight": 1.0,
+    "pepper_bacterial_spot": 0.0,
+    "pepper_healthy": 0.001,
+    "potato_early_blight": 0.0,
+    "potato_healthy": 0.0,
+    "potato_late_blight": 0.0,
+    "tomato_bacterial_spot": 0.0,
+    "tomato_early_blight": 0.001,
+    "tomato_healthy": 0.372,
+    "tomato_late_blight": 0.518,
+    "tomato_leaf_mold": 0.0,
+    "tomato_mosaic_virus": 1.0,
+    "tomato_septoria": 0.435,
+    "tomato_spider_mites": 0.0,
+    "tomato_target_spot": 1.0,
+    "tomato_yellow_leaf_curl": 0.489
+  },
+  "images_per_leaf_mean": 1.96,
+  "images_per_split": {
+    "test": 3991,
+    "train": 18643,
+    "val": 4005
+  },
+  "leaf_groups_per_split": {
+    "test": 2037,
+    "train": 9509,
+    "val": 2032
+  },
+  "per_class": {
+    "potato_early_blight": {
+      "train": 700,
+      "val": 152,
+      "test": 148,
+      "total": 1000
+    },
+    "potato_late_blight": {
+      "train": 700,
+      "val": 152,
+      "test": 148,
+      "total": 1000
+    },
+    "potato_healthy": {
+      "train": 104,
+      "val": 24,
+      "test": 24,
+      "total": 152
+    },
+    "tomato_bacterial_spot": {
+      "train": 1487,
+      "val": 320,
+      "test": 320,
+      "total": 2127
+    },
+    "tomato_early_blight": {
+      "train": 699,
+      "val": 152,
+      "test": 149,
+      "total": 1000
+    },
+    "tomato_late_blight": {
+      "train": 1336,
+      "val": 287,
+      "test": 286,
+      "total": 1909
+    },
+    "tomato_leaf_mold": {
+      "train": 664,
+      "val": 144,
+      "test": 144,
+      "total": 952
+    },
+    "tomato_septoria": {
+      "train": 1241,
+      "val": 265,
+      "test": 265,
+      "total": 1771
+    },
+    "tomato_spider_mites": {
+      "train": 1172,
+      "val": 252,
+      "test": 252,
+      "total": 1676
+    },
+    "tomato_target_spot": {
+      "train": 983,
+      "val": 211,
+      "test": 210,
+      "total": 1404
+    },
+    "tomato_yellow_leaf_curl": {
+      "train": 3749,
+      "val": 806,
+      "test": 802,
+      "total": 5357
+    },
+    "tomato_mosaic_virus": {
+      "train": 261,
+      "val": 56,
+      "test": 56,
+      "total": 373
+    },
+    "tomato_healthy": {
+      "train": 1114,
+      "val": 238,
+      "test": 239,
+      "total": 1591
+    },
+    "corn_gray_leaf_spot": {
+      "train": 359,
+      "val": 78,
+      "test": 76,
+      "total": 513
+    },
+    "corn_common_rust": {
+      "train": 834,
+      "val": 179,
+      "test": 179,
+      "total": 1192
+    },
+    "corn_northern_leaf_blight": {
+      "train": 689,
+      "val": 148,
+      "test": 148,
+      "total": 985
+    },
+    "corn_healthy": {
+      "train": 815,
+      "val": 174,
+      "test": 173,
+      "total": 1162
+    },
+    "pepper_bacterial_spot": {
+      "train": 700,
+      "val": 149,
+      "test": 148,
+      "total": 997
+    },
+    "pepper_healthy": {
+      "train": 1036,
+      "val": 218,
+      "test": 224,
+      "total": 1478
+    }
+  },
+  "leakage_check": {
+    "leaf_group_overlap": {
+      "train&val": 0,
+      "train&test": 0,
+      "val&test": 0
+    },
+    "identical_file_overlap": {
+      "train&val": 0,
+      "train&test": 0,
+      "val&test": 0
+    },
+    "passed": true
+  }
+}
