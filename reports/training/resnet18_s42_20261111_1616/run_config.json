@@ -1,0 +1,67 @@
+{
+  "name": "resnet18_s42_20261111_1616",
+  "arch": "resnet18",
+  "seed": 42,
+  "smoke": false,
+  "amp": true,
+  "hparams": {
+    "batch_size": 64,
+    "num_workers": 8,
+    "stage1_epochs": 3,
+    "stage1_lr": 0.001,
+    "stage2_max_epochs": 25,
+    "stage2_lr_backbone": 0.0001,
+    "stage2_lr_head": 0.0005,
+    "weight_decay": 0.01,
+    "label_smoothing": 0.1,
+    "class_weight_power": 0.5,
+    "early_stop_patience": 5,
+    "grad_clip": 1.0,
+    "bg_prob": 0.5,
+    "erase_prob": 0.25
+  },
+  "started": "2026-11-11T16:16:51",
+  "environment": {
+    "python": "3.11.9",
+    "os": "Windows-10-10.0.26300-SP0",
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "cuda_runtime": "12.4",
+    "gpu": "NVIDIA GeForce RTX 3060"
+  },
+  "git": {
+    "commit": "a35e563b4eecc4776df1eb79710204d593c5af28",
+    "dirty": true
+  },
+  "data": {
+    "manifest_digests": {
+      "train.csv": "5576a95b2e1b4c63",
+      "val.csv": "e600f8a1b520f5f5",
+      "test.csv": "a079ac697f7804af"
+    },
+    "train_images_used": 18643,
+    "val_images_used": 4005
+  },
+  "class_weights": {
+    "potato_early_blight": 1.1839,
+    "potato_late_blight": 1.1839,
+    "potato_healthy": 3.0716,
+    "tomato_bacterial_spot": 0.8123,
+    "tomato_early_blight": 1.1848,
+    "tomato_late_blight": 0.857,
+    "tomato_leaf_mold": 1.2156,
+    "tomato_septoria": 0.8892,
+    "tomato_spider_mites": 0.915,
+    "tomato_target_spot": 0.9991,
+    "tomato_yellow_leaf_curl": 0.5116,
+    "tomato_mosaic_virus": 1.9389,
+    "tomato_healthy": 0.9385,
+    "corn_gray_leaf_spot": 1.6532,
+    "corn_common_rust": 1.0847,
+    "corn_northern_leaf_blight": 1.1934,
+    "corn_healthy": 1.0972,
+    "pepper_bacterial_spot": 1.1839,
+    "pepper_healthy": 0.9732
+  },
+  "params_million": 11.186
+}
