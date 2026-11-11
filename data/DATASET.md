@@ -14,3 +14,8 @@ classes) are not in that map. They are grouped by filename only, so photos of on
 could still be spread across splits. Lab metrics for those classes are therefore upper bounds.
 The manifests carry `leaf_id_source` (`leaf_map` or `fallback`); evaluation reports the leaf-verified
 subset separately. The field test set is the unbiased measurement.
+
+## Leaf masks for the background augmentation
+Cut-out leaf shapes are derived from PlantVillage's own segmented images with
+`python -m ml.make_masks` and used only for the background-replacement augmentation.
+Training, validation and test images are the colour originals. Switch it off with `--bg-prob 0`.

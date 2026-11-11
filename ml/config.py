@@ -36,6 +36,7 @@ class Config(BaseModel):
     inference: dict
     dataset: dict
     test_sets: dict
+    train: dict
     classes: list[ClassSpec]
 
     @field_validator("classes")

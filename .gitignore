@@ -8,6 +8,7 @@ __pycache__/
 
 # Datasets and images (never commit)
 data/raw/
+data/masks/
 data/field/*
 data/nonleaf/*
 !data/field/labels.csv

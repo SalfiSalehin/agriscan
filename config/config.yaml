@@ -52,7 +52,24 @@ dataset:
   variant: color
   export_dir: data/raw/plantvillage
   licence: "UNVERIFIED: see data/DATASET.md"
+  mask_dir: data/masks
 test_sets:
   field_min_per_class: 5
   field_min_total: 50
   nonleaf_min_total: 100
+
+train:
+  batch_size: 64
+  num_workers: 8
+  stage1_epochs: 3
+  stage1_lr: 0.001
+  stage2_max_epochs: 25
+  stage2_lr_backbone: 0.0001
+  stage2_lr_head: 0.0005
+  weight_decay: 0.01
+  label_smoothing: 0.1
+  class_weight_power: 0.5
+  early_stop_patience: 5
+  grad_clip: 1.0
+  bg_prob: 0.5
+  erase_prob: 0.25

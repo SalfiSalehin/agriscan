@@ -1,0 +1,24 @@
+{
+  "splits": [
+    "train"
+  ],
+  "rows": 18643,
+  "written": 834,
+  "skipped_existing": 17808,
+  "missing_segmented": 1,
+  "missing_examples": [
+    "Tomato___Spider_mites Two-spotted_spider_mite/0db2da38-8650-461a-a785-814cc442f44d___Com.G_SpM_FL 1378.JPG"
+  ],
+  "image_sizes": {
+    "(256, 256)": 834
+  },
+  "leaf_fraction_percentiles_0_1_5_50_95_100": [
+    0.315,
+    0.435,
+    0.508,
+    0.695,
+    0.869,
+    0.979
+  ],
+  "masks_outside_5_to_97_percent": 1
+}
