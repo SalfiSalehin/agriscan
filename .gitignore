@@ -24,3 +24,10 @@ models/*
 !models/agriscan.onnx
 
 .vscode/
+
+data/field/**/*.jpg
+data/field/**/*.jpeg
+data/field/**/*.png
+data/nonleaf/**/*.jpg
+data/nonleaf/**/*.jpeg
+data/nonleaf/**/*.png
