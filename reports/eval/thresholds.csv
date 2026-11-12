@@ -1,0 +1,3 @@
+run,arch,temperature,threshold,field_coverage,field_acc_answered,test_coverage,unknown_false_accept,auroc_test_vs_unknown_held_out,auroc_field_held_out_vs_unknown_held_out
+mobilenet_v3_small_s42_20261111_1551,mobilenet_v3_small,0.44,0.99,0.2321,0.2687,0.8649,0.0482,0.9581,0.6643
+resnet18_s42_20261111_1616,resnet18,0.55,0.98,0.2517,0.4128,0.8933,0.0768,0.954,0.6599

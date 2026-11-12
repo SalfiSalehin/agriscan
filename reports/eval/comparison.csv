@@ -1,0 +1,13 @@
+run,arch,set,images,classes,accuracy,acc_ci95,macro_f1,f1_ci95,ece
+mobilenet_v3_small_s42_20261111_1551,mobilenet_v3_small,val,4005,19,0.977,,0.9696,,0.0035
+mobilenet_v3_small_s42_20261111_1551,mobilenet_v3_small,test,3991,19,0.983,"[0.9787, 0.9867]",0.9771,"[0.9707, 0.9823]",0.0062
+mobilenet_v3_small_s42_20261111_1551,mobilenet_v3_small,test_leaf_verified_only,2410,13,0.9859,,0.9873,,0.0052
+mobilenet_v3_small_s42_20261111_1551,mobilenet_v3_small,test_fallback_grouping_only,1581,12,0.9785,,0.8921,,0.0089
+mobilenet_v3_small_s42_20261111_1551,mobilenet_v3_small,field,1748,15,0.258,"[0.2374, 0.2797]",0.2508,"[0.2235, 0.2724]",0.558
+mobilenet_v3_small_s42_20261111_1551,mobilenet_v3_small,field_exact_mapping_only,1126,11,0.2558,,0.263,,0.5771
+resnet18_s42_20261111_1616,resnet18,val,4005,19,0.976,,0.9682,,0.0053
+resnet18_s42_20261111_1616,resnet18,test,3991,19,0.9807,"[0.9767, 0.985]",0.9733,"[0.9667, 0.9796]",0.0036
+resnet18_s42_20261111_1616,resnet18,test_leaf_verified_only,2410,13,0.9826,,0.9835,,0.0028
+resnet18_s42_20261111_1616,resnet18,test_fallback_grouping_only,1581,12,0.9779,,0.9281,,0.0082
+resnet18_s42_20261111_1616,resnet18,field,1748,15,0.3118,"[0.2912, 0.3324]",0.2774,"[0.2517, 0.298]",0.485
+resnet18_s42_20261111_1616,resnet18,field_exact_mapping_only,1126,11,0.3197,,0.3095,,0.4871
