@@ -1,0 +1,21 @@
+{
+  "source": "PlantDoc",
+  "imported": 2877,
+  "skipped": {
+    "duplicate_in_source": 45,
+    "duplicate_of_plantvillage": 0,
+    "unreadable": 0
+  },
+  "skipped_examples": {
+    "duplicate_in_source": [
+      "E:\\external\\plantdoc\\train\\Apple_leaf\\train_Apple leaf_31.jpg",
+      "E:\\external\\plantdoc\\train\\Apple_Scab_Leaf\\train_Apple Scab Leaf_80.jpg",
+      "E:\\external\\plantdoc\\train\\Cherry_leaf\\train_Cherry leaf_35.jpg",
+      "E:\\external\\plantdoc\\train\\Corn_leaf_blight\\train_Corn leaf blight_136.jpg",
+      "E:\\external\\plantdoc\\train\\Corn_leaf_blight\\train_Corn leaf blight_156.jpg"
+    ],
+    "duplicate_of_plantvillage": [],
+    "unreadable": []
+  },
+  "folders_without_mapping": []
+}
