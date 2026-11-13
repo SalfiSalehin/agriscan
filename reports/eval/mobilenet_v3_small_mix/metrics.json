@@ -1,0 +1,1218 @@
+{
+  "run": "mobilenet_v3_small_mix",
+  "arch": "mobilenet_v3_small",
+  "best_epoch": 10,
+  "created": "2026-11-13T12:40:41",
+  "data": {
+    "test_images": 3991,
+    "field_images": 134,
+    "field_val_images_used_for_calibration": 225,
+    "field_test_excluded_as_duplicates": 0,
+    "trained_with_field_share": 0.25,
+    "unknown_images": 1129,
+    "field_min_images_per_class": 5,
+    "external_sources": {
+      "PlantDoc": 2877
+    }
+  },
+  "temperature": 0.75,
+  "results": {
+    "temperature": 0.75,
+    "temperature_fitted_on": "lab validation + field validation (225 field images), averaged per set",
+    "sets": {
+      "val": {
+        "n_images": 4005,
+        "accuracy": 0.9623,
+        "macro_f1": 0.9528,
+        "top3_accuracy": 0.9978,
+        "nll": 0.1624,
+        "ece": 0.0617,
+        "nll_before_temperature": 0.2899,
+        "ece_before_temperature": 0.1681,
+        "classes_reported": 19,
+        "classes_below_min_support": {},
+        "lowest_recall": [
+          {
+            "class": "tomato_early_blight",
+            "recall": 0.8487,
+            "support": 152
+          },
+          {
+            "class": "potato_healthy",
+            "recall": 0.875,
+            "support": 24
+          },
+          {
+            "class": "corn_northern_leaf_blight",
+            "recall": 0.9122,
+            "support": 148
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 0.974,
+            "recall": 0.9868,
+            "f1": 0.9804,
+            "support": 152
+          },
+          "potato_late_blight": {
+            "precision": 0.9789,
+            "recall": 0.9145,
+            "f1": 0.9456,
+            "support": 152
+          },
+          "potato_healthy": {
+            "precision": 0.913,
+            "recall": 0.875,
+            "f1": 0.8936,
+            "support": 24
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.9967,
+            "recall": 0.9563,
+            "f1": 0.9761,
+            "support": 320
+          },
+          "tomato_early_blight": {
+            "precision": 0.9627,
+            "recall": 0.8487,
+            "f1": 0.9021,
+            "support": 152
+          },
+          "tomato_late_blight": {
+            "precision": 0.9305,
+            "recall": 0.9791,
+            "f1": 0.9542,
+            "support": 287
+          },
+          "tomato_leaf_mold": {
+            "precision": 1.0,
+            "recall": 0.9167,
+            "f1": 0.9565,
+            "support": 144
+          },
+          "tomato_septoria": {
+            "precision": 0.9321,
+            "recall": 0.9321,
+            "f1": 0.9321,
+            "support": 265
+          },
+          "tomato_spider_mites": {
+            "precision": 0.9339,
+            "recall": 0.9524,
+            "f1": 0.943,
+            "support": 252
+          },
+          "tomato_target_spot": {
+            "precision": 0.8924,
+            "recall": 0.9431,
+            "f1": 0.9171,
+            "support": 211
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 0.9913,
+            "recall": 0.995,
+            "f1": 0.9932,
+            "support": 806
+          },
+          "tomato_mosaic_virus": {
+            "precision": 0.9649,
+            "recall": 0.9821,
+            "f1": 0.9735,
+            "support": 56
+          },
+          "tomato_healthy": {
+            "precision": 0.9219,
+            "recall": 0.9916,
+            "f1": 0.9555,
+            "support": 238
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.8539,
+            "recall": 0.9744,
+            "f1": 0.9102,
+            "support": 78
+          },
+          "corn_common_rust": {
+            "precision": 0.9944,
+            "recall": 0.9832,
+            "f1": 0.9888,
+            "support": 179
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.9574,
+            "recall": 0.9122,
+            "f1": 0.9343,
+            "support": 148
+          },
+          "corn_healthy": {
+            "precision": 1.0,
+            "recall": 0.9885,
+            "f1": 0.9942,
+            "support": 174
+          },
+          "pepper_bacterial_spot": {
+            "precision": 1.0,
+            "recall": 0.9396,
+            "f1": 0.9689,
+            "support": 149
+          },
+          "pepper_healthy": {
+            "precision": 0.9689,
+            "recall": 1.0,
+            "f1": 0.9842,
+            "support": 218
+          }
+        }
+      },
+      "test": {
+        "n_images": 3991,
+        "accuracy": 0.9717,
+        "macro_f1": 0.9643,
+        "top3_accuracy": 0.9985,
+        "nll": 0.1507,
+        "ece": 0.07,
+        "nll_before_temperature": 0.281,
+        "ece_before_temperature": 0.1771,
+        "classes_reported": 19,
+        "classes_below_min_support": {},
+        "lowest_recall": [
+          {
+            "class": "corn_gray_leaf_spot",
+            "recall": 0.8684,
+            "support": 76
+          },
+          {
+            "class": "tomato_early_blight",
+            "recall": 0.8926,
+            "support": 149
+          },
+          {
+            "class": "tomato_leaf_mold",
+            "recall": 0.9028,
+            "support": 144
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 0.9801,
+            "recall": 1.0,
+            "f1": 0.99,
+            "support": 148
+          },
+          "potato_late_blight": {
+            "precision": 1.0,
+            "recall": 0.9797,
+            "f1": 0.9898,
+            "support": 148
+          },
+          "potato_healthy": {
+            "precision": 0.8889,
+            "recall": 1.0,
+            "f1": 0.9412,
+            "support": 24
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.9903,
+            "recall": 0.9594,
+            "f1": 0.9746,
+            "support": 320
+          },
+          "tomato_early_blight": {
+            "precision": 0.9433,
+            "recall": 0.8926,
+            "f1": 0.9172,
+            "support": 149
+          },
+          "tomato_late_blight": {
+            "precision": 0.9649,
+            "recall": 0.9615,
+            "f1": 0.9632,
+            "support": 286
+          },
+          "tomato_leaf_mold": {
+            "precision": 1.0,
+            "recall": 0.9028,
+            "f1": 0.9489,
+            "support": 144
+          },
+          "tomato_septoria": {
+            "precision": 0.9336,
+            "recall": 0.9547,
+            "f1": 0.944,
+            "support": 265
+          },
+          "tomato_spider_mites": {
+            "precision": 0.9459,
+            "recall": 0.9722,
+            "f1": 0.9589,
+            "support": 252
+          },
+          "tomato_target_spot": {
+            "precision": 0.9095,
+            "recall": 0.9571,
+            "f1": 0.9327,
+            "support": 210
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 0.9962,
+            "recall": 0.9925,
+            "f1": 0.9944,
+            "support": 802
+          },
+          "tomato_mosaic_virus": {
+            "precision": 0.9492,
+            "recall": 1.0,
+            "f1": 0.9739,
+            "support": 56
+          },
+          "tomato_healthy": {
+            "precision": 0.9795,
+            "recall": 1.0,
+            "f1": 0.9896,
+            "support": 239
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.9167,
+            "recall": 0.8684,
+            "f1": 0.8919,
+            "support": 76
+          },
+          "corn_common_rust": {
+            "precision": 0.9622,
+            "recall": 0.9944,
+            "f1": 0.978,
+            "support": 179
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.9658,
+            "recall": 0.9527,
+            "f1": 0.9592,
+            "support": 148
+          },
+          "corn_healthy": {
+            "precision": 0.9943,
+            "recall": 1.0,
+            "f1": 0.9971,
+            "support": 173
+          },
+          "pepper_bacterial_spot": {
+            "precision": 0.9865,
+            "recall": 0.9865,
+            "f1": 0.9865,
+            "support": 148
+          },
+          "pepper_healthy": {
+            "precision": 0.9911,
+            "recall": 0.9911,
+            "f1": 0.9911,
+            "support": 224
+          }
+        },
+        "ci95": {
+          "accuracy": [
+            0.9662,
+            0.9764
+          ],
+          "macro_f1": [
+            0.9566,
+            0.9711
+          ]
+        }
+      },
+      "field": {
+        "n_images": 134,
+        "accuracy": 0.4851,
+        "macro_f1": 0.4707,
+        "top3_accuracy": 0.8433,
+        "nll": 1.6605,
+        "ece": 0.2396,
+        "nll_before_temperature": 1.5346,
+        "ece_before_temperature": 0.1338,
+        "classes_reported": 14,
+        "classes_below_min_support": {
+          "potato_healthy": 0,
+          "tomato_spider_mites": 0,
+          "tomato_target_spot": 0,
+          "corn_gray_leaf_spot": 3,
+          "corn_healthy": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "tomato_mosaic_virus",
+            "recall": 0.1,
+            "support": 10
+          },
+          {
+            "class": "tomato_bacterial_spot",
+            "recall": 0.1429,
+            "support": 7
+          },
+          {
+            "class": "tomato_healthy",
+            "recall": 0.25,
+            "support": 8
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 0.4,
+            "recall": 0.2857,
+            "f1": 0.3333,
+            "support": 14
+          },
+          "potato_late_blight": {
+            "precision": 0.2353,
+            "recall": 0.6667,
+            "f1": 0.3478,
+            "support": 6
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.2,
+            "recall": 0.1429,
+            "f1": 0.1667,
+            "support": 7
+          },
+          "tomato_early_blight": {
+            "precision": 0.5333,
+            "recall": 0.8889,
+            "f1": 0.6667,
+            "support": 9
+          },
+          "tomato_late_blight": {
+            "precision": 0.5556,
+            "recall": 0.5556,
+            "f1": 0.5556,
+            "support": 9
+          },
+          "tomato_leaf_mold": {
+            "precision": 0.2222,
+            "recall": 0.3333,
+            "f1": 0.2667,
+            "support": 6
+          },
+          "tomato_septoria": {
+            "precision": 0.5385,
+            "recall": 0.5833,
+            "f1": 0.56,
+            "support": 12
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 0.8333,
+            "recall": 0.7692,
+            "f1": 0.8,
+            "support": 13
+          },
+          "tomato_mosaic_virus": {
+            "precision": 0.3333,
+            "recall": 0.1,
+            "f1": 0.1538,
+            "support": 10
+          },
+          "tomato_healthy": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "support": 8
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.125,
+            "recall": 0.3333,
+            "f1": 0.1818,
+            "support": 3
+          },
+          "corn_common_rust": {
+            "precision": 0.8889,
+            "recall": 0.8,
+            "f1": 0.8421,
+            "support": 10
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.5,
+            "recall": 0.3,
+            "f1": 0.375,
+            "support": 10
+          },
+          "pepper_bacterial_spot": {
+            "precision": 0.6667,
+            "recall": 0.4444,
+            "f1": 0.5333,
+            "support": 9
+          },
+          "pepper_healthy": {
+            "precision": 0.5556,
+            "recall": 0.625,
+            "f1": 0.5882,
+            "support": 8
+          }
+        },
+        "ci95": {
+          "accuracy": [
+            0.3955,
+            0.5746
+          ],
+          "macro_f1": [
+            0.3838,
+            0.5624
+          ]
+        }
+      },
+      "test_crop_known": {
+        "n_images": 3991,
+        "accuracy": 0.9727,
+        "macro_f1": 0.9662,
+        "top3_accuracy": 0.999,
+        "nll": 0.1107,
+        "ece": 0.0389,
+        "nll_before_temperature": 0.1711,
+        "ece_before_temperature": 0.0947,
+        "classes_reported": 19,
+        "classes_below_min_support": {},
+        "lowest_recall": [
+          {
+            "class": "corn_gray_leaf_spot",
+            "recall": 0.8684,
+            "support": 76
+          },
+          {
+            "class": "tomato_early_blight",
+            "recall": 0.8926,
+            "support": 149
+          },
+          {
+            "class": "tomato_leaf_mold",
+            "recall": 0.9028,
+            "support": 144
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 0.9933,
+            "recall": 1.0,
+            "f1": 0.9966,
+            "support": 148
+          },
+          "potato_late_blight": {
+            "precision": 1.0,
+            "recall": 0.9797,
+            "f1": 0.9898,
+            "support": 148
+          },
+          "potato_healthy": {
+            "precision": 0.9231,
+            "recall": 1.0,
+            "f1": 0.96,
+            "support": 24
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.9904,
+            "recall": 0.9625,
+            "f1": 0.9762,
+            "support": 320
+          },
+          "tomato_early_blight": {
+            "precision": 0.9366,
+            "recall": 0.8926,
+            "f1": 0.9141,
+            "support": 149
+          },
+          "tomato_late_blight": {
+            "precision": 0.965,
+            "recall": 0.965,
+            "f1": 0.965,
+            "support": 286
+          },
+          "tomato_leaf_mold": {
+            "precision": 1.0,
+            "recall": 0.9028,
+            "f1": 0.9489,
+            "support": 144
+          },
+          "tomato_septoria": {
+            "precision": 0.9336,
+            "recall": 0.9547,
+            "f1": 0.944,
+            "support": 265
+          },
+          "tomato_spider_mites": {
+            "precision": 0.9459,
+            "recall": 0.9722,
+            "f1": 0.9589,
+            "support": 252
+          },
+          "tomato_target_spot": {
+            "precision": 0.9095,
+            "recall": 0.9571,
+            "f1": 0.9327,
+            "support": 210
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 0.9962,
+            "recall": 0.9938,
+            "f1": 0.995,
+            "support": 802
+          },
+          "tomato_mosaic_virus": {
+            "precision": 0.9492,
+            "recall": 1.0,
+            "f1": 0.9739,
+            "support": 56
+          },
+          "tomato_healthy": {
+            "precision": 0.9795,
+            "recall": 1.0,
+            "f1": 0.9896,
+            "support": 239
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.9167,
+            "recall": 0.8684,
+            "f1": 0.8919,
+            "support": 76
+          },
+          "corn_common_rust": {
+            "precision": 0.9622,
+            "recall": 0.9944,
+            "f1": 0.978,
+            "support": 179
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.9658,
+            "recall": 0.9527,
+            "f1": 0.9592,
+            "support": 148
+          },
+          "corn_healthy": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 173
+          },
+          "pepper_bacterial_spot": {
+            "precision": 0.9932,
+            "recall": 0.9865,
+            "f1": 0.9898,
+            "support": 148
+          },
+          "pepper_healthy": {
+            "precision": 0.9911,
+            "recall": 0.9955,
+            "f1": 0.9933,
+            "support": 224
+          }
+        },
+        "ci95": {
+          "accuracy": [
+            0.9674,
+            0.9772
+          ],
+          "macro_f1": [
+            0.9589,
+            0.9725
+          ]
+        }
+      },
+      "field_crop_known": {
+        "n_images": 134,
+        "accuracy": 0.6045,
+        "macro_f1": 0.5896,
+        "top3_accuracy": 0.9328,
+        "nll": 1.3044,
+        "ece": 0.2251,
+        "nll_before_temperature": 1.15,
+        "ece_before_temperature": 0.1621,
+        "classes_reported": 14,
+        "classes_below_min_support": {
+          "potato_healthy": 0,
+          "tomato_spider_mites": 0,
+          "tomato_target_spot": 0,
+          "corn_gray_leaf_spot": 3,
+          "corn_healthy": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "tomato_mosaic_virus",
+            "recall": 0.2,
+            "support": 10
+          },
+          {
+            "class": "potato_early_blight",
+            "recall": 0.2857,
+            "support": 14
+          },
+          {
+            "class": "tomato_bacterial_spot",
+            "recall": 0.2857,
+            "support": 7
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 0.8,
+            "recall": 0.2857,
+            "f1": 0.4211,
+            "support": 14
+          },
+          "potato_late_blight": {
+            "precision": 0.3333,
+            "recall": 0.8333,
+            "f1": 0.4762,
+            "support": 6
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.4,
+            "recall": 0.2857,
+            "f1": 0.3333,
+            "support": 7
+          },
+          "tomato_early_blight": {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.75,
+            "support": 9
+          },
+          "tomato_late_blight": {
+            "precision": 0.7,
+            "recall": 0.7778,
+            "f1": 0.7368,
+            "support": 9
+          },
+          "tomato_leaf_mold": {
+            "precision": 0.25,
+            "recall": 0.3333,
+            "f1": 0.2857,
+            "support": 6
+          },
+          "tomato_septoria": {
+            "precision": 0.6667,
+            "recall": 0.8333,
+            "f1": 0.7407,
+            "support": 12
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 0.7857,
+            "recall": 0.8462,
+            "f1": 0.8148,
+            "support": 13
+          },
+          "tomato_mosaic_virus": {
+            "precision": 0.5,
+            "recall": 0.2,
+            "f1": 0.2857,
+            "support": 10
+          },
+          "tomato_healthy": {
+            "precision": 1.0,
+            "recall": 0.375,
+            "f1": 0.5455,
+            "support": 8
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.125,
+            "recall": 0.3333,
+            "f1": 0.1818,
+            "support": 3
+          },
+          "corn_common_rust": {
+            "precision": 0.8889,
+            "recall": 0.8,
+            "f1": 0.8421,
+            "support": 10
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.5,
+            "recall": 0.3,
+            "f1": 0.375,
+            "support": 10
+          },
+          "pepper_bacterial_spot": {
+            "precision": 0.875,
+            "recall": 0.7778,
+            "f1": 0.8235,
+            "support": 9
+          },
+          "pepper_healthy": {
+            "precision": 0.7778,
+            "recall": 0.875,
+            "f1": 0.8235,
+            "support": 8
+          }
+        },
+        "ci95": {
+          "accuracy": [
+            0.5222,
+            0.6866
+          ],
+          "macro_f1": [
+            0.503,
+            0.6822
+          ]
+        }
+      },
+      "field_exact_mapping_only": {
+        "n_images": 92,
+        "accuracy": 0.4348,
+        "macro_f1": 0.4247,
+        "top3_accuracy": 0.8261,
+        "nll": 1.8372,
+        "ece": 0.244,
+        "nll_before_temperature": 1.6928,
+        "ece_before_temperature": 0.157,
+        "classes_reported": 10,
+        "classes_below_min_support": {
+          "potato_healthy": 0,
+          "tomato_spider_mites": 0,
+          "tomato_target_spot": 0,
+          "tomato_yellow_leaf_curl": 0,
+          "corn_gray_leaf_spot": 3,
+          "corn_common_rust": 0,
+          "corn_northern_leaf_blight": 0,
+          "corn_healthy": 0,
+          "pepper_bacterial_spot": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "tomato_mosaic_virus",
+            "recall": 0.1,
+            "support": 10
+          },
+          {
+            "class": "tomato_bacterial_spot",
+            "recall": 0.1429,
+            "support": 7
+          },
+          {
+            "class": "tomato_healthy",
+            "recall": 0.25,
+            "support": 8
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 0.4,
+            "recall": 0.2857,
+            "f1": 0.3333,
+            "support": 14
+          },
+          "potato_late_blight": {
+            "precision": 0.2353,
+            "recall": 0.6667,
+            "f1": 0.3478,
+            "support": 6
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.3333,
+            "recall": 0.1429,
+            "f1": 0.2,
+            "support": 7
+          },
+          "tomato_early_blight": {
+            "precision": 0.6154,
+            "recall": 0.8889,
+            "f1": 0.7273,
+            "support": 9
+          },
+          "tomato_late_blight": {
+            "precision": 0.5556,
+            "recall": 0.5556,
+            "f1": 0.5556,
+            "support": 9
+          },
+          "tomato_leaf_mold": {
+            "precision": 0.2222,
+            "recall": 0.3333,
+            "f1": 0.2667,
+            "support": 6
+          },
+          "tomato_septoria": {
+            "precision": 0.5833,
+            "recall": 0.5833,
+            "f1": 0.5833,
+            "support": 12
+          },
+          "tomato_mosaic_virus": {
+            "precision": 0.5,
+            "recall": 0.1,
+            "f1": 0.1667,
+            "support": 10
+          },
+          "tomato_healthy": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "support": 8
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 1.0,
+            "recall": 0.3333,
+            "f1": 0.5,
+            "support": 3
+          },
+          "pepper_healthy": {
+            "precision": 0.7143,
+            "recall": 0.625,
+            "f1": 0.6667,
+            "support": 8
+          }
+        }
+      },
+      "test_leaf_verified_only": {
+        "n_images": 2410,
+        "accuracy": 0.9689,
+        "macro_f1": 0.9669,
+        "top3_accuracy": 0.9983,
+        "nll": 0.1698,
+        "ece": 0.0776,
+        "nll_before_temperature": 0.3037,
+        "ece_before_temperature": 0.1856,
+        "classes_reported": 13,
+        "classes_below_min_support": {
+          "tomato_target_spot": 0,
+          "tomato_mosaic_virus": 0,
+          "corn_gray_leaf_spot": 0,
+          "corn_common_rust": 0,
+          "corn_northern_leaf_blight": 0,
+          "corn_healthy": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "tomato_early_blight",
+            "recall": 0.8919,
+            "support": 148
+          },
+          {
+            "class": "tomato_leaf_mold",
+            "recall": 0.9028,
+            "support": 144
+          },
+          {
+            "class": "tomato_septoria",
+            "recall": 0.9459,
+            "support": 148
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 0.9801,
+            "recall": 1.0,
+            "f1": 0.99,
+            "support": 148
+          },
+          "potato_late_blight": {
+            "precision": 1.0,
+            "recall": 0.9797,
+            "f1": 0.9898,
+            "support": 148
+          },
+          "potato_healthy": {
+            "precision": 0.8889,
+            "recall": 1.0,
+            "f1": 0.9412,
+            "support": 24
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.9903,
+            "recall": 0.9594,
+            "f1": 0.9746,
+            "support": 320
+          },
+          "tomato_early_blight": {
+            "precision": 0.9565,
+            "recall": 0.8919,
+            "f1": 0.9231,
+            "support": 148
+          },
+          "tomato_late_blight": {
+            "precision": 0.9268,
+            "recall": 0.95,
+            "f1": 0.9383,
+            "support": 120
+          },
+          "tomato_leaf_mold": {
+            "precision": 1.0,
+            "recall": 0.9028,
+            "f1": 0.9489,
+            "support": 144
+          },
+          "tomato_septoria": {
+            "precision": 0.9091,
+            "recall": 0.9459,
+            "f1": 0.9272,
+            "support": 148
+          },
+          "tomato_spider_mites": {
+            "precision": 0.9608,
+            "recall": 0.9722,
+            "f1": 0.9665,
+            "support": 252
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 0.9932,
+            "recall": 0.9886,
+            "f1": 0.9909,
+            "support": 440
+          },
+          "tomato_healthy": {
+            "precision": 0.9866,
+            "recall": 1.0,
+            "f1": 0.9932,
+            "support": 147
+          },
+          "pepper_bacterial_spot": {
+            "precision": 1.0,
+            "recall": 0.9865,
+            "f1": 0.9932,
+            "support": 148
+          },
+          "pepper_healthy": {
+            "precision": 0.9911,
+            "recall": 0.9955,
+            "f1": 0.9933,
+            "support": 223
+          }
+        }
+      },
+      "test_fallback_grouping_only": {
+        "n_images": 1581,
+        "accuracy": 0.976,
+        "macro_f1": 0.8517,
+        "top3_accuracy": 0.9987,
+        "nll": 0.1217,
+        "ece": 0.061,
+        "nll_before_temperature": 0.2463,
+        "ece_before_temperature": 0.1657,
+        "classes_reported": 12,
+        "classes_below_min_support": {
+          "potato_early_blight": 0,
+          "potato_late_blight": 0,
+          "potato_healthy": 0,
+          "tomato_bacterial_spot": 0,
+          "tomato_leaf_mold": 0,
+          "tomato_spider_mites": 0,
+          "pepper_bacterial_spot": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "pepper_healthy",
+            "recall": 0.0,
+            "support": 1
+          },
+          {
+            "class": "corn_gray_leaf_spot",
+            "recall": 0.8684,
+            "support": 76
+          },
+          {
+            "class": "corn_northern_leaf_blight",
+            "recall": 0.9527,
+            "support": 148
+          }
+        ],
+        "per_class": {
+          "tomato_early_blight": {
+            "precision": 0.3333,
+            "recall": 1.0,
+            "f1": 0.5,
+            "support": 1
+          },
+          "tomato_late_blight": {
+            "precision": 0.9938,
+            "recall": 0.9699,
+            "f1": 0.9817,
+            "support": 166
+          },
+          "tomato_septoria": {
+            "precision": 0.9658,
+            "recall": 0.9658,
+            "f1": 0.9658,
+            "support": 117
+          },
+          "tomato_target_spot": {
+            "precision": 0.9901,
+            "recall": 0.9571,
+            "f1": 0.9734,
+            "support": 210
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 1.0,
+            "recall": 0.9972,
+            "f1": 0.9986,
+            "support": 362
+          },
+          "tomato_mosaic_virus": {
+            "precision": 0.9825,
+            "recall": 1.0,
+            "f1": 0.9912,
+            "support": 56
+          },
+          "tomato_healthy": {
+            "precision": 0.9684,
+            "recall": 1.0,
+            "f1": 0.984,
+            "support": 92
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.9167,
+            "recall": 0.8684,
+            "f1": 0.8919,
+            "support": 76
+          },
+          "corn_common_rust": {
+            "precision": 0.9622,
+            "recall": 0.9944,
+            "f1": 0.978,
+            "support": 179
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.9658,
+            "recall": 0.9527,
+            "f1": 0.9592,
+            "support": 148
+          },
+          "corn_healthy": {
+            "precision": 0.9943,
+            "recall": 1.0,
+            "f1": 0.9971,
+            "support": 173
+          },
+          "pepper_healthy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          }
+        }
+      }
+    },
+    "threshold": {
+      "selection_rule": "smallest threshold from 0.50 to 0.99 at which at most 10% of the calibration-half unknown images still get an answer",
+      "chosen_threshold": 0.89,
+      "images": {
+        "unknown_calibration": 569,
+        "unknown_held_out": 560,
+        "field_calibration": 58,
+        "field_held_out": 76
+      },
+      "auroc_confidence_known_vs_unknown": {
+        "test_vs_unknown_held_out": 0.909,
+        "field_held_out_vs_unknown_held_out": 0.735
+      },
+      "table": [
+        {
+          "threshold": 0.5,
+          "chosen": false,
+          "test": {
+            "n": 3991,
+            "coverage": 0.9687,
+            "accuracy_when_answered": 0.9829
+          },
+          "field_held_out": {
+            "n": 76,
+            "coverage": 0.7895,
+            "accuracy_when_answered": 0.6333
+          },
+          "unknown_held_out_false_accept": 0.5
+        },
+        {
+          "threshold": 0.6,
+          "chosen": false,
+          "test": {
+            "n": 3991,
+            "coverage": 0.9446,
+            "accuracy_when_answered": 0.9889
+          },
+          "field_held_out": {
+            "n": 76,
+            "coverage": 0.6842,
+            "accuracy_when_answered": 0.5962
+          },
+          "unknown_held_out_false_accept": 0.3679
+        },
+        {
+          "threshold": 0.7,
+          "chosen": false,
+          "test": {
+            "n": 3991,
+            "coverage": 0.9118,
+            "accuracy_when_answered": 0.9934
+          },
+          "field_held_out": {
+            "n": 76,
+            "coverage": 0.6447,
+            "accuracy_when_answered": 0.6122
+          },
+          "unknown_held_out_false_accept": 0.2554
+        },
+        {
+          "threshold": 0.8,
+          "chosen": false,
+          "test": {
+            "n": 3991,
+            "coverage": 0.8559,
+            "accuracy_when_answered": 0.9971
+          },
+          "field_held_out": {
+            "n": 76,
+            "coverage": 0.5132,
+            "accuracy_when_answered": 0.641
+          },
+          "unknown_held_out_false_accept": 0.1679
+        },
+        {
+          "threshold": 0.89,
+          "chosen": true,
+          "test": {
+            "n": 3991,
+            "coverage": 0.7567,
+            "accuracy_when_answered": 0.998
+          },
+          "field_held_out": {
+            "n": 76,
+            "coverage": 0.3947,
+            "accuracy_when_answered": 0.7333
+          },
+          "unknown_held_out_false_accept": 0.1071
+        },
+        {
+          "threshold": 0.9,
+          "chosen": false,
+          "test": {
+            "n": 3991,
+            "coverage": 0.7334,
+            "accuracy_when_answered": 0.999
+          },
+          "field_held_out": {
+            "n": 76,
+            "coverage": 0.3553,
+            "accuracy_when_answered": 0.7407
+          },
+          "unknown_held_out_false_accept": 0.1036
+        },
+        {
+          "threshold": 0.95,
+          "chosen": false,
+          "test": {
+            "n": 3991,
+            "coverage": 0.5094,
+            "accuracy_when_answered": 0.9995
+          },
+          "field_held_out": {
+            "n": 76,
+            "coverage": 0.1842,
+            "accuracy_when_answered": 0.7143
+          },
+          "unknown_held_out_false_accept": 0.0429
+        }
+      ]
+    }
+  },
+  "notes": [
+    "test = held-out PlantVillage split: lab photos on plain backgrounds. Only part of it has verified leaf grouping; compare test_leaf_verified_only with test_fallback_grouping_only.",
+    "field = PlantDoc's official TEST photos mapped onto our classes (plus any local photos), minus near-duplicates of training photos. No run trained on them. Labels are the dataset authors' own. Mappings marked approximate are in 'field' but not in 'field_exact_mapping_only'. Classes with fewer images than the minimum are not scored.",
+    "*_crop_known = the same images, but with the classes of every other crop switched off, as if the user had picked the crop first. It measures the app design, not the model alone.",
+    "unknown = leaves of other crops (plus any local non-leaf photos). Without photos of hands, soil or objects in data/nonleaf, the threshold is only tested against other plants' leaves.",
+    "Confidence intervals resample images as if independent. Several photos of one leaf are correlated, so the real uncertainty is larger.",
+    "Temperature is fitted on lab validation (plus field validation for runs trained on field photos; see temperature_fitted_on). The threshold is chosen on one half of the unknown images (split by file hash) and reported on the other half.",
+    "The field test set is small (check n_images and classes_below_min_support). Differences of a few points between runs are inside the confidence intervals."
+  ]
+}

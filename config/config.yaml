@@ -73,3 +73,5 @@ train:
   grad_clip: 1.0
   bg_prob: 0.5
   erase_prob: 0.25
+  field_share: 0.25
+  field_val_fraction: 0.15

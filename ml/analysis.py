@@ -46,6 +46,33 @@ def fit_temperature(logits, labels) -> float:
     return float(TEMPERATURE_GRID[int(np.argmin(losses))])
 
 
+def fit_temperature_balanced(pairs) -> float:
+    """Temperature that minimises the *average of the per-set* NLLs. `pairs` is a list of
+    (logits, labels), e.g. lab validation and field validation, so a big easy set cannot drown
+    out a small hard one."""
+    pairs = [(x, y) for x, y in pairs if len(y) > 0]
+    if not pairs:
+        raise ValueError("no data to fit a temperature on")
+    losses = [np.mean([nll(x, y, t) for x, y in pairs]) for t in TEMPERATURE_GRID]
+    return float(TEMPERATURE_GRID[int(np.argmin(losses))])
+
+
+def crop_of(class_id: str) -> str:
+    """'tomato_early_blight' -> 'tomato'."""
+    return class_id.split("_")[0]
+
+
+def crop_restricted_logits(logits, labels, class_ids) -> np.ndarray:
+    """Logits as if the user had picked the right crop first: classes of every other crop are
+    switched off. This measures the "pick your crop" design, not the model alone."""
+    logits = np.array(logits, dtype=np.float64, copy=True)
+    crops = np.array([crop_of(c) for c in class_ids])
+    for crop in set(crops):
+        rows = crops[np.asarray(labels)] == crop
+        logits[np.ix_(rows, crops != crop)] = -1e9
+    return logits
+
+
 def expected_calibration_error(conf, correct, bins: int = 10) -> float:
     """Average gap between confidence and accuracy, weighted by how many images fall in each bin."""
     conf = np.asarray(conf, dtype=float)
@@ -197,16 +224,26 @@ def analyse_run(
     max_false_accept: float,
     n_boot: int,
     seed: int = 0,
+    field_val=None,
 ) -> dict:
     """Everything evaluate.py reports for one model.
 
     `logits` has keys val, test, field, unknown; `labels` has val, test, field.
     `field_info` needs columns mapping and half (aligned with the field logits);
-    `unknown_info` needs the column half. The temperature is fitted on the validation split.
+    `unknown_info` needs the column half. `field_val` is an optional (logits, labels) pair of
+    real-world validation photos that are NOT in the field test set.
+    The temperature is fitted on the validation split (lab only, or the balanced average of lab
+    and field validation when `field_val` is given).
     The threshold is chosen on the calibration half of the unknown images and every threshold
     number is reported on the other half, so the threshold never grades its own homework.
     """
-    temperature = fit_temperature(logits["val"], labels["val"])
+    has_field_val = field_val is not None and len(field_val[1]) > 0
+    if has_field_val:
+        temperature = fit_temperature_balanced(
+            [(logits["val"], labels["val"]), (field_val[0], field_val[1])]
+        )
+    else:
+        temperature = fit_temperature(logits["val"], labels["val"])
     sets = {
         "val": summarise_set(logits["val"], labels["val"], temperature, class_ids),
         "test": summarise_set(
@@ -222,6 +259,16 @@ def analyse_run(
             seed=seed,
         ),
     }
+    for name in ("test", "field"):  # the "pick your crop first" design: right crop is given
+        sets[f"{name}_crop_known"] = summarise_set(
+            crop_restricted_logits(logits[name], labels[name], class_ids),
+            labels[name],
+            temperature,
+            class_ids,
+            min_support=min_support if name == "field" else 1,
+            n_boot=n_boot,
+            seed=seed,
+        )
     exact = field_info["mapping"].to_numpy() == "exact"
     if exact.any() and not exact.all():
         sets["field_exact_mapping_only"] = summarise_set(
@@ -270,6 +317,12 @@ def analyse_run(
     ]
     return {
         "temperature": _num(temperature),
+        "temperature_fitted_on": (
+            f"lab validation + field validation ({len(field_val[1])} field images), "
+            "averaged per set"
+            if has_field_val
+            else "lab validation only"
+        ),
         "sets": sets,
         "threshold": {
             "selection_rule": (
@@ -297,8 +350,9 @@ def collect_external_rows(root, manifest_path, field_dir, nonleaf_dir, class_ids
     """All field and unknown images: the imported ones (data/external_manifest.csv) plus any
     image you drop into data/field/<class id>/ or data/nonleaf/ yourself ("local").
 
-    Returns (DataFrame with path, role, class_id, source, mapping, sha256, half; warnings).
-    Paths are relative to `root`.
+    Returns (DataFrame with path, role, class_id, source, source_split, mapping, sha256, half;
+    warnings). Paths are relative to `root`. `source_split` is PlantDoc's own train/test folder
+    ("" for local photos).
     """
     root = Path(root)
     warnings: list[str] = []
@@ -313,6 +367,7 @@ def collect_external_rows(root, manifest_path, field_dir, nonleaf_dir, class_ids
                     "role": r.role,
                     "class_id": r.class_id,
                     "source": r.source,
+                    "source_split": getattr(r, "source_split", ""),
                     "mapping": r.mapping,
                     "sha256": r.sha256,
                 }
@@ -340,6 +395,7 @@ def collect_external_rows(root, manifest_path, field_dir, nonleaf_dir, class_ids
                     "role": role,
                     "class_id": class_id,
                     "source": "local",
+                    "source_split": "",
                     "mapping": "exact",
                     "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
                 }
@@ -349,7 +405,8 @@ def collect_external_rows(root, manifest_path, field_dir, nonleaf_dir, class_ids
             f"{len(ignored)} image(s) in the field folder were ignored because their folder is "
             f"not a class id, e.g. {ignored[0]}"
         )
-    frame = pd.DataFrame(rows, columns=["path", "role", "class_id", "source", "mapping", "sha256"])
+    columns = ["path", "role", "class_id", "source", "source_split", "mapping", "sha256"]
+    frame = pd.DataFrame(rows, columns=columns)
     present = np.array([(root / p).exists() for p in frame["path"]], dtype=bool)
     if not present.all():
         warnings.append(
@@ -359,3 +416,39 @@ def collect_external_rows(root, manifest_path, field_dir, nonleaf_dir, class_ids
     frame = frame.reset_index(drop=True)
     frame["half"] = [half_of(s) for s in frame["sha256"]]
     return frame, warnings
+
+
+def val_share(sha256_hex: str) -> float:
+    """Stable number in [0, 1) from a file hash (different hex digits than `half_of`)."""
+    return int(str(sha256_hex)[8:16], 16) / 16**8
+
+
+def load_overlap(path) -> set[str]:
+    """Paths listed in the overlap file written by ml.check_overlap (empty set if it is missing)."""
+    path = Path(path)
+    if not path.exists():
+        return set()
+    return set(pd.read_csv(path)["path"])
+
+
+def assign_use(frame: pd.DataFrame, val_fraction: float, exclude=()) -> pd.Series:
+    """What each external image is used for.
+
+    - field, PlantDoc train folder -> "train" (mixed into training) or, for a stable
+      `val_fraction` of them chosen by file hash, "val" (early stopping and calibration only)
+    - field, PlantDoc test folder or your own local photos -> "test" (never trained on)
+    - field images listed in `exclude` (near-duplicates of training photos) -> "excluded"
+    - unknown images -> "unknown" (never trained on; they only choose the "unsure" threshold)
+    """
+    exclude = set(exclude)
+    use = []
+    for r in frame.itertuples(index=False):
+        if r.role != "field":
+            use.append("unknown")
+        elif r.path in exclude:
+            use.append("excluded")
+        elif r.source_split == "train":
+            use.append("val" if val_share(r.sha256) < val_fraction else "train")
+        else:
+            use.append("test")
+    return pd.Series(use, index=frame.index, dtype=object)

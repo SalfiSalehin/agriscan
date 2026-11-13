@@ -3,12 +3,17 @@
     python -m ml.train --arch mobilenet_v3_small --smoke    # pipeline check, a few minutes
     python -m ml.train --arch mobilenet_v3_small            # the real run
     python -m ml.train --arch resnet18                      # baseline
+    python -m ml.train --field-share 0                      # lab photos only (the old behaviour)
     python -m ml.train --resume runs/<run name>/last.pt     # continue an interrupted run
 
 Stage 1 trains only the classifier head (backbone and its BatchNorm statistics frozen).
-Stage 2 fine-tunes everything with a lower learning rate, cosine schedule and early stopping on
-validation loss. Only the validation split is used for model selection; the test split is never
-touched here.
+Stage 2 fine-tunes everything with a lower learning rate, cosine schedule and early stopping.
+
+Real-world photos: with --field-share > 0 (default from the config) a share of every epoch's
+draws are PlantDoc *training-folder* photos (repeated and augmented), the rest PlantVillage. A
+stable slice of those PlantDoc training photos is held back as "field validation". Model
+selection and early stopping use the average of the lab validation loss and the field validation
+loss. The PlantVillage test split and PlantDoc's official test folder are never touched here.
 """
 
 import argparse
@@ -30,12 +35,20 @@ import torchvision
 from torch import nn
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import CosineAnnealingLR
-from torch.utils.data import DataLoader
+from torch.utils.data import ConcatDataset, DataLoader, WeightedRandomSampler
 
+from ml.analysis import assign_use, collect_external_rows, load_overlap
 from ml.augment import RandomBackground
 from ml.config import ROOT, load_config
-from ml.data import ManifestDataset, class_weights, load_class_index, verify_manifests
+from ml.data import (
+    ListDataset,
+    ManifestDataset,
+    class_weights,
+    load_class_index,
+    verify_manifests,
+)
 from ml.metrics import accuracy, confusion_matrix, macro_f1, per_class_prf
+from ml.mixing import balanced_loss, effective_class_weights, sample_weights
 from ml.models import (
     ARCHS,
     build_model,
@@ -71,6 +84,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--seed", type=int, default=None, help="default: project.seed from the config")
     p.add_argument("--bg-prob", type=float, default=None, help="chance of replacing the background")
     p.add_argument("--erase-prob", type=float, default=None, help="chance of random erasing")
+    p.add_argument(
+        "--field-share",
+        type=float,
+        default=None,
+        help="share of each epoch's draws that are real-world photos (0 = lab only)",
+    )
     p.add_argument("--workers", type=int, default=None, help="DataLoader workers")
     p.add_argument("--batch-size", type=int, default=None)
     p.add_argument("--stage1-epochs", type=int, default=None)
@@ -86,8 +105,10 @@ def parse_args() -> argparse.Namespace:
 
 
 def resolve_hparams(args: argparse.Namespace, cfg) -> dict:
-    hp = dict(cfg.train)
+    hp = {"field_share": 0.25, "field_val_fraction": 0.15, "selection_field_weight": 0.5}
+    hp.update(cfg.train)
     overrides = {
+        "field_share": args.field_share,
         "bg_prob": args.bg_prob,
         "erase_prob": args.erase_prob,
         "num_workers": args.workers,
@@ -117,13 +138,36 @@ def git_info() -> dict:
         return {"commit": None, "dirty": None}
 
 
-def make_loaders(cfg, hp: dict, smoke: bool, seed: int, class_index: dict):
+def load_field_frames(cfg, class_ids: list[str], val_fraction: float):
+    """PlantDoc training-folder photos, split into (train, val) by a stable file-hash rule."""
+    external, _ = collect_external_rows(
+        ROOT,
+        ROOT / "data" / "external_manifest.csv",
+        ROOT / cfg.paths["field_dir"],
+        ROOT / cfg.paths["nonleaf_dir"],
+        class_ids,
+    )
+    external["use"] = assign_use(
+        external, val_fraction, load_overlap(ROOT / "data" / "field_test_overlap.csv")
+    )
+    train = external[external["use"] == "train"].reset_index(drop=True)
+    val = external[external["use"] == "val"].reset_index(drop=True)
+    if train.empty or val.empty:
+        raise SystemExit(
+            f"No PlantDoc training photos found (train {len(train)}, val {len(val)}). "
+            "Run `python -m ml.import_external plantdoc <folder>` first, or use --field-share 0."
+        )
+    return train, val
+
+
+def make_loaders(cfg, hp, smoke, seed, class_index, field_train=None, field_val=None):
+    """Returns (train_loader, val_loader, field_val_loader or None)."""
     root = ROOT / cfg.dataset["export_dir"]
     splits = ROOT / cfg.paths["splits_dir"]
     size = cfg.data["image_size"]
-    train_limit, val_limit = (512, 256) if smoke else (None, None)
+    train_limit, val_limit, field_limit = (512, 256, 128) if smoke else (None, None, None)
     background = RandomBackground(hp["bg_prob"]) if hp["bg_prob"] > 0 else None
-    train_ds = ManifestDataset(
+    lab_ds = ManifestDataset(
         splits / "train.csv",
         root,
         class_index,
@@ -133,7 +177,7 @@ def make_loaders(cfg, hp: dict, smoke: bool, seed: int, class_index: dict):
         mask_root=ROOT / cfg.dataset["mask_dir"],
     )
     if background is not None:
-        coverage = train_ds.mask_coverage()
+        coverage = lab_ds.mask_coverage()
         print(f"Background masks found for {coverage:.1%} of the training images")
         if coverage < 0.9:
             raise SystemExit(
@@ -151,16 +195,46 @@ def make_loaders(cfg, hp: dict, smoke: bool, seed: int, class_index: dict):
         "worker_init_fn": worker_init,
         "persistent_workers": workers > 0,
     }
-    train_loader = DataLoader(
-        train_ds,
-        batch_size=hp["batch_size"],
-        shuffle=True,
-        drop_last=True,
-        generator=generator,
-        **common,
-    )
+
+    def field_dataset(frame, transform):
+        if field_limit is not None:
+            frame = frame.head(field_limit)
+        return ListDataset(
+            [ROOT / p for p in frame["path"]], frame["class_id"].map(class_index), transform
+        )
+
+    field_val_loader = None
+    if hp["field_share"] > 0:
+        field_ds = field_dataset(field_train, build_train_transform(size, hp["erase_prob"]))
+        weights = sample_weights(len(lab_ds), len(field_ds), hp["field_share"])
+        sampler = WeightedRandomSampler(
+            torch.as_tensor(weights), num_samples=len(lab_ds), replacement=True, generator=generator
+        )
+        train_loader = DataLoader(
+            ConcatDataset([lab_ds, field_ds]),
+            batch_size=hp["batch_size"],
+            sampler=sampler,
+            drop_last=True,
+            generator=generator,
+            **common,
+        )
+        field_val_loader = DataLoader(
+            field_dataset(field_val, build_eval_transform(size)),
+            batch_size=hp["batch_size"] * 2,
+            shuffle=False,
+            **common,
+        )
+    else:
+        train_loader = DataLoader(
+            lab_ds,
+            batch_size=hp["batch_size"],
+            shuffle=True,
+            drop_last=True,
+            generator=generator,
+            **common,
+        )
     val_loader = DataLoader(val_ds, batch_size=hp["batch_size"] * 2, shuffle=False, **common)
-    return train_loader, val_loader
+    return train_loader, val_loader, field_val_loader
 
 
 def configure_stage(model: nn.Module, arch: str, stage: int, hp: dict, n_epochs: int):
@@ -228,10 +302,15 @@ def plot_curves(history: pd.DataFrame, path: Path, title: str) -> None:
     fig, (ax_loss, ax_score) = plt.subplots(1, 2, figsize=(11, 4))
     x = history["epoch"]
     ax_loss.plot(x, history["train_loss"], label="train (weighted + label smoothing)")
-    ax_loss.plot(x, history["val_loss"], label="val (plain cross-entropy)")
+    ax_loss.plot(x, history["val_loss"], label="lab val (plain cross-entropy)")
+    if "field_val_loss" in history and history["field_val_loss"].notna().any():
+        ax_loss.plot(x, history["field_val_loss"], label="field val (plain cross-entropy)")
+        ax_loss.plot(x, history["select_loss"], ls=":", c="black", label="selection loss (mean)")
     ax_loss.set_ylabel("loss")
-    ax_score.plot(x, history["val_acc"], label="val accuracy")
-    ax_score.plot(x, history["val_macro_f1"], label="val macro-F1")
+    ax_score.plot(x, history["val_acc"], label="lab val accuracy")
+    ax_score.plot(x, history["val_macro_f1"], label="lab val macro-F1")
+    if "field_val_acc" in history and history["field_val_acc"].notna().any():
+        ax_score.plot(x, history["field_val_acc"], label="field val accuracy")
     ax_score.set_ylabel("score")
     for ax in (ax_loss, ax_score):
         ax.set_xlabel("epoch")
@@ -254,6 +333,9 @@ def main() -> int:
         run_dir = args.resume.resolve().parent
         saved = json.loads((run_dir / "run_config.json").read_text(encoding="utf-8"))
         arch, hp, seed = saved["arch"], saved["hparams"], saved["seed"]
+        hp.setdefault("field_share", 0.0)  # runs started before field mixing existed
+        hp.setdefault("field_val_fraction", 0.15)
+        hp.setdefault("selection_field_weight", 0.5)
         name, smoke = saved["name"], saved["smoke"]
         resume_ckpt = torch.load(args.resume, map_location="cpu", weights_only=True)
     else:
@@ -275,11 +357,26 @@ def main() -> int:
     class_index = load_class_index(cfg)
     class_ids = sorted(class_index, key=class_index.get)
     num_classes = len(class_ids)
-    train_loader, val_loader = make_loaders(cfg, hp, smoke, seed, class_index)
+    field_train = field_val = None
+    if hp["field_share"] > 0:
+        field_train, field_val = load_field_frames(cfg, class_ids, hp["field_val_fraction"])
+        print(
+            f"Field photos: {len(field_train)} for training, {len(field_val)} for validation "
+            f"(about {hp['field_share']:.0%} of the draws in every epoch are field photos)"
+        )
+    train_loader, val_loader, field_val_loader = make_loaders(
+        cfg, hp, smoke, seed, class_index, field_train, field_val
+    )
 
     splits = ROOT / cfg.paths["splits_dir"]
     train_labels = pd.read_csv(splits / "train.csv")["class_id"].map(class_index).to_numpy()
-    weights = class_weights(train_labels, num_classes, hp["class_weight_power"])
+    if field_train is not None:
+        field_labels = field_train["class_id"].map(class_index).to_numpy()
+        weights = effective_class_weights(
+            train_labels, field_labels, num_classes, hp["field_share"], hp["class_weight_power"]
+        )
+    else:
+        weights = class_weights(train_labels, num_classes, hp["class_weight_power"])
 
     model = build_model(arch, num_classes, pretrained=True)
     model = model.to(device).to(memory_format=torch.channels_last)
@@ -294,6 +391,7 @@ def main() -> int:
         "mean": list(IMAGENET_MEAN),
         "std": list(IMAGENET_STD),
         "seed": seed,
+        "field_share": float(hp["field_share"]),
     }
 
     state = {"stage": 1, "epoch_in_stage": 0, "epoch": 0, "best_loss": float("inf"),
@@ -327,6 +425,16 @@ def main() -> int:
                 },
                 "train_images_used": len(train_loader.dataset),
                 "val_images_used": len(val_loader.dataset),
+                "field_train_images": 0 if field_train is None else len(field_train),
+                "field_val_images": 0 if field_val is None else len(field_val),
+                "external_files": {
+                    f.name: file_digest(f)
+                    for f in (
+                        ROOT / "data" / "external_manifest.csv",
+                        ROOT / "data" / "field_test_overlap.csv",
+                    )
+                    if f.exists()
+                },
             },
             "class_weights": {
                 c: round(float(w), 4) for c, w in zip(class_ids, weights, strict=True)
@@ -363,6 +471,14 @@ def main() -> int:
                 model, train_loader, criterion, optimizer, scaler, device, hp, use_amp
             )
             val, _ = evaluate(model, val_loader, device, num_classes, use_amp)
+            fval = None
+            if field_val_loader is not None:
+                fval, _ = evaluate(model, field_val_loader, device, num_classes, use_amp)
+            select_loss = balanced_loss(
+                val["loss"],
+                None if fval is None else fval["loss"],
+                hp["selection_field_weight"],
+            )
             if scheduler is not None:
                 scheduler.step()
 
@@ -377,14 +493,17 @@ def main() -> int:
                 "val_loss": float(val["loss"]),
                 "val_acc": float(val["acc"]),
                 "val_macro_f1": float(val["macro_f1"]),
+                "field_val_loss": None if fval is None else float(fval["loss"]),
+                "field_val_acc": None if fval is None else float(fval["acc"]),
+                "select_loss": float(select_loss),
                 "seconds": round(time.time() - began, 1),
             }
             state["history"].append(row)
 
-            improved = val["loss"] < state["best_loss"] - MIN_DELTA
+            improved = select_loss < state["best_loss"] - MIN_DELTA
             if improved:
                 state["best_loss"], state["best_epoch"], state["bad_epochs"] = (
-                    float(val["loss"]),
+                    float(select_loss),
                     state["epoch"],
                     0,
                 )
@@ -406,20 +525,26 @@ def main() -> int:
                 last_path,
             )
             pd.DataFrame(state["history"]).to_csv(run_dir / "history.csv", index=False)
+            field_text = ""
+            if fval is not None:
+                field_text = f"field val loss {fval['loss']:.4f} acc {fval['acc']:.4f} | "
             print(
                 f"[stage {stage}] epoch {state['epoch']:>2}/{total_epochs} "
                 f"train loss {train_loss:.4f} acc {train_acc:.4f} | "
                 f"val loss {val['loss']:.4f} acc {val['acc']:.4f} f1 {val['macro_f1']:.4f} | "
-                f"lr {lr:.1e} | {row['seconds']:.0f}s{' *best*' if improved else ''}"
+                f"{field_text}lr {lr:.1e} | {row['seconds']:.0f}s{' *best*' if improved else ''}"
             )
             if state["stopped_early"]:
-                print(f"Early stopping: no val-loss improvement for {state['bad_epochs']} epochs.")
+                print(f"Early stopping: no improvement for {state['bad_epochs']} epochs.")
                 break
 
     # ---- final report on the best checkpoint (validation split only) ----
     best = torch.load(best_path, map_location="cpu", weights_only=True)
     model.load_state_dict(best["model"])
     val, cm = evaluate(model, val_loader, device, num_classes, use_amp)
+    fval_best = None
+    if field_val_loader is not None:
+        fval_best, _ = evaluate(model, field_val_loader, device, num_classes, use_amp)
     precision, recall, f1, support = per_class_prf(cm)
     history = pd.DataFrame(state["history"])
     summary = {
@@ -429,7 +554,18 @@ def main() -> int:
         "best_epoch": state["best_epoch"],
         "epochs_run": state["epoch"],
         "stopped_early": state["stopped_early"],
+        "field_share": float(hp["field_share"]),
+        "selection": (
+            "mean of lab-validation loss and field-validation loss"
+            if fval_best is not None
+            else "lab-validation loss"
+        ),
         "val_at_best": {k: round(float(v), 4) for k, v in val.items()},
+        "field_val_at_best": (
+            None
+            if fval_best is None
+            else {k: round(float(v), 4) for k, v in fval_best.items() if k != "macro_f1"}
+        ),
         "train_seconds_total": round(float(history["seconds"].sum()), 1),
         "seconds_per_epoch_mean": round(float(history["seconds"].mean()), 1),
         "peak_gpu_memory_mb": (
@@ -456,6 +592,8 @@ def main() -> int:
     print(
         f"\nBest epoch {summary['best_epoch']} of {summary['epochs_run']}: {summary['val_at_best']}"
     )
+    if summary["field_val_at_best"] is not None:
+        print(f"Field validation at the best epoch: {summary['field_val_at_best']}")
     worst = sorted(summary["val_per_class"].items(), key=lambda kv: kv[1]["recall"])[:3]
     print("Lowest validation recall:", ", ".join(f"{c} {m['recall']:.3f}" for c, m in worst))
     print(f"Checkpoints: {run_dir}")

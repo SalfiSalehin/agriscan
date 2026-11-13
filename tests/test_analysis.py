@@ -161,6 +161,7 @@ def test_collect_external_rows_merges_manifest_and_local_images(tmp_path):
             "role": ["field", "unknown", "field"],
             "class_id": ["a", "", "a"],
             "source": ["PlantDoc"] * 3,
+            "source_split": ["train", "", "test"],
             "mapping": ["approximate", "out_of_scope", "exact"],
             "sha256": ["0" * 8, "1" * 8, "2" * 8],
         }
@@ -178,6 +179,9 @@ def test_collect_external_rows_merges_manifest_and_local_images(tmp_path):
     local_field = frame[(frame["source"] == "local") & (frame["role"] == "field")].iloc[0]
     assert local_field["class_id"] == "b"
     assert local_field["mapping"] == "exact"
+    assert local_field["source_split"] == ""
+    imported = frame[frame["path"] == "data/field/a/imported.jpg"].iloc[0]
+    assert imported["source_split"] == "train"
     assert frame[frame["role"] == "unknown"]["class_id"].eq("").all()
     assert set(frame["half"]) <= {0, 1}
     assert any("not a class id" in w for w in warnings)
@@ -190,3 +194,119 @@ def test_collect_external_rows_without_manifest_or_folders(tmp_path):
     )
     assert frame.empty
     assert warnings == []
+
+
+def test_crop_of_and_crop_restricted_logits():
+    ids = ["tomato_a", "tomato_b", "potato_a", "potato_b"]
+    assert an.crop_of("tomato_early_blight") == "tomato"
+    logits = np.array([[0.0, 1.0, 9.0, 0.0], [9.0, 0.0, 0.0, 1.0]])
+    labels = np.array([1, 3])  # a tomato leaf, then a potato leaf
+    out = an.crop_restricted_logits(logits, labels, ids)
+    assert out[0].argmax() == 1  # the potato class that won is switched off
+    assert out[1].argmax() == 3
+    assert logits[0, 2] == 9.0  # input is not modified
+
+
+def test_crop_known_sets_are_never_worse_than_open_set():
+    rng = np.random.default_rng(3)
+    ids = ["t_a", "t_b", "p_a", "p_b"]
+    labels = rng.integers(0, 4, 400)
+    logits = rng.normal(0, 1, (400, 4))
+    logits[np.arange(400), labels] += 1.5
+    base = an.summarise_set(logits, labels, 1.0, ids)["accuracy"]
+    known = an.summarise_set(an.crop_restricted_logits(logits, labels, ids), labels, 1.0, ids)[
+        "accuracy"
+    ]
+    assert known >= base
+
+
+def test_fit_temperature_balanced_weights_each_set_equally():
+    rng = np.random.default_rng(0)
+    big_x, big_y = _calibrated(rng, 4000, 2.5)  # honest: wants T ~ 1
+    small_x, small_y = _calibrated(rng, 100, 2.5)
+    small_x = small_x * 3.0  # the small set is overconfident: wants T ~ 3
+    pooled = an.fit_temperature(np.vstack([big_x, small_x]), np.concatenate([big_y, small_y]))
+    balanced = an.fit_temperature_balanced([(big_x, big_y), (small_x, small_y)])
+    assert pooled < balanced  # pooling lets the big set win, balancing does not
+    assert 1.2 < balanced < 3.0
+    with pytest.raises(ValueError):
+        an.fit_temperature_balanced([(big_x[:0], big_y[:0])])
+
+
+def test_analyse_run_with_field_val_and_crop_known():
+    rng = np.random.default_rng(1)
+    val_x, val_y = _calibrated(rng, 600, 2.5)
+    test_x, test_y = _calibrated(rng, 600, 2.5)
+    field_x, field_y = _calibrated(rng, 200, 2.5)
+    fv_x, fv_y = _calibrated(rng, 100, 2.5)
+    logits = {
+        "val": val_x,
+        "test": test_x,
+        "field": field_x,
+        "unknown": rng.normal(0, 0.4, (300, 4)),
+    }
+    labels = {"val": val_y, "test": test_y, "field": field_y}
+    field_info = pd.DataFrame({"mapping": ["exact"] * 200, "half": [0, 1] * 100})
+    unknown_info = pd.DataFrame({"half": [0, 1] * 150})
+    ids = ["t_a", "t_b", "p_a", "p_b"]
+    result = an.analyse_run(
+        logits, labels, field_info, unknown_info, ids, None, 5, 0.10, 20, field_val=(fv_x, fv_y)
+    )
+    assert "field_crop_known" in result["sets"] and "test_crop_known" in result["sets"]
+    assert result["sets"]["field_crop_known"]["accuracy"] >= result["sets"]["field"]["accuracy"]
+    assert "field validation" in result["temperature_fitted_on"]
+    plain = an.analyse_run(logits, labels, field_info, unknown_info, ids, None, 5, 0.10, 0)
+    assert plain["temperature_fitted_on"] == "lab validation only"
+
+
+def _frame(rows):
+    return pd.DataFrame(rows, columns=["path", "role", "source_split", "sha256"])
+
+
+def test_assign_use_splits_plantdoc_train_into_train_and_val_and_keeps_test_apart():
+    rows = [
+        (f"train{i}.jpg", "field", "train", f"{0:08x}{i * 2654435761 % 2**32:08x}")
+        for i in range(400)
+    ]
+    rows += [("test.jpg", "field", "test", "f" * 16), ("mine.jpg", "field", "", "e" * 16)]
+    rows += [("other.jpg", "unknown", "train", "a" * 16)]
+    frame = _frame(rows)
+    use = an.assign_use(frame, 0.15)
+    is_train_photo = (frame["source_split"] == "train") & (frame["role"] == "field")
+    assert set(use[is_train_photo]) == {"train", "val"}
+    share = (use[is_train_photo] == "val").mean()
+    assert 0.08 < share < 0.22
+    assert use[frame["path"] == "test.jpg"].item() == "test"
+    assert use[frame["path"] == "mine.jpg"].item() == "test"  # local photos are never trained on
+    assert use[frame["path"] == "other.jpg"].item() == "unknown"
+    again = an.assign_use(frame, 0.15)
+    assert list(use) == list(again)  # stable
+    assert (an.assign_use(frame, 0.0)[frame["source_split"] == "train"] != "val").all()
+
+
+def test_assign_use_excludes_listed_test_images():
+    frame = _frame([("a.jpg", "field", "test", "0" * 16), ("b.jpg", "field", "test", "1" * 16)])
+    use = an.assign_use(frame, 0.15, exclude={"a.jpg"})
+    assert list(use) == ["excluded", "test"]
+
+
+def test_load_overlap(tmp_path):
+    assert an.load_overlap(tmp_path / "none.csv") == set()
+    pd.DataFrame({"path": ["x.jpg", "y.jpg"], "bits": [0, 3], "matches": ["p", "q"]}).to_csv(
+        tmp_path / "o.csv", index=False
+    )
+    assert an.load_overlap(tmp_path / "o.csv") == {"x.jpg", "y.jpg"}
+
+
+def test_find_overlaps_flags_copies_but_not_different_pictures(tmp_path):
+    from ml.check_overlap import find_overlaps
+
+    rng = np.random.default_rng(0)
+    base = rng.integers(0, 256, (64, 64, 3), dtype=np.uint8)
+    Image.fromarray(base).save(tmp_path / "train.png")
+    Image.fromarray(base).resize((48, 48)).save(tmp_path / "copy_small.png")  # rescaled copy
+    Image.fromarray(rng.integers(0, 256, (64, 64, 3), dtype=np.uint8)).save(tmp_path / "other.png")
+    found = find_overlaps(tmp_path, ["copy_small.png", "other.png"], ["train.png"])
+    assert list(found["path"]) == ["copy_small.png"]
+    empty = find_overlaps(tmp_path, ["other.png"], [])
+    assert empty.empty

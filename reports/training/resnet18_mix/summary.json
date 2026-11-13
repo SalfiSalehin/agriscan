@@ -1,0 +1,139 @@
+{
+  "run": "resnet18_mix",
+  "arch": "resnet18",
+  "params_million": 11.186,
+  "best_epoch": 10,
+  "epochs_run": 15,
+  "stopped_early": true,
+  "field_share": 0.25,
+  "selection": "mean of lab-validation loss and field-validation loss",
+  "val_at_best": {
+    "loss": 0.1957,
+    "acc": 0.9743,
+    "macro_f1": 0.9653
+  },
+  "field_val_at_best": {
+    "loss": 0.9981,
+    "acc": 0.7156
+  },
+  "train_seconds_total": 1773.0,
+  "seconds_per_epoch_mean": 118.2,
+  "peak_gpu_memory_mb": 943.0,
+  "best_checkpoint_mb_pytorch": 42.74,
+  "val_per_class": {
+    "potato_early_blight": {
+      "precision": 0.9742,
+      "recall": 0.9934,
+      "f1": 0.9837,
+      "support": 152
+    },
+    "potato_late_blight": {
+      "precision": 1.0,
+      "recall": 0.8618,
+      "f1": 0.9258,
+      "support": 152
+    },
+    "potato_healthy": {
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091,
+      "support": 24
+    },
+    "tomato_bacterial_spot": {
+      "precision": 0.9694,
+      "recall": 0.9906,
+      "f1": 0.9799,
+      "support": 320
+    },
+    "tomato_early_blight": {
+      "precision": 0.964,
+      "recall": 0.8816,
+      "f1": 0.921,
+      "support": 152
+    },
+    "tomato_late_blight": {
+      "precision": 0.9137,
+      "recall": 0.9965,
+      "f1": 0.9533,
+      "support": 287
+    },
+    "tomato_leaf_mold": {
+      "precision": 1.0,
+      "recall": 0.9861,
+      "f1": 0.993,
+      "support": 144
+    },
+    "tomato_septoria": {
+      "precision": 0.9774,
+      "recall": 0.9811,
+      "f1": 0.9793,
+      "support": 265
+    },
+    "tomato_spider_mites": {
+      "precision": 0.9959,
+      "recall": 0.9643,
+      "f1": 0.9798,
+      "support": 252
+    },
+    "tomato_target_spot": {
+      "precision": 0.9414,
+      "recall": 0.9905,
+      "f1": 0.9654,
+      "support": 211
+    },
+    "tomato_yellow_leaf_curl": {
+      "precision": 0.9963,
+      "recall": 0.9963,
+      "f1": 0.9963,
+      "support": 806
+    },
+    "tomato_mosaic_virus": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 56
+    },
+    "tomato_healthy": {
+      "precision": 1.0,
+      "recall": 0.9916,
+      "f1": 0.9958,
+      "support": 238
+    },
+    "corn_gray_leaf_spot": {
+      "precision": 0.8636,
+      "recall": 0.9744,
+      "f1": 0.9157,
+      "support": 78
+    },
+    "corn_common_rust": {
+      "precision": 0.9833,
+      "recall": 0.9888,
+      "f1": 0.9861,
+      "support": 179
+    },
+    "corn_northern_leaf_blight": {
+      "precision": 0.9852,
+      "recall": 0.8986,
+      "f1": 0.9399,
+      "support": 148
+    },
+    "corn_healthy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 174
+    },
+    "pepper_bacterial_spot": {
+      "precision": 1.0,
+      "recall": 0.9128,
+      "f1": 0.9544,
+      "support": 149
+    },
+    "pepper_healthy": {
+      "precision": 0.9277,
+      "recall": 1.0,
+      "f1": 0.9625,
+      "support": 218
+    }
+  }
+}

@@ -61,6 +61,29 @@ class ManifestDataset(Dataset):
         return image, self.labels[i]
 
 
+class ListDataset(Dataset):
+    """Images from an explicit list of (absolute) paths and integer labels.
+
+    Used for the real-world photos: as training data (with a training transform) and for scoring
+    (with the eval transform). No background replacement: there are no leaf masks for them.
+    """
+
+    def __init__(self, paths, labels, transform=None):
+        self.paths = list(paths)
+        self.labels = [int(x) for x in labels]
+        self.transform = transform
+
+    def __len__(self) -> int:
+        return len(self.paths)
+
+    def __getitem__(self, i: int):
+        with Image.open(self.paths[i]) as handle:
+            image = handle.convert("RGB")
+        if self.transform is not None:
+            image = self.transform(image)
+        return image, self.labels[i]
+
+
 def load_class_index(cfg) -> dict[str, int]:
     path = ROOT / cfg.paths["splits_dir"] / "class_index.json"
     index = json.loads(path.read_text(encoding="utf-8"))

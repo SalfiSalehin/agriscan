@@ -4,10 +4,13 @@
 
 Sets
 - test:    the held-out PlantVillage split (lab photos)
-- field:   real-world photos (PlantDoc, plus anything you add to data/field/<class id>/)
+- field:   real-world photos the model never trained on: PlantDoc's official test folder, plus
+           anything you add to data/field/<class id>/ (minus near-duplicates of training photos,
+           see ml.check_overlap)
 - unknown: leaves of other crops (plus anything you add to data/nonleaf/)
 
-The validation split is used only to fit the temperature (probability calibration). The "unsure"
+The validation split(s) are used only to fit the temperature (probability calibration): lab
+validation, plus the field validation photos for runs that trained on field photos. The "unsure"
 threshold is chosen on one half of the unknown images and reported on the other half.
 Results go to reports/eval/<run>/ (metrics.json, confusion matrices, error lists and pictures)
 and reports/eval/comparison.csv / thresholds.csv.
@@ -23,12 +26,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import torch
-from PIL import Image
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import DataLoader
 
-from ml.analysis import analyse_run, collect_external_rows, softmax
+from ml.analysis import analyse_run, assign_use, collect_external_rows, load_overlap, softmax
 from ml.config import ROOT, load_config
-from ml.data import ManifestDataset, load_class_index
+from ml.data import ListDataset, ManifestDataset, load_class_index
 from ml.eval_plots import plot_confusion, plot_errors
 from ml.metrics import confusion_matrix
 from ml.models import build_model
@@ -37,33 +39,22 @@ from ml.transforms import build_eval_transform
 NOTES = [
     "test = held-out PlantVillage split: lab photos on plain backgrounds. Only part of it has "
     "verified leaf grouping; compare test_leaf_verified_only with test_fallback_grouping_only.",
-    "field = PlantDoc web photos mapped onto our classes (plus any local photos). Labels are the "
-    "dataset authors' own. Mappings marked approximate are in 'field' but not in "
+    "field = PlantDoc's official TEST photos mapped onto our classes (plus any local photos), "
+    "minus near-duplicates of training photos. No run trained on them. Labels are the dataset "
+    "authors' own. Mappings marked approximate are in 'field' but not in "
     "'field_exact_mapping_only'. Classes with fewer images than the minimum are not scored.",
+    "*_crop_known = the same images, but with the classes of every other crop switched off, as if "
+    "the user had picked the crop first. It measures the app design, not the model alone.",
     "unknown = leaves of other crops (plus any local non-leaf photos). Without photos of hands, "
     "soil or objects in data/nonleaf, the threshold is only tested against other plants' leaves.",
     "Confidence intervals resample images as if independent. Several photos of one leaf are "
     "correlated, so the real uncertainty is larger.",
-    "Temperature is fitted on the validation split. The threshold is chosen on one half of the "
-    "unknown images (split by file hash) and reported on the other half.",
+    "Temperature is fitted on lab validation (plus field validation for runs trained on field "
+    "photos; see temperature_fitted_on). The threshold is chosen on one half of the unknown "
+    "images (split by file hash) and reported on the other half.",
+    "The field test set is small (check n_images and classes_below_min_support). Differences of a "
+    "few points between runs are inside the confidence intervals.",
 ]
-
-
-class ListDataset(Dataset):
-    """Images from a list of paths. Labels are only used for scoring, never for training."""
-
-    def __init__(self, paths, labels, transform):
-        self.paths = list(paths)
-        self.labels = list(labels)
-        self.transform = transform
-
-    def __len__(self) -> int:
-        return len(self.paths)
-
-    def __getitem__(self, i: int):
-        with Image.open(self.paths[i]) as handle:
-            image = handle.convert("RGB")
-        return self.transform(image), self.labels[i]
 
 
 def load_run(run_dir: Path, device):
@@ -154,6 +145,8 @@ def comparison_tables(all_metrics: list[dict]):
         "test_fallback_grouping_only",
         "field",
         "field_exact_mapping_only",
+        "test_crop_known",
+        "field_crop_known",
     )
     for m in all_metrics:
         for key in wanted:
@@ -165,6 +158,7 @@ def comparison_tables(all_metrics: list[dict]):
                 {
                     "run": m["run"],
                     "arch": m["arch"],
+                    "field_share": m["data"]["trained_with_field_share"],
                     "set": key,
                     "images": s["n_images"],
                     "classes": s["classes_reported"],
@@ -181,6 +175,7 @@ def comparison_tables(all_metrics: list[dict]):
             {
                 "run": m["run"],
                 "arch": m["arch"],
+                "field_share": m["data"]["trained_with_field_share"],
                 "temperature": m["results"]["temperature"],
                 "threshold": th["chosen_threshold"],
                 "field_coverage": picked["field_held_out"]["coverage"] if picked else None,
@@ -225,14 +220,24 @@ def main() -> int:
     )
     for warning in warnings:
         print("WARNING:", warning)
-    field = external[external["role"] == "field"].reset_index(drop=True)
+    overlap_path = ROOT / "data" / "field_test_overlap.csv"
+    overlap = load_overlap(overlap_path)
+    if not overlap_path.exists():
+        print("NOTE: no data/field_test_overlap.csv. Run `python -m ml.check_overlap` first.")
+    default_fraction = float(cfg.train.get("field_val_fraction", 0.15))
     unknown = external[external["role"] == "unknown"].reset_index(drop=True)
-    if field.empty or unknown.empty:
+    preview = assign_use(external, default_fraction, overlap)
+    n_test = int((preview == "test").sum())
+    if n_test == 0 or unknown.empty:
         raise SystemExit(
-            "Need both field and unknown images. Run ml.import_external first "
-            f"(field: {len(field)}, unknown: {len(unknown)})."
+            "Need both field test and unknown images. Run ml.import_external first "
+            f"(field test: {n_test}, unknown: {len(unknown)})."
         )
-    print(f"Field images: {len(field)}  unknown images: {len(unknown)}  device: {device}")
+    dropped = int((preview == "excluded").sum())
+    print(
+        f"Field test images: {n_test} (left out as duplicates: {dropped})  "
+        f"unknown images: {len(unknown)}  device: {device}"
+    )
     leaf_verified = leaf_verified_mask(splits / "test.csv", args.fallback_label)
 
     out_root = ROOT / cfg.paths["reports_dir"] / "eval"
@@ -242,11 +247,25 @@ def main() -> int:
         model, meta, state = load_run(run_dir, device)
         if meta["class_ids"] != class_ids:
             raise SystemExit(f"{run_dir.name}: class order differs from class_index.json")
+        hparams = {}
+        if (run_dir / "run_config.json").exists():
+            saved = json.loads((run_dir / "run_config.json").read_text(encoding="utf-8"))
+            hparams = saved.get("hparams", {})
+        field_share = float(hparams.get("field_share", 0.0))  # old runs: lab only
+        fraction = float(hparams.get("field_val_fraction", default_fraction))
+        external["use"] = assign_use(external, fraction, overlap)
+        field = external[external["use"] == "test"].reset_index(drop=True)
+        field_val = external[external["use"] == "val"].reset_index(drop=True)
+        use_field_val = field_share > 0 and not field_val.empty
         transform = build_eval_transform(meta["image_size"])
         val_ds = ManifestDataset(splits / "val.csv", export_root, class_index, transform)
         test_ds = ManifestDataset(splits / "test.csv", export_root, class_index, transform)
         field_labels = field["class_id"].map(class_index).to_numpy()
         field_ds = ListDataset([ROOT / p for p in field["path"]], field_labels, transform)
+        field_val_labels = field_val["class_id"].map(class_index).to_numpy()
+        field_val_ds = ListDataset(
+            [ROOT / p for p in field_val["path"]], field_val_labels, transform
+        )
         unknown_ds = ListDataset(
             [ROOT / p for p in unknown["path"]], [-1] * len(unknown), transform
         )
@@ -261,6 +280,8 @@ def main() -> int:
                 ("unknown", unknown_ds),
             )
         }
+        if use_field_val:
+            fv_logits = predict_logits(model, field_val_ds, device, args.batch_size, workers)
         print(
             f"{run_dir.name}: scored {sum(len(v) for v in logits.values())} images "
             f"in {time.time() - began:.0f}s"
@@ -281,6 +302,7 @@ def main() -> int:
             args.max_false_accept,
             args.bootstrap,
             seed=cfg.seed,
+            field_val=(fv_logits, field_val_labels) if use_field_val else None,
         )
         out_dir = out_root / run_dir.name
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -303,6 +325,9 @@ def main() -> int:
             "data": {
                 "test_images": len(test_ds),
                 "field_images": len(field),
+                "field_val_images_used_for_calibration": len(field_val) if use_field_val else 0,
+                "field_test_excluded_as_duplicates": int((external["use"] == "excluded").sum()),
+                "trained_with_field_share": field_share,
                 "unknown_images": len(unknown),
                 "field_min_images_per_class": min_support,
                 "external_sources": external["source"].value_counts().to_dict(),

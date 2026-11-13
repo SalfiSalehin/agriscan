@@ -5,7 +5,7 @@ import torch
 from PIL import Image
 
 from ml.augment import RandomBackground
-from ml.data import ManifestDataset, class_weights
+from ml.data import ListDataset, ManifestDataset, class_weights
 from ml.models import build_model, set_backbone_trainable, set_train_mode, split_params
 from ml.transforms import build_eval_transform, build_train_transform
 
@@ -74,3 +74,27 @@ def test_forward_and_freezing(arch):
     assert all(not m.training for m in norms)
     set_train_mode(model, arch, backbone_frozen=False)
     assert all(m.training for m in norms)
+
+
+def test_list_dataset_and_mixed_sampling(tmp_path):
+    from torch.utils.data import ConcatDataset, DataLoader, WeightedRandomSampler
+
+    from ml.mixing import sample_weights
+
+    for name, colour in (("lab", (200, 0, 0)), ("field", (0, 0, 200))):
+        Image.new("RGB", (40, 30), colour).save(tmp_path / f"{name}.jpg")
+    transform = build_eval_transform(32)
+    lab = ListDataset([tmp_path / "lab.jpg"] * 90, [0] * 90, transform)
+    field = ListDataset([tmp_path / "field.jpg"] * 10, [1] * 10, transform)
+    image, label = field[0]
+    assert image.shape == (3, 32, 32) and label == 1
+    weights = sample_weights(len(lab), len(field), 0.3)
+    generator = torch.Generator()
+    generator.manual_seed(0)
+    sampler = WeightedRandomSampler(
+        torch.as_tensor(weights), num_samples=len(lab), replacement=True, generator=generator
+    )
+    loader = DataLoader(ConcatDataset([lab, field]), batch_size=30, sampler=sampler, drop_last=True)
+    labels = torch.cat([y for _, y in loader])
+    assert len(labels) == 90
+    assert 0.15 < labels.float().mean().item() < 0.45  # about 30% field photos
