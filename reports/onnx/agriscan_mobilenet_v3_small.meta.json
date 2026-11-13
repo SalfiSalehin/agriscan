@@ -63,16 +63,16 @@
     {
       "threads": 1,
       "runs": 200,
-      "median_ms": 1.26,
-      "p95_ms": 1.51,
-      "mean_ms": 1.29
+      "median_ms": 1.27,
+      "p95_ms": 1.57,
+      "mean_ms": 1.33
     },
     {
       "threads": 2,
       "runs": 200,
-      "median_ms": 0.75,
-      "p95_ms": 1.22,
-      "mean_ms": 0.82
+      "median_ms": 0.77,
+      "p95_ms": 0.95,
+      "mean_ms": 0.81
     }
   ],
   "environment": {
@@ -82,5 +82,5 @@
     "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
     "os": "Windows-10-10.0.26300-SP0"
   },
-  "exported": "2026-11-13T12:44:25"
+  "exported": "2026-11-13T12:45:57"
 }
