@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgriScan</title>
+  <meta name="description" content="Upload a leaf photo of tomato, potato, pepper or corn and get a possible diagnosis with advice, in Bangla or English.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap bar">
+      <a class="brand" href="./"><span class="logo" aria-hidden="true"></span>AgriScan</a>
+      <div class="langs" role="group" aria-label="Language">
+        <button type="button" class="lang" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" class="lang" data-lang="bn" aria-pressed="false">বাংলা</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <h1 data-i18n="title">Check a leaf for disease</h1>
+      <p data-i18n="lead">Upload one clear photo of a leaf. AgriScan names the most likely disease and explains why it happens and what you can do.</p>
+    </section>
+
+    <form id="form" class="card" novalidate>
+      <fieldset class="crops">
+        <legend data-i18n="step1">1. Which crop? <span class="hint" data-i18n="step1hint">(picking it gives better answers)</span></legend>
+        <div id="crop-chips" class="chips"></div>
+      </fieldset>
+
+      <div class="field">
+        <span class="label" data-i18n="step2">2. Add a photo</span>
+        <label class="drop" id="drop" for="file">
+          <img id="preview" alt="" hidden>
+          <span id="drop-text" data-i18n="choose">Tap to take or choose a photo</span>
+        </label>
+        <input id="file" name="file" type="file" accept="image/jpeg,image/png,image/webp,image/*" class="sr">
+        <p class="tips" data-i18n="photoTips">Best: one leaf, close up, in daylight and in focus.</p>
+      </div>
+
+      <button id="go" type="submit" class="primary" disabled data-i18n="analyse">Analyse leaf</button>
+      <p id="error" class="error" role="alert" hidden></p>
+    </form>
+
+    <section id="result" class="result" aria-live="polite" hidden></section>
+  </main>
+
+  <footer class="wrap foot">
+    <p data-i18n="footer">AgriScan is a student portfolio project. The model learned mostly from studio-style photos, so it is less reliable on photos taken in the field, and it knows only 19 conditions of four crops. Use it as a first hint, not as a final answer.</p>
+    <p class="small" data-i18n="credits">Photos: PlantVillage and PlantDoc (CC BY 4.0). Advice is summarised from university extension services; see the sources under each result.</p>
+  </footer>
+</body>
+</html>

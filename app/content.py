@@ -94,6 +94,13 @@ class Content:
             page["helpline"] = self._helpline(lang)
         return page
 
+    def classes(self, class_ids, lang: str) -> list[dict]:
+        """[{class_id, crop, name}] for the model's classes, e.g. for a "what was it?" menu."""
+        return [
+            {"class_id": cid, "crop": cid.split("_")[0], "name": self.name(cid, lang)}
+            for cid in class_ids
+        ]
+
     def unsure(self, lang: str) -> dict:
         block = localize(self.doc["unsure"], lang)
         block["kind"] = "unsure"

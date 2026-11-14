@@ -7,6 +7,8 @@ Endpoints
     GET  /api/model     classes, crops, temperature, threshold of the loaded model
     POST /api/predict   multipart form: `file` (image), optional `crop` ("tomato"), `lang` (en|bn)
     GET  /api/diseases/{class_id}?lang=en|bn   the advice page for one class
+    GET  /api/classes?lang=en|bn   the model's classes with display names
+    GET  /            the web page (app/static)
     POST /api/feedback  JSON {prediction_id, verdict: correct|wrong, true_class?}
 
 Uploaded photos are decoded in memory and never written to disk or kept.
@@ -20,15 +22,22 @@ from typing import Annotated, Literal
 
 from fastapi import FastAPI, File, Form, Request, UploadFile
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from app.content import Content
 from app.db import Store
 from app.inference import Classifier
 from app.service import ServiceError, normalise_lang, predict_upload
-from app.settings import Settings
+from app.settings import STATIC_DIR, Settings
 
 log = logging.getLogger("agriscan")
+# The page loads only its own scripts, styles and images (photos preview from blob: URLs).
+PAGE_CSP = (
+    "default-src 'self'; img-src 'self' blob: data:; style-src 'self'; script-src 'self'; "
+    "connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; "
+    "form-action 'self'"
+)
 BODY_OVERHEAD = 64 * 1024  # multipart framing around the file, allowed on top of the file limit
 
 
@@ -97,6 +106,9 @@ def create_app(
         response.headers["X-Content-Type-Options"] = "nosniff"
         if request.url.path.startswith("/api/"):
             response.headers["Cache-Control"] = "no-store"
+        else:
+            response.headers["Content-Security-Policy"] = PAGE_CSP
+            response.headers["Referrer-Policy"] = "no-referrer"
         return response
 
     @app.exception_handler(ServiceError)
@@ -155,10 +167,20 @@ def create_app(
     def disease(request: Request, class_id: str, lang: str = "en"):
         lang_id = normalise_lang(lang)
         loaded = request.app.state.content
+        if loaded is not None and class_id == "unsure":  # the "not sure" advice block
+            return loaded.unsure(lang_id)
         page = loaded.disease(class_id, lang_id) if loaded is not None else None
         if page is None:
             raise ServiceError(404, "unknown_class", "No information for this class.")
         return page
+
+    @app.get("/api/classes")
+    def classes(request: Request, lang: str = "en"):
+        lang_id = normalise_lang(lang)
+        loaded = request.app.state.content
+        if loaded is None:
+            raise ServiceError(404, "no_content", "No class names available.")
+        return {"classes": loaded.classes(request.app.state.classifier.class_ids, lang_id)}
 
     @app.post("/api/feedback")
     def feedback(request: Request, body: FeedbackIn):
@@ -173,6 +195,9 @@ def create_app(
         if not db.add_feedback(body.prediction_id, body.verdict, body.true_class):
             raise ServiceError(404, "unknown_prediction", "No such prediction, or already rated.")
         return {"status": "thanks"}
+
+    if STATIC_DIR.is_dir():  # last, so it never shadows an /api route
+        app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="web")
 
     return app
 

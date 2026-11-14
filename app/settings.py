@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_META = ROOT / "models" / "agriscan_mobilenet_v3_small.meta.json"
 DEFAULT_CONTENT = ROOT / "app" / "content" / "diseases.json"
+STATIC_DIR = ROOT / "app" / "static"
 DEFAULT_DB = ROOT / "data" / "agriscan.db"
 
 
