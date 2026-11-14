@@ -310,3 +310,30 @@ def test_find_overlaps_flags_copies_but_not_different_pictures(tmp_path):
     assert list(found["path"]) == ["copy_small.png"]
     empty = find_overlaps(tmp_path, ["other.png"], [])
     assert empty.empty
+
+
+def test_threshold_table_has_crop_known_rows_that_never_answer_more_than_open_set():
+    rng = np.random.default_rng(5)
+    ids = ["t_a", "t_b", "p_a", "p_b"]
+    val_x, val_y = _calibrated(rng, 600, 2.5)
+    test_x, test_y = _calibrated(rng, 600, 2.5)
+    field_x, field_y = _calibrated(rng, 200, 2.5)
+    logits = {
+        "val": val_x,
+        "test": test_x,
+        "field": field_x,
+        "unknown": rng.normal(0, 0.4, (300, 4)),
+    }
+    labels = {"val": val_y, "test": test_y, "field": field_y}
+    field_info = pd.DataFrame({"mapping": ["exact"] * 200, "half": [0, 1] * 100})
+    result = an.analyse_run(
+        logits, labels, field_info, pd.DataFrame({"half": [0, 1] * 150}), ids, None, 5, 0.1, 0
+    )
+    for row in result["threshold"]["table"]:
+        assert row["test_crop_known"]["n"] == 600
+        assert row["field_held_out_crop_known"]["n"] == 100
+        # the in-crop answer's probability is never above the overall top probability
+        assert row["test_crop_known"]["coverage"] <= row["test"]["coverage"] + 1e-9
+        assert (
+            row["field_held_out_crop_known"]["coverage"] <= row["field_held_out"]["coverage"] + 1e-9
+        )

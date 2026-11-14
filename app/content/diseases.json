@@ -1,0 +1,1790 @@
+{
+  "version": 1,
+  "crops": {
+    "tomato": {
+      "en": "Tomato",
+      "bn": "টমেটো"
+    },
+    "potato": {
+      "en": "Potato",
+      "bn": "আলু"
+    },
+    "pepper": {
+      "en": "Pepper (bell pepper)",
+      "bn": "ক্যাপসিকাম (মিষ্টি মরিচ)"
+    },
+    "corn": {
+      "en": "Corn (maize)",
+      "bn": "ভুট্টা"
+    }
+  },
+  "disclaimer": {
+    "en": "This is general guidance compiled from university extension services in other countries. Weather, crop varieties and the products allowed differ from country to country, and a result from a photo can be wrong. Before you spray or remove a crop, check with your local agriculture office.",
+    "bn": "এই তথ্য অন্য দেশের বিশ্ববিদ্যালয়-ভিত্তিক কৃষি সম্প্রসারণ সংস্থার সাধারণ নির্দেশনা থেকে সংকলিত। আবহাওয়া, ফসলের জাত ও অনুমোদিত ওষুধ দেশভেদে আলাদা, আর ছবি দেখে দেওয়া ফলাফল ভুলও হতে পারে। ওষুধ ছিটানো বা ফসল তুলে ফেলার আগে আপনার স্থানীয় কৃষি অফিসের সাথে নিশ্চিত হয়ে নিন।"
+  },
+  "chemical_note": {
+    "en": "Sprays: the extension sources describe some chemical options, but products, doses and what is legal differ by country and change over time. This site therefore does not recommend any product or dose. Ask your Upazila Agriculture Office (Department of Agricultural Extension) for current advice.",
+    "bn": "ওষুধ: এক্সটেনশন সূত্রে কিছু রাসায়নিক বিকল্পের কথা আছে, কিন্তু ওষুধের নাম, মাত্রা ও আইনি অনুমোদন দেশভেদে আলাদা এবং সময়ের সাথে বদলায়। তাই এই সাইট কোনো ওষুধ বা মাত্রা সুপারিশ করে না। সর্বশেষ পরামর্শের জন্য আপনার উপজেলা কৃষি অফিসে (কৃষি সম্প্রসারণ অধিদপ্তর) জিজ্ঞাসা করুন।"
+  },
+  "helpline": {
+    "verified": false,
+    "text": {
+      "en": "Krishi Call Centre (Department of Agricultural Extension): 16123",
+      "bn": "কৃষি কল সেন্টার (কৃষি সম্প্রসারণ অধিদপ্তর): ১৬১২৩"
+    }
+  },
+  "unsure": {
+    "message": {
+      "en": "The model is not confident enough to name a disease for this photo. Please do not treat your crop based on this result.",
+      "bn": "এই ছবির জন্য মডেল কোনো রোগের নাম নিশ্চিতভাবে বলতে পারছে না। এই ফলাফলের ওপর ভিত্তি করে ফসলে কোনো চিকিৎসা করবেন না।"
+    },
+    "tips": [
+      {
+        "en": "Take a close-up of one leaf that shows the problem, in daylight and in focus.",
+        "bn": "সমস্যাটি দেখা যায় এমন একটি পাতার কাছ থেকে, দিনের আলোয় ও ফোকাসে ছবি তুলুন।"
+      },
+      {
+        "en": "If you can, show a damaged part and a healthy part of the same leaf, on a plain background.",
+        "bn": "পারলে একই পাতার ক্ষতিগ্রস্ত ও সুস্থ অংশ একসাথে, সাদাসিধে পটভূমিতে দেখান।"
+      },
+      {
+        "en": "Pick the right crop before you upload.",
+        "bn": "ছবি আপলোডের আগে সঠিক ফসল বেছে নিন।"
+      },
+      {
+        "en": "Try another leaf. If the problem is spreading, show it to your local agriculture officer.",
+        "bn": "আরেকটি পাতার ছবি দিয়ে দেখুন। সমস্যা ছড়াতে থাকলে স্থানীয় কৃষি কর্মকর্তাকে দেখান।"
+      }
+    ]
+  },
+  "diseases": {
+    "potato_early_blight": {
+      "kind": "disease",
+      "crop": "potato",
+      "name": {
+        "en": "Early blight",
+        "bn": "আর্লি ব্লাইট (আগাম পাতা ধসা)"
+      },
+      "cause": {
+        "en": "A fungus (Alternaria solani). It survives on leftovers of earlier crops and spreads by wind, splashing rain and irrigation water.",
+        "bn": "আলটারনারিয়া সোলানি নামের একটি ছত্রাক এই রোগ ঘটায়। এটি আগের ফসলের অবশিষ্টাংশে বেঁচে থাকে এবং বাতাস, বৃষ্টির ছিটা ও সেচের পানির মাধ্যমে ছড়ায়।"
+      },
+      "symptoms": [
+        {
+          "en": "Dark brown to black spots, first on the older, lower leaves.",
+          "bn": "পুরোনো, নিচের পাতায় প্রথমে গাঢ় বাদামি থেকে কালো দাগ পড়ে।"
+        },
+        {
+          "en": "The spots grow and show rings like a target; their edges are often angular where the veins stop them.",
+          "bn": "দাগ বড় হয় এবং লক্ষ্যবস্তুর মতো বলয় দেখা যায়; শিরার কারণে কিনারা প্রায়ই কোণাকার হয়।"
+        },
+        {
+          "en": "The leaf turns yellow around the spots. Spots can join, kill the leaf, and the disease moves up the plant.",
+          "bn": "দাগের চারপাশে পাতা হলুদ হয়। দাগ মিলে পাতা মরে যেতে পারে এবং রোগ গাছের ওপরের দিকে ওঠে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Leaves that stay wet from rain, dew or irrigation, and alternating wet and dry spells.",
+          "bn": "বৃষ্টি, শিশির বা সেচের কারণে পাতা ভেজা থাকা এবং ভেজা-শুকনো আবহাওয়া পালা করে আসা।"
+        },
+        {
+          "en": "Warm, humid weather (the sources give different temperature ranges).",
+          "bn": "উষ্ণ ও আর্দ্র আবহাওয়া (সূত্রভেদে তাপমাত্রার সীমা আলাদা)।"
+        },
+        {
+          "en": "Plants that are stressed or poorly fed, and older leaves, are hit more, especially after flowering.",
+          "bn": "চাপে থাকা বা পুষ্টির অভাবে থাকা গাছ এবং পুরোনো পাতা বেশি আক্রান্ত হয়, বিশেষ করে ফুল আসার পর।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "It survives on crop leftovers from earlier seasons, and less often on seed tubers, volunteer potatoes and weeds such as nightshade.",
+          "bn": "এটি আগের মৌসুমের ফসলের অবশিষ্টাংশে বেঁচে থাকে; কম ক্ষেত্রে বীজ আলু, আপনা-আপনি গজানো আলু এবং বিষফোঁড়া-জাতীয় আগাছায়ও থাকে।"
+        },
+        {
+          "en": "Spores travel with wind, splashing rain, irrigation water, soil, tools and machinery.",
+          "bn": "বাতাস, বৃষ্টির ছিটা, সেচের পানি, মাটি, যন্ত্রপাতি ও মেশিনের মাধ্যমে রেণু ছড়ায়।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Rotate with crops that are not potato or tomato (the sources suggest about three years between potato crops).",
+          "bn": "আলু বা টমেটো নয় এমন ফসলের সাথে পর্যায়ক্রমে চাষ করুন (সূত্র অনুযায়ী আলুর দুই ফসলের মাঝে প্রায় তিন বছর)।"
+        },
+        {
+          "en": "Use clean or certified seed tubers.",
+          "bn": "পরিষ্কার বা প্রত্যয়িত বীজ আলু ব্যবহার করুন।"
+        },
+        {
+          "en": "After harvest, remove or bury crop leftovers, and pull out volunteer potatoes and nightshade weeds.",
+          "bn": "ফসল তোলার পর অবশিষ্টাংশ সরিয়ে ফেলুন বা মাটিতে পুঁতে দিন; আপনা-আপনি গজানো আলু ও বিষফোঁড়া-জাতীয় আগাছা তুলে ফেলুন।"
+        },
+        {
+          "en": "Water early in the day so leaves dry before night. Drip irrigation keeps leaves dry.",
+          "bn": "দিনের শুরুতে সেচ দিন যাতে রাতের আগে পাতা শুকিয়ে যায়। ড্রিপ সেচে পাতা শুকনো থাকে।"
+        },
+        {
+          "en": "Give plants space for air to move, and keep them well fed and free of other stress.",
+          "bn": "গাছের মাঝে বাতাস চলাচলের জায়গা রাখুন এবং গাছকে পর্যাপ্ত পুষ্টি দিন ও অন্য চাপ থেকে মুক্ত রাখুন।"
+        },
+        {
+          "en": "Check the field often, especially the edges next to last season's potato fields.",
+          "bn": "ক্ষেত ঘন ঘন দেখুন, বিশেষ করে গত মৌসুমের আলুক্ষেতের পাশের কিনারা।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Ask your local agriculture office for control advice that fits your area and season.",
+          "bn": "আপনার এলাকা ও মৌসুমের জন্য উপযুক্ত দমন-পরামর্শ স্থানীয় কৃষি অফিস থেকে জেনে নিন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Brown spot has small round spots without rings. Black dot and grey mould can look similar when early blight patches merge.",
+          "bn": "ব্রাউন স্পটে ছোট গোল দাগ হয়, বলয় থাকে না। আর্লি ব্লাইটের দাগ মিলে গেলে ব্ল্যাক ডট ও গ্রে মোল্ডের মতোও দেখাতে পারে।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Fungicides",
+        "bn": "ছত্রাকনাশক"
+      },
+      "sources": [
+        {
+          "title": "Early blight (potato)",
+          "url": "https://www.ndsu.edu/agriculture/ag-hub/publications/early-blight-potato",
+          "publisher": "North Dakota State University Extension"
+        },
+        {
+          "title": "Bulletin #5087, Early Blight of Potatoes and Tomatoes",
+          "url": "https://extension.umaine.edu/ipm/?p=4592",
+          "publisher": "University of Maine Cooperative Extension"
+        }
+      ]
+    },
+    "potato_late_blight": {
+      "kind": "disease",
+      "crop": "potato",
+      "name": {
+        "en": "Late blight",
+        "bn": "লেট ব্লাইট (নাবি ধসা)"
+      },
+      "cause": {
+        "en": "Phytophthora infestans, a water mould (fungus-like, but not a true fungus). It needs living potato or tomato tissue to survive, and it can destroy a field in days.",
+        "bn": "ফাইটোফথোরা ইনফেস্টানস নামের একটি জলজ ছত্রাকসদৃশ জীব (প্রকৃত ছত্রাক নয়) এই রোগ ঘটায়। বেঁচে থাকতে এর জীবিত আলু বা টমেটো টিস্যু লাগে, আর কয়েক দিনেই এটি ক্ষেত নষ্ট করে দিতে পারে।"
+      },
+      "symptoms": [
+        {
+          "en": "Small, water-soaked spots, usually on lower leaves and often at the leaf tips or edges.",
+          "bn": "ছোট, পানি-ভেজা দাগ, সাধারণত নিচের পাতায় এবং প্রায়ই পাতার আগা বা কিনারায়।"
+        },
+        {
+          "en": "In cool, wet weather the spots quickly grow into large dark brown or black greasy patches, often with a pale green or yellow border, and are not stopped by the veins.",
+          "bn": "ঠান্ডা, ভেজা আবহাওয়ায় দাগ দ্রুত বড় হয়ে গাঢ় বাদামি বা কালো তেলতেলে ছোপে পরিণত হয়, প্রায়ই হালকা সবুজ বা হলুদ কিনারাসহ, এবং শিরা এগুলোকে আটকাতে পারে না।"
+        },
+        {
+          "en": "A white, mildew-like growth may show at the edge of the spots, often on the underside of the leaf. Whole leaves can die within days.",
+          "bn": "দাগের কিনারায়, প্রায়ই পাতার নিচের দিকে, সাদা ছত্রাকের মতো আস্তরণ দেখা যেতে পারে। কয়েক দিনের মধ্যেই পুরো পাতা মরে যেতে পারে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Cool, wet, humid weather with rain, heavy dew, fog or overhead watering.",
+          "bn": "ঠান্ডা, ভেজা ও আর্দ্র আবহাওয়া; বৃষ্টি, ঘন শিশির, কুয়াশা বা ওপর থেকে সেচ।"
+        },
+        {
+          "en": "Free water on the leaves for about 12 hours is enough for infection, and a new round of spores can form every 5 to 7 days.",
+          "bn": "পাতায় প্রায় ১২ ঘণ্টা পানি জমে থাকলেই সংক্রমণ হতে পারে, আর প্রতি ৫ থেকে ৭ দিনে নতুন করে রেণু তৈরি হতে পারে।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Between seasons it survives mainly in living potato tissue: infected seed tubers, cull piles and volunteer plants.",
+          "bn": "এক মৌসুম থেকে আরেক মৌসুমে এটি মূলত জীবিত আলুর টিস্যুতে বেঁচে থাকে: আক্রান্ত বীজ আলু, ফেলে দেওয়া আলুর স্তূপ ও আপনা-আপনি গজানো গাছ।"
+        },
+        {
+          "en": "During the season, spores travel on wind and splashing rain, and rain can wash spores into the soil where they infect tubers.",
+          "bn": "মৌসুম চলাকালে রেণু বাতাস ও বৃষ্টির ছিটায় ছড়ায়, আর বৃষ্টি রেণুকে মাটিতে ধুয়ে নিলে তা আলুকে আক্রান্ত করতে পারে।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Plant certified, blight-free seed and do not mix seed lots.",
+          "bn": "প্রত্যয়িত, রোগমুক্ত বীজ লাগান এবং বিভিন্ন বীজের লট মেশাবেন না।"
+        },
+        {
+          "en": "Destroy cull potatoes and volunteer potato and tomato plants. Remove nightshade weeds.",
+          "bn": "ফেলে দেওয়া আলু এবং আপনা-আপনি গজানো আলু ও টমেটো গাছ নষ্ট করুন। বিষফোঁড়া-জাতীয় আগাছা তুলে ফেলুন।"
+        },
+        {
+          "en": "Space rows so air can move and the field dries faster. Avoid too much irrigation, especially late in the season.",
+          "bn": "সারির মাঝে জায়গা রাখুন যাতে বাতাস চলে এবং ক্ষেত দ্রুত শুকায়। বিশেষ করে মৌসুমের শেষ দিকে বেশি সেচ এড়িয়ে চলুন।"
+        },
+        {
+          "en": "Check the field often, especially wet or sheltered parts, and destroy small hot spots quickly.",
+          "bn": "ক্ষেত ঘন ঘন দেখুন, বিশেষ করে ভেজা বা আড়াল-পড়া অংশ, এবং ছোট আক্রান্ত জায়গা দ্রুত নষ্ট করুন।"
+        },
+        {
+          "en": "Kill the vines 2 to 3 weeks before harvest, and store tubers dry.",
+          "bn": "ফসল তোলার ২ থেকে ৩ সপ্তাহ আগে গাছের লতা মেরে ফেলুন এবং আলু শুকনো অবস্থায় সংরক্ষণ করুন।"
+        },
+        {
+          "en": "Where they are available, use more resistant varieties (none is immune).",
+          "bn": "পাওয়া গেলে অপেক্ষাকৃত প্রতিরোধী জাত ব্যবহার করুন (কোনোটিই সম্পূর্ণ প্রতিরোধী নয়)।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "If you suspect late blight, contact your local agriculture office quickly: it spreads fast, and a lab can confirm it.",
+          "bn": "লেট ব্লাইট সন্দেহ হলে দ্রুত স্থানীয় কৃষি অফিসে যোগাযোগ করুন: এটি দ্রুত ছড়ায় এবং ল্যাবে নিশ্চিত করা যায়।"
+        },
+        {
+          "en": "Have suspected seed tubers checked before planting them.",
+          "bn": "সন্দেহজনক বীজ আলু লাগানোর আগে পরীক্ষা করিয়ে নিন।"
+        }
+      ],
+      "look_alikes": [],
+      "chemical_class": {
+        "en": "Fungicides",
+        "bn": "ছত্রাকনাশক"
+      },
+      "sources": [
+        {
+          "title": "Late blight (potato)",
+          "url": "https://www.ndsu.edu/agriculture/extension/publications/late-blight-potato",
+          "publisher": "North Dakota State University Extension"
+        },
+        {
+          "title": "Potato Late Blight (factsheet)",
+          "url": "https://barron.extension.wisc.edu/files/2023/02/Potato-Late-Blight.pdf",
+          "publisher": "University of Wisconsin-Madison Extension"
+        },
+        {
+          "title": "Late blight (Michigan-origin factsheet 'late-blight-mich.pdf')",
+          "url": "https://www.maine.gov/DACF/php/gotpests/diseases/factsheets/late-blight-mich.pdf",
+          "publisher": "Hosted by Maine Dept. of Agriculture, Conservation and Forestry; original author/publisher not confirmed from fetched text"
+        }
+      ]
+    },
+    "pepper_bacterial_spot": {
+      "kind": "disease",
+      "crop": "pepper",
+      "name": {
+        "en": "Bacterial spot",
+        "bn": "ব্যাকটেরিয়াল স্পট (ব্যাকটেরিয়াজনিত পাতার দাগ)"
+      },
+      "cause": {
+        "en": "Xanthomonas bacteria. They often arrive on seed or on young plants from a nursery, and spread in splashing rain and irrigation water, and on hands, tools and equipment.",
+        "bn": "জ্যান্থোমোনাস ব্যাকটেরিয়া এই রোগ ঘটায়। এগুলো প্রায়ই বীজে বা নার্সারির চারার সাথে আসে এবং বৃষ্টির ছিটা, সেচের পানি এবং হাত, যন্ত্রপাতি ও সরঞ্জামের মাধ্যমে ছড়ায়।"
+      },
+      "symptoms": [
+        {
+          "en": "Small water-soaked spots, mostly on the underside of leaves, that turn brown and may be angular, sometimes with a narrow yellow halo.",
+          "bn": "ছোট পানি-ভেজা দাগ, বেশিরভাগ পাতার নিচের দিকে, যা বাদামি হয়ে যায় এবং কোণাকার হতে পারে; কখনো সরু হলুদ বলয় থাকে।"
+        },
+        {
+          "en": "Spots can join into larger yellow-brown areas. In dry weather the centres can dry and fall out, leaving a tattered leaf.",
+          "bn": "দাগ মিলে বড় হলদেটে-বাদামি অংশ তৈরি হতে পারে। শুকনো আবহাওয়ায় দাগের মাঝের অংশ শুকিয়ে ঝরে গিয়ে পাতা ছেঁড়া-ছেঁড়া দেখায়।"
+        },
+        {
+          "en": "Leaves turn yellow and drop early, which thins the plant and exposes the fruit to sunscald.",
+          "bn": "পাতা হলুদ হয়ে আগেই ঝরে যায়; এতে গাছ পাতলা হয় এবং ফলে রোদে পোড়া দাগ পড়তে পারে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Warm, humid weather with long periods of wet leaves and wind-driven rain.",
+          "bn": "উষ্ণ ও আর্দ্র আবহাওয়া, দীর্ঘ সময় পাতা ভেজা থাকা এবং ঝোড়ো বৃষ্টি।"
+        },
+        {
+          "en": "Several days of dry air slow the disease (the sources give different temperature figures).",
+          "bn": "কয়েক দিন শুকনো বাতাস থাকলে রোগের বিস্তার ধীর হয় (সূত্রভেদে তাপমাত্রার হিসাব আলাদা)।"
+        },
+        {
+          "en": "Too much nitrogen fertiliser and warm, wet nursery conditions make it worse.",
+          "bn": "বেশি নাইট্রোজেন সার এবং উষ্ণ, ভেজা নার্সারি পরিবেশে রোগ বাড়ে।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "It can ride inside or on seed and on infected young plants, so outbreaks often start in the nursery.",
+          "bn": "এটি বীজের ভেতরে বা গায়ে এবং আক্রান্ত চারার সাথে আসতে পারে, তাই প্রায়ই নার্সারি থেকেই রোগ শুরু হয়।"
+        },
+        {
+          "en": "It survives in plant debris, and on volunteer pepper or tomato plants and some weeds.",
+          "bn": "এটি গাছের অবশিষ্টাংশে এবং আপনা-আপনি গজানো মরিচ বা টমেটো গাছ ও কিছু আগাছায় বেঁচে থাকে।"
+        },
+        {
+          "en": "People, tools and equipment that touch wet plants spread it from plant to plant.",
+          "bn": "ভেজা গাছ ছোঁয়া মানুষ, যন্ত্রপাতি ও সরঞ্জাম এক গাছ থেকে আরেক গাছে রোগ ছড়ায়।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Use certified disease-free seed and healthy young plants. Inspect them and reject infected ones.",
+          "bn": "প্রত্যয়িত রোগমুক্ত বীজ এবং সুস্থ চারা ব্যবহার করুন। চারা পরীক্ষা করুন এবং আক্রান্তগুলো বাদ দিন।"
+        },
+        {
+          "en": "Remove volunteer peppers and tomatoes, nightshade-type weeds and crop debris. Work debris into the soil soon after harvest.",
+          "bn": "আপনা-আপনি গজানো মরিচ ও টমেটো, বিষফোঁড়া-জাতীয় আগাছা এবং ফসলের অবশিষ্টাংশ সরান। ফসল তোলার পরপরই অবশিষ্টাংশ মাটিতে মিশিয়ে দিন।"
+        },
+        {
+          "en": "Rotate fields; avoid planting pepper where pepper or tomato grew recently (the sources suggest between 1 and 3 years).",
+          "bn": "জমি পর্যায়ক্রমে বদলে চাষ করুন; সম্প্রতি মরিচ বা টমেটো হয়েছে এমন জমিতে মরিচ লাগাবেন না (সূত্র অনুযায়ী ১ থেকে ৩ বছর)।"
+        },
+        {
+          "en": "Use drip or furrow irrigation instead of overhead. Stay out of the field and do not handle plants when they are wet.",
+          "bn": "ওপর থেকে সেচের বদলে ড্রিপ বা নালা সেচ দিন। গাছ ভেজা থাকলে ক্ষেতে ঢুকবেন না এবং গাছ নাড়াচাড়া করবেন না।"
+        },
+        {
+          "en": "Clean tools and equipment, and clean nursery trays and benches between crops.",
+          "bn": "যন্ত্রপাতি ও সরঞ্জাম পরিষ্কার করুন এবং দুই ফসলের মাঝে নার্সারির ট্রে ও বেঞ্চ পরিষ্কার করুন।"
+        },
+        {
+          "en": "Where available, grow resistant varieties. Avoid too much fertiliser, especially nitrogen.",
+          "bn": "পাওয়া গেলে প্রতিরোধী জাত লাগান। বেশি সার, বিশেষ করে নাইট্রোজেন, এড়িয়ে চলুন।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Once established the disease is hard to cure and can kill plants in severe cases. Ask your local agriculture office about control options.",
+          "bn": "একবার ছড়িয়ে পড়লে রোগ সারানো কঠিন এবং মারাত্মক ক্ষেত্রে গাছ মরে যেতে পারে। দমনের উপায় সম্পর্কে স্থানীয় কৃষি অফিসে জিজ্ঞাসা করুন।"
+        }
+      ],
+      "look_alikes": [],
+      "chemical_class": {
+        "en": "Copper-based bactericides (limited effect)",
+        "bn": "তামাভিত্তিক ব্যাকটেরিয়ানাশক (সীমিত কার্যকারিতা)"
+      },
+      "sources": [
+        {
+          "title": "Bacterial Leaf Spot of Pepper",
+          "url": "https://extension.wvu.edu/lawn-gardening-pests/plant-disease/fruit-vegetable-diseases/bacterial-leaf-spot-of-pepper",
+          "publisher": "West Virginia University Extension"
+        },
+        {
+          "title": "Bacterial Spot of Peppers (UC IPM Pest Management Guidelines)",
+          "url": "https://ipm.ucanr.edu/PMG/r604100311.html",
+          "publisher": "University of California Statewide IPM Program"
+        },
+        {
+          "title": "Bacterial Spot of Pepper (EDIS PP362)",
+          "url": "https://ask.ifas.ufl.edu/publication/PP362/pdf",
+          "publisher": "UF/IFAS Extension"
+        },
+        {
+          "title": "Bacterial spot in peppers and tomatoes",
+          "url": "https://www.aces.edu/blog/topics/crop-production/bacterial-spot-in-peppers-and-tomatoes/",
+          "publisher": "Alabama Cooperative Extension System"
+        }
+      ]
+    },
+    "tomato_bacterial_spot": {
+      "kind": "disease",
+      "crop": "tomato",
+      "name": {
+        "en": "Bacterial spot",
+        "bn": "ব্যাকটেরিয়াল স্পট (ব্যাকটেরিয়াজনিত পাতার দাগ)"
+      },
+      "cause": {
+        "en": "Xanthomonas bacteria. They usually arrive on infected seed or young plants and spread in splashing rain, sprinkler water and when people handle wet plants.",
+        "bn": "জ্যান্থোমোনাস ব্যাকটেরিয়া এই রোগ ঘটায়। এগুলো সাধারণত আক্রান্ত বীজ বা চারার সাথে আসে এবং বৃষ্টির ছিটা, স্প্রিংকলারের পানি ও ভেজা গাছ নাড়াচাড়া করার সময় ছড়ায়।"
+      },
+      "symptoms": [
+        {
+          "en": "Many small dark spots, about 3 mm or less across, that look water-soaked or greasy at first.",
+          "bn": "অনেক ছোট গাঢ় দাগ, প্রায় ৩ মিলিমিটার বা তার কম চওড়া, প্রথমে পানি-ভেজা বা তেলতেলে দেখায়।"
+        },
+        {
+          "en": "Spots often get a yellow halo. Older spots turn dark brown to black and the centres can dry out and tear.",
+          "bn": "দাগে প্রায়ই হলুদ বলয় হয়। পুরোনো দাগ গাঢ় বাদামি থেকে কালো হয় এবং মাঝের অংশ শুকিয়ে ছিঁড়ে যেতে পারে।"
+        },
+        {
+          "en": "Spots can run together into dead patches, especially along leaf edges, and leaves drop. Older, fully grown leaves are hit most.",
+          "bn": "দাগ মিলে মরা ছোপ হতে পারে, বিশেষ করে পাতার কিনারায়, এবং পাতা ঝরে। পূর্ণবয়স্ক পুরোনো পাতা সবচেয়ে বেশি আক্রান্ত হয়।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Warm, wet, humid weather, with leaves staying wet.",
+          "bn": "উষ্ণ, ভেজা ও আর্দ্র আবহাওয়া, পাতা ভেজা থাকা।"
+        },
+        {
+          "en": "Long leaf wetness, frequent rain and heavy morning dew after the plants are put in the field.",
+          "bn": "জমিতে চারা লাগানোর পর দীর্ঘ সময় পাতা ভেজা থাকা, ঘন ঘন বৃষ্টি ও ভোরের ঘন শিশির।"
+        },
+        {
+          "en": "Hot, dry weather slows it down.",
+          "bn": "গরম ও শুকনো আবহাওয়ায় রোগের বিস্তার ধীর হয়।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Infected seed can start an outbreak, and infected young plants carry it too.",
+          "bn": "আক্রান্ত বীজ থেকে রোগ শুরু হতে পারে এবং আক্রান্ত চারাও রোগ বয়ে আনে।"
+        },
+        {
+          "en": "It survives on crop debris, volunteer tomatoes and weeds such as nightshade, and can live in small numbers on leaves without symptoms.",
+          "bn": "এটি ফসলের অবশিষ্টাংশে, আপনা-আপনি গজানো টমেটোতে এবং বিষফোঁড়ার মতো আগাছায় বেঁচে থাকে, আর লক্ষণ ছাড়াই অল্প সংখ্যায় পাতায় থাকতে পারে।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Buy clean seed and healthy young plants from a reliable source. Plants without symptoms may still be infected, so watch the whole batch.",
+          "bn": "নির্ভরযোগ্য উৎস থেকে পরিষ্কার বীজ ও সুস্থ চারা কিনুন। লক্ষণ না থাকলেও চারা আক্রান্ত হতে পারে, তাই পুরো চালান নজরে রাখুন।"
+        },
+        {
+          "en": "In nurseries use clean trays, benches and tools, remove weeds, and throw away affected trays or plants.",
+          "bn": "নার্সারিতে পরিষ্কার ট্রে, বেঞ্চ ও যন্ত্রপাতি ব্যবহার করুন, আগাছা তুলুন এবং আক্রান্ত ট্রে বা চারা ফেলে দিন।"
+        },
+        {
+          "en": "Avoid overhead or sprinkler watering. Water early in the day so leaves dry quickly, and avoid watering at night.",
+          "bn": "ওপর থেকে বা স্প্রিংকলারে সেচ এড়ান। দিনের শুরুতে সেচ দিন যাতে পাতা দ্রুত শুকায়, রাতে সেচ দেবেন না।"
+        },
+        {
+          "en": "Do not work among, handle or prune plants while the leaves are wet, and clean your pruning tools.",
+          "bn": "পাতা ভেজা থাকলে গাছের মাঝে কাজ করবেন না, গাছ নাড়াচাড়া বা ছাঁটাই করবেন না এবং ছাঁটাইয়ের যন্ত্র পরিষ্কার রাখুন।"
+        },
+        {
+          "en": "Rotate with crops outside the tomato family (about 2 to 3 years), never with pepper, and control weeds and volunteer tomatoes.",
+          "bn": "টমেটো-পরিবারের বাইরের ফসলের সাথে পর্যায়ক্রমে চাষ করুন (প্রায় ২ থেকে ৩ বছর), কখনো মরিচের সাথে নয়, এবং আগাছা ও আপনা-আপনি গজানো টমেটো দমন করুন।"
+        },
+        {
+          "en": "Mulch and space plants for airflow. Remove infected plants and clear crop debris after harvest.",
+          "bn": "মালচ দিন এবং বাতাস চলাচলের জন্য গাছের মাঝে জায়গা রাখুন। আক্রান্ত গাছ সরান এবং ফসল তোলার পর অবশিষ্টাংশ পরিষ্কার করুন।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "An infected plant will not recover. Ask a local agriculture officer to confirm the disease before you act.",
+          "bn": "আক্রান্ত গাছ আর সেরে ওঠে না। ব্যবস্থা নেওয়ার আগে স্থানীয় কৃষি কর্মকর্তাকে দিয়ে রোগটি নিশ্চিত করিয়ে নিন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Bacterial speck looks very similar on leaves; the fruit spots tell them apart. Early blight can look alike at first, but bacterial spot usually moves much faster.",
+          "bn": "পাতায় ব্যাকটেরিয়াল স্পেক দেখতে প্রায় একই; ফলের দাগ দেখে আলাদা করা যায়। শুরুতে আর্লি ব্লাইটও একই রকম দেখাতে পারে, তবে ব্যাকটেরিয়াল স্পট সাধারণত অনেক দ্রুত ছড়ায়।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Copper-based bactericides (protection only)",
+        "bn": "তামাভিত্তিক ব্যাকটেরিয়ানাশক (শুধু সুরক্ষা)"
+      },
+      "sources": [
+        {
+          "title": "Bacterial Diseases of Tomato",
+          "url": "https://extension.umd.edu/resource/bacterial-diseases-tomato",
+          "publisher": "University of Maryland Extension"
+        },
+        {
+          "title": "Tomato Pest Management Guidelines: Bacterial spot",
+          "url": "https://ipm.ucanr.edu/PMG/r783101711.html",
+          "publisher": "UC IPM (University of California)"
+        },
+        {
+          "title": "Manage bacterial spot on your tomato transplants",
+          "url": "https://plantpathology.ces.ncsu.edu/news/manage-bacterial-spot-on-your-tomato-transplants/",
+          "publisher": "NC State Extension Plant Pathology"
+        },
+        {
+          "title": "Bacterial Diseases of Tomato",
+          "url": "https://ipm.cahnr.uconn.edu/?p=1962",
+          "publisher": "University of Connecticut (UConn IPM)"
+        },
+        {
+          "title": "Early Blight & Septoria Leaf Spot of Tomato: Disease Management for Commercial Growers (PPFS-VG-25)",
+          "url": "https://plantpathology.ca.uky.edu/files/ppfs-vg-25.pdf",
+          "publisher": "University of Kentucky Cooperative Extension"
+        }
+      ]
+    },
+    "tomato_early_blight": {
+      "kind": "disease",
+      "crop": "tomato",
+      "name": {
+        "en": "Early blight",
+        "bn": "আর্লি ব্লাইট (আগাম পাতা ধসা)"
+      },
+      "cause": {
+        "en": "A fungus of the genus Alternaria. It survives on infected plant debris and in the soil, and spreads by wind, splashing rain, people and equipment.",
+        "bn": "আলটারনারিয়া গণের একটি ছত্রাক এই রোগ ঘটায়। এটি আক্রান্ত গাছের অবশিষ্টাংশে ও মাটিতে বেঁচে থাকে এবং বাতাস, বৃষ্টির ছিটা, মানুষ ও যন্ত্রপাতির মাধ্যমে ছড়ায়।"
+      },
+      "symptoms": [
+        {
+          "en": "Brown spots on the older, lower leaves first, often where leaves touch the soil or are splashed by it.",
+          "bn": "প্রথমে পুরোনো, নিচের পাতায় বাদামি দাগ, প্রায়ই যেখানে পাতা মাটি ছোঁয় বা মাটির ছিটা লাগে।"
+        },
+        {
+          "en": "Round or oval spots up to about 1 cm across, with light and dark rings like a target.",
+          "bn": "গোল বা ডিম্বাকার দাগ, প্রায় ১ সেন্টিমিটার পর্যন্ত চওড়া, লক্ষ্যবস্তুর মতো হালকা ও গাঢ় বলয়সহ।"
+        },
+        {
+          "en": "The leaf turns yellow around each spot. Spots join, whole leaves turn brown and drop, and the loss moves up the plant.",
+          "bn": "প্রতিটি দাগের চারপাশে পাতা হলুদ হয়। দাগ মিলে পুরো পাতা বাদামি হয়ে ঝরে যায়, আর ক্ষতি গাছের ওপরের দিকে ওঠে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Mild, rainy, humid weather with heavy dews; infection happens quickly in warm, humid weather.",
+          "bn": "মৃদু, বৃষ্টিভেজা ও আর্দ্র আবহাওয়া এবং ঘন শিশির; উষ্ণ ও আর্দ্র আবহাওয়ায় সংক্রমণ দ্রুত হয়।"
+        },
+        {
+          "en": "Plants stressed by low nitrogen or a heavy fruit load are hit most.",
+          "bn": "কম নাইট্রোজেন বা বেশি ফলের চাপে থাকা গাছ সবচেয়ে বেশি আক্রান্ত হয়।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "The fungus lasts about a year or longer on plant debris and in soil, and can also be on seed, young plants and common weeds.",
+          "bn": "ছত্রাক গাছের অবশিষ্টাংশে ও মাটিতে প্রায় এক বছর বা তার বেশি টিকে থাকে এবং বীজ, চারা ও সাধারণ আগাছায়ও থাকতে পারে।"
+        },
+        {
+          "en": "Spores spread over short distances mainly by wind and splashing rain; people and equipment carry them too.",
+          "bn": "রেণু কাছাকাছি দূরত্বে মূলত বাতাস ও বৃষ্টির ছিটায় ছড়ায়; মানুষ ও যন্ত্রপাতিও তা বহন করে।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Rotate away from tomato, potato and other nightshade crops (at least 2 years).",
+          "bn": "টমেটো, আলু ও এই পরিবারের অন্য ফসল থেকে সরে পর্যায়ক্রমে চাষ করুন (কমপক্ষে ২ বছর)।"
+        },
+        {
+          "en": "Space, stake or prune plants for airflow and sun. On established plants, remove the lowest leaves once fruit has set.",
+          "bn": "বাতাস ও রোদ ঢোকার জন্য গাছের মাঝে জায়গা রাখুন, খুঁটি দিন বা ছাঁটাই করুন। প্রতিষ্ঠিত গাছে ফল ধরার পর সবচেয়ে নিচের পাতা সরিয়ে দিন।"
+        },
+        {
+          "en": "Mulch to limit soil splash. Water at the base or with drip, and avoid wetting the leaves.",
+          "bn": "মাটির ছিটা কমাতে মালচ দিন। গোড়ায় বা ড্রিপে সেচ দিন এবং পাতা ভেজানো এড়ান।"
+        },
+        {
+          "en": "Check young plants before planting, control weeds (especially nightshades) and feed the soil well.",
+          "bn": "চারা লাগানোর আগে পরীক্ষা করুন, আগাছা (বিশেষ করে বিষফোঁড়া-জাতীয়) দমন করুন এবং মাটিতে পর্যাপ্ত সার দিন।"
+        },
+        {
+          "en": "Remove infected leaves during the season, clean tools, and remove or bury plant debris at the end of the season. Compost diseased material only in a hot compost pile.",
+          "bn": "মৌসুম চলাকালে আক্রান্ত পাতা সরান, যন্ত্রপাতি পরিষ্কার রাখুন এবং মৌসুম শেষে গাছের অবশিষ্টাংশ সরান বা মাটিতে পুঁতে দিন। রোগাক্রান্ত অংশ শুধু গরম কম্পোস্টের স্তূপে দিন।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "If the disease is severe or returns every year, ask your local agriculture office for advice that fits your area.",
+          "bn": "রোগ মারাত্মক হলে বা প্রতি বছর ফিরে এলে আপনার এলাকার উপযোগী পরামর্শের জন্য স্থানীয় কৃষি অফিসে জিজ্ঞাসা করুন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Septoria leaf spot has smaller spots (under about 8 mm) with grey centres and tiny black dots. Target spot and bacterial spot can also look alike early on.",
+          "bn": "সেপ্টোরিয়া পাতার দাগে দাগ ছোট (প্রায় ৮ মিলিমিটারের কম), মাঝখান ধূসর এবং ছোট কালো বিন্দু থাকে। টার্গেট স্পট ও ব্যাকটেরিয়াল স্পটও শুরুর দিকে একই রকম দেখাতে পারে।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Protectant fungicides",
+        "bn": "সুরক্ষামূলক ছত্রাকনাশক"
+      },
+      "sources": [
+        {
+          "title": "Early Blight on Tomatoes",
+          "url": "https://extension.umd.edu/resource/early-blight-tomatoes",
+          "publisher": "University of Maryland Extension"
+        },
+        {
+          "title": "Early Blight of Tomato",
+          "url": "https://extension.okstate.edu/programs/digital-diagnostics/plant-diseases/early-blight-of-tomato",
+          "publisher": "Oklahoma State University Extension"
+        },
+        {
+          "title": "Early Blight & Septoria Leaf Spot of Tomato: Disease Management for Commercial Growers (PPFS-VG-25)",
+          "url": "https://plantpathology.ca.uky.edu/files/ppfs-vg-25.pdf",
+          "publisher": "University of Kentucky Cooperative Extension"
+        },
+        {
+          "title": "Tomato fungal leaf diseases fact sheet (PPFS-VG-38; covers target spot, early blight, Septoria)",
+          "url": "https://plantpathology.mgcafe.uky.edu/files/PPFS-VG-38.pdf",
+          "publisher": "University of Kentucky Cooperative Extension"
+        }
+      ]
+    },
+    "tomato_late_blight": {
+      "kind": "disease",
+      "crop": "tomato",
+      "name": {
+        "en": "Late blight",
+        "bn": "লেট ব্লাইট (নাবি ধসা)"
+      },
+      "cause": {
+        "en": "Phytophthora infestans, a water mould (fungus-like, but not a true fungus). It can spread long distances on the wind and kill plants quickly.",
+        "bn": "ফাইটোফথোরা ইনফেস্টানস নামের জলজ ছত্রাকসদৃশ জীব (প্রকৃত ছত্রাক নয়) এই রোগ ঘটায়। এটি বাতাসে অনেক দূর ছড়াতে পারে এবং দ্রুত গাছ মেরে ফেলে।"
+      },
+      "symptoms": [
+        {
+          "en": "Dark, water-soaked spots that grow into large olive-green to brown or purple-black blotches, sometimes with a pale border.",
+          "bn": "গাঢ়, পানি-ভেজা দাগ যা বড় হয়ে জলপাই-সবুজ থেকে বাদামি বা বেগুনি-কালো ছোপে পরিণত হয়, কখনো ফ্যাকাশে কিনারাসহ।"
+        },
+        {
+          "en": "In humid or wet conditions a white, slightly fuzzy growth appears on the underside of the affected leaves.",
+          "bn": "আর্দ্র বা ভেজা অবস্থায় আক্রান্ত পাতার নিচের দিকে সাদা, সামান্য তুলতুলে আস্তরণ দেখা যায়।"
+        },
+        {
+          "en": "Leaves brown and die but often stay on the stem; the plant can look frost-damaged and collapse quickly. In hot, dry weather the spots turn brown and papery.",
+          "bn": "পাতা বাদামি হয়ে মরে যায় কিন্তু প্রায়ই কাণ্ডে ঝুলে থাকে; গাছ তুষারে পোড়ার মতো দেখায় এবং দ্রুত নুইয়ে পড়ে। গরম, শুকনো আবহাওয়ায় দাগ বাদামি ও কাগজের মতো হয়।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Cool, wet weather with heavy dew, fog, long-lasting leaf wetness or rain, and overhead watering.",
+          "bn": "ঠান্ডা, ভেজা আবহাওয়া; ঘন শিশির, কুয়াশা, দীর্ঘ সময় পাতা ভেজা থাকা বা বৃষ্টি এবং ওপর থেকে সেচ।"
+        },
+        {
+          "en": "Hot, dry weather slows or stops it. Cloudy weather helps the spores survive.",
+          "bn": "গরম, শুকনো আবহাওয়ায় রোগ ধীর হয় বা থেমে যায়। মেঘলা আবহাওয়ায় রেণু বেশি টিকে থাকে।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Spores travel on wind and rain, short distances and, with weather systems, very long distances.",
+          "bn": "রেণু বাতাস ও বৃষ্টিতে ছড়ায়, কাছাকাছি এবং আবহাওয়ার সাথে অনেক দূরেও।"
+        },
+        {
+          "en": "It can arrive on infected young tomato plants or potato seed pieces. In cold-winter areas it survives mainly in leftover or volunteer potato tubers.",
+          "bn": "এটি আক্রান্ত টমেটো চারা বা বীজ আলুর টুকরোর সাথে আসতে পারে। শীতপ্রধান অঞ্চলে এটি মূলত ফেলে রাখা বা আপনা-আপনি গজানো আলুতে টিকে থাকে।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Buy healthy young plants and inspect them before planting.",
+          "bn": "সুস্থ চারা কিনুন এবং লাগানোর আগে পরীক্ষা করুন।"
+        },
+        {
+          "en": "Do not plant saved or leftover potatoes. Destroy volunteer potato and tomato plants and nightshade-type weeds.",
+          "bn": "রেখে দেওয়া বা পড়ে থাকা আলু লাগাবেন না। আপনা-আপনি গজানো আলু ও টমেটো গাছ এবং বিষফোঁড়া-জাতীয় আগাছা নষ্ট করুন।"
+        },
+        {
+          "en": "Keep leaves dry: avoid overhead watering and crowding, and give plants airflow (staking helps).",
+          "bn": "পাতা শুকনো রাখুন: ওপর থেকে সেচ ও ঘন করে লাগানো এড়ান এবং বাতাস চলাচলের সুযোগ দিন (খুঁটি সাহায্য করে)।"
+        },
+        {
+          "en": "Check plants often in cool, wet weather. Symptoms cannot be cured once present.",
+          "bn": "ঠান্ডা, ভেজা আবহাওয়ায় ঘন ঘন গাছ দেখুন। লক্ষণ একবার দেখা দিলে তা সারানো যায় না।"
+        },
+        {
+          "en": "Remove infected plants quickly, seal them in a bag and discard or bury them deeply. Do not compost them. Clean stakes and cages.",
+          "bn": "আক্রান্ত গাছ দ্রুত সরান, ব্যাগে ভরে মুখ বন্ধ করুন এবং ফেলে দিন বা গভীরে পুঁতে দিন। কম্পোস্ট করবেন না। খুঁটি ও খাঁচা পরিষ্কার করুন।"
+        },
+        {
+          "en": "Where available, choose late-blight-resistant varieties.",
+          "bn": "পাওয়া গেলে লেট ব্লাইট-প্রতিরোধী জাত বেছে নিন।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "If you suspect late blight, contact your local agriculture office promptly and show them close-up photos: it spreads easily and can kill plants fast.",
+          "bn": "লেট ব্লাইট সন্দেহ হলে দ্রুত স্থানীয় কৃষি অফিসে যোগাযোগ করুন এবং কাছ থেকে তোলা ছবি দেখান: এটি সহজে ছড়ায় এবং দ্রুত গাছ মেরে ফেলতে পারে।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "In home gardens early blight and Septoria leaf spot look similar. A spot with a yellow border low on the plant is more likely one of those two.",
+          "bn": "বাড়ির বাগানে আর্লি ব্লাইট ও সেপ্টোরিয়া পাতার দাগ একই রকম দেখায়। গাছের নিচের দিকে হলুদ কিনারাওয়ালা দাগ হলে সেগুলোর একটি হওয়ার সম্ভাবনা বেশি।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Protectant fungicides",
+        "bn": "সুরক্ষামূলক ছত্রাকনাশক"
+      },
+      "sources": [
+        {
+          "title": "Late blight on tomatoes and potatoes",
+          "url": "https://www.umass.edu/agriculture-food-environment/home-lawn-garden/fact-sheets/late-blight-on-tomatoes-potatoes",
+          "publisher": "UMass Amherst Extension"
+        },
+        {
+          "title": "Late Blight of Tomato and Potato",
+          "url": "https://extension.umd.edu/resource/late-blight-tomato-and-potato",
+          "publisher": "University of Maryland Extension"
+        },
+        {
+          "title": "Late Blight on Potato and Tomato (PP301)",
+          "url": "https://edis.ifas.ufl.edu/publication/PP301/pdf",
+          "publisher": "UF/IFAS Extension"
+        },
+        {
+          "title": "Late Blight of Tomato and Potato (BP-80-W)",
+          "url": "https://www.extension.purdue.edu/extmedia/BP/BP-80-W.pdf",
+          "publisher": "Purdue Extension"
+        }
+      ]
+    },
+    "tomato_target_spot": {
+      "kind": "disease",
+      "crop": "tomato",
+      "name": {
+        "en": "Target spot",
+        "bn": "টার্গেট স্পট (লক্ষ্যবস্তু-দাগ রোগ)"
+      },
+      "cause": {
+        "en": "A fungus (Corynespora cassiicola). It lives on crop debris, dead leaves and weeds and spreads by wind and wind-driven rain.",
+        "bn": "কোরিনোস্পোরা ক্যাসিকোলা নামের একটি ছত্রাক এই রোগ ঘটায়। এটি ফসলের অবশিষ্টাংশ, মরা পাতা ও আগাছায় বেঁচে থাকে এবং বাতাস ও ঝোড়ো বৃষ্টিতে ছড়ায়।"
+      },
+      "symptoms": [
+        {
+          "en": "Tiny dark brown or water-soaked spots, often on the upper side of older leaves.",
+          "bn": "ছোট গাঢ় বাদামি বা পানি-ভেজা দাগ, প্রায়ই পুরোনো পাতার ওপরের দিকে।"
+        },
+        {
+          "en": "The spots grow into round spots with light brown to grey centres and dark rings, like a target, often with a yellow halo.",
+          "bn": "দাগ বড় হয়ে গোল হয়, মাঝখান হালকা বাদামি থেকে ধূসর ও চারপাশে গাঢ় বলয়, লক্ষ্যবস্তুর মতো, প্রায়ই হলুদ বলয়সহ।"
+        },
+        {
+          "en": "Spots can merge into large dead areas. Leaf loss usually starts low on the plant or deep in the dense canopy and moves up.",
+          "bn": "দাগ মিলে বড় মরা অংশ হতে পারে। পাতা ঝরা সাধারণত গাছের নিচ থেকে বা ঘন পাতার ভেতর থেকে শুরু হয়ে ওপরে ওঠে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Long periods of wet leaves and high humidity; infection needs many hours of continuous leaf wetness.",
+          "bn": "দীর্ঘ সময় পাতা ভেজা থাকা ও উচ্চ আর্দ্রতা; সংক্রমণের জন্য অনেক ঘণ্টা একটানা পাতা ভেজা থাকা দরকার।"
+        },
+        {
+          "en": "Warm, wet, windy weather speeds it up, and overhead irrigation creates good conditions for it.",
+          "bn": "উষ্ণ, ভেজা ও বাতাসময় আবহাওয়ায় রোগ দ্রুত ছড়ায়, আর ওপর থেকে সেচ রোগের অনুকূল পরিবেশ তৈরি করে।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Spores spread by wind and wind-driven rain. Soil splash can make wounds on fruit that let spores in.",
+          "bn": "রেণু বাতাস ও ঝোড়ো বৃষ্টিতে ছড়ায়। মাটির ছিটায় ফলে ক্ষত হলে সেখান দিয়ে রেণু ঢুকতে পারে।"
+        },
+        {
+          "en": "The fungus survives for up to about 2 years on crop debris, dead leaves, weeds and other host plants.",
+          "bn": "ছত্রাক ফসলের অবশিষ্টাংশ, মরা পাতা, আগাছা ও অন্য পোষক গাছে প্রায় ২ বছর পর্যন্ত টিকে থাকে।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Start with clean, healthy young plants and discard diseased nursery seedlings.",
+          "bn": "পরিষ্কার, সুস্থ চারা দিয়ে শুরু করুন এবং রোগাক্রান্ত নার্সারির চারা ফেলে দিন।"
+        },
+        {
+          "en": "Do not plant tomato after tomato or other host crops on the same land (one source suggests 3 years).",
+          "bn": "একই জমিতে টমেটোর পর টমেটো বা অন্য পোষক ফসল লাগাবেন না (একটি সূত্রের পরামর্শ ৩ বছর)।"
+        },
+        {
+          "en": "After harvest, remove and destroy crop debris, old vines and volunteer plants. Control weeds, especially nightshade-type weeds.",
+          "bn": "ফসল তোলার পর অবশিষ্টাংশ, পুরোনো লতা ও আপনা-আপনি গজানো গাছ সরিয়ে নষ্ট করুন। আগাছা, বিশেষ করে বিষফোঁড়া-জাতীয়, দমন করুন।"
+        },
+        {
+          "en": "Improve airflow by spacing and staking plants and removing the lowest leaves; remove infected lower leaves when spots first appear.",
+          "bn": "গাছের মাঝে জায়গা রেখে, খুঁটি দিয়ে এবং নিচের পাতা সরিয়ে বাতাস চলাচল বাড়ান; প্রথম দাগ দেখা দিলে নিচের আক্রান্ত পাতা সরিয়ে ফেলুন।"
+        },
+        {
+          "en": "Avoid overhead and evening watering. Mulch lightly to limit soil splash. Clean tools and do not compost diseased plants.",
+          "bn": "ওপর থেকে ও সন্ধ্যায় সেচ এড়ান। মাটির ছিটা কমাতে হালকা মালচ দিন। যন্ত্রপাতি পরিষ্কার করুন এবং রোগাক্রান্ত গাছ কম্পোস্ট করবেন না।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Target spot is easily mistaken for early blight or bacterial spot. Ask a local agriculture officer to confirm it, especially if it is severe or comes back each year.",
+          "bn": "টার্গেট স্পটকে সহজেই আর্লি ব্লাইট বা ব্যাকটেরিয়াল স্পট ভেবে ভুল হয়। স্থানীয় কৃষি কর্মকর্তাকে দিয়ে নিশ্চিত করিয়ে নিন, বিশেষ করে রোগ মারাত্মক হলে বা প্রতি বছর ফিরে এলে।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Early blight looks very similar; its spots are brown-black and become angular where they meet leaf veins. Early bacterial spot and Septoria leaf spot can also look alike.",
+          "bn": "আর্লি ব্লাইট দেখতে প্রায় একই; তার দাগ বাদামি-কালো এবং শিরার কাছে কোণাকার হয়। শুরুর ব্যাকটেরিয়াল স্পট ও সেপ্টোরিয়া পাতার দাগও একই রকম দেখাতে পারে।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Protectant fungicides",
+        "bn": "সুরক্ষামূলক ছত্রাকনাশক"
+      },
+      "sources": [
+        {
+          "title": "Target Spot of Tomato in Florida (PP351)",
+          "url": "https://edis.ifas.ufl.edu/publication/PP351/pdf",
+          "publisher": "UF/IFAS Extension"
+        },
+        {
+          "title": "Tomato fungal leaf diseases fact sheet (PPFS-VG-38)",
+          "url": "https://plantpathology.mgcafe.uky.edu/files/PPFS-VG-38.pdf",
+          "publisher": "University of Kentucky Cooperative Extension"
+        },
+        {
+          "title": "Foliar Pathogens in Guam: Corynespora Diseases: Target Spot, Bull's Eye, Leaf Blight (TR 08-22)",
+          "url": "https://projects.sare.org/media/pdf/C/o/r/Corynespora_10_19_2022.pdf",
+          "publisher": "University of Guam Cooperative Extension and Outreach"
+        },
+        {
+          "title": "Tomato target spot (163), Pacific Pests, Pathogens, Weeds and Pesticides",
+          "url": "https://apps.lucidcentral.org/pppw_v12/text/web_full/entities/tomato_target_spot_163.htm",
+          "publisher": "Pacific Community / University of Queensland (ACIAR-supported)"
+        },
+        {
+          "title": "Tomato Diseases: Target Spot (Publication 05-630)",
+          "url": "https://worldveg.tind.io/record/39590/files/f0164.pdf",
+          "publisher": "AVRDC - The World Vegetable Center"
+        }
+      ]
+    },
+    "tomato_septoria": {
+      "kind": "disease",
+      "crop": "tomato",
+      "name": {
+        "en": "Septoria leaf spot",
+        "bn": "সেপ্টোরিয়া পাতার দাগ রোগ"
+      },
+      "cause": {
+        "en": "A fungus (Septoria lycopersici). It survives winter on infected plant debris and on related weeds, and spreads by splashing rain and wind.",
+        "bn": "সেপ্টোরিয়া লাইকোপার্সিসি নামের একটি ছত্রাক এই রোগ ঘটায়। এটি শীতকালে আক্রান্ত গাছের অবশিষ্টাংশে ও একই পরিবারের আগাছায় বেঁচে থাকে এবং বৃষ্টির ছিটা ও বাতাসে ছড়ায়।"
+      },
+      "symptoms": [
+        {
+          "en": "Many small round spots, usually under about 8 mm across, starting on the lower, older leaves, often after fruit set.",
+          "bn": "অনেক ছোট গোল দাগ, সাধারণত প্রায় ৮ মিলিমিটারের কম চওড়া, নিচের পুরোনো পাতায় শুরু হয়, প্রায়ই ফল ধরার পর।"
+        },
+        {
+          "en": "The spots have tan to grey centres with dark brown edges, often with a yellow halo.",
+          "bn": "দাগের মাঝখান হালকা বাদামি থেকে ধূসর এবং কিনারা গাঢ় বাদামি, প্রায়ই হলুদ বলয়সহ।"
+        },
+        {
+          "en": "Tiny black or dark brown dots form in the centre of the spots; you can see them with a hand lens. Badly spotted leaves yellow, wither and drop from the base upward.",
+          "bn": "দাগের মাঝখানে ছোট কালো বা গাঢ় বাদামি বিন্দু তৈরি হয়, আতশ কাচে দেখা যায়। বেশি আক্রান্ত পাতা হলুদ হয়ে শুকিয়ে ঝরে যায়, নিচ থেকে ওপরের দিকে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Frequent rain, high humidity and dew on the leaves, with moderate to warm weather.",
+          "bn": "ঘন ঘন বৃষ্টি, উচ্চ আর্দ্রতা ও পাতায় শিশির, সাথে মাঝারি থেকে উষ্ণ আবহাওয়া।"
+        },
+        {
+          "en": "Dense leaves that block airflow help it take off.",
+          "bn": "ঘন পাতা বাতাস চলাচলে বাধা দিলে রোগ সহজে ছড়ায়।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "The fungus survives winter on infected plant debris and on weeds such as horsenettle, nightshade and groundcherry.",
+          "bn": "ছত্রাক শীতকালে আক্রান্ত গাছের অবশিষ্টাংশে এবং বিষফোঁড়া, গুঁড়ি-বেগুন জাতীয় আগাছায় বেঁচে থাকে।"
+        },
+        {
+          "en": "Spores spread mainly by splashing rain and wind; people, tools and animals carry them too. New spores keep forming while it stays warm and wet.",
+          "bn": "রেণু মূলত বৃষ্টির ছিটা ও বাতাসে ছড়ায়; মানুষ, যন্ত্রপাতি ও প্রাণীও তা বহন করে। উষ্ণ ও ভেজা আবহাওয়া থাকলে নতুন রেণু তৈরি হতেই থাকে।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Rotate out of tomato (the sources suggest 2 to 3 years) and control nightshade-family weeds.",
+          "bn": "টমেটো থেকে সরে পর্যায়ক্রমে চাষ করুন (সূত্র অনুযায়ী ২ থেকে ৩ বছর) এবং এই পরিবারের আগাছা দমন করুন।"
+        },
+        {
+          "en": "Use disease-free seed. After harvest, remove or bury plant debris.",
+          "bn": "রোগমুক্ত বীজ ব্যবহার করুন। ফসল তোলার পর গাছের অবশিষ্টাংশ সরান বা পুঁতে দিন।"
+        },
+        {
+          "en": "Space, stake or cage plants and choose sunny, airy places so leaves dry quickly. Some varieties tolerate it, but none is fully resistant.",
+          "bn": "গাছের মাঝে জায়গা রাখুন, খুঁটি বা খাঁচা দিন এবং রোদ-বাতাসময় জায়গা বেছে নিন যাতে পাতা দ্রুত শুকায়। কিছু জাত সহনশীল, তবে কোনোটিই সম্পূর্ণ প্রতিরোধী নয়।"
+        },
+        {
+          "en": "Mulch around the base of the plant to stop soil splash. Water at the base, early in the day, and avoid wetting the leaves.",
+          "bn": "মাটির ছিটা ঠেকাতে গাছের গোড়ায় মালচ দিন। দিনের শুরুতে গোড়ায় সেচ দিন এবং পাতা ভেজানো এড়ান।"
+        },
+        {
+          "en": "Stay out of the crop while leaves are wet, and clean tools. Remove the lowest infected leaves early and keep them out of compost.",
+          "bn": "পাতা ভেজা থাকলে ক্ষেতে ঢুকবেন না এবং যন্ত্রপাতি পরিষ্কার রাখুন। সবচেয়ে নিচের আক্রান্ত পাতা আগেভাগে সরান এবং কম্পোস্টে দেবেন না।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Ask your local agriculture office for advice, especially in rainy, humid seasons or if the disease keeps coming back.",
+          "bn": "বিশেষ করে বৃষ্টিভেজা, আর্দ্র মৌসুমে বা রোগ বারবার ফিরে এলে স্থানীয় কৃষি অফিসে পরামর্শ নিন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Early blight spots are larger with rings, while Septoria spots are small with grey centres and black dots.",
+          "bn": "আর্লি ব্লাইটের দাগ বড় ও বলয়যুক্ত, আর সেপ্টোরিয়ার দাগ ছোট, মাঝখান ধূসর এবং কালো বিন্দুযুক্ত।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Protectant fungicides",
+        "bn": "সুরক্ষামূলক ছত্রাকনাশক"
+      },
+      "sources": [
+        {
+          "title": "Early Blight & Septoria Leaf Spot of Tomato: Disease Management for Commercial Growers (PPFS-VG-25)",
+          "url": "https://plantpathology.ca.uky.edu/files/ppfs-vg-25.pdf",
+          "publisher": "University of Kentucky Cooperative Extension"
+        },
+        {
+          "title": "Early Blight & Septoria Leaf Spot of Tomato: Disease Management for Residential Growers (PPFS-VG-26)",
+          "url": "https://plantpathology.ca.uky.edu/files/ppfs-vg-26.pdf",
+          "publisher": "University of Kentucky Cooperative Extension"
+        },
+        {
+          "title": "Septoria Leaf Spot",
+          "url": "https://extension.wvu.edu/lawn-gardening-pests/plant-disease/fruit-vegetable-diseases/septoria-leaf-spot",
+          "publisher": "West Virginia University Extension"
+        },
+        {
+          "title": "Septoria Leaf Spot",
+          "url": "https://extension.okstate.edu/programs/digital-diagnostics/plant-diseases/septoria-leaf-spot",
+          "publisher": "Oklahoma State University Extension"
+        },
+        {
+          "title": "Septoria Leaf Spot of Tomato",
+          "url": "https://extension.umaine.edu/ipm/?p=4626",
+          "publisher": "University of Maine Cooperative Extension"
+        }
+      ]
+    },
+    "tomato_leaf_mold": {
+      "kind": "disease",
+      "crop": "tomato",
+      "name": {
+        "en": "Leaf mold",
+        "bn": "লিফ মোল্ড (পাতার ছাঁচ রোগ)"
+      },
+      "cause": {
+        "en": "A fungus (Passalora fulva) that infects only tomato. It thrives in humid, closed places such as high tunnels and greenhouses.",
+        "bn": "প্যাসালোরা ফালভা নামের একটি ছত্রাক, যা শুধু টমেটোকে আক্রমণ করে। হাই টানেল ও গ্রিনহাউসের মতো আর্দ্র, বদ্ধ জায়গায় এটি ভালো বাড়ে।"
+      },
+      "symptoms": [
+        {
+          "en": "Pale green to yellow spots on the upper side of the leaves, usually small with blurry edges.",
+          "bn": "পাতার ওপরের দিকে ফ্যাকাশে সবুজ থেকে হলুদ দাগ, সাধারণত ছোট ও ঝাপসা কিনারাওয়ালা।"
+        },
+        {
+          "en": "Olive-green to brown velvety mould on the underside of the leaf, right under each spot.",
+          "bn": "পাতার নিচের দিকে, প্রতিটি দাগের ঠিক নিচে, জলপাই-সবুজ থেকে বাদামি মখমলের মতো ছাঁচ।"
+        },
+        {
+          "en": "Spots join and turn brown; leaves wither and die but often stay hanging on the plant. The oldest leaves are hit first and the disease moves upward.",
+          "bn": "দাগ মিলে বাদামি হয়; পাতা শুকিয়ে মরে যায় কিন্তু প্রায়ই গাছে ঝুলে থাকে। সবচেয়ে পুরোনো পাতা প্রথমে আক্রান্ত হয় এবং রোগ ওপরের দিকে ওঠে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "High humidity, about 85% or more, strongly favours severe outbreaks.",
+          "bn": "প্রায় ৮৫% বা তার বেশি আর্দ্রতা মারাত্মক প্রাদুর্ভাবের জন্য খুবই অনুকূল।"
+        },
+        {
+          "en": "Humid, enclosed high tunnels and greenhouses favour the disease.",
+          "bn": "আর্দ্র, বদ্ধ হাই টানেল ও গ্রিনহাউসে রোগ বেশি হয়।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Spores move by wind, splashing or overhead water, tools and workers. New spores form within about 10 to 12 days, so several rounds can happen in one season.",
+          "bn": "রেণু বাতাস, ছিটকে পড়া বা ওপর থেকে আসা পানি, যন্ত্রপাতি ও শ্রমিকের মাধ্যমে ছড়ায়। প্রায় ১০ থেকে ১২ দিনে নতুন রেণু তৈরি হয়, তাই এক মৌসুমে কয়েক দফা সংক্রমণ হতে পারে।"
+        },
+        {
+          "en": "It survives between seasons mainly in infected plant debris, and it can live on and in tomato seed.",
+          "bn": "এক মৌসুম থেকে আরেক মৌসুমে এটি মূলত আক্রান্ত গাছের অবশিষ্টাংশে টিকে থাকে এবং টমেটো বীজের গায়ে ও ভেতরেও থাকতে পারে।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Use drip irrigation and keep water off the leaves.",
+          "bn": "ড্রিপ সেচ ব্যবহার করুন এবং পাতায় পানি লাগতে দেবেন না।"
+        },
+        {
+          "en": "Space, stake, string or prune plants so air moves through. Ventilate tunnels and greenhouses to cut humidity.",
+          "bn": "গাছের মাঝে জায়গা রাখুন, খুঁটি বা সুতা দিন বা ছাঁটাই করুন যাতে বাতাস চলে। আর্দ্রতা কমাতে টানেল ও গ্রিনহাউসে বায়ু চলাচলের ব্যবস্থা করুন।"
+        },
+        {
+          "en": "Remove diseased plants. At the end of the season remove crop debris and dispose of it away from where you grow.",
+          "bn": "রোগাক্রান্ত গাছ সরান। মৌসুম শেষে ফসলের অবশিষ্টাংশ সরিয়ে চাষের জায়গা থেকে দূরে ফেলুন।"
+        },
+        {
+          "en": "Disinfect stakes, ties, trellises, tools and tunnel surfaces between crops.",
+          "bn": "দুই ফসলের মাঝে খুঁটি, বাঁধার সুতা, মাচা, যন্ত্রপাতি ও টানেলের পৃষ্ঠ জীবাণুমুক্ত করুন।"
+        },
+        {
+          "en": "Rotate crops and use clean seed from a reliable source.",
+          "bn": "ফসল পর্যায়ক্রমে বদলে চাষ করুন এবং নির্ভরযোগ্য উৎস থেকে পরিষ্কার বীজ ব্যবহার করুন।"
+        },
+        {
+          "en": "Resistant varieties exist, but the fungus has many races, so they may not work everywhere. Try them on a small area first.",
+          "bn": "প্রতিরোধী জাত আছে, কিন্তু ছত্রাকের অনেক রেস আছে বলে সব জায়গায় কাজ নাও করতে পারে। আগে অল্প জায়গায় চেষ্টা করুন।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Other problems, such as magnesium deficiency, can look similar. Ask a local agriculture officer to confirm the diagnosis.",
+          "bn": "ম্যাগনেসিয়ামের অভাবের মতো অন্য সমস্যাও একই রকম দেখাতে পারে। স্থানীয় কৃষি কর্মকর্তাকে দিয়ে রোগ নিশ্চিত করিয়ে নিন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Magnesium deficiency and the early stages of other diseases can look similar.",
+          "bn": "ম্যাগনেসিয়ামের অভাব এবং অন্য রোগের শুরুর অবস্থা একই রকম দেখাতে পারে।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Protectant fungicides",
+        "bn": "সুরক্ষামূলক ছত্রাকনাশক"
+      },
+      "sources": [
+        {
+          "title": "Tomato leaf mold",
+          "url": "https://extension.umn.edu/disease-management/tomato-leaf-mold",
+          "publisher": "University of Minnesota Extension"
+        },
+        {
+          "title": "Tomato Leaf Mold",
+          "url": "https://vegetables.cornell.edu/crops/tomatoes/tomato-leaf-mold",
+          "publisher": "Cornell University (Cornell Vegetables)"
+        },
+        {
+          "title": "Common Tomato High-Tunnel Diseases in Florida (PP368)",
+          "url": "https://edis.ifas.ufl.edu/publication/PP368/pdf",
+          "publisher": "UF/IFAS Extension"
+        }
+      ]
+    },
+    "tomato_spider_mites": {
+      "kind": "disease",
+      "crop": "tomato",
+      "name": {
+        "en": "Spider mites",
+        "bn": "স্পাইডার মাইট (মাকড়)"
+      },
+      "cause": {
+        "en": "Two-spotted spider mites (Tetranychus urticae): tiny plant-feeding mites, about half a millimetre long. They are not insects, and a hand lens helps to see them. They multiply fastest in hot, dry weather.",
+        "bn": "দুই-ফোঁটা মাকড় (টেট্রানাইকাস ইউর্টিকি): গাছের রস খাওয়া ক্ষুদ্র মাকড়, প্রায় আধা মিলিমিটার লম্বা। এরা পোকা নয়, আতশ কাচে ভালো দেখা যায়। গরম, শুকনো আবহাওয়ায় এরা সবচেয়ে দ্রুত বাড়ে।"
+      },
+      "symptoms": [
+        {
+          "en": "Fine white-to-yellow speckling on the leaves that gives a mottled look.",
+          "bn": "পাতায় সূক্ষ্ম সাদা থেকে হলুদ ফুটকি, যা চিত্র-বিচিত্র দেখায়।"
+        },
+        {
+          "en": "Later the leaves turn bronze or brown, dry out and may curl. The underside can look yellow, bronze or 'sandblasted'.",
+          "bn": "পরে পাতা ব্রোঞ্জ বা বাদামি হয়, শুকিয়ে যায় এবং কুঁকড়ে যেতে পারে। নিচের দিক হলদেটে, ব্রোঞ্জ বা ঘষা-ঘষা দেখাতে পারে।"
+        },
+        {
+          "en": "When numbers are high you may see fine webbing, tiny round eggs and cast skins on the underside of the leaves. Severe attacks kill the leaves.",
+          "bn": "সংখ্যা বেশি হলে পাতার নিচে সূক্ষ্ম জাল, ছোট গোল ডিম ও খোলস দেখা যায়। মারাত্মক আক্রমণে পাতা মরে যায়।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Warm to hot, dry weather: they multiply fastest above about 27 °C with fairly low humidity.",
+          "bn": "উষ্ণ থেকে গরম, শুকনো আবহাওয়া: প্রায় ২৭ °সে. এর বেশি তাপমাত্রায় ও তুলনামূলক কম আর্দ্রতায় এরা সবচেয়ে দ্রুত বাড়ে।"
+        },
+        {
+          "en": "Tunnels and greenhouses are more prone because they are warmer and rain does not wash the mites off.",
+          "bn": "টানেল ও গ্রিনহাউসে ঝুঁকি বেশি, কারণ সেখানে বেশি গরম থাকে আর বৃষ্টি মাকড় ধুয়ে নেয় না।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Mites crawl, drift on air currents and hitch a ride on workers and machinery. New plants can bring them in.",
+          "bn": "মাকড় হেঁটে, বাতাসে ভেসে এবং শ্রমিক ও যন্ত্রের গায়ে চড়ে ছড়ায়। নতুন চারার সাথেও আসতে পারে।"
+        },
+        {
+          "en": "Weeds at the field edge can host them, and infestations often start in hot spots such as tunnel ends and doorways.",
+          "bn": "ক্ষেতের কিনারার আগাছায় এরা থাকতে পারে, আর সংক্রমণ প্রায়ই টানেলের মাথা ও দরজার মতো জায়গা থেকে শুরু হয়।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Check at least once a week (more often in hot, dry weather), looking at the underside of the leaves. Shaking a leaf over white paper shows tiny moving dots.",
+          "bn": "অন্তত সপ্তাহে একবার (গরম, শুকনো আবহাওয়ায় আরও ঘন ঘন) পাতার নিচের দিক দেখুন। সাদা কাগজের ওপর পাতা ঝাঁকালে নড়াচড়া করা ছোট বিন্দু দেখা যায়।"
+        },
+        {
+          "en": "Inspect new plants before you bring them into the growing area.",
+          "bn": "নতুন চারা চাষের জায়গায় আনার আগে পরীক্ষা করুন।"
+        },
+        {
+          "en": "Remove plant debris and weeds, especially at the edges and in tunnels.",
+          "bn": "গাছের অবশিষ্টাংশ ও আগাছা সরান, বিশেষ করে কিনারা ও টানেলের ভেতরে।"
+        },
+        {
+          "en": "Keep plants well watered and free of other stress, which slows the build-up.",
+          "bn": "গাছে পর্যাপ্ত পানি দিন ও অন্য চাপ থেকে মুক্ত রাখুন; এতে মাকড়ের বংশবৃদ্ধি ধীর হয়।"
+        },
+        {
+          "en": "In early, local infestations, spray the underside of the leaves with a strong stream of water to knock mites and webbing off.",
+          "bn": "শুরুর দিকে ও সীমিত জায়গায় আক্রমণ হলে পাতার নিচে জোরালো পানির ধারা দিয়ে মাকড় ও জাল ধুয়ে ফেলুন।"
+        },
+        {
+          "en": "Avoid unnecessary broad-spectrum insecticides, so natural enemies such as lady beetles and lacewings survive.",
+          "bn": "অপ্রয়োজনে সব ধরনের পোকা মারে এমন কীটনাশক এড়ান, যাতে লেডি বিটল ও লেসউইংয়ের মতো প্রাকৃতিক শত্রু বেঁচে থাকে।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Act when mites are on many plants and numbers are rising. Ask your local agriculture office for current advice.",
+          "bn": "অনেক গাছে মাকড় দেখা গেলে এবং সংখ্যা বাড়তে থাকলে ব্যবস্থা নিন। সর্বশেষ পরামর্শের জন্য স্থানীয় কৃষি অফিসে জিজ্ঞাসা করুন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Drought stress can look similar, because mites also increase under dry conditions.",
+          "bn": "খরার চাপও একই রকম দেখাতে পারে, কারণ শুকনো অবস্থায় মাকড়ও বাড়ে।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Miticides (also soaps and oils)",
+        "bn": "মাকড়নাশক (সাবান ও তেলও)"
+      },
+      "sources": [
+        {
+          "title": "Tomato – Spider Mites",
+          "url": "https://ipm.cahnr.uconn.edu/tomato-spider-mites/",
+          "publisher": "University of Connecticut IPM"
+        },
+        {
+          "title": "Two-spotted Spider Mite",
+          "url": "https://www.udel.edu/academics/colleges/canr/cooperative-extension/fact-sheets/two-spotted-spider-mites/",
+          "publisher": "University of Delaware Cooperative Extension"
+        },
+        {
+          "title": "Two-spotted Spider Mites in High Tunnel Tomatoes: Know Your Pest",
+          "url": "https://vegcropshotline.org/article/two-spotted-spider-mites-in-high-tunnel-tomatoes-know-your-pest/",
+          "publisher": "Vegetable Crops Hotline (university extension newsletter)"
+        }
+      ]
+    },
+    "tomato_yellow_leaf_curl": {
+      "kind": "disease",
+      "crop": "tomato",
+      "name": {
+        "en": "Yellow leaf curl virus",
+        "bn": "ইয়েলো লিফ কার্ল ভাইরাস (পাতা কোঁকড়ানো ভাইরাস)"
+      },
+      "cause": {
+        "en": "Tomato yellow leaf curl virus, carried from plant to plant by whiteflies (Bemisia tabaci). There is no cure for an infected plant; the work is to keep the whiteflies away and remove infected plants.",
+        "bn": "টমেটো ইয়েলো লিফ কার্ল ভাইরাস, যা সাদামাছি (বেমিসিয়া ট্যাবাসি) এক গাছ থেকে আরেক গাছে বয়ে নিয়ে যায়। আক্রান্ত গাছ সারানোর উপায় নেই; কাজ হলো সাদামাছি ঠেকানো ও আক্রান্ত গাছ সরানো।"
+      },
+      "symptoms": [
+        {
+          "en": "Leaves yellow at the edges or between the veins, and curl upward or cup. The newest leaves show it first.",
+          "bn": "পাতার কিনারা বা শিরার মাঝের অংশ হলুদ হয় এবং পাতা ওপরের দিকে কুঁকড়ে যায় বা বাটির মতো হয়। সবচেয়ে নতুন পাতায় প্রথম দেখা যায়।"
+        },
+        {
+          "en": "Leaves are small, crumpled or thickened. Plants become stunted, bushy and upright.",
+          "bn": "পাতা ছোট, কুঁচকানো বা পুরু হয়। গাছ খর্বাকৃতি, ঝোপালো ও খাড়া হয়ে যায়।"
+        },
+        {
+          "en": "Symptoms show about 2 to 3 weeks after infection. Young plants can carry the virus for up to about 3 weeks without showing it.",
+          "bn": "সংক্রমণের প্রায় ২ থেকে ৩ সপ্তাহ পর লক্ষণ দেখা যায়। চারা প্রায় ৩ সপ্তাহ পর্যন্ত লক্ষণ ছাড়াই ভাইরাস বহন করতে পারে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Warm weather speeds up whitefly growth: from egg to adult can take as little as about 2 weeks.",
+          "bn": "উষ্ণ আবহাওয়ায় সাদামাছির বংশবৃদ্ধি দ্রুত হয়: ডিম থেকে পূর্ণবয়স্ক হতে মাত্র প্রায় ২ সপ্তাহ লাগতে পারে।"
+        },
+        {
+          "en": "Whitefly and virus pressure peaks in certain seasons. Whiteflies generally do not survive cold winters, and a tomato-free period breaks the cycle.",
+          "bn": "নির্দিষ্ট মৌসুমে সাদামাছি ও ভাইরাসের চাপ সবচেয়ে বেশি থাকে। সাদামাছি সাধারণত তীব্র শীতে টিকতে পারে না, আর টমেটোবিহীন সময় রোগচক্র ভেঙে দেয়।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Whiteflies pick up the virus in as little as a few minutes of feeding and can then carry it on.",
+          "bn": "সাদামাছি মাত্র কয়েক মিনিট রস খেয়েই ভাইরাস তুলে নিতে পারে এবং তারপর তা অন্য গাছে বয়ে নেয়।"
+        },
+        {
+          "en": "One source says it is not spread by touch or seed. Long-distance spread is mainly through infected young plants and whiteflies moved by plants or wind.",
+          "bn": "একটি সূত্র বলছে এটি স্পর্শ বা বীজের মাধ্যমে ছড়ায় না। দূরে ছড়ানো হয় মূলত আক্রান্ত চারা এবং গাছ বা বাতাসের সাথে সরে যাওয়া সাদামাছির মাধ্যমে।"
+        },
+        {
+          "en": "Other hosts, including pepper, common bean and some weeds, can carry it, often without symptoms.",
+          "bn": "মরিচ, শিম ও কিছু আগাছাসহ অন্য পোষক গাছও এটি বহন করতে পারে, প্রায়ই লক্ষণ ছাড়াই।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Use virus-free and whitefly-free young plants, grown away from production fields, and inspect them.",
+          "bn": "ভাইরাসমুক্ত ও সাদামাছিমুক্ত চারা ব্যবহার করুন, যা উৎপাদন ক্ষেত থেকে দূরে তৈরি, এবং চারা পরীক্ষা করুন।"
+        },
+        {
+          "en": "Where available, plant virus-tolerant varieties; tolerant plants can still carry the virus, so whitefly control is still needed.",
+          "bn": "পাওয়া গেলে ভাইরাস-সহনশীল জাত লাগান; সহনশীল গাছও ভাইরাস বহন করতে পারে, তাই সাদামাছি দমন তবুও দরকার।"
+        },
+        {
+          "en": "Pull out infected plants early and bag them. Remove weeds and other host plants nearby.",
+          "bn": "আক্রান্ত গাছ আগেভাগে তুলে ব্যাগে ভরুন। আশপাশের আগাছা ও অন্য পোষক গাছ সরান।"
+        },
+        {
+          "en": "Destroy the crop promptly after the last harvest, and do not plant new crops next to old or infested fields.",
+          "bn": "শেষ ফসল তোলার পরপরই গাছ নষ্ট করুন এবং পুরোনো বা আক্রান্ত ক্ষেতের পাশে নতুন ফসল লাগাবেন না।"
+        },
+        {
+          "en": "Keep a tomato-free period between crops to break the whitefly and virus cycle.",
+          "bn": "সাদামাছি ও ভাইরাসের চক্র ভাঙতে দুই ফসলের মাঝে টমেটোবিহীন সময় রাখুন।"
+        },
+        {
+          "en": "Reflective (metallic) mulch can repel adult whiteflies early in the season, but the effect fades and it works poorly when whitefly numbers are high.",
+          "bn": "প্রতিফলক (ধাতব) মালচ মৌসুমের শুরুতে পূর্ণবয়স্ক সাদামাছি তাড়াতে পারে, তবে প্রভাব কমে যায় এবং সাদামাছি বেশি হলে ভালো কাজ করে না।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Other viruses look similar, so only a laboratory test can confirm this one. Ask your local agriculture office for help.",
+          "bn": "অন্য ভাইরাসও একই রকম দেখায়, তাই শুধু ল্যাব পরীক্ষাতেই এটি নিশ্চিত হয়। সাহায্যের জন্য স্থানীয় কৃষি অফিসে যোগাযোগ করুন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Other viruses can cause similar symptoms, so symptoms alone cannot confirm this virus.",
+          "bn": "অন্য ভাইরাসেও একই রকম লক্ষণ হতে পারে, তাই শুধু লক্ষণ দেখে এই ভাইরাস নিশ্চিত করা যায় না।"
+        }
+      ],
+      "chemical_class": {
+        "en": "No cure; insecticides only target the whitefly",
+        "bn": "প্রতিকার নেই; কীটনাশক শুধু সাদামাছির বিরুদ্ধে"
+      },
+      "sources": [
+        {
+          "title": "Tomato yellow leaf curl virus (UC pest management brochure, TomBrochure03)",
+          "url": "https://ipm.ucanr.edu/legacy_assets/PDF/PMG/TomBrochure03.pdf",
+          "publisher": "UC IPM / UC ANR"
+        },
+        {
+          "title": "Management of Whiteflies, Whitefly-Vectored Plant Virus, and Insecticide Resistance for Tomato Production in Southern Florida (ENY-735)",
+          "url": "https://ask.ifas.ufl.edu/publication/IN695/pdf",
+          "publisher": "UF/IFAS Extension"
+        },
+        {
+          "title": "Managing Bemisia tabaci MEAM1 and Tomato yellow leaf curl virus in Florida Tomato (ENY2111/IN1430)",
+          "url": "https://ask.ifas.ufl.edu/publication/IN1430",
+          "publisher": "UF/IFAS Extension"
+        },
+        {
+          "title": "Tomato Yellow Leaf Curl Virus: An Emerging Virus of Tomatoes in Tennessee (SP 1044)",
+          "url": "https://utia.tennessee.edu/publications/wp-content/uploads/sites/269/2024/12/SP1044.pdf",
+          "publisher": "University of Tennessee Institute of Agriculture Extension"
+        },
+        {
+          "title": "Common Tomato High-Tunnel Diseases in Florida (PP368)",
+          "url": "https://edis.ifas.ufl.edu/publication/PP368/pdf",
+          "publisher": "UF/IFAS Extension"
+        }
+      ]
+    },
+    "tomato_mosaic_virus": {
+      "kind": "disease",
+      "crop": "tomato",
+      "name": {
+        "en": "Mosaic virus",
+        "bn": "মোজাইক ভাইরাস"
+      },
+      "cause": {
+        "en": "Tomato mosaic virus, a tobamovirus (a relative of tobacco mosaic virus). It spreads mainly by hands, tools and plants touching, and it can live a very long time on surfaces. An infected plant cannot be cured.",
+        "bn": "টমেটো মোজাইক ভাইরাস, একটি টোব্যামোভাইরাস (তামাকের মোজাইক ভাইরাসের আত্মীয়)। এটি মূলত হাত, যন্ত্রপাতি ও গাছে গাছে ছোঁয়ার মাধ্যমে ছড়ায় এবং বিভিন্ন পৃষ্ঠে অনেক দিন টিকে থাকতে পারে। আক্রান্ত গাছ সারানো যায় না।"
+      },
+      "symptoms": [
+        {
+          "en": "A mosaic of light and dark green (or yellow) patches on the leaves.",
+          "bn": "পাতায় হালকা ও গাঢ় সবুজ (বা হলুদ) ছোপের মোজাইক নকশা।"
+        },
+        {
+          "en": "Leaves can be distorted: curled, wavy, puckered, small, or narrow and strap-like.",
+          "bn": "পাতা বিকৃত হতে পারে: কুঁকড়ানো, ঢেউ-খেলানো, কুঁচকানো, ছোট বা সরু ফিতার মতো।"
+        },
+        {
+          "en": "Symptoms are strongest on young leaves. Early infection can leave plants yellow and stunted.",
+          "bn": "নতুন পাতায় লক্ষণ সবচেয়ে স্পষ্ট। শুরুতে সংক্রমণ হলে গাছ হলদেটে ও খর্বাকৃতি হতে পারে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "The sources give no specific weather range. Warm temperatures can bring out leaf spotting in some varieties.",
+          "bn": "সূত্রগুলোতে নির্দিষ্ট আবহাওয়ার সীমা নেই। উষ্ণ আবহাওয়ায় কিছু জাতে পাতায় দাগ বেশি ফুটে ওঠে।"
+        },
+        {
+          "en": "Dense planting, a closed environment and frequent handling, for example in greenhouses, raise the risk.",
+          "bn": "ঘন করে লাগানো, বদ্ধ পরিবেশ ও ঘন ঘন গাছ নাড়াচাড়া, যেমন গ্রিনহাউসে, ঝুঁকি বাড়ায়।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Mainly by touch: hands, clothing, tools, stakes and plants rubbing together, while tying, pruning, removing side shoots and harvesting.",
+          "bn": "মূলত স্পর্শের মাধ্যমে: গাছ বাঁধা, ছাঁটাই, পার্শ্বকুঁড়ি সরানো ও ফসল তোলার সময় হাত, কাপড়, যন্ত্রপাতি, খুঁটি ও গাছে গাছে ঘষা লাগলে।"
+        },
+        {
+          "en": "It can come in on infected seed or young plants, plant debris, perennial weeds and tobacco products, and it can survive on tools, benches and in debris.",
+          "bn": "এটি আক্রান্ত বীজ বা চারা, গাছের অবশিষ্টাংশ, বহুবর্ষজীবী আগাছা ও তামাকজাত দ্রব্যের সাথে আসতে পারে এবং যন্ত্রপাতি, বেঞ্চ ও অবশিষ্টাংশে টিকে থাকে।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Where available, use resistant or tolerant varieties and certified or properly treated seed.",
+          "bn": "পাওয়া গেলে প্রতিরোধী বা সহনশীল জাত এবং প্রত্যয়িত বা যথাযথভাবে শোধিত বীজ ব্যবহার করুন।"
+        },
+        {
+          "en": "Buy young plants from reliable sources and inspect them. Throw away any with twisting or mosaic without touching healthy ones.",
+          "bn": "নির্ভরযোগ্য উৎস থেকে চারা কিনুন ও পরীক্ষা করুন। কুঁকড়ানো বা মোজাইক লক্ষণ থাকা চারা সুস্থ চারা না ছুঁয়ে ফেলে দিন।"
+        },
+        {
+          "en": "Wash your hands and disinfect tools often. Keep tobacco products away from the plants and wash your hands after handling them.",
+          "bn": "ঘন ঘন হাত ধোবেন ও যন্ত্রপাতি জীবাণুমুক্ত করবেন। তামাকজাত দ্রব্য গাছ থেকে দূরে রাখুন এবং সেগুলো ধরার পর হাত ধুয়ে নিন।"
+        },
+        {
+          "en": "Remove infected plants early, with their roots, bag them and destroy them. Do not compost them.",
+          "bn": "আক্রান্ত গাছ আগেভাগে শিকড়সহ তুলে ব্যাগে ভরে নষ্ট করুন। কম্পোস্ট করবেন না।"
+        },
+        {
+          "en": "Control weeds around the planting and remove all tomato plants when the crop ends.",
+          "bn": "চাষের আশপাশের আগাছা দমন করুন এবং ফসল শেষে সব টমেটো গাছ সরিয়ে ফেলুন।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "A virus cannot be confirmed by eye. Bag a suspect plant with its roots and take it to a local agriculture office or plant clinic. No product cures an infected plant.",
+          "bn": "ভাইরাস শুধু চোখে দেখে নিশ্চিত করা যায় না। সন্দেহজনক গাছ শিকড়সহ ব্যাগে ভরে স্থানীয় কৃষি অফিস বা প্ল্যান্ট ক্লিনিকে নিয়ে যান। কোনো ওষুধ আক্রান্ত গাছ সারাতে পারে না।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Many other viruses look similar. Herbicide injury and nutrient problems can also look like viral symptoms.",
+          "bn": "আরও অনেক ভাইরাস একই রকম দেখায়। আগাছানাশকের ক্ষতি ও পুষ্টির সমস্যাও ভাইরাসের লক্ষণের মতো দেখাতে পারে।"
+        }
+      ],
+      "chemical_class": {
+        "en": "No chemical cures the virus",
+        "bn": "ভাইরাস সারানোর কোনো রাসায়নিক নেই"
+      },
+      "sources": [
+        {
+          "title": "Tomato viruses",
+          "url": "https://extension.umn.edu/disease-management/tomato-viruses",
+          "publisher": "University of Minnesota Extension"
+        },
+        {
+          "title": "Virus diseases of greenhouse tomato and their management",
+          "url": "https://content.ces.ncsu.edu/virus-diseases-of-greenhouse-tomato-and-their-management",
+          "publisher": "NC State Extension"
+        },
+        {
+          "title": "Managing Tobamoviruses in Greenhouse Production (PPFS-GH-08)",
+          "url": "https://plantpathology.mgcafe.uky.edu/files/ppfs-gh-08.pdf",
+          "publisher": "University of Kentucky Cooperative Extension"
+        },
+        {
+          "title": "Common Tomato High-Tunnel Diseases in Florida (PP368)",
+          "url": "https://edis.ifas.ufl.edu/publication/PP368/pdf",
+          "publisher": "UF/IFAS Extension"
+        }
+      ]
+    },
+    "corn_common_rust": {
+      "kind": "disease",
+      "crop": "corn",
+      "name": {
+        "en": "Common rust",
+        "bn": "কমন রাস্ট (সাধারণ মরিচা রোগ)"
+      },
+      "cause": {
+        "en": "A rust fungus (Puccinia sorghi) that needs living corn tissue. In the cited sources its spores are blown in each season from warmer regions where it survives the winter.",
+        "bn": "পাকসিনিয়া সরঘি নামের একটি মরিচা ছত্রাক, যার বাঁচতে জীবিত ভুট্টা টিস্যু লাগে। উদ্ধৃত সূত্রগুলো অনুযায়ী, শীতে যেখানে এটি টিকে থাকে সেই উষ্ণ অঞ্চল থেকে প্রতি মৌসুমে বাতাসে এর রেণু আসে।"
+      },
+      "symptoms": [
+        {
+          "en": "Small yellow flecks that break open into powdery pustules, brick-red, golden-brown or cinnamon-brown.",
+          "bn": "ছোট হলুদ ফোঁটা, যা ফেটে গুঁড়োর মতো ফুসকুড়ি হয়ে যায়; রং ইটের মতো লাল, সোনালি-বাদামি বা দারুচিনি-বাদামি।"
+        },
+        {
+          "en": "Pustules are oval to elongated, about 3 mm long, scattered or in clusters, and appear on both the upper and lower leaf surfaces.",
+          "bn": "ফুসকুড়ি ডিম্বাকার থেকে লম্বাটে, প্রায় ৩ মিলিমিটার লম্বা, ছড়ানো বা গুচ্ছে থাকে এবং পাতার ওপর ও নিচ উভয় পিঠেই দেখা যায়।"
+        },
+        {
+          "en": "Older pustules darken to brown or black late in the season. Badly infected leaves can die.",
+          "bn": "মৌসুমের শেষ দিকে পুরোনো ফুসকুড়ি বাদামি বা কালো হয়ে যায়। মারাত্মক আক্রান্ত পাতা মরে যেতে পারে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Cool weather, roughly 16 to 25 °C (the sources give slightly different ranges), with about 6 hours of dew or very high humidity.",
+          "bn": "ঠান্ডা আবহাওয়া, মোটামুটি ১৬ থেকে ২৫ °সে. (সূত্রভেদে সীমা সামান্য আলাদা), সাথে প্রায় ৬ ঘণ্টা শিশির বা খুব উচ্চ আর্দ্রতা।"
+        },
+        {
+          "en": "Hot, dry weather (above about 27 °C) holds it back. Young leaves and late-planted corn are most at risk.",
+          "bn": "গরম, শুকনো আবহাওয়ায় (প্রায় ২৭ °সে. এর বেশি) রোগ কমে। কচি পাতা ও দেরিতে লাগানো ভুট্টা সবচেয়ে ঝুঁকিতে থাকে।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "One pustule can make thousands of spores, which re-infect nearby plants; new pustules can form in as few as 7 days.",
+          "bn": "একটি ফুসকুড়ি হাজার হাজার রেণু তৈরি করতে পারে, যা আশপাশের গাছে আবার সংক্রমণ ঘটায়; মাত্র ৭ দিনে নতুন ফুসকুড়ি হতে পারে।"
+        },
+        {
+          "en": "The sources are from regions with cold winters. They do not describe how the disease survives in Bangladesh.",
+          "bn": "সূত্রগুলো শীতপ্রধান অঞ্চলের। বাংলাদেশে রোগটি কীভাবে টিকে থাকে তা এতে বলা নেই।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Where ratings are available, plant hybrids with common rust resistance; ask your seed dealer.",
+          "bn": "রেটিং পাওয়া গেলে কমন রাস্ট-প্রতিরোধী হাইব্রিড লাগান; বীজ বিক্রেতাকে জিজ্ঞাসা করুন।"
+        },
+        {
+          "en": "Plant as early as you can: older leaves resist infection better than young ones. Avoid late planting where rust is frequent.",
+          "bn": "যত তাড়াতাড়ি সম্ভব লাগান: কচি পাতার চেয়ে পুরোনো পাতা সংক্রমণ বেশি ঠেকায়। যেখানে রাস্ট ঘন ঘন হয়, সেখানে দেরিতে লাগানো এড়ান।"
+        },
+        {
+          "en": "Check fields regularly. Take extra care with seed corn, sweet corn and susceptible lines, where the disease is usually worse.",
+          "bn": "নিয়মিত ক্ষেত দেখুন। বীজ ভুট্টা, মিষ্টি ভুট্টা ও সংবেদনশীল লাইনে বিশেষ নজর দিন, কারণ সেখানে রোগ সাধারণত বেশি হয়।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "If the pustules could be southern rust (mostly on the upper leaf surface), a laboratory can tell them apart. Ask a local agriculture officer.",
+          "bn": "ফুসকুড়ি সাদার্ন রাস্ট (বেশিরভাগ পাতার ওপরের পিঠে) হতে পারে কি না, তা ল্যাবে আলাদা করা যায়। স্থানীয় কৃষি কর্মকর্তাকে জিজ্ঞাসা করুন।"
+        },
+        {
+          "en": "Sources say sprays are rarely needed on ordinary field corn. Ask before you spray.",
+          "bn": "সূত্র অনুযায়ী সাধারণ মাঠের ভুট্টায় ওষুধ ছিটানো কদাচিৎ দরকার হয়। ছিটানোর আগে জিজ্ঞাসা করুন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Southern rust has small, round, orange pustules mostly on the upper leaf surface; common rust pustules are on both surfaces, larger and more scattered.",
+          "bn": "সাদার্ন রাস্টে ছোট, গোল, কমলা ফুসকুড়ি বেশিরভাগ পাতার ওপরের পিঠে থাকে; কমন রাস্টের ফুসকুড়ি দুই পিঠেই, বড় ও বেশি ছড়ানো।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Foliar fungicides (rarely needed on field corn)",
+        "bn": "পাতায় ছিটানোর ছত্রাকনাশক (মাঠের ভুট্টায় কদাচিৎ দরকার)"
+      },
+      "sources": [
+        {
+          "title": "Common rust in corn",
+          "url": "https://extension.umn.edu/corn-pest-management/common-rust-corn",
+          "publisher": "University of Minnesota Extension"
+        },
+        {
+          "title": "Common Rust",
+          "url": "https://crops.extension.iastate.edu/common-rust",
+          "publisher": "Iowa State University Extension and Outreach (crops)"
+        },
+        {
+          "title": "Common Rust of Corn",
+          "url": "https://cropprotectionnetwork.org/encyclopedia/common-rust-of-corn",
+          "publisher": "Crop Protection Network (university-extension collaboration)"
+        },
+        {
+          "title": "Common rust publication G1680 (University of Nebraska-Lincoln Extension)",
+          "url": "https://extensionpubs.unl.edu/publication/g1680/na/html/view",
+          "publisher": "University of Nebraska-Lincoln Extension"
+        },
+        {
+          "title": "Rust diseases of corn BP-82-W",
+          "url": "https://www.extension.purdue.edu/extmedia/BP/BP-82-W.pdf",
+          "publisher": "Purdue University Extension"
+        }
+      ]
+    },
+    "corn_gray_leaf_spot": {
+      "kind": "disease",
+      "crop": "corn",
+      "name": {
+        "en": "Gray leaf spot",
+        "bn": "গ্রে লিফ স্পট (ধূসর পাতার দাগ রোগ)"
+      },
+      "cause": {
+        "en": "A fungus (Cercospora zeae-maydis). It survives the winter in corn residue lying on or near the soil surface and is blown or splashed onto the lower leaves.",
+        "bn": "সারকোস্পোরা জি-মেইডিস নামের একটি ছত্রাক এই রোগ ঘটায়। এটি শীতে মাটির ওপরে বা কাছে পড়ে থাকা ভুট্টার অবশিষ্টাংশে টিকে থাকে এবং বাতাসে বা বৃষ্টির ছিটায় নিচের পাতায় পৌঁছায়।"
+      },
+      "symptoms": [
+        {
+          "en": "Early lesions are small tan to brown spots, often with a yellow halo that is easier to see when the leaf is held up to the light.",
+          "bn": "শুরুর দাগ ছোট, হালকা বাদামি থেকে বাদামি, প্রায়ই হলুদ বলয়সহ, যা পাতা আলোর দিকে ধরলে ভালো দেখা যায়।"
+        },
+        {
+          "en": "Mature lesions are narrow and rectangular with blunt ends, grey to tan, and stopped by the veins, so the edges are straight and parallel.",
+          "bn": "পূর্ণ দাগ সরু ও আয়তাকার, ভোঁতা প্রান্তযুক্ত, ধূসর থেকে হালকা বাদামি, এবং শিরায় আটকে যায়, তাই কিনারা সোজা ও সমান্তরাল হয়।"
+        },
+        {
+          "en": "Lesions look silvery-grey when spores form. They start on the lower leaves, can join up and kill whole leaves.",
+          "bn": "রেণু তৈরি হলে দাগ রুপালি-ধূসর দেখায়। দাগ নিচের পাতায় শুরু হয়, মিলে গিয়ে পুরো পাতা মেরে ফেলতে পারে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Long periods of high humidity or wet leaves: roughly 12 hours or more of dew or fog with humidity around 90% (the sources give different figures).",
+          "bn": "দীর্ঘ সময় উচ্চ আর্দ্রতা বা ভেজা পাতা: মোটামুটি ১২ ঘণ্টা বা তার বেশি শিশির বা কুয়াশা এবং প্রায় ৯০% আর্দ্রতা (সূত্রভেদে সংখ্যা আলাদা)।"
+        },
+        {
+          "en": "Moderate to warm temperatures (the sources give about 25 to 32 °C).",
+          "bn": "মাঝারি থেকে উষ্ণ তাপমাত্রা (সূত্র অনুযায়ী প্রায় ২৫ থেকে ৩২ °সে.)।"
+        },
+        {
+          "en": "Risk is higher with a susceptible hybrid, corn after corn, late planting, minimum tillage, a field history of the disease, and low, humid or weedy spots.",
+          "bn": "সংবেদনশীল হাইব্রিড, ভুট্টার পর ভুট্টা, দেরিতে লাগানো, কম চাষ, আগে রোগ হওয়ার ইতিহাস এবং নিচু, আর্দ্র বা আগাছাভরা জায়গায় ঝুঁকি বেশি।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "The fungus survives in infected corn residue lying on or near the soil surface, and rarely survives if the residue is buried.",
+          "bn": "ছত্রাক মাটির ওপরে বা কাছে পড়ে থাকা আক্রান্ত ভুট্টার অবশিষ্টাংশে টিকে থাকে এবং অবশিষ্টাংশ মাটিতে পুঁতে ফেললে কদাচিৎ টিকে।"
+        },
+        {
+          "en": "In spring, spores are blown or splashed onto the lower leaves; spores from nearby fields can also start infections.",
+          "bn": "বসন্তে রেণু বাতাসে বা বৃষ্টির ছিটায় নিচের পাতায় পড়ে; আশপাশের ক্ষেত থেকে আসা রেণুও সংক্রমণ শুরু করতে পারে।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Use hybrids with partial resistance or tolerance. No hybrid is fully immune, and some seed companies use rating scales in reverse, so read the ratings carefully.",
+          "bn": "আংশিক প্রতিরোধী বা সহনশীল হাইব্রিড ব্যবহার করুন। কোনো হাইব্রিডই সম্পূর্ণ প্রতিরোধী নয়, আর কিছু বীজ কোম্পানি উল্টো রেটিং স্কেল ব্যবহার করে, তাই রেটিং সাবধানে পড়ুন।"
+        },
+        {
+          "en": "Rotate away from corn (one or two years) in fields that have had the disease.",
+          "bn": "যেসব জমিতে রোগ হয়েছে সেখানে ভুট্টা থেকে সরে (এক বা দুই বছর) পর্যায়ক্রমে চাষ করুন।"
+        },
+        {
+          "en": "Where it suits your farming, till to bury infected residue.",
+          "bn": "আপনার চাষপদ্ধতিতে মানালে আক্রান্ত অবশিষ্টাংশ মাটিতে পুঁতে দিতে চাষ দিন।"
+        },
+        {
+          "en": "Avoid late planting, and watch low, humid and weedy parts of the field.",
+          "bn": "দেরিতে লাগানো এড়ান এবং ক্ষেতের নিচু, আর্দ্র ও আগাছাভরা অংশে নজর রাখুন।"
+        },
+        {
+          "en": "Check the lower leaves before tasselling; early disease before tasselling raises the risk.",
+          "bn": "মোচা আসার আগে নিচের পাতা দেখুন; মোচা আসার আগে রোগ দেখা দিলে ঝুঁকি বাড়ে।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "If lesions reach the upper leaves around tasselling, ask a local agriculture officer to help judge how serious it is before you spend money on sprays.",
+          "bn": "মোচা আসার সময় ওপরের পাতায় দাগ পৌঁছালে ওষুধে টাকা খরচের আগে রোগ কতটা গুরুতর তা বুঝতে স্থানীয় কৃষি কর্মকর্তার সাহায্য নিন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Anthracnose, eyespot and early common rust can be confused with it. Breaking open a rust pustule shows powdery spores.",
+          "bn": "অ্যানথ্রাকনোজ, আইস্পট ও শুরুর কমন রাস্টের সাথে একে গুলিয়ে ফেলা যায়। রাস্টের ফুসকুড়ি ভাঙলে গুঁড়োর মতো রেণু দেখা যায়।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Foliar fungicides (mainly for susceptible hybrids)",
+        "bn": "পাতায় ছিটানোর ছত্রাকনাশক (প্রধানত সংবেদনশীল হাইব্রিডের জন্য)"
+      },
+      "sources": [
+        {
+          "title": "Gray leaf spot in corn",
+          "url": "https://extension.umn.edu/corn-pest-management/gray-leaf-spot-corn",
+          "publisher": "University of Minnesota Extension"
+        },
+        {
+          "title": "Gray Leaf Spot of Corn",
+          "url": "https://cropprotectionnetwork.org/encyclopedia/gray-leaf-spot-of-corn",
+          "publisher": "Crop Protection Network (university-extension collaboration)"
+        },
+        {
+          "title": "Gray leaf spot publication G1902",
+          "url": "https://extensionpubs.unl.edu/publication/g1902/na/html/view",
+          "publisher": "University of Nebraska-Lincoln Extension"
+        },
+        {
+          "title": "Gray leaf spot of corn (Ohioline PLPATH-CER-05)",
+          "url": "https://ohioline.osu.edu/factsheet/plpath-cer-05",
+          "publisher": "Ohio State University Extension"
+        },
+        {
+          "title": "Rust diseases of corn BP-82-W (used only for the rust look-alike note)",
+          "url": "https://www.extension.purdue.edu/extmedia/BP/BP-82-W.pdf",
+          "publisher": "Purdue University Extension"
+        }
+      ]
+    },
+    "corn_northern_leaf_blight": {
+      "kind": "disease",
+      "crop": "corn",
+      "name": {
+        "en": "Northern leaf blight",
+        "bn": "নর্দার্ন লিফ ব্লাইট (উত্তরাঞ্চলীয় পাতা ধসা)"
+      },
+      "cause": {
+        "en": "A fungus (Exserohilum turcicum) that survives the winter in corn residue on the soil surface. Spores are carried by wind, rain splash or irrigation to the lower leaves.",
+        "bn": "এক্সেরোহিলাম টারসিকাম নামের একটি ছত্রাক এই রোগ ঘটায়, যা শীতে মাটির ওপরের ভুট্টার অবশিষ্টাংশে টিকে থাকে। রেণু বাতাস, বৃষ্টির ছিটা বা সেচের পানিতে নিচের পাতায় পৌঁছায়।"
+      },
+      "symptoms": [
+        {
+          "en": "Long, narrow tan lesions that first run along the leaf veins.",
+          "bn": "লম্বা, সরু, হালকা বাদামি দাগ, যা প্রথমে পাতার শিরা বরাবর চলে।"
+        },
+        {
+          "en": "They grow into canoe- or cigar-shaped lesions, tan to grey, usually 2.5 to 15 cm long. Resistant hybrids can show only small yellowish lesions.",
+          "bn": "দাগ বড় হয়ে নৌকা বা চুরুটের মতো আকার নেয়, হালকা বাদামি থেকে ধূসর, সাধারণত ২.৫ থেকে ১৫ সেন্টিমিটার লম্বা। প্রতিরোধী হাইব্রিডে শুধু ছোট হলদেটে দাগ দেখা যেতে পারে।"
+        },
+        {
+          "en": "Dark spore specks may show inside the lesions in humid weather. Symptoms start on the lower leaves and move up; lesions can join and blight much of the leaf.",
+          "bn": "আর্দ্র আবহাওয়ায় দাগের ভেতরে গাঢ় রেণুর ফুটকি দেখা যেতে পারে। লক্ষণ নিচের পাতায় শুরু হয়ে ওপরে ওঠে; দাগ মিলে পাতার বড় অংশ ধসে যেতে পারে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Moderate temperatures with long wet periods: roughly 18 to 28 °C (the sources give slightly different ranges).",
+          "bn": "দীর্ঘ ভেজা সময়সহ মাঝারি তাপমাত্রা: মোটামুটি ১৮ থেকে ২৮ °সে. (সূত্রভেদে সীমা সামান্য আলাদা)।"
+        },
+        {
+          "en": "Spores need free water on the leaf for about 6 to 18 hours to infect; frequent rain, high humidity or heavy dew favour the disease.",
+          "bn": "সংক্রমণের জন্য রেণুর প্রায় ৬ থেকে ১৮ ঘণ্টা পাতায় পানি লাগে; ঘন ঘন বৃষ্টি, উচ্চ আর্দ্রতা বা ঘন শিশির রোগের অনুকূল।"
+        },
+        {
+          "en": "Infection before silking usually causes more severe disease.",
+          "bn": "রেশম আসার আগে সংক্রমণ হলে রোগ সাধারণত বেশি মারাত্মক হয়।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "The fungus survives winter in infected corn residue on the soil surface.",
+          "bn": "ছত্রাক শীতে মাটির ওপরের আক্রান্ত ভুট্টার অবশিষ্টাংশে টিকে থাকে।"
+        },
+        {
+          "en": "Lesions appear about 1 to 2 weeks after infection and make new spores that move up the plant and to neighbouring plants.",
+          "bn": "সংক্রমণের প্রায় ১ থেকে ২ সপ্তাহ পর দাগ দেখা দেয় এবং নতুন রেণু তৈরি করে, যা গাছের ওপরে ও পাশের গাছে ছড়ায়।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Plant hybrids with resistance, especially in fields with a history of the disease; ask the seed supplier for northern leaf blight ratings.",
+          "bn": "প্রতিরোধী হাইব্রিড লাগান, বিশেষ করে যেসব ক্ষেতে আগে রোগ হয়েছে; বীজ সরবরাহকারীর কাছে নর্দার্ন লিফ ব্লাইটের রেটিং জানতে চান।"
+        },
+        {
+          "en": "Rotate away from corn for one or two years (soybean, small grains and vegetables suit); avoid sorghum, which can host the fungus.",
+          "bn": "এক বা দুই বছর ভুট্টা থেকে সরে পর্যায়ক্রমে চাষ করুন (সয়াবিন, ছোট দানাশস্য ও সবজি উপযোগী); জোয়ার এড়ান, কারণ এতে ছত্রাক থাকতে পারে।"
+        },
+        {
+          "en": "Till to bury infected residue and speed its breakdown, and clean equipment before moving to a new field.",
+          "bn": "আক্রান্ত অবশিষ্টাংশ পুঁতে ফেলতে ও দ্রুত পচাতে চাষ দিন এবং নতুন ক্ষেতে যাওয়ার আগে যন্ত্রপাতি পরিষ্কার করুন।"
+        },
+        {
+          "en": "Check lower leaves early in the season, because early infection does the most damage.",
+          "bn": "মৌসুমের শুরুতে নিচের পাতা দেখুন, কারণ শুরুর সংক্রমণ সবচেয়ে বেশি ক্ষতি করে।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "If the disease is established before tasselling and the weather stays wet, timing of any treatment matters a lot. Ask a local agriculture officer at that point.",
+          "bn": "মোচা আসার আগেই রোগ বসে গেলে এবং আবহাওয়া ভেজা থাকলে যেকোনো চিকিৎসার সময় অনেক গুরুত্বপূর্ণ। তখন স্থানীয় কৃষি কর্মকর্তাকে জিজ্ঞাসা করুন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Gray leaf spot lesions are narrower and rectangular and stopped by the veins. Goss's leaf blight and Stewart's wilt can also be confused with it.",
+          "bn": "গ্রে লিফ স্পটের দাগ আরও সরু, আয়তাকার এবং শিরায় আটকে যায়। গসের লিফ ব্লাইট ও স্টুয়ার্টস উইল্টের সাথেও গুলিয়ে ফেলা যায়।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Foliar fungicides (mainly for susceptible hybrids)",
+        "bn": "পাতায় ছিটানোর ছত্রাকনাশক (প্রধানত সংবেদনশীল হাইব্রিডের জন্য)"
+      },
+      "sources": [
+        {
+          "title": "Northern corn leaf blight (corn pest management)",
+          "url": "https://extension.umn.edu/corn-pest-management/northern-corn-leaf-blight",
+          "publisher": "University of Minnesota Extension"
+        },
+        {
+          "title": "Northern Corn Leaf Blight fact sheet",
+          "url": "https://www.udel.edu/content/dam/udelImages/canr/pdfs/extension/factsheets/Northern-Corn-Leaf-Blight.pdf",
+          "publisher": "University of Delaware Cooperative Extension"
+        },
+        {
+          "title": "Select hybrids with resistance to northern corn leaf blight: how does it work?",
+          "url": "https://agcrops.osu.edu/newsletter/corn-newsletter/select-hybrids-resistance-northern-corn-leaf-blight-how-does-it-work",
+          "publisher": "Ohio State University Extension (C.O.R.N. Newsletter)"
+        }
+      ]
+    },
+    "tomato_healthy": {
+      "kind": "healthy",
+      "crop": "tomato",
+      "name": {
+        "en": "Healthy tomato leaf",
+        "bn": "সুস্থ টমেটো পাতা"
+      },
+      "message": {
+        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 19 conditions of four crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
+        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল চারটি ফসলের মাত্র ১৯টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
+      },
+      "tips": [
+        {
+          "en": "Keep checking your plants regularly, including the underside of leaves.",
+          "bn": "নিয়মিত গাছ পরীক্ষা করুন, পাতার নিচের দিকও দেখুন।"
+        },
+        {
+          "en": "If new spots, yellowing or curling appear, upload a new photo.",
+          "bn": "নতুন দাগ, হলুদ ভাব বা কোঁকড়ানো দেখা দিলে নতুন ছবি আপলোড করুন।"
+        }
+      ],
+      "sources": []
+    },
+    "potato_healthy": {
+      "kind": "healthy",
+      "crop": "potato",
+      "name": {
+        "en": "Healthy potato leaf",
+        "bn": "সুস্থ আলু পাতা"
+      },
+      "message": {
+        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 19 conditions of four crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
+        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল চারটি ফসলের মাত্র ১৯টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
+      },
+      "tips": [
+        {
+          "en": "Keep checking your plants regularly, including the underside of leaves.",
+          "bn": "নিয়মিত গাছ পরীক্ষা করুন, পাতার নিচের দিকও দেখুন।"
+        },
+        {
+          "en": "If new spots, yellowing or curling appear, upload a new photo.",
+          "bn": "নতুন দাগ, হলুদ ভাব বা কোঁকড়ানো দেখা দিলে নতুন ছবি আপলোড করুন।"
+        }
+      ],
+      "sources": []
+    },
+    "pepper_healthy": {
+      "kind": "healthy",
+      "crop": "pepper",
+      "name": {
+        "en": "Healthy pepper leaf",
+        "bn": "সুস্থ ক্যাপসিকাম পাতা"
+      },
+      "message": {
+        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 19 conditions of four crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
+        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল চারটি ফসলের মাত্র ১৯টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
+      },
+      "tips": [
+        {
+          "en": "Keep checking your plants regularly, including the underside of leaves.",
+          "bn": "নিয়মিত গাছ পরীক্ষা করুন, পাতার নিচের দিকও দেখুন।"
+        },
+        {
+          "en": "If new spots, yellowing or curling appear, upload a new photo.",
+          "bn": "নতুন দাগ, হলুদ ভাব বা কোঁকড়ানো দেখা দিলে নতুন ছবি আপলোড করুন।"
+        }
+      ],
+      "sources": []
+    },
+    "corn_healthy": {
+      "kind": "healthy",
+      "crop": "corn",
+      "name": {
+        "en": "Healthy corn leaf",
+        "bn": "সুস্থ ভুট্টা পাতা"
+      },
+      "message": {
+        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 19 conditions of four crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
+        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল চারটি ফসলের মাত্র ১৯টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
+      },
+      "tips": [
+        {
+          "en": "Keep checking your plants regularly, including the underside of leaves.",
+          "bn": "নিয়মিত গাছ পরীক্ষা করুন, পাতার নিচের দিকও দেখুন।"
+        },
+        {
+          "en": "If new spots, yellowing or curling appear, upload a new photo.",
+          "bn": "নতুন দাগ, হলুদ ভাব বা কোঁকড়ানো দেখা দিলে নতুন ছবি আপলোড করুন।"
+        }
+      ],
+      "sources": []
+    }
+  }
+}

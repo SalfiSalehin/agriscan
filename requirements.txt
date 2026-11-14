@@ -1,0 +1,9 @@
+# Web app (inference API). Training tools are in requirements-train.txt.
+fastapi
+uvicorn[standard]
+python-multipart
+onnxruntime
+numpy
+pillow
+pydantic
+pyyaml

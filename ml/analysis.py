@@ -303,6 +303,21 @@ def analyse_run(
     unknown_cal, _ = conf_and_correct("unknown", unknown_half == 0)
     unknown_held, _ = conf_and_correct("unknown", unknown_half == 1)
 
+    def crop_known_conf_and_correct(name, mask=None):
+        """Serving rule when the user picked the crop: the answer is the best class of that crop,
+        the confidence is its probability among ALL classes (not renormalised), so the threshold
+        chosen on the unknown images still applies and a wrong crop pick ends up as "unsure"."""
+        restricted = crop_restricted_logits(logits[name], labels[name], class_ids)
+        pred = restricted.argmax(axis=1)
+        conf = softmax(logits[name], temperature)[np.arange(len(pred)), pred]
+        correct = pred == np.asarray(labels[name])
+        if mask is not None:
+            conf, correct = conf[mask], correct[mask]
+        return conf, correct
+
+    test_ck_conf, test_ck_correct = crop_known_conf_and_correct("test")
+    field_ck_conf, field_ck_correct = crop_known_conf_and_correct("field", field_half == 1)
+
     chosen = choose_threshold(unknown_cal, max_false_accept)
     grid = sorted(set(THRESHOLDS) | ({chosen} if chosen is not None else set()))
     table = [
@@ -311,6 +326,8 @@ def analyse_run(
             "chosen": chosen is not None and abs(t - chosen) < 1e-9,
             "test": selective_stats(test_conf, test_correct, t),
             "field_held_out": selective_stats(field_conf, field_correct, t),
+            "test_crop_known": selective_stats(test_ck_conf, test_ck_correct, t),
+            "field_held_out_crop_known": selective_stats(field_ck_conf, field_ck_correct, t),
             "unknown_held_out_false_accept": _num((unknown_held >= t).mean()),
         }
         for t in grid

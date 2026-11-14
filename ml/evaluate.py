@@ -183,6 +183,17 @@ def comparison_tables(all_metrics: list[dict]):
                     picked["field_held_out"]["accuracy_when_answered"] if picked else None
                 ),
                 "test_coverage": picked["test"]["coverage"] if picked else None,
+                "field_coverage_crop_known": (
+                    picked["field_held_out_crop_known"]["coverage"] if picked else None
+                ),
+                "field_acc_answered_crop_known": (
+                    picked["field_held_out_crop_known"]["accuracy_when_answered"]
+                    if picked
+                    else None
+                ),
+                "test_coverage_crop_known": (
+                    picked["test_crop_known"]["coverage"] if picked else None
+                ),
                 "unknown_false_accept": (
                     picked["unknown_held_out_false_accept"] if picked else None
                 ),

@@ -1,6 +1,3 @@
-run,arch,field_share,temperature,threshold,field_coverage,field_acc_answered,test_coverage,unknown_false_accept,auroc_test_vs_unknown_held_out,auroc_field_held_out_vs_unknown_held_out
-mobilenet_v3_small_s42_20261111_1541,mobilenet_v3_small,0.0,0.58,0.98,0.1053,0.375,0.3405,0.0732,0.7553,0.6102
-mobilenet_v3_small_s42_20261111_1551,mobilenet_v3_small,0.0,0.44,0.99,0.2763,0.2857,0.8649,0.0482,0.9581,0.7027
-resnet18_s42_20261111_1616,resnet18,0.0,0.55,0.98,0.2632,0.45,0.8933,0.0768,0.954,0.634
-mobilenet_v3_small_mix,mobilenet_v3_small,0.25,0.75,0.89,0.3947,0.7333,0.7567,0.1071,0.909,0.735
-resnet18_mix,resnet18,0.25,0.8,0.95,0.3026,0.7391,0.5953,0.0964,0.8947,0.6858
+run,arch,field_share,temperature,threshold,field_coverage,field_acc_answered,test_coverage,field_coverage_crop_known,field_acc_answered_crop_known,test_coverage_crop_known,unknown_false_accept,auroc_test_vs_unknown_held_out,auroc_field_held_out_vs_unknown_held_out
+mobilenet_v3_small_mix,mobilenet_v3_small,0.25,0.75,0.89,0.3947,0.7333,0.7567,0.3816,0.7586,0.7567,0.1071,0.909,0.735
+resnet18_mix,resnet18,0.25,0.8,0.95,0.3026,0.7391,0.5953,0.2763,0.8095,0.5953,0.0964,0.8947,0.6858
