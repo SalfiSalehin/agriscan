@@ -24,6 +24,17 @@ def _int_env(name: str, default: int, minimum: int, maximum: int) -> int:
     return value
 
 
+def _flag_env(name: str, default: bool) -> bool:
+    raw = os.environ.get(name, "").strip().lower()
+    if raw == "":
+        return default
+    if raw in ("1", "true", "yes", "on"):
+        return True
+    if raw in ("0", "false", "no", "off"):
+        return False
+    raise ValueError(f"{name} must be 1/0, true/false, yes/no or on/off, got {raw!r}")
+
+
 def _db_path() -> Path | None:
     """AGRISCAN_DB: a file path, or "off" to store nothing. Default: data/agriscan.db."""
     raw = os.environ.get("AGRISCAN_DB", "")
@@ -40,6 +51,9 @@ class Settings:
     min_side: int = 64  # shorter side in pixels; smaller images carry no usable detail
     threads: int = 2  # ONNX Runtime threads per request
     max_concurrent: int = 4  # predictions running at once; more get a 503 "busy"
+    rate_per_min: int = 0  # requests per visitor per minute on POST endpoints; 0 = unlimited
+    trust_proxy: bool = False  # read the visitor address from X-Forwarded-For (behind a proxy)
+    docs: bool = True  # serve the Swagger page at /api/docs
     content_path: Path | None = None  # disease texts; None = answers carry no advice
     db_path: Path | None = None  # prediction/feedback log; None = nothing is stored
 
@@ -54,6 +68,9 @@ class Settings:
             min_side=_int_env("AGRISCAN_MIN_SIDE", 64, 16, 1024),
             threads=_int_env("AGRISCAN_THREADS", 2, 1, 16),
             max_concurrent=_int_env("AGRISCAN_MAX_CONCURRENT", 4, 1, 64),
+            rate_per_min=_int_env("AGRISCAN_RATE_PER_MIN", 30, 0, 10_000),
+            trust_proxy=_flag_env("AGRISCAN_TRUST_PROXY", False),
+            docs=_flag_env("AGRISCAN_DOCS", True),
             content_path=Path(content) if content else DEFAULT_CONTENT,
             db_path=_db_path(),
         )

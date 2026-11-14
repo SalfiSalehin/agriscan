@@ -28,6 +28,7 @@ from pydantic import BaseModel
 from app.content import Content
 from app.db import Store
 from app.inference import Classifier
+from app.ratelimit import RateLimiter, client_ip
 from app.service import ServiceError, normalise_lang, predict_upload
 from app.settings import STATIC_DIR, Settings
 
@@ -90,25 +91,45 @@ def create_app(
         title="AgriScan",
         version="0.4.0",
         lifespan=lifespan,
-        docs_url="/api/docs",
+        docs_url="/api/docs" if settings.docs else None,
         redoc_url=None,
-        openapi_url="/api/openapi.json",
+        openapi_url="/api/openapi.json" if settings.docs else None,
     )
     app.state.slots = threading.BoundedSemaphore(settings.max_concurrent)
+    limiter = RateLimiter(settings.rate_per_min) if settings.rate_per_min else None
+    app.state.limiter = limiter
+    limited_paths = ("/api/predict", "/api/feedback")
 
     @app.middleware("http")
     async def guard_and_headers(request: Request, call_next):
-        if request.url.path == "/api/predict":
+        path = request.url.path
+        early = None
+        if path == "/api/predict":
             length = request.headers.get("content-length", "")
             if length.isdigit() and int(length) > settings.max_upload_bytes + BODY_OVERHEAD:
-                return error_response(413, "too_large", "The upload is too large.")
-        response = await call_next(request)
+                early = error_response(413, "too_large", "The upload is too large.")
+        if early is None and limiter and request.method == "POST" and path in limited_paths:
+            who = client_ip(
+                request.client.host if request.client else None,
+                request.headers.get("x-forwarded-for"),
+                settings.trust_proxy,
+            )
+            allowed, wait = limiter.allow(f"{who}|{path}")
+            if not allowed:
+                early = error_response(
+                    429,
+                    "rate_limited",
+                    "Too many requests. Please wait a moment and try again.",
+                    {"Retry-After": str(wait)},
+                )
+        response = early or await call_next(request)
         response.headers["X-Content-Type-Options"] = "nosniff"
-        if request.url.path.startswith("/api/"):
+        response.headers["Referrer-Policy"] = "no-referrer"
+        response.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
+        if path.startswith("/api/"):
             response.headers["Cache-Control"] = "no-store"
         else:
             response.headers["Content-Security-Policy"] = PAGE_CSP
-            response.headers["Referrer-Policy"] = "no-referrer"
         return response
 
     @app.exception_handler(ServiceError)

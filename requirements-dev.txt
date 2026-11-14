@@ -1,6 +1,11 @@
-
-pyyaml>=6.0
-pydantic>=2.6
-pytest>=8.0
-ruff>=0.5
-black>=24.0
+# Tests and linting (used locally and by GitHub Actions). Install after requirements.txt.
+-r requirements.txt
+pytest
+httpx
+black
+ruff
+pandas
+matplotlib
+tqdm
+huggingface_hub
+# torch and torchvision are installed separately (CPU build in CI): see .github/workflows/ci.yml

@@ -77,3 +77,59 @@ def test_every_ui_string_exists_in_both_languages():
 
     assert keys(en) == keys(bn)
     assert json.dumps(keys(en))  # non-empty
+
+
+def limited_client(**settings):
+    classifier = Classifier(FakeSession([0, 0, 9, 0]), make_meta(class_ids=IDS))
+    app = create_app(classifier, Settings(**settings), Content.load(DEFAULT_CONTENT))
+    return TestClient(app)
+
+
+def png():
+    from tests.conftest import image_bytes
+
+    return {"file": ("leaf.png", image_bytes("PNG"), "image/png")}
+
+
+def test_rate_limit_answers_429_with_retry_after_and_security_headers():
+    with limited_client(rate_per_min=2) as c:
+        assert c.post("/api/predict", files=png()).status_code == 200
+        assert c.post("/api/predict", files=png()).status_code == 200
+        blocked = c.post("/api/predict", files=png())
+        assert blocked.status_code == 429
+        assert blocked.json()["error"]["code"] == "rate_limited"
+        assert int(blocked.headers["retry-after"]) >= 1
+        assert (
+            blocked.headers["x-content-type-options"] == "nosniff"
+        )  # headers also on early replies
+        assert c.get("/api/health").status_code == 200  # reading is never limited
+        assert c.get("/").status_code == 200
+
+
+def test_rate_limit_is_per_visitor_when_a_proxy_is_trusted():
+    with limited_client(rate_per_min=1, trust_proxy=True) as c:
+        first = c.post("/api/predict", files=png(), headers={"x-forwarded-for": "1.1.1.1"})
+        again = c.post("/api/predict", files=png(), headers={"x-forwarded-for": "1.1.1.1"})
+        other = c.post("/api/predict", files=png(), headers={"x-forwarded-for": "2.2.2.2"})
+        assert (first.status_code, again.status_code, other.status_code) == (200, 429, 200)
+
+
+def test_forged_forwarded_header_does_not_dodge_the_limit_without_a_proxy():
+    with limited_client(rate_per_min=1) as c:
+        assert (
+            c.post("/api/predict", files=png(), headers={"x-forwarded-for": "1.1.1.1"}).status_code
+            == 200
+        )
+        assert (
+            c.post("/api/predict", files=png(), headers={"x-forwarded-for": "2.2.2.2"}).status_code
+            == 429
+        )
+
+
+def test_docs_can_be_switched_off_and_headers_are_set(client):
+    assert client.get("/api/docs").status_code == 200
+    assert "permissions-policy" in client.get("/").headers
+    assert client.get("/").headers["referrer-policy"] == "no-referrer"
+    with limited_client(docs=False) as c:
+        assert c.get("/api/docs").status_code == 404
+        assert c.get("/api/openapi.json").status_code == 404

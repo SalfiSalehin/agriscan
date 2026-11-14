@@ -53,6 +53,7 @@ const STR = {
     err_too_many_pixels: "The photo has too many pixels. Please choose a smaller one.",
     err_corrupt_image: "The photo file is damaged. Please choose another one.",
     err_busy: "The server is busy. Please try again in a moment.",
+    err_rate_limited: "Too many requests from you in a short time. Please wait a minute and try again.",
     crops: { tomato: "Tomato", potato: "Potato", pepper: "Pepper", corn: "Corn" },
   },
   bn: {
@@ -107,6 +108,7 @@ const STR = {
     err_too_many_pixels: "ছবিতে পিক্সেল অনেক বেশি। ছোট ছবি বেছে নিন।",
     err_corrupt_image: "ছবির ফাইলটি নষ্ট। অন্য ছবি বেছে নিন।",
     err_busy: "সার্ভার এখন ব্যস্ত। একটু পরে আবার চেষ্টা করুন।",
+    err_rate_limited: "অল্প সময়ে আপনার অনেক অনুরোধ হয়েছে। এক মিনিট অপেক্ষা করে আবার চেষ্টা করুন।",
     crops: { tomato: "টমেটো", potato: "আলু", pepper: "ক্যাপসিকাম", corn: "ভুট্টা" },
   },
 };
