@@ -1,0 +1,8 @@
+# Send only what the image needs to the build.
+*
+!requirements.txt
+!app
+!models/agriscan_mobilenet_v3_small.onnx
+!models/agriscan_mobilenet_v3_small.meta.json
+**/__pycache__
+**/*.pyc
