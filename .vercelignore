@@ -1,0 +1,13 @@
+# Not needed to serve the app; keeps the deployed bundle small.
+.git
+.github
+.venv
+data
+runs
+reports
+tests
+ml
+scripts
+config
+**/__pycache__
+**/*.pyc
