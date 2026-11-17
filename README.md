@@ -4,7 +4,7 @@ Upload a photo of a tomato, potato, pepper, corn, rice or eggplant (brinjal) lea
 explains why it happens and what a grower can do, in **Bangla or English**. When the model is not
 confident enough it says so instead of guessing.
 
-**Live demo:** _add the link here after deploying_ (free host: the first visit after a quiet period takes about a minute to wake up)
+**Live demo:** [_add the link here after deploying_ (free host: the first visit after a quiet period takes about a minute to wake up)](https://agriscan-pewt.onrender.com/)
 
 > A student portfolio project, not agronomic advice. Check with your Upazila Agriculture Office
 > before spraying or removing a crop.
