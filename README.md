@@ -4,7 +4,7 @@ Upload a photo of a tomato, potato, pepper, corn, rice or eggplant (brinjal) lea
 explains why it happens and what a grower can do, in **Bangla or English**. When the model is not
 confident enough it says so instead of guessing.
 
-**Live demo:** _add the link here after deploying_ (free host: the first visit after a quiet period takes about a minute to wake up)
+**Live demo:** https://agriscan-pewt.onrender.com/ (free host: the first visit after a quiet period takes about a minute to wake up)
 
 > A student portfolio project, not agronomic advice. Check with your Upazila Agriculture Office
 > before spraying or removing a crop.
@@ -79,10 +79,21 @@ Settings (environment variables, all optional): `AGRISCAN_RATE_PER_MIN` (default
 
 ## Credits and data
 
-- PlantVillage dataset (lab photos). Leaf masks derived from it were used to place leaves on
-  varied backgrounds during training.
+- PlantVillage dataset (lab photos): Hughes and Salathé, "An open access repository of images on
+  plant health to enable the development of mobile disease diagnostics" (2015); Mohanty, Hughes
+  and Salathé, "Using deep learning for image-based plant disease detection", Frontiers in Plant
+  Science 7 (2016), doi:10.3389/fpls.2016.01419. The copy used was a Hugging Face mirror
+  (`TSY-0408/PlantVillage`) whose dataset card states CC BY-SA 3.0; the original GitHub repository
+  states no licence. Leaf masks derived from it were used to place leaves on varied backgrounds
+  during training. The dataset is used here for a non-commercial portfolio project, with credit.
 - PlantDoc dataset, CC BY 4.0: Singh et al., "PlantDoc: A Dataset for Visual Plant Disease
   Detection" (2020).
-- Dhan-Shomadhan (rice leaf diseases) and Brinjal-BD (eggplant leaf diseases) datasets, both
-  CC BY 4.0. _Add the full citations from each dataset's page here._
+- Dhan-Shomadhan: a dataset of rice leaf disease classification for Bangladeshi local rice, Md Fahad
+  Hossain, Sheikh Abujar, Sheak Rashed Haider Noori, Syed Akhter Hossain, Mendeley Data (2021),
+  doi:10.17632/znsxdctwtt.1, CC BY 4.0.
+- Brinjal Leaf Disease and Fruit Condition Image Dataset: A Field-Collected Dataset from
+  Bangladesh, Md Hasibul Islam, Rabioul Hasan Shuvo, Nazmul Islam, Fernaz Nur, Mendeley Data,
+  version 2, doi:10.17632/nft66vt53x.2, CC BY 4.0. Only the `RawDataset` leaf folders were used
+  (the augmented copies were left out, and so were the fruit, aphid and magnesium-deficiency
+  folders).
 - Advice drawn from the extension publications listed under each result.
