@@ -6,7 +6,7 @@ confident enough it says so instead of guessing.
 
 **Live demo:** https://agriscan-pewt.onrender.com/ (free host: the first visit after a quiet period takes about a minute to wake up)
 
-> A student portfolio project, not agronomic advice. Check with your Upazila Agriculture Office
+> Not agronomic advice. Check with your Upazila Agriculture Office
 > before spraying or removing a crop.
 
 ## How it works
@@ -85,7 +85,7 @@ Settings (environment variables, all optional): `AGRISCAN_RATE_PER_MIN` (default
   Science 7 (2016), doi:10.3389/fpls.2016.01419. The copy used was a Hugging Face mirror
   (`TSY-0408/PlantVillage`) whose dataset card states CC BY-SA 3.0; the original GitHub repository
   states no licence. Leaf masks derived from it were used to place leaves on varied backgrounds
-  during training. The dataset is used here for a non-commercial portfolio project, with credit.
+  during training. The dataset is used here for a non-commercial project, with credit.
 - PlantDoc dataset, CC BY 4.0: Singh et al., "PlantDoc: A Dataset for Visual Plant Disease
   Detection" (2020).
 - Dhan-Shomadhan: a dataset of rice leaf disease classification for Bangladeshi local rice, Md Fahad
