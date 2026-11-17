@@ -72,6 +72,3 @@ def test_leaf_id_uses_map_then_falls_back():
     )
     assert leaf_id_for("x___Dup 1.JPG", tomato, leaf_map) == ("Tomato___Early_blight_y", "leaf_map")
     assert leaf_id_for("x___Nope 9.JPG", tomato, leaf_map) == ("fallback_Nope 9", "fallback")
-
-
-

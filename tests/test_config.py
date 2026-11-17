@@ -14,5 +14,3 @@ def test_bad_split_rejected():
     cfg["data"]["split"] = {"train": 0.8, "val": 0.15, "test": 0.15}
     with pytest.raises(ValueError):
         Config(**cfg)
-
-
