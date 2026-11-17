@@ -1,32 +1,25 @@
----
-title: AgriScan
-emoji: 🌿
-colorFrom: green
-colorTo: green
-sdk: docker
-app_port: 7860
-pinned: false
-short_description: Leaf-disease hints for tomato, potato, pepper and corn (Bangla/English)
----
-
 # AgriScan
 
-Upload a photo of a tomato, potato, pepper or corn leaf. AgriScan names the most likely disease,
+Upload a photo of a tomato, potato, pepper, corn, rice or eggplant (brinjal) leaf. AgriScan names the most likely disease,
 explains why it happens and what a grower can do, in **Bangla or English**. When the model is not
 confident enough it says so instead of guessing.
 
-**Live demo:** _add your Hugging Face Space link here after deploying_
+**Live demo:** _add the link here after deploying_ (free host: the first visit after a quiet period takes about a minute to wake up)
 
 > A student portfolio project, not agronomic advice. Check with your Upazila Agriculture Office
 > before spraying or removing a crop.
 
 ## How it works
 
-- **Model:** MobileNetV3-Small fine-tuned on PlantVillage (19 classes), exported to ONNX and served
-  on CPU with ONNX Runtime. Calibrated with temperature scaling.
-- **Real-world photos:** PlantVillage photos are studio-style, so the model was also trained on a
-  share of real-world photos from PlantDoc. A separate, official PlantDoc test folder was never
-  trained on; near-duplicates between its photos and the training photos were checked and removed.
+- **Model:** ResNet18 fine-tuned for 31 classes (12 conditions of rice and eggplant, 19 of tomato,
+  potato, pepper and corn), exported to ONNX (about 43 MB) and served on CPU with ONNX Runtime
+  (about 25 ms per photo for the model alone). Calibrated with temperature scaling. A
+  MobileNetV3-Small was trained on the same data and scored a little lower, so it was not used.
+- **Training data:** PlantVillage lab photos (the 19 older classes), plus real-world photos: PlantDoc
+  for the older crops, and the Dhan-Shomadhan (rice) and Brinjal-BD (eggplant) datasets for the new
+  ones. Rice and eggplant have no lab photos and no healthy rice class. Photos were split by leaf
+  group so shots of one leaf never sit on both sides of the train/test split; exact and
+  near-duplicate photos were removed.
 - **"Not sure" rule:** if the model's calibrated confidence is below a threshold chosen on held-out
   photos, the page shows photo-taking tips instead of a diagnosis (and, if the model is at least
   50% sure, lets you read about its top guess, clearly marked as unconfirmed).
@@ -41,21 +34,33 @@ confident enough it says so instead of guessing.
 
 ## Honest results
 
-| | PlantVillage (lab photos) | Real-world photos (PlantDoc test) |
-|---|---|---|
-| Before mixing in real-world photos | very high | about 36% right (crop unknown) |
-| After | about 1 point lower | about 49% right (crop unknown), about 61% (crop picked) |
+Version 2 (ResNet18, 31 classes), measured on photos the model never trained on:
 
-With the "not sure" rule on, the model answered about 39% of real-world photos and was right on
-roughly 73–76% of those it answered. Full tables are in `reports/`.
+| Test set | Photos | Right answer |
+|---|---|---|
+| PlantVillage lab photos (19 older classes) | 3,991 | 98.4% |
+| Real-world photos, all crops together | 711 | 70.5% (72.9% if the crop is picked first) |
+| of which PlantDoc (older crops) | 134 | 54.5% |
+| of which rice (Dhan-Shomadhan) | 244 | 65.6% |
+| of which eggplant (Brinjal-BD) | 333 | 80.5% |
+
+For comparison, version 1 (19 classes) got about 49% on the PlantDoc photos; adding rice and
+eggplant did not make the older crops worse. With the "not sure" rule on, the model answers about
+55% of real-world photos and is right on 84% of those it answers; it also answers about 11% of
+photos of other plants' leaves instead of saying "not sure". Full tables are in `reports/`.
 
 Limits to keep in mind:
 
-- The real-world test set is small (134 photos, 14 classes scored), so the numbers have wide
-  uncertainty. Some classes have no real-world test photos at all.
+- Real-world test sets are small, so numbers carry wide uncertainty (the 95% interval for the
+  711-photo figure is 67-74%). Five classes have too few real-world test photos to score.
+- Rice and eggplant test photos come from the same datasets and photographers as their training
+  photos. Leaf groups are kept apart, but a stranger's phone photo will likely score lower.
+- Rice leaf scald (about 25% recall) and rice brown spot (64%) are often mixed up with other rice
+  diseases. Eggplant Phytophthora blight and powdery mildew have only 51 and 71 photos in total.
 - PlantDoc labels were made by its authors and a few class mappings are approximate.
-- The model knows only 19 conditions of four crops. It was not tested on non-leaf photos.
-- Lab accuracy is not field accuracy: roughly half of real-world photos still get a wrong or
+- The model knows only 31 conditions of six crops. It was tested on other plants' leaves, not on
+  screenshots, hands or soil.
+- Lab accuracy is not field accuracy: about half of real-world photos still get a wrong or
   "not sure" answer.
 
 ## Run it locally (Windows PowerShell)
@@ -78,4 +83,6 @@ Settings (environment variables, all optional): `AGRISCAN_RATE_PER_MIN` (default
   varied backgrounds during training.
 - PlantDoc dataset, CC BY 4.0: Singh et al., "PlantDoc: A Dataset for Visual Plant Disease
   Detection" (2020).
+- Dhan-Shomadhan (rice leaf diseases) and Brinjal-BD (eggplant leaf diseases) datasets, both
+  CC BY 4.0. _Add the full citations from each dataset's page here._
 - Advice drawn from the extension publications listed under each result.

@@ -17,5 +17,17 @@
   "corn_northern_leaf_blight": 15,
   "corn_healthy": 16,
   "pepper_bacterial_spot": 17,
-  "pepper_healthy": 18
+  "pepper_healthy": 18,
+  "rice_brown_spot": 19,
+  "rice_blast": 20,
+  "rice_leaf_scald": 21,
+  "rice_sheath_blight": 22,
+  "rice_tungro": 23,
+  "eggplant_cercospora_leaf_spot": 24,
+  "eggplant_early_blight": 25,
+  "eggplant_healthy": 26,
+  "eggplant_mosaic_virus": 27,
+  "eggplant_phomopsis_blight": 28,
+  "eggplant_phytophthora_blight": 29,
+  "eggplant_powdery_mildew": 30
 }

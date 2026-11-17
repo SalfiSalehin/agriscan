@@ -1,0 +1,88 @@
+{
+  "name": "v2_r18_fs35",
+  "arch": "resnet18",
+  "seed": 42,
+  "smoke": false,
+  "amp": true,
+  "hparams": {
+    "field_share": 0.35,
+    "field_val_fraction": 0.15,
+    "selection_field_weight": 0.5,
+    "batch_size": 64,
+    "num_workers": 3,
+    "stage1_epochs": 3,
+    "stage1_lr": 0.001,
+    "stage2_max_epochs": 25,
+    "stage2_lr_backbone": 0.0001,
+    "stage2_lr_head": 0.0005,
+    "weight_decay": 0.01,
+    "label_smoothing": 0.1,
+    "class_weight_power": 0.5,
+    "early_stop_patience": 5,
+    "grad_clip": 1.0,
+    "bg_prob": 0.5,
+    "erase_prob": 0.25
+  },
+  "started": "2026-11-16T15:54:18",
+  "environment": {
+    "python": "3.11.9",
+    "os": "Windows-10-10.0.26300-SP0",
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "cuda_runtime": "12.4",
+    "gpu": "NVIDIA GeForce RTX 3060"
+  },
+  "git": {
+    "commit": "fe2dfbee7f0489651708d3db08029b1910f84ab3",
+    "dirty": true
+  },
+  "data": {
+    "manifest_digests": {
+      "train.csv": "5576a95b2e1b4c63",
+      "val.csv": "e600f8a1b520f5f5",
+      "test.csv": "a079ac697f7804af"
+    },
+    "train_images_used": 21763,
+    "val_images_used": 4005,
+    "field_train_images": 3120,
+    "field_val_images": 538,
+    "external_files": {
+      "external_manifest.csv": "ed6df4bbd7ae03d9",
+      "field_test_overlap.csv": "e25d73d4d26b09ae"
+    }
+  },
+  "class_weights": {
+    "potato_early_blight": 0.9083,
+    "potato_late_blight": 0.8559,
+    "potato_healthy": 2.9827,
+    "tomato_bacterial_spot": 0.7217,
+    "tomato_early_blight": 1.013,
+    "tomato_late_blight": 0.7605,
+    "tomato_leaf_mold": 1.0145,
+    "tomato_septoria": 0.7541,
+    "tomato_spider_mites": 0.8873,
+    "tomato_target_spot": 0.9702,
+    "tomato_yellow_leaf_curl": 0.4608,
+    "tomato_mosaic_virus": 1.5737,
+    "tomato_healthy": 0.8651,
+    "corn_gray_leaf_spot": 1.3218,
+    "corn_common_rust": 0.9049,
+    "corn_northern_leaf_blight": 0.8862,
+    "corn_healthy": 1.0655,
+    "pepper_bacterial_spot": 1.007,
+    "pepper_healthy": 0.9051,
+    "rice_brown_spot": 1.8077,
+    "rice_blast": 1.2501,
+    "rice_leaf_scald": 1.4082,
+    "rice_sheath_blight": 1.2238,
+    "rice_tungro": 1.529,
+    "eggplant_cercospora_leaf_spot": 1.5611,
+    "eggplant_early_blight": 1.4595,
+    "eggplant_healthy": 1.3846,
+    "eggplant_mosaic_virus": 0.8489,
+    "eggplant_phomopsis_blight": 1.5228,
+    "eggplant_phytophthora_blight": 2.8663,
+    "eggplant_powdery_mildew": 2.7509
+  },
+  "params_million": 11.192
+}

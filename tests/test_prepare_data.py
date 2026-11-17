@@ -1,4 +1,4 @@
-import pandas as pd
+﻿import pandas as pd
 import pytest
 
 from ml.config import load_config
@@ -25,9 +25,10 @@ def test_normalise_matches_mirror_spellings():
 
 def test_label_map_covers_all_classes():
     cfg = load_config()
-    names = [c.raw_name for c in cfg.classes] + ["Apple___healthy"]
-    mapping = build_label_map(names, cfg.classes)
-    assert sorted(mapping.values()) == sorted(cfg.class_ids)
+    classes = [c for c in cfg.classes if c.raw_name]
+    names = [c.raw_name for c in classes] + ["Apple___healthy"]
+    mapping = build_label_map(names, classes)
+    assert sorted(mapping.values()) == sorted(c.id for c in classes)
 
 
 def test_label_map_fails_loudly_when_class_missing():
@@ -71,3 +72,6 @@ def test_leaf_id_uses_map_then_falls_back():
     )
     assert leaf_id_for("x___Dup 1.JPG", tomato, leaf_map) == ("Tomato___Early_blight_y", "leaf_map")
     assert leaf_id_for("x___Nope 9.JPG", tomato, leaf_map) == ("fallback_Nope 9", "fallback")
+
+
+

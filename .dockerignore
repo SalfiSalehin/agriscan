@@ -2,7 +2,8 @@
 *
 !requirements.txt
 !app
-!models/agriscan_mobilenet_v3_small.onnx
-!models/agriscan_mobilenet_v3_small.meta.json
+!models/agriscan_resnet18.onnx
+!models/agriscan_resnet18.meta.json
 **/__pycache__
 **/*.pyc
+

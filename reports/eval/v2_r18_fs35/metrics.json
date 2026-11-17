@@ -1,0 +1,1894 @@
+{
+  "run": "v2_r18_fs35",
+  "arch": "resnet18",
+  "best_epoch": 27,
+  "created": "2026-11-16T17:02:49",
+  "data": {
+    "test_images": 3991,
+    "field_images": 711,
+    "field_val_images_used_for_calibration": 538,
+    "field_test_excluded_as_duplicates": 0,
+    "trained_with_field_share": 0.35,
+    "unknown_images": 1129,
+    "field_min_images_per_class": 5,
+    "external_sources": {
+      "PlantDoc": 2877,
+      "Brinjal-BD": 1515,
+      "Dhan-Shomadhan": 1106
+    }
+  },
+  "temperature": 0.77,
+  "results": {
+    "temperature": 0.77,
+    "temperature_fitted_on": "lab validation + field validation (538 field images), averaged per set",
+    "sets": {
+      "val": {
+        "n_images": 4005,
+        "accuracy": 0.9825,
+        "macro_f1": 0.9744,
+        "top3_accuracy": 0.9995,
+        "nll": 0.0983,
+        "ece": 0.0469,
+        "nll_before_temperature": 0.2252,
+        "ece_before_temperature": 0.1588,
+        "classes_reported": 19,
+        "classes_below_min_support": {
+          "rice_brown_spot": 0,
+          "rice_blast": 0,
+          "rice_leaf_scald": 0,
+          "rice_sheath_blight": 0,
+          "rice_tungro": 0,
+          "eggplant_cercospora_leaf_spot": 0,
+          "eggplant_early_blight": 0,
+          "eggplant_healthy": 0,
+          "eggplant_mosaic_virus": 0,
+          "eggplant_phomopsis_blight": 0,
+          "eggplant_phytophthora_blight": 0,
+          "eggplant_powdery_mildew": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "potato_healthy",
+            "recall": 0.8333,
+            "support": 24
+          },
+          {
+            "class": "corn_northern_leaf_blight",
+            "recall": 0.9257,
+            "support": 148
+          },
+          {
+            "class": "pepper_bacterial_spot",
+            "recall": 0.9262,
+            "support": 149
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 152
+          },
+          "potato_late_blight": {
+            "precision": 0.9865,
+            "recall": 0.9605,
+            "f1": 0.9733,
+            "support": 152
+          },
+          "potato_healthy": {
+            "precision": 1.0,
+            "recall": 0.8333,
+            "f1": 0.9091,
+            "support": 24
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.9905,
+            "recall": 0.9781,
+            "f1": 0.9843,
+            "support": 320
+          },
+          "tomato_early_blight": {
+            "precision": 0.9863,
+            "recall": 0.9474,
+            "f1": 0.9664,
+            "support": 152
+          },
+          "tomato_late_blight": {
+            "precision": 0.9694,
+            "recall": 0.993,
+            "f1": 0.9811,
+            "support": 287
+          },
+          "tomato_leaf_mold": {
+            "precision": 0.9862,
+            "recall": 0.9931,
+            "f1": 0.9896,
+            "support": 144
+          },
+          "tomato_septoria": {
+            "precision": 0.967,
+            "recall": 0.9962,
+            "f1": 0.9814,
+            "support": 265
+          },
+          "tomato_spider_mites": {
+            "precision": 0.996,
+            "recall": 0.9762,
+            "f1": 0.986,
+            "support": 252
+          },
+          "tomato_target_spot": {
+            "precision": 0.9665,
+            "recall": 0.9573,
+            "f1": 0.9619,
+            "support": 211
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 0.9975,
+            "recall": 1.0,
+            "f1": 0.9988,
+            "support": 806
+          },
+          "tomato_mosaic_virus": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 56
+          },
+          "tomato_healthy": {
+            "precision": 0.9794,
+            "recall": 1.0,
+            "f1": 0.9896,
+            "support": 238
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.8721,
+            "recall": 0.9615,
+            "f1": 0.9146,
+            "support": 78
+          },
+          "corn_common_rust": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 179
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.9716,
+            "recall": 0.9257,
+            "f1": 0.9481,
+            "support": 148
+          },
+          "corn_healthy": {
+            "precision": 1.0,
+            "recall": 0.9943,
+            "f1": 0.9971,
+            "support": 174
+          },
+          "pepper_bacterial_spot": {
+            "precision": 1.0,
+            "recall": 0.9262,
+            "f1": 0.9617,
+            "support": 149
+          },
+          "pepper_healthy": {
+            "precision": 0.9437,
+            "recall": 1.0,
+            "f1": 0.971,
+            "support": 218
+          }
+        }
+      },
+      "test": {
+        "n_images": 3991,
+        "accuracy": 0.9837,
+        "macro_f1": 0.98,
+        "top3_accuracy": 0.998,
+        "nll": 0.0991,
+        "ece": 0.0473,
+        "nll_before_temperature": 0.2254,
+        "ece_before_temperature": 0.1592,
+        "classes_reported": 19,
+        "classes_below_min_support": {
+          "rice_brown_spot": 0,
+          "rice_blast": 0,
+          "rice_leaf_scald": 0,
+          "rice_sheath_blight": 0,
+          "rice_tungro": 0,
+          "eggplant_cercospora_leaf_spot": 0,
+          "eggplant_early_blight": 0,
+          "eggplant_healthy": 0,
+          "eggplant_mosaic_virus": 0,
+          "eggplant_phomopsis_blight": 0,
+          "eggplant_phytophthora_blight": 0,
+          "eggplant_powdery_mildew": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "corn_gray_leaf_spot",
+            "recall": 0.9079,
+            "support": 76
+          },
+          {
+            "class": "tomato_spider_mites",
+            "recall": 0.9127,
+            "support": 252
+          },
+          {
+            "class": "corn_northern_leaf_blight",
+            "recall": 0.9392,
+            "support": 148
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 148
+          },
+          "potato_late_blight": {
+            "precision": 0.9932,
+            "recall": 0.9797,
+            "f1": 0.9864,
+            "support": 148
+          },
+          "potato_healthy": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.9969,
+            "recall": 0.9938,
+            "f1": 0.9953,
+            "support": 320
+          },
+          "tomato_early_blight": {
+            "precision": 0.9539,
+            "recall": 0.9732,
+            "f1": 0.9635,
+            "support": 149
+          },
+          "tomato_late_blight": {
+            "precision": 0.9725,
+            "recall": 0.9895,
+            "f1": 0.9809,
+            "support": 286
+          },
+          "tomato_leaf_mold": {
+            "precision": 1.0,
+            "recall": 0.9931,
+            "f1": 0.9965,
+            "support": 144
+          },
+          "tomato_septoria": {
+            "precision": 0.9813,
+            "recall": 0.9925,
+            "f1": 0.9869,
+            "support": 265
+          },
+          "tomato_spider_mites": {
+            "precision": 0.9957,
+            "recall": 0.9127,
+            "f1": 0.9524,
+            "support": 252
+          },
+          "tomato_target_spot": {
+            "precision": 0.914,
+            "recall": 0.9619,
+            "f1": 0.9374,
+            "support": 210
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 1.0,
+            "recall": 0.9988,
+            "f1": 0.9994,
+            "support": 802
+          },
+          "tomato_mosaic_virus": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 56
+          },
+          "tomato_healthy": {
+            "precision": 0.9795,
+            "recall": 1.0,
+            "f1": 0.9896,
+            "support": 239
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.8961,
+            "recall": 0.9079,
+            "f1": 0.902,
+            "support": 76
+          },
+          "corn_common_rust": {
+            "precision": 0.9835,
+            "recall": 1.0,
+            "f1": 0.9917,
+            "support": 179
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.9653,
+            "recall": 0.9392,
+            "f1": 0.9521,
+            "support": 148
+          },
+          "corn_healthy": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 173
+          },
+          "pepper_bacterial_spot": {
+            "precision": 1.0,
+            "recall": 0.9865,
+            "f1": 0.9932,
+            "support": 148
+          },
+          "pepper_healthy": {
+            "precision": 0.9911,
+            "recall": 0.9955,
+            "f1": 0.9933,
+            "support": 224
+          }
+        },
+        "ci95": {
+          "accuracy": [
+            0.9795,
+            0.9875
+          ],
+          "macro_f1": [
+            0.9748,
+            0.9848
+          ]
+        }
+      },
+      "field": {
+        "n_images": 711,
+        "accuracy": 0.7046,
+        "macro_f1": 0.6137,
+        "top3_accuracy": 0.9086,
+        "nll": 1.2067,
+        "ece": 0.1456,
+        "nll_before_temperature": 1.1227,
+        "ece_before_temperature": 0.0698,
+        "classes_reported": 26,
+        "classes_below_min_support": {
+          "potato_healthy": 0,
+          "tomato_spider_mites": 0,
+          "tomato_target_spot": 0,
+          "corn_gray_leaf_spot": 3,
+          "corn_healthy": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "potato_early_blight",
+            "recall": 0.2143,
+            "support": 14
+          },
+          {
+            "class": "rice_leaf_scald",
+            "recall": 0.25,
+            "support": 48
+          },
+          {
+            "class": "tomato_healthy",
+            "recall": 0.25,
+            "support": 8
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 0.4286,
+            "recall": 0.2143,
+            "f1": 0.2857,
+            "support": 14
+          },
+          "potato_late_blight": {
+            "precision": 0.2667,
+            "recall": 0.6667,
+            "f1": 0.381,
+            "support": 6
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.3333,
+            "recall": 0.2857,
+            "f1": 0.3077,
+            "support": 7
+          },
+          "tomato_early_blight": {
+            "precision": 0.5,
+            "recall": 0.6667,
+            "f1": 0.5714,
+            "support": 9
+          },
+          "tomato_late_blight": {
+            "precision": 0.5556,
+            "recall": 0.5556,
+            "f1": 0.5556,
+            "support": 9
+          },
+          "tomato_leaf_mold": {
+            "precision": 0.375,
+            "recall": 0.5,
+            "f1": 0.4286,
+            "support": 6
+          },
+          "tomato_septoria": {
+            "precision": 0.6923,
+            "recall": 0.75,
+            "f1": 0.72,
+            "support": 12
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 0.75,
+            "recall": 0.9231,
+            "f1": 0.8276,
+            "support": 13
+          },
+          "tomato_mosaic_virus": {
+            "precision": 0.75,
+            "recall": 0.3,
+            "f1": 0.4286,
+            "support": 10
+          },
+          "tomato_healthy": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "support": 8
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.1429,
+            "recall": 0.3333,
+            "f1": 0.2,
+            "support": 3
+          },
+          "corn_common_rust": {
+            "precision": 0.8889,
+            "recall": 0.8,
+            "f1": 0.8421,
+            "support": 10
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.375,
+            "recall": 0.3,
+            "f1": 0.3333,
+            "support": 10
+          },
+          "pepper_bacterial_spot": {
+            "precision": 0.8333,
+            "recall": 0.5556,
+            "f1": 0.6667,
+            "support": 9
+          },
+          "pepper_healthy": {
+            "precision": 0.6364,
+            "recall": 0.875,
+            "f1": 0.7368,
+            "support": 8
+          },
+          "rice_brown_spot": {
+            "precision": 0.6364,
+            "recall": 0.6364,
+            "f1": 0.6364,
+            "support": 33
+          },
+          "rice_blast": {
+            "precision": 0.6389,
+            "recall": 0.8214,
+            "f1": 0.7187,
+            "support": 56
+          },
+          "rice_leaf_scald": {
+            "precision": 0.3871,
+            "recall": 0.25,
+            "f1": 0.3038,
+            "support": 48
+          },
+          "rice_sheath_blight": {
+            "precision": 0.7742,
+            "recall": 0.8136,
+            "f1": 0.7934,
+            "support": 59
+          },
+          "rice_tungro": {
+            "precision": 0.7174,
+            "recall": 0.6875,
+            "f1": 0.7021,
+            "support": 48
+          },
+          "eggplant_cercospora_leaf_spot": {
+            "precision": 0.5385,
+            "recall": 0.525,
+            "f1": 0.5316,
+            "support": 40
+          },
+          "eggplant_early_blight": {
+            "precision": 0.561,
+            "recall": 0.4792,
+            "f1": 0.5169,
+            "support": 48
+          },
+          "eggplant_healthy": {
+            "precision": 0.9821,
+            "recall": 0.9821,
+            "f1": 0.9821,
+            "support": 56
+          },
+          "eggplant_mosaic_virus": {
+            "precision": 0.8462,
+            "recall": 0.9167,
+            "f1": 0.88,
+            "support": 120
+          },
+          "eggplant_phomopsis_blight": {
+            "precision": 0.8409,
+            "recall": 1.0,
+            "f1": 0.9136,
+            "support": 37
+          },
+          "eggplant_phytophthora_blight": {
+            "precision": 0.9412,
+            "recall": 1.0,
+            "f1": 0.9697,
+            "support": 16
+          },
+          "eggplant_powdery_mildew": {
+            "precision": 0.8571,
+            "recall": 0.375,
+            "f1": 0.5217,
+            "support": 16
+          }
+        },
+        "ci95": {
+          "accuracy": [
+            0.6709,
+            0.7398
+          ],
+          "macro_f1": [
+            0.5626,
+            0.6703
+          ]
+        }
+      },
+      "test_crop_known": {
+        "n_images": 3991,
+        "accuracy": 0.9847,
+        "macro_f1": 0.981,
+        "top3_accuracy": 0.9982,
+        "nll": 0.0565,
+        "ece": 0.0106,
+        "nll_before_temperature": 0.0828,
+        "ece_before_temperature": 0.0402,
+        "classes_reported": 19,
+        "classes_below_min_support": {
+          "rice_brown_spot": 0,
+          "rice_blast": 0,
+          "rice_leaf_scald": 0,
+          "rice_sheath_blight": 0,
+          "rice_tungro": 0,
+          "eggplant_cercospora_leaf_spot": 0,
+          "eggplant_early_blight": 0,
+          "eggplant_healthy": 0,
+          "eggplant_mosaic_virus": 0,
+          "eggplant_phomopsis_blight": 0,
+          "eggplant_phytophthora_blight": 0,
+          "eggplant_powdery_mildew": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "corn_gray_leaf_spot",
+            "recall": 0.9079,
+            "support": 76
+          },
+          {
+            "class": "tomato_spider_mites",
+            "recall": 0.9127,
+            "support": 252
+          },
+          {
+            "class": "corn_northern_leaf_blight",
+            "recall": 0.9392,
+            "support": 148
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 148
+          },
+          "potato_late_blight": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 148
+          },
+          "potato_healthy": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.9969,
+            "recall": 0.9938,
+            "f1": 0.9953,
+            "support": 320
+          },
+          "tomato_early_blight": {
+            "precision": 0.9539,
+            "recall": 0.9732,
+            "f1": 0.9635,
+            "support": 149
+          },
+          "tomato_late_blight": {
+            "precision": 0.9861,
+            "recall": 0.993,
+            "f1": 0.9895,
+            "support": 286
+          },
+          "tomato_leaf_mold": {
+            "precision": 1.0,
+            "recall": 0.9931,
+            "f1": 0.9965,
+            "support": 144
+          },
+          "tomato_septoria": {
+            "precision": 0.9813,
+            "recall": 0.9925,
+            "f1": 0.9869,
+            "support": 265
+          },
+          "tomato_spider_mites": {
+            "precision": 0.9957,
+            "recall": 0.9127,
+            "f1": 0.9524,
+            "support": 252
+          },
+          "tomato_target_spot": {
+            "precision": 0.914,
+            "recall": 0.9619,
+            "f1": 0.9374,
+            "support": 210
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 1.0,
+            "recall": 0.9988,
+            "f1": 0.9994,
+            "support": 802
+          },
+          "tomato_mosaic_virus": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 56
+          },
+          "tomato_healthy": {
+            "precision": 0.9795,
+            "recall": 1.0,
+            "f1": 0.9896,
+            "support": 239
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.8961,
+            "recall": 0.9079,
+            "f1": 0.902,
+            "support": 76
+          },
+          "corn_common_rust": {
+            "precision": 0.9835,
+            "recall": 1.0,
+            "f1": 0.9917,
+            "support": 179
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.9653,
+            "recall": 0.9392,
+            "f1": 0.9521,
+            "support": 148
+          },
+          "corn_healthy": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 173
+          },
+          "pepper_bacterial_spot": {
+            "precision": 0.9932,
+            "recall": 0.9865,
+            "f1": 0.9898,
+            "support": 148
+          },
+          "pepper_healthy": {
+            "precision": 0.9911,
+            "recall": 0.9955,
+            "f1": 0.9933,
+            "support": 224
+          }
+        },
+        "ci95": {
+          "accuracy": [
+            0.981,
+            0.9885
+          ],
+          "macro_f1": [
+            0.976,
+            0.986
+          ]
+        }
+      },
+      "field_crop_known": {
+        "n_images": 711,
+        "accuracy": 0.7286,
+        "macro_f1": 0.6842,
+        "top3_accuracy": 0.9409,
+        "nll": 1.0835,
+        "ece": 0.1573,
+        "nll_before_temperature": 0.9289,
+        "ece_before_temperature": 0.1158,
+        "classes_reported": 26,
+        "classes_below_min_support": {
+          "potato_healthy": 0,
+          "tomato_spider_mites": 0,
+          "tomato_target_spot": 0,
+          "corn_gray_leaf_spot": 3,
+          "corn_healthy": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "rice_leaf_scald",
+            "recall": 0.25,
+            "support": 48
+          },
+          {
+            "class": "corn_northern_leaf_blight",
+            "recall": 0.3,
+            "support": 10
+          },
+          {
+            "class": "potato_early_blight",
+            "recall": 0.3571,
+            "support": 14
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 0.8333,
+            "recall": 0.3571,
+            "f1": 0.5,
+            "support": 14
+          },
+          "potato_late_blight": {
+            "precision": 0.3571,
+            "recall": 0.8333,
+            "f1": 0.5,
+            "support": 6
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.4286,
+            "recall": 0.4286,
+            "f1": 0.4286,
+            "support": 7
+          },
+          "tomato_early_blight": {
+            "precision": 0.6667,
+            "recall": 0.8889,
+            "f1": 0.7619,
+            "support": 9
+          },
+          "tomato_late_blight": {
+            "precision": 0.7273,
+            "recall": 0.8889,
+            "f1": 0.8,
+            "support": 9
+          },
+          "tomato_leaf_mold": {
+            "precision": 0.3333,
+            "recall": 0.5,
+            "f1": 0.4,
+            "support": 6
+          },
+          "tomato_septoria": {
+            "precision": 0.9,
+            "recall": 0.75,
+            "f1": 0.8182,
+            "support": 12
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 0.8,
+            "recall": 0.9231,
+            "f1": 0.8571,
+            "support": 13
+          },
+          "tomato_mosaic_virus": {
+            "precision": 0.7143,
+            "recall": 0.5,
+            "f1": 0.5882,
+            "support": 10
+          },
+          "tomato_healthy": {
+            "precision": 1.0,
+            "recall": 0.375,
+            "f1": 0.5455,
+            "support": 8
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.1429,
+            "recall": 0.3333,
+            "f1": 0.2,
+            "support": 3
+          },
+          "corn_common_rust": {
+            "precision": 0.8889,
+            "recall": 0.8,
+            "f1": 0.8421,
+            "support": 10
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.4286,
+            "recall": 0.3,
+            "f1": 0.3529,
+            "support": 10
+          },
+          "pepper_bacterial_spot": {
+            "precision": 1.0,
+            "recall": 0.8889,
+            "f1": 0.9412,
+            "support": 9
+          },
+          "pepper_healthy": {
+            "precision": 0.8889,
+            "recall": 1.0,
+            "f1": 0.9412,
+            "support": 8
+          },
+          "rice_brown_spot": {
+            "precision": 0.6562,
+            "recall": 0.6364,
+            "f1": 0.6462,
+            "support": 33
+          },
+          "rice_blast": {
+            "precision": 0.6389,
+            "recall": 0.8214,
+            "f1": 0.7187,
+            "support": 56
+          },
+          "rice_leaf_scald": {
+            "precision": 0.3871,
+            "recall": 0.25,
+            "f1": 0.3038,
+            "support": 48
+          },
+          "rice_sheath_blight": {
+            "precision": 0.7619,
+            "recall": 0.8136,
+            "f1": 0.7869,
+            "support": 59
+          },
+          "rice_tungro": {
+            "precision": 0.7174,
+            "recall": 0.6875,
+            "f1": 0.7021,
+            "support": 48
+          },
+          "eggplant_cercospora_leaf_spot": {
+            "precision": 0.5385,
+            "recall": 0.525,
+            "f1": 0.5316,
+            "support": 40
+          },
+          "eggplant_early_blight": {
+            "precision": 0.561,
+            "recall": 0.4792,
+            "f1": 0.5169,
+            "support": 48
+          },
+          "eggplant_healthy": {
+            "precision": 0.9821,
+            "recall": 0.9821,
+            "f1": 0.9821,
+            "support": 56
+          },
+          "eggplant_mosaic_virus": {
+            "precision": 0.8538,
+            "recall": 0.925,
+            "f1": 0.888,
+            "support": 120
+          },
+          "eggplant_phomopsis_blight": {
+            "precision": 0.8409,
+            "recall": 1.0,
+            "f1": 0.9136,
+            "support": 37
+          },
+          "eggplant_phytophthora_blight": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 16
+          },
+          "eggplant_powdery_mildew": {
+            "precision": 0.8571,
+            "recall": 0.375,
+            "f1": 0.5217,
+            "support": 16
+          }
+        },
+        "ci95": {
+          "accuracy": [
+            0.6962,
+            0.7623
+          ],
+          "macro_f1": [
+            0.6375,
+            0.7346
+          ]
+        }
+      },
+      "field_exact_mapping_only": {
+        "n_images": 669,
+        "accuracy": 0.707,
+        "macro_f1": 0.6111,
+        "top3_accuracy": 0.9073,
+        "nll": 1.2213,
+        "ece": 0.1482,
+        "nll_before_temperature": 1.1294,
+        "ece_before_temperature": 0.0766,
+        "classes_reported": 22,
+        "classes_below_min_support": {
+          "potato_healthy": 0,
+          "tomato_spider_mites": 0,
+          "tomato_target_spot": 0,
+          "tomato_yellow_leaf_curl": 0,
+          "corn_gray_leaf_spot": 3,
+          "corn_common_rust": 0,
+          "corn_northern_leaf_blight": 0,
+          "corn_healthy": 0,
+          "pepper_bacterial_spot": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "potato_early_blight",
+            "recall": 0.2143,
+            "support": 14
+          },
+          {
+            "class": "rice_leaf_scald",
+            "recall": 0.25,
+            "support": 48
+          },
+          {
+            "class": "tomato_healthy",
+            "recall": 0.25,
+            "support": 8
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 0.4286,
+            "recall": 0.2143,
+            "f1": 0.2857,
+            "support": 14
+          },
+          "potato_late_blight": {
+            "precision": 0.2667,
+            "recall": 0.6667,
+            "f1": 0.381,
+            "support": 6
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.5,
+            "recall": 0.2857,
+            "f1": 0.3636,
+            "support": 7
+          },
+          "tomato_early_blight": {
+            "precision": 0.5,
+            "recall": 0.6667,
+            "f1": 0.5714,
+            "support": 9
+          },
+          "tomato_late_blight": {
+            "precision": 0.5556,
+            "recall": 0.5556,
+            "f1": 0.5556,
+            "support": 9
+          },
+          "tomato_leaf_mold": {
+            "precision": 0.375,
+            "recall": 0.5,
+            "f1": 0.4286,
+            "support": 6
+          },
+          "tomato_septoria": {
+            "precision": 0.8182,
+            "recall": 0.75,
+            "f1": 0.7826,
+            "support": 12
+          },
+          "tomato_mosaic_virus": {
+            "precision": 0.75,
+            "recall": 0.3,
+            "f1": 0.4286,
+            "support": 10
+          },
+          "tomato_healthy": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "support": 8
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 1.0,
+            "recall": 0.3333,
+            "f1": 0.5,
+            "support": 3
+          },
+          "pepper_healthy": {
+            "precision": 0.7,
+            "recall": 0.875,
+            "f1": 0.7778,
+            "support": 8
+          },
+          "rice_brown_spot": {
+            "precision": 0.6364,
+            "recall": 0.6364,
+            "f1": 0.6364,
+            "support": 33
+          },
+          "rice_blast": {
+            "precision": 0.6389,
+            "recall": 0.8214,
+            "f1": 0.7187,
+            "support": 56
+          },
+          "rice_leaf_scald": {
+            "precision": 0.3871,
+            "recall": 0.25,
+            "f1": 0.3038,
+            "support": 48
+          },
+          "rice_sheath_blight": {
+            "precision": 0.7742,
+            "recall": 0.8136,
+            "f1": 0.7934,
+            "support": 59
+          },
+          "rice_tungro": {
+            "precision": 0.7174,
+            "recall": 0.6875,
+            "f1": 0.7021,
+            "support": 48
+          },
+          "eggplant_cercospora_leaf_spot": {
+            "precision": 0.5385,
+            "recall": 0.525,
+            "f1": 0.5316,
+            "support": 40
+          },
+          "eggplant_early_blight": {
+            "precision": 0.561,
+            "recall": 0.4792,
+            "f1": 0.5169,
+            "support": 48
+          },
+          "eggplant_healthy": {
+            "precision": 0.9821,
+            "recall": 0.9821,
+            "f1": 0.9821,
+            "support": 56
+          },
+          "eggplant_mosaic_virus": {
+            "precision": 0.8462,
+            "recall": 0.9167,
+            "f1": 0.88,
+            "support": 120
+          },
+          "eggplant_phomopsis_blight": {
+            "precision": 0.8409,
+            "recall": 1.0,
+            "f1": 0.9136,
+            "support": 37
+          },
+          "eggplant_phytophthora_blight": {
+            "precision": 0.9412,
+            "recall": 1.0,
+            "f1": 0.9697,
+            "support": 16
+          },
+          "eggplant_powdery_mildew": {
+            "precision": 0.8571,
+            "recall": 0.375,
+            "f1": 0.5217,
+            "support": 16
+          }
+        }
+      },
+      "field_source_Brinjal-BD": {
+        "n_images": 333,
+        "accuracy": 0.8048,
+        "macro_f1": 0.7642,
+        "top3_accuracy": 0.964,
+        "nll": 0.7484,
+        "ece": 0.0931,
+        "nll_before_temperature": 0.7438,
+        "ece_before_temperature": 0.0404,
+        "classes_reported": 7,
+        "classes_below_min_support": {
+          "potato_early_blight": 0,
+          "potato_late_blight": 0,
+          "potato_healthy": 0,
+          "tomato_bacterial_spot": 0,
+          "tomato_early_blight": 0,
+          "tomato_late_blight": 0,
+          "tomato_leaf_mold": 0,
+          "tomato_septoria": 0,
+          "tomato_spider_mites": 0,
+          "tomato_target_spot": 0,
+          "tomato_yellow_leaf_curl": 0,
+          "tomato_mosaic_virus": 0,
+          "tomato_healthy": 0,
+          "corn_gray_leaf_spot": 0,
+          "corn_common_rust": 0,
+          "corn_northern_leaf_blight": 0,
+          "corn_healthy": 0,
+          "pepper_bacterial_spot": 0,
+          "pepper_healthy": 0,
+          "rice_brown_spot": 0,
+          "rice_blast": 0,
+          "rice_leaf_scald": 0,
+          "rice_sheath_blight": 0,
+          "rice_tungro": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "eggplant_powdery_mildew",
+            "recall": 0.375,
+            "support": 16
+          },
+          {
+            "class": "eggplant_early_blight",
+            "recall": 0.4792,
+            "support": 48
+          },
+          {
+            "class": "eggplant_cercospora_leaf_spot",
+            "recall": 0.525,
+            "support": 40
+          }
+        ],
+        "per_class": {
+          "eggplant_cercospora_leaf_spot": {
+            "precision": 0.5385,
+            "recall": 0.525,
+            "f1": 0.5316,
+            "support": 40
+          },
+          "eggplant_early_blight": {
+            "precision": 0.561,
+            "recall": 0.4792,
+            "f1": 0.5169,
+            "support": 48
+          },
+          "eggplant_healthy": {
+            "precision": 0.9821,
+            "recall": 0.9821,
+            "f1": 0.9821,
+            "support": 56
+          },
+          "eggplant_mosaic_virus": {
+            "precision": 0.8527,
+            "recall": 0.9167,
+            "f1": 0.8835,
+            "support": 120
+          },
+          "eggplant_phomopsis_blight": {
+            "precision": 0.8409,
+            "recall": 1.0,
+            "f1": 0.9136,
+            "support": 37
+          },
+          "eggplant_phytophthora_blight": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 16
+          },
+          "eggplant_powdery_mildew": {
+            "precision": 0.8571,
+            "recall": 0.375,
+            "f1": 0.5217,
+            "support": 16
+          }
+        }
+      },
+      "field_source_Dhan-Shomadhan": {
+        "n_images": 244,
+        "accuracy": 0.6557,
+        "macro_f1": 0.6328,
+        "top3_accuracy": 0.8852,
+        "nll": 1.5191,
+        "ece": 0.2075,
+        "nll_before_temperature": 1.3344,
+        "ece_before_temperature": 0.1257,
+        "classes_reported": 5,
+        "classes_below_min_support": {
+          "potato_early_blight": 0,
+          "potato_late_blight": 0,
+          "potato_healthy": 0,
+          "tomato_bacterial_spot": 0,
+          "tomato_early_blight": 0,
+          "tomato_late_blight": 0,
+          "tomato_leaf_mold": 0,
+          "tomato_septoria": 0,
+          "tomato_spider_mites": 0,
+          "tomato_target_spot": 0,
+          "tomato_yellow_leaf_curl": 0,
+          "tomato_mosaic_virus": 0,
+          "tomato_healthy": 0,
+          "corn_gray_leaf_spot": 0,
+          "corn_common_rust": 0,
+          "corn_northern_leaf_blight": 0,
+          "corn_healthy": 0,
+          "pepper_bacterial_spot": 0,
+          "pepper_healthy": 0,
+          "eggplant_cercospora_leaf_spot": 0,
+          "eggplant_early_blight": 0,
+          "eggplant_healthy": 0,
+          "eggplant_mosaic_virus": 0,
+          "eggplant_phomopsis_blight": 0,
+          "eggplant_phytophthora_blight": 0,
+          "eggplant_powdery_mildew": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "rice_leaf_scald",
+            "recall": 0.25,
+            "support": 48
+          },
+          {
+            "class": "rice_brown_spot",
+            "recall": 0.6364,
+            "support": 33
+          },
+          {
+            "class": "rice_tungro",
+            "recall": 0.6875,
+            "support": 48
+          }
+        ],
+        "per_class": {
+          "rice_brown_spot": {
+            "precision": 0.6562,
+            "recall": 0.6364,
+            "f1": 0.6462,
+            "support": 33
+          },
+          "rice_blast": {
+            "precision": 0.6389,
+            "recall": 0.8214,
+            "f1": 0.7187,
+            "support": 56
+          },
+          "rice_leaf_scald": {
+            "precision": 0.3871,
+            "recall": 0.25,
+            "f1": 0.3038,
+            "support": 48
+          },
+          "rice_sheath_blight": {
+            "precision": 0.7742,
+            "recall": 0.8136,
+            "f1": 0.7934,
+            "support": 59
+          },
+          "rice_tungro": {
+            "precision": 0.7174,
+            "recall": 0.6875,
+            "f1": 0.7021,
+            "support": 48
+          }
+        }
+      },
+      "field_source_PlantDoc": {
+        "n_images": 134,
+        "accuracy": 0.5448,
+        "macro_f1": 0.5382,
+        "top3_accuracy": 0.8134,
+        "nll": 1.7769,
+        "ece": 0.22,
+        "nll_before_temperature": 1.6787,
+        "ece_before_temperature": 0.1588,
+        "classes_reported": 14,
+        "classes_below_min_support": {
+          "potato_healthy": 0,
+          "tomato_spider_mites": 0,
+          "tomato_target_spot": 0,
+          "corn_gray_leaf_spot": 3,
+          "corn_healthy": 0,
+          "rice_brown_spot": 0,
+          "rice_blast": 0,
+          "rice_leaf_scald": 0,
+          "rice_sheath_blight": 0,
+          "rice_tungro": 0,
+          "eggplant_cercospora_leaf_spot": 0,
+          "eggplant_early_blight": 0,
+          "eggplant_healthy": 0,
+          "eggplant_mosaic_virus": 0,
+          "eggplant_phomopsis_blight": 0,
+          "eggplant_phytophthora_blight": 0,
+          "eggplant_powdery_mildew": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "potato_early_blight",
+            "recall": 0.2143,
+            "support": 14
+          },
+          {
+            "class": "tomato_healthy",
+            "recall": 0.25,
+            "support": 8
+          },
+          {
+            "class": "tomato_bacterial_spot",
+            "recall": 0.2857,
+            "support": 7
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 0.4286,
+            "recall": 0.2143,
+            "f1": 0.2857,
+            "support": 14
+          },
+          "potato_late_blight": {
+            "precision": 0.2667,
+            "recall": 0.6667,
+            "f1": 0.381,
+            "support": 6
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.3333,
+            "recall": 0.2857,
+            "f1": 0.3077,
+            "support": 7
+          },
+          "tomato_early_blight": {
+            "precision": 0.5,
+            "recall": 0.6667,
+            "f1": 0.5714,
+            "support": 9
+          },
+          "tomato_late_blight": {
+            "precision": 0.5556,
+            "recall": 0.5556,
+            "f1": 0.5556,
+            "support": 9
+          },
+          "tomato_leaf_mold": {
+            "precision": 0.375,
+            "recall": 0.5,
+            "f1": 0.4286,
+            "support": 6
+          },
+          "tomato_septoria": {
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1": 0.75,
+            "support": 12
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 0.75,
+            "recall": 0.9231,
+            "f1": 0.8276,
+            "support": 13
+          },
+          "tomato_mosaic_virus": {
+            "precision": 0.75,
+            "recall": 0.3,
+            "f1": 0.4286,
+            "support": 10
+          },
+          "tomato_healthy": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "support": 8
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.1429,
+            "recall": 0.3333,
+            "f1": 0.2,
+            "support": 3
+          },
+          "corn_common_rust": {
+            "precision": 0.8889,
+            "recall": 0.8,
+            "f1": 0.8421,
+            "support": 10
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.4286,
+            "recall": 0.3,
+            "f1": 0.3529,
+            "support": 10
+          },
+          "pepper_bacterial_spot": {
+            "precision": 0.8333,
+            "recall": 0.5556,
+            "f1": 0.6667,
+            "support": 9
+          },
+          "pepper_healthy": {
+            "precision": 0.6364,
+            "recall": 0.875,
+            "f1": 0.7368,
+            "support": 8
+          }
+        }
+      },
+      "test_leaf_verified_only": {
+        "n_images": 2410,
+        "accuracy": 0.9838,
+        "macro_f1": 0.9872,
+        "top3_accuracy": 0.9975,
+        "nll": 0.1069,
+        "ece": 0.0516,
+        "nll_before_temperature": 0.2379,
+        "ece_before_temperature": 0.1669,
+        "classes_reported": 13,
+        "classes_below_min_support": {
+          "tomato_target_spot": 0,
+          "tomato_mosaic_virus": 0,
+          "corn_gray_leaf_spot": 0,
+          "corn_common_rust": 0,
+          "corn_northern_leaf_blight": 0,
+          "corn_healthy": 0,
+          "rice_brown_spot": 0,
+          "rice_blast": 0,
+          "rice_leaf_scald": 0,
+          "rice_sheath_blight": 0,
+          "rice_tungro": 0,
+          "eggplant_cercospora_leaf_spot": 0,
+          "eggplant_early_blight": 0,
+          "eggplant_healthy": 0,
+          "eggplant_mosaic_virus": 0,
+          "eggplant_phomopsis_blight": 0,
+          "eggplant_phytophthora_blight": 0,
+          "eggplant_powdery_mildew": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "tomato_spider_mites",
+            "recall": 0.9127,
+            "support": 252
+          },
+          {
+            "class": "tomato_early_blight",
+            "recall": 0.973,
+            "support": 148
+          },
+          {
+            "class": "potato_late_blight",
+            "recall": 0.9797,
+            "support": 148
+          }
+        ],
+        "per_class": {
+          "potato_early_blight": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 148
+          },
+          "potato_late_blight": {
+            "precision": 1.0,
+            "recall": 0.9797,
+            "f1": 0.9898,
+            "support": 148
+          },
+          "potato_healthy": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "tomato_bacterial_spot": {
+            "precision": 0.9969,
+            "recall": 0.9938,
+            "f1": 0.9953,
+            "support": 320
+          },
+          "tomato_early_blight": {
+            "precision": 0.973,
+            "recall": 0.973,
+            "f1": 0.973,
+            "support": 148
+          },
+          "tomato_late_blight": {
+            "precision": 0.944,
+            "recall": 0.9833,
+            "f1": 0.9633,
+            "support": 120
+          },
+          "tomato_leaf_mold": {
+            "precision": 1.0,
+            "recall": 0.9931,
+            "f1": 0.9965,
+            "support": 144
+          },
+          "tomato_septoria": {
+            "precision": 0.9865,
+            "recall": 0.9865,
+            "f1": 0.9865,
+            "support": 148
+          },
+          "tomato_spider_mites": {
+            "precision": 0.9957,
+            "recall": 0.9127,
+            "f1": 0.9524,
+            "support": 252
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 1.0,
+            "recall": 0.9977,
+            "f1": 0.9989,
+            "support": 440
+          },
+          "tomato_healthy": {
+            "precision": 0.98,
+            "recall": 1.0,
+            "f1": 0.9899,
+            "support": 147
+          },
+          "pepper_bacterial_spot": {
+            "precision": 1.0,
+            "recall": 0.9865,
+            "f1": 0.9932,
+            "support": 148
+          },
+          "pepper_healthy": {
+            "precision": 0.9911,
+            "recall": 1.0,
+            "f1": 0.9955,
+            "support": 223
+          }
+        }
+      },
+      "test_fallback_grouping_only": {
+        "n_images": 1581,
+        "accuracy": 0.9836,
+        "macro_f1": 0.8497,
+        "top3_accuracy": 0.9987,
+        "nll": 0.0872,
+        "ece": 0.0418,
+        "nll_before_temperature": 0.2062,
+        "ece_before_temperature": 0.1475,
+        "classes_reported": 12,
+        "classes_below_min_support": {
+          "potato_early_blight": 0,
+          "potato_late_blight": 0,
+          "potato_healthy": 0,
+          "tomato_bacterial_spot": 0,
+          "tomato_leaf_mold": 0,
+          "tomato_spider_mites": 0,
+          "pepper_bacterial_spot": 0,
+          "rice_brown_spot": 0,
+          "rice_blast": 0,
+          "rice_leaf_scald": 0,
+          "rice_sheath_blight": 0,
+          "rice_tungro": 0,
+          "eggplant_cercospora_leaf_spot": 0,
+          "eggplant_early_blight": 0,
+          "eggplant_healthy": 0,
+          "eggplant_mosaic_virus": 0,
+          "eggplant_phomopsis_blight": 0,
+          "eggplant_phytophthora_blight": 0,
+          "eggplant_powdery_mildew": 0
+        },
+        "lowest_recall": [
+          {
+            "class": "pepper_healthy",
+            "recall": 0.0,
+            "support": 1
+          },
+          {
+            "class": "corn_gray_leaf_spot",
+            "recall": 0.9079,
+            "support": 76
+          },
+          {
+            "class": "corn_northern_leaf_blight",
+            "recall": 0.9392,
+            "support": 148
+          }
+        ],
+        "per_class": {
+          "tomato_early_blight": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4,
+            "support": 1
+          },
+          "tomato_late_blight": {
+            "precision": 0.994,
+            "recall": 0.994,
+            "f1": 0.994,
+            "support": 166
+          },
+          "tomato_septoria": {
+            "precision": 0.975,
+            "recall": 1.0,
+            "f1": 0.9873,
+            "support": 117
+          },
+          "tomato_target_spot": {
+            "precision": 1.0,
+            "recall": 0.9619,
+            "f1": 0.9806,
+            "support": 210
+          },
+          "tomato_yellow_leaf_curl": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 362
+          },
+          "tomato_mosaic_virus": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 56
+          },
+          "tomato_healthy": {
+            "precision": 0.9787,
+            "recall": 1.0,
+            "f1": 0.9892,
+            "support": 92
+          },
+          "corn_gray_leaf_spot": {
+            "precision": 0.8961,
+            "recall": 0.9079,
+            "f1": 0.902,
+            "support": 76
+          },
+          "corn_common_rust": {
+            "precision": 0.9835,
+            "recall": 1.0,
+            "f1": 0.9917,
+            "support": 179
+          },
+          "corn_northern_leaf_blight": {
+            "precision": 0.9653,
+            "recall": 0.9392,
+            "f1": 0.9521,
+            "support": 148
+          },
+          "corn_healthy": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 173
+          },
+          "pepper_healthy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          }
+        }
+      }
+    },
+    "threshold": {
+      "selection_rule": "smallest threshold from 0.50 to 0.99 at which at most 10% of the calibration-half unknown images still get an answer",
+      "chosen_threshold": 0.91,
+      "images": {
+        "unknown_calibration": 569,
+        "unknown_held_out": 560,
+        "field_calibration": 361,
+        "field_held_out": 350
+      },
+      "auroc_confidence_known_vs_unknown": {
+        "test_vs_unknown_held_out": 0.9263,
+        "field_held_out_vs_unknown_held_out": 0.8169
+      },
+      "table": [
+        {
+          "threshold": 0.5,
+          "chosen": false,
+          "test": {
+            "n": 3991,
+            "coverage": 0.9917,
+            "accuracy_when_answered": 0.9881
+          },
+          "field_held_out": {
+            "n": 350,
+            "coverage": 0.8971,
+            "accuracy_when_answered": 0.7166
+          },
+          "test_crop_known": {
+            "n": 3991,
+            "coverage": 0.9912,
+            "accuracy_when_answered": 0.9886
+          },
+          "field_held_out_crop_known": {
+            "n": 350,
+            "coverage": 0.8829,
+            "accuracy_when_answered": 0.7282
+          },
+          "unknown_held_out_false_accept": 0.5018
+        },
+        {
+          "threshold": 0.6,
+          "chosen": false,
+          "test": {
+            "n": 3991,
+            "coverage": 0.9832,
+            "accuracy_when_answered": 0.9911
+          },
+          "field_held_out": {
+            "n": 350,
+            "coverage": 0.82,
+            "accuracy_when_answered": 0.7422
+          },
+          "test_crop_known": {
+            "n": 3991,
+            "coverage": 0.9827,
+            "accuracy_when_answered": 0.9916
+          },
+          "field_held_out_crop_known": {
+            "n": 350,
+            "coverage": 0.8057,
+            "accuracy_when_answered": 0.7553
+          },
+          "unknown_held_out_false_accept": 0.4054
+        },
+        {
+          "threshold": 0.7,
+          "chosen": false,
+          "test": {
+            "n": 3991,
+            "coverage": 0.9724,
+            "accuracy_when_answered": 0.9933
+          },
+          "field_held_out": {
+            "n": 350,
+            "coverage": 0.7657,
+            "accuracy_when_answered": 0.7575
+          },
+          "test_crop_known": {
+            "n": 3991,
+            "coverage": 0.9722,
+            "accuracy_when_answered": 0.9936
+          },
+          "field_held_out_crop_known": {
+            "n": 350,
+            "coverage": 0.7514,
+            "accuracy_when_answered": 0.7719
+          },
+          "unknown_held_out_false_accept": 0.2982
+        },
+        {
+          "threshold": 0.8,
+          "chosen": false,
+          "test": {
+            "n": 3991,
+            "coverage": 0.9514,
+            "accuracy_when_answered": 0.9953
+          },
+          "field_held_out": {
+            "n": 350,
+            "coverage": 0.6914,
+            "accuracy_when_answered": 0.781
+          },
+          "test_crop_known": {
+            "n": 3991,
+            "coverage": 0.9514,
+            "accuracy_when_answered": 0.9953
+          },
+          "field_held_out_crop_known": {
+            "n": 350,
+            "coverage": 0.6857,
+            "accuracy_when_answered": 0.7875
+          },
+          "unknown_held_out_false_accept": 0.2107
+        },
+        {
+          "threshold": 0.9,
+          "chosen": false,
+          "test": {
+            "n": 3991,
+            "coverage": 0.8857,
+            "accuracy_when_answered": 0.998
+          },
+          "field_held_out": {
+            "n": 350,
+            "coverage": 0.5686,
+            "accuracy_when_answered": 0.8342
+          },
+          "test_crop_known": {
+            "n": 3991,
+            "coverage": 0.8857,
+            "accuracy_when_answered": 0.998
+          },
+          "field_held_out_crop_known": {
+            "n": 350,
+            "coverage": 0.5629,
+            "accuracy_when_answered": 0.8426
+          },
+          "unknown_held_out_false_accept": 0.1179
+        },
+        {
+          "threshold": 0.91,
+          "chosen": true,
+          "test": {
+            "n": 3991,
+            "coverage": 0.8614,
+            "accuracy_when_answered": 0.998
+          },
+          "field_held_out": {
+            "n": 350,
+            "coverage": 0.5514,
+            "accuracy_when_answered": 0.8394
+          },
+          "test_crop_known": {
+            "n": 3991,
+            "coverage": 0.8614,
+            "accuracy_when_answered": 0.998
+          },
+          "field_held_out_crop_known": {
+            "n": 350,
+            "coverage": 0.5457,
+            "accuracy_when_answered": 0.8482
+          },
+          "unknown_held_out_false_accept": 0.1125
+        },
+        {
+          "threshold": 0.95,
+          "chosen": false,
+          "test": {
+            "n": 3991,
+            "coverage": 0.5921,
+            "accuracy_when_answered": 0.9983
+          },
+          "field_held_out": {
+            "n": 350,
+            "coverage": 0.4486,
+            "accuracy_when_answered": 0.8599
+          },
+          "test_crop_known": {
+            "n": 3991,
+            "coverage": 0.5921,
+            "accuracy_when_answered": 0.9983
+          },
+          "field_held_out_crop_known": {
+            "n": 350,
+            "coverage": 0.4457,
+            "accuracy_when_answered": 0.8654
+          },
+          "unknown_held_out_false_accept": 0.0679
+        }
+      ]
+    }
+  },
+  "notes": [
+    "test = held-out PlantVillage split: lab photos on plain backgrounds. Only part of it has verified leaf grouping; compare test_leaf_verified_only with test_fallback_grouping_only.",
+    "field = PlantDoc's official TEST photos mapped onto our classes (plus any local photos), minus near-duplicates of training photos. No run trained on them. Labels are the dataset authors' own. Mappings marked approximate are in 'field' but not in 'field_exact_mapping_only'. Classes with fewer images than the minimum are not scored.",
+    "*_crop_known = the same images, but with the classes of every other crop switched off, as if the user had picked the crop first. It measures the app design, not the model alone.",
+    "unknown = leaves of other crops (plus any local non-leaf photos). Without photos of hands, soil or objects in data/nonleaf, the threshold is only tested against other plants' leaves.",
+    "Confidence intervals resample images as if independent. Several photos of one leaf are correlated, so the real uncertainty is larger.",
+    "Temperature is fitted on lab validation (plus field validation for runs trained on field photos; see temperature_fitted_on). The threshold is chosen on one half of the unknown images (split by file hash) and reported on the other half.",
+    "The field test set is small (check n_images and classes_below_min_support). Differences of a few points between runs are inside the confidence intervals."
+  ]
+}

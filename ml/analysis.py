@@ -274,6 +274,18 @@ def analyse_run(
         sets["field_exact_mapping_only"] = summarise_set(
             logits["field"][exact], labels["field"][exact], temperature, class_ids, min_support
         )
+    if "source" in field_info.columns:  # report each photo source on its own
+        sources = field_info["source"].to_numpy()
+        if len(set(sources)) > 1:
+            for source in sorted(set(sources)):
+                keep = sources == source
+                sets[f"field_source_{source}"] = summarise_set(
+                    logits["field"][keep],
+                    np.asarray(labels["field"])[keep],
+                    temperature,
+                    class_ids,
+                    min_support,
+                )
     if test_leaf_verified is not None:
         verified = np.asarray(test_leaf_verified, dtype=bool)
         for name, keep in (
@@ -387,6 +399,7 @@ def collect_external_rows(root, manifest_path, field_dir, nonleaf_dir, class_ids
                     "source_split": getattr(r, "source_split", ""),
                     "mapping": r.mapping,
                     "sha256": r.sha256,
+                    "group": str(getattr(r, "group", "")),
                 }
             )
     ignored = []
@@ -415,6 +428,7 @@ def collect_external_rows(root, manifest_path, field_dir, nonleaf_dir, class_ids
                     "source_split": "",
                     "mapping": "exact",
                     "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                    "group": "",
                 }
             )
     if ignored:
@@ -422,7 +436,16 @@ def collect_external_rows(root, manifest_path, field_dir, nonleaf_dir, class_ids
             f"{len(ignored)} image(s) in the field folder were ignored because their folder is "
             f"not a class id, e.g. {ignored[0]}"
         )
-    columns = ["path", "role", "class_id", "source", "source_split", "mapping", "sha256"]
+    columns = [
+        "path",
+        "role",
+        "class_id",
+        "source",
+        "source_split",
+        "mapping",
+        "sha256",
+        "group",
+    ]
     frame = pd.DataFrame(rows, columns=columns)
     present = np.array([(root / p).exists() for p in frame["path"]], dtype=bool)
     if not present.all():
@@ -451,8 +474,9 @@ def load_overlap(path) -> set[str]:
 def assign_use(frame: pd.DataFrame, val_fraction: float, exclude=()) -> pd.Series:
     """What each external image is used for.
 
-    - field, PlantDoc train folder -> "train" (mixed into training) or, for a stable
-      `val_fraction` of them chosen by file hash, "val" (early stopping and calibration only)
+    - field, train folder -> "train" (mixed into training) or, for a stable `val_fraction`
+      of them, "val" (early stopping and calibration only). The choice is made per file hash,
+      or per `group` when the import gave one (photos of one leaf then stay on the same side)
     - field, PlantDoc test folder or your own local photos -> "test" (never trained on)
     - field images listed in `exclude` (near-duplicates of training photos) -> "excluded"
     - unknown images -> "unknown" (never trained on; they only choose the "unsure" threshold)
@@ -465,7 +489,8 @@ def assign_use(frame: pd.DataFrame, val_fraction: float, exclude=()) -> pd.Serie
         elif r.path in exclude:
             use.append("excluded")
         elif r.source_split == "train":
-            use.append("val" if val_share(r.sha256) < val_fraction else "train")
+            key = getattr(r, "group", "") or r.sha256
+            use.append("val" if val_share(key) < val_fraction else "train")
         else:
             use.append("test")
     return pd.Series(use, index=frame.index, dtype=object)

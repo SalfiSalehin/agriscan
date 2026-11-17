@@ -1,0 +1,15 @@
+{
+  "skipped_folders": {
+    "Aphids": 90,
+    "Defect_Fruit": 263,
+    "Healthy_Fruit": 161,
+    "Magnesium_Deficiency": 162
+  },
+  "matched_by_similarity": {},
+  "source": "Brinjal-BD",
+  "imported": 1515,
+  "skipped": {
+    "duplicate": 15,
+    "unreadable": 0
+  }
+}

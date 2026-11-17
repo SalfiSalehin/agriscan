@@ -130,6 +130,34 @@ def test_analyse_run_end_to_end_on_synthetic_logits():
     assert threshold["images"]["unknown_calibration"] == 150
 
 
+def test_analyse_run_reports_each_field_source_and_allows_classes_without_lab_photos():
+    rng = np.random.default_rng(2)
+    classes = CLASSES + ["new_crop_a", "new_crop_b"]  # these two never occur in the lab sets
+    val_x, val_y = _calibrated(rng, 600, 2.5)
+    test_x, test_y = _calibrated(rng, 600, 2.5)
+    field_x, field_y = _calibrated(rng, 200, 2.5)
+    pad = lambda x: np.hstack([x, rng.normal(-3, 0.3, (len(x), 2))])  # noqa: E731
+    logits = {
+        "val": pad(val_x),
+        "test": pad(test_x),
+        "field": pad(field_x),
+        "unknown": rng.normal(0, 0.4, (300, 6)),
+    }
+    labels = {"val": val_y, "test": test_y, "field": field_y}
+    info = pd.DataFrame(
+        {
+            "mapping": ["exact"] * 200,
+            "half": [0, 1] * 100,
+            "source": ["PlantDoc"] * 100 + ["BrinjalBD"] * 100,
+        }
+    )
+    result = an.analyse_run(
+        logits, labels, info, pd.DataFrame({"half": [0, 1] * 150}), classes, None, 5, 0.1, 20
+    )
+    assert {"field_source_PlantDoc", "field_source_BrinjalBD"} <= set(result["sets"])
+    assert result["sets"]["test"]["accuracy"] > 0.5
+
+
 def test_analyse_run_rejects_tiny_sets():
     rng = np.random.default_rng(0)
     logits = {k: rng.normal(0, 1, (10, 4)) for k in ("val", "test", "field", "unknown")}

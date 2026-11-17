@@ -13,7 +13,7 @@ const STR = {
     analyse: "Analyse leaf",
     analysing: "Analysing…",
     auto: "Not sure / any",
-    footer: "AgriScan is a student portfolio project. The model learned mostly from studio-style photos, so it is less reliable on photos taken in the field, and it knows only 19 conditions of four crops. Use it as a first hint, not as a final answer.",
+    footer: "AgriScan is a student portfolio project. The model learned mostly from studio-style photos, so it is less reliable on photos taken in the field, and it knows only 31 conditions of six crops. Use it as a first hint, not as a final answer.",
     credits: "Photos: PlantVillage and PlantDoc (CC BY 4.0). Advice is summarised from university extension services; see the sources under each result.",
     possible: "Most likely",
     healthyBadge: "No known disease seen",
@@ -21,7 +21,14 @@ const STR = {
     confidence: "Model confidence",
     confNote: "This is the model's own estimate and can be wrong, especially on field photos.",
     others: "Other possibilities",
+    ranked: "How sure the model is, in detail",
+    neededLine: "Needed to name a disease: {need}. This photo: {got} for {name}.",
+    sumNote: "The model shares 100% between all 31 conditions it knows. A low top value means the photo does not look clearly like any of them.",
+    veryLow: "Such a low value usually means the photo is not a clear leaf of one of the six crops (tomato, potato, pepper, corn, rice or eggplant), or is blurry, dark or too far away. Try a close, sharp photo of one leaf.",
+    passLine: "Above the {need} needed, so the model named a disease.",
     unverified: "(number to be confirmed)",
+    acrossAll: "Across all 31 conditions and all crops:",
+    cropMismatch: "You chose {chosen}, but the model thinks this looks more like {crop} ({p}). Check the crop you selected, or take another photo.",
     peek: "Read about the top guess: {name}",
     peekBadge: "Possible, not confirmed",
     peekNote: "The model is not sure. Treat this as background reading, not a diagnosis, and check with your agriculture office.",
@@ -54,7 +61,7 @@ const STR = {
     err_corrupt_image: "The photo file is damaged. Please choose another one.",
     err_busy: "The server is busy. Please try again in a moment.",
     err_rate_limited: "Too many requests from you in a short time. Please wait a minute and try again.",
-    crops: { tomato: "Tomato", potato: "Potato", pepper: "Pepper", corn: "Corn" },
+    crops: { tomato: "Tomato", potato: "Potato", pepper: "Pepper", corn: "Corn", rice: "Rice", eggplant: "Eggplant" },
   },
   bn: {
     title: "পাতার রোগ পরীক্ষা করুন",
@@ -68,7 +75,7 @@ const STR = {
     analyse: "পাতা বিশ্লেষণ করুন",
     analysing: "বিশ্লেষণ চলছে…",
     auto: "নিশ্চিত নই / যেকোনো",
-    footer: "AgriScan একটি শিক্ষার্থীর পোর্টফোলিও প্রকল্প। মডেলটি বেশিরভাগ স্টুডিও-ধাঁচের ছবি থেকে শিখেছে, তাই মাঠে তোলা ছবিতে এটি কম নির্ভরযোগ্য, আর এটি চারটি ফসলের মাত্র ১৯টি অবস্থা চেনে। একে প্রথম ইঙ্গিত হিসেবে ব্যবহার করুন, চূড়ান্ত উত্তর হিসেবে নয়।",
+    footer: "AgriScan একটি শিক্ষার্থীর পোর্টফোলিও প্রকল্প। মডেলটি বেশিরভাগ স্টুডিও-ধাঁচের ছবি থেকে শিখেছে, তাই মাঠে তোলা ছবিতে এটি কম নির্ভরযোগ্য, আর এটি ছয়টি ফসলের মাত্র ৩১টি অবস্থা চেনে। একে প্রথম ইঙ্গিত হিসেবে ব্যবহার করুন, চূড়ান্ত উত্তর হিসেবে নয়।",
     credits: "ছবি: PlantVillage ও PlantDoc (CC BY 4.0)। পরামর্শ বিশ্ববিদ্যালয়-ভিত্তিক কৃষি সম্প্রসারণ সংস্থার তথ্য থেকে সংক্ষেপে নেওয়া; প্রতিটি ফলাফলের নিচে সূত্র দেখুন।",
     possible: "সবচেয়ে সম্ভাব্য",
     healthyBadge: "জানা কোনো রোগ দেখা যায়নি",
@@ -76,7 +83,14 @@ const STR = {
     confidence: "মডেলের আত্মবিশ্বাস",
     confNote: "এটি মডেলের নিজের অনুমান এবং ভুল হতে পারে, বিশেষ করে মাঠে তোলা ছবিতে।",
     others: "অন্যান্য সম্ভাবনা",
+    ranked: "মডেল ঠিক কতটা নিশ্চিত, বিস্তারিত",
+    neededLine: "রোগের নাম বলতে দরকার: {need}। এই ছবিতে {name}-এর জন্য: {got}।",
+    sumNote: "মডেল তার জানা ৩১টি অবস্থার মধ্যে মোট ১০০% ভাগ করে দেয়। সর্বোচ্চ মান কম হলে বোঝায় ছবিটি কোনোটির সাথেই স্পষ্টভাবে মেলে না।",
+    veryLow: "এত কম মান সাধারণত বোঝায় ছবিটি ছয়টি ফসলের (টমেটো, আলু, ক্যাপসিকাম, ভুট্টা, ধান বা বেগুন) কোনোটির স্পষ্ট পাতা নয়, অথবা ঝাপসা, অন্ধকার বা অনেক দূর থেকে তোলা। একটি পাতার কাছ থেকে তোলা পরিষ্কার ছবি দিন।",
+    passLine: "দরকারি {need}-এর বেশি, তাই মডেল একটি রোগের নাম বলেছে।",
     unverified: "(নম্বরটি নিশ্চিত করা হয়নি)",
+    acrossAll: "৩১টি অবস্থা ও সব ফসল মিলিয়ে:",
+    cropMismatch: "আপনি {chosen} বেছেছেন, কিন্তু মডেল মনে করছে এটি দেখতে বেশি {crop}-এর মতো ({p})। বেছে নেওয়া ফসলটি ঠিক আছে কি না দেখুন, অথবা আরেকটি ছবি তুলুন।",
     peek: "শীর্ষ অনুমান সম্পর্কে পড়ুন: {name}",
     peekBadge: "সম্ভাব্য, নিশ্চিত নয়",
     peekNote: "মডেল নিশ্চিত নয়। এটিকে রোগনির্ণয় নয়, পটভূমি-তথ্য হিসেবে পড়ুন এবং আপনার কৃষি অফিসের সাথে মিলিয়ে নিন।",
@@ -109,11 +123,11 @@ const STR = {
     err_corrupt_image: "ছবির ফাইলটি নষ্ট। অন্য ছবি বেছে নিন।",
     err_busy: "সার্ভার এখন ব্যস্ত। একটু পরে আবার চেষ্টা করুন।",
     err_rate_limited: "অল্প সময়ে আপনার অনেক অনুরোধ হয়েছে। এক মিনিট অপেক্ষা করে আবার চেষ্টা করুন।",
-    crops: { tomato: "টমেটো", potato: "আলু", pepper: "ক্যাপসিকাম", corn: "ভুট্টা" },
+    crops: { tomato: "টমেটো", potato: "আলু", pepper: "ক্যাপসিকাম", corn: "ভুট্টা", rice: "ধান", eggplant: "বেগুন" },
   },
 };
 
-const CROPS = ["tomato", "potato", "pepper", "corn"];
+const CROPS = ["tomato", "potato", "pepper", "corn", "rice", "eggplant"];
 const SECTIONS = ["cause", "symptoms", "conditions", "spread", "actions", "get_help", "look_alikes"];
 const MAX_SIDE = 1600; // photos are shrunk in the browser first: faster upload, same detail for the model
 const TIMEOUT_MS = 30000;
@@ -298,7 +312,7 @@ async function refreshAdvice() {
   try {
     const names = await loadClassNames();
     const byId = Object.fromEntries(names.map((c) => [c.class_id, c.name]));
-    r.predictions.forEach((p) => { p.name = byId[p.class_id] || p.class_id; });
+    r.predictions.concat(r.overall || []).forEach((p) => { p.name = byId[p.class_id] || p.class_id; });
     const id = r.status === "ok" ? r.diagnosis : "unsure";
     r.info = await fetchDisease(id);
     r.lang = state.lang;
@@ -311,7 +325,8 @@ async function refreshAdvice() {
 }
 
 function pct(p) {
-  return (p * 100).toFixed(p >= 0.995 ? 0 : 1) + "%";
+  if (p > 0 && p < 0.0005) return "<0.1%";
+  return (p * 100).toFixed(1) + "%";
 }
 
 function listSection(title, items, open) {
@@ -408,6 +423,15 @@ function renderResult() {
       head.append(row);
     }
   }
+  const best = r.overall && r.overall[0];
+  if (best && r.crop && best.crop !== r.crop && r.status !== "ok") {
+    const chosen = t("crops")[r.crop] || r.crop;
+    const crop = t("crops")[best.crop] || best.crop;
+    head.append(
+      el("p", "notice", t("cropMismatch")
+        .replaceAll("{chosen}", chosen).replaceAll("{crop}", crop).replaceAll("{p}", pct(best.probability))),
+    );
+  }
   box.append(head);
 
   if (state.peek && r.status !== "ok" && state.peek.info && state.peek.info.kind === "disease") {
@@ -427,21 +451,52 @@ function renderResult() {
     box.append(card);
   }
 
-  const listed = r.status === "ok" ? r.predictions.slice(1) : r.predictions;
-  if (listed.length) {
+  if (r.predictions && r.predictions.length) {
     const card = el("div", "card");
-    card.append(el("strong", "", t("others")));
+    card.append(el("strong", "", t("ranked")));
+    const top = r.predictions[0];
+    const need = pct(r.threshold);
+    if (r.status === "ok") {
+      card.append(el("p", "muted", t("passLine").replaceAll("{need}", need)));
+    } else {
+      card.append(
+        el(
+          "p",
+          "muted",
+          t("neededLine")
+            .replaceAll("{need}", need)
+            .replaceAll("{got}", pct(top.probability))
+            .replaceAll("{name}", top.name || top.class_id),
+        ),
+      );
+      const peak = r.overall && r.overall.length ? r.overall[0].probability : top.probability;
+      if (peak < 0.2) card.append(el("p", "notice", t("veryLow")));
+    }
     const list = el("ul", "top3");
-    listed.forEach((p) => {
+    r.predictions.forEach((p) => {
       const li = el("li");
-      li.append(el("span", "", p.name || p.class_id), el("span", "muted", pct(p.probability)));
+      li.append(el("span", "", p.name || p.class_id), el("strong", "", pct(p.probability)));
       list.append(li);
     });
     card.append(list);
+    const all = r.overall || [];
+    if (r.crop && all.length && all[0].class_id !== top.class_id) {
+      // a crop was picked and the model's overall best answer is a different one: show it too
+      card.append(el("p", "muted", t("acrossAll")));
+      const wide = el("ul", "top3");
+      all.forEach((p) => {
+        const li = el("li");
+        li.append(el("span", "", p.name || p.class_id), el("strong", "", pct(p.probability)));
+        wide.append(li);
+      });
+      card.append(wide);
+    }
+    card.append(el("p", "muted", t("sumNote")));
     box.append(card);
   }
 
   if (info.kind === "disease") box.append(sourcesCard(info));
+
 
   if (info.disclaimer) box.append(el("p", "muted", info.disclaimer));
   if (r.prediction_id) box.append(feedbackCard(r));

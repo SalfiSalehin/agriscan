@@ -45,6 +45,7 @@ MANIFEST_COLUMNS = [
     "sha256",
     "width",
     "height",
+    "group",  # photos of one leaf share a group (empty = every photo on its own)
 ]
 
 # PlantDoc folder -> (AgriScan class id or None, mapping quality)

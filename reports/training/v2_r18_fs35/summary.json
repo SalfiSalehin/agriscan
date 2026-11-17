@@ -1,0 +1,211 @@
+{
+  "run": "v2_r18_fs35",
+  "arch": "resnet18",
+  "params_million": 11.192,
+  "best_epoch": 27,
+  "epochs_run": 28,
+  "stopped_early": false,
+  "field_share": 0.35,
+  "selection": "mean of lab-validation loss and field-validation loss",
+  "val_at_best": {
+    "loss": 0.2252,
+    "acc": 0.9825,
+    "macro_f1": 0.9744
+  },
+  "field_val_at_best": {
+    "loss": 0.954,
+    "acc": 0.7621
+  },
+  "train_seconds_total": 3625.8,
+  "seconds_per_epoch_mean": 129.5,
+  "peak_gpu_memory_mb": 943.1,
+  "best_checkpoint_mb_pytorch": 42.77,
+  "val_per_class": {
+    "potato_early_blight": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 152
+    },
+    "potato_late_blight": {
+      "precision": 0.9865,
+      "recall": 0.9605,
+      "f1": 0.9733,
+      "support": 152
+    },
+    "potato_healthy": {
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091,
+      "support": 24
+    },
+    "tomato_bacterial_spot": {
+      "precision": 0.9905,
+      "recall": 0.9781,
+      "f1": 0.9843,
+      "support": 320
+    },
+    "tomato_early_blight": {
+      "precision": 0.9863,
+      "recall": 0.9474,
+      "f1": 0.9664,
+      "support": 152
+    },
+    "tomato_late_blight": {
+      "precision": 0.9694,
+      "recall": 0.993,
+      "f1": 0.9811,
+      "support": 287
+    },
+    "tomato_leaf_mold": {
+      "precision": 0.9862,
+      "recall": 0.9931,
+      "f1": 0.9896,
+      "support": 144
+    },
+    "tomato_septoria": {
+      "precision": 0.967,
+      "recall": 0.9962,
+      "f1": 0.9814,
+      "support": 265
+    },
+    "tomato_spider_mites": {
+      "precision": 0.996,
+      "recall": 0.9762,
+      "f1": 0.986,
+      "support": 252
+    },
+    "tomato_target_spot": {
+      "precision": 0.9665,
+      "recall": 0.9573,
+      "f1": 0.9619,
+      "support": 211
+    },
+    "tomato_yellow_leaf_curl": {
+      "precision": 0.9975,
+      "recall": 1.0,
+      "f1": 0.9988,
+      "support": 806
+    },
+    "tomato_mosaic_virus": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 56
+    },
+    "tomato_healthy": {
+      "precision": 0.9794,
+      "recall": 1.0,
+      "f1": 0.9896,
+      "support": 238
+    },
+    "corn_gray_leaf_spot": {
+      "precision": 0.8721,
+      "recall": 0.9615,
+      "f1": 0.9146,
+      "support": 78
+    },
+    "corn_common_rust": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 179
+    },
+    "corn_northern_leaf_blight": {
+      "precision": 0.9716,
+      "recall": 0.9257,
+      "f1": 0.9481,
+      "support": 148
+    },
+    "corn_healthy": {
+      "precision": 1.0,
+      "recall": 0.9943,
+      "f1": 0.9971,
+      "support": 174
+    },
+    "pepper_bacterial_spot": {
+      "precision": 1.0,
+      "recall": 0.9262,
+      "f1": 0.9617,
+      "support": 149
+    },
+    "pepper_healthy": {
+      "precision": 0.9437,
+      "recall": 1.0,
+      "f1": 0.971,
+      "support": 218
+    },
+    "rice_brown_spot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "rice_blast": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "rice_leaf_scald": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "rice_sheath_blight": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "rice_tungro": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "eggplant_cercospora_leaf_spot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "eggplant_early_blight": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "eggplant_healthy": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "eggplant_mosaic_virus": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "eggplant_phomopsis_blight": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "eggplant_phytophthora_blight": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "eggplant_powdery_mildew": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    }
+  }
+}

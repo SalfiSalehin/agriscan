@@ -16,6 +16,14 @@
     "corn": {
       "en": "Corn (maize)",
       "bn": "ভুট্টা"
+    },
+    "rice": {
+      "en": "Rice",
+      "bn": "ধান"
+    },
+    "eggplant": {
+      "en": "Eggplant (brinjal)",
+      "bn": "বেগুন"
     }
   },
   "disclaimer": {
@@ -1694,6 +1702,1181 @@
         }
       ]
     },
+    "rice_brown_spot": {
+      "kind": "disease",
+      "crop": "rice",
+      "name": {
+        "en": "Brown spot",
+        "bn": "ব্রাউন স্পট (বাদামি দাগ রোগ)"
+      },
+      "cause": {
+        "en": "A fungus (Cochliobolus miyabeanus, also called Bipolaris oryzae). It is carried on infected seed and survives in rice straw, volunteer rice and wild grasses.",
+        "bn": "কোক্লিওবোলাস মিয়াবিনিয়াস (বাইপোলারিস ওরাইজি নামেও পরিচিত) নামের একটি ছত্রাক। এটি আক্রান্ত বীজে থাকে এবং ধানের খড়, আপনা-আপনি গজানো ধান ও বুনো ঘাসে টিকে থাকে।"
+      },
+      "symptoms": [
+        {
+          "en": "Small to medium round or oval spots, dark brown to purple-brown, often with a grey or light-brown centre and a dark brown edge, scattered over the leaf.",
+          "bn": "ছোট থেকে মাঝারি গোল বা ডিম্বাকার দাগ, গাঢ় বাদামি থেকে বেগুনি-বাদামি, প্রায়ই ধূসর বা হালকা বাদামি কেন্দ্র ও গাঢ় বাদামি কিনারাসহ, পাতাজুড়ে ছড়ানো।"
+        },
+        {
+          "en": "Spots can run together and the leaf dries out. Seedlings can get brown spots on the first shoot and leaf sheaths, giving thin, weak stands.",
+          "bn": "দাগ মিলে গিয়ে পাতা শুকিয়ে যেতে পারে। চারায় প্রথম পাতা ও খোলে বাদামি দাগ হয়ে চারা পাতলা ও দুর্বল হতে পারে।"
+        },
+        {
+          "en": "Grains and husks can also show brown marks and black spore masses; badly infected grain may fill poorly.",
+          "bn": "দানা ও তুষেও বাদামি দাগ ও কালো রেণুর স্তর দেখা দিতে পারে; মারাত্মক আক্রান্ত দানা ঠিকমতো ভরাট না-ও হতে পারে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Several days of high humidity with light rain or heavy dew and cloudy weather.",
+          "bn": "কয়েক দিন উচ্চ আর্দ্রতা, হালকা বৃষ্টি বা ঘন শিশির ও মেঘলা আবহাওয়া।"
+        },
+        {
+          "en": "Stressed or poorly fed crops: low nitrogen, phosphorus or potassium, drought, salty or problem soils. Sources describe it as worse on weak crops.",
+          "bn": "চাপে থাকা বা কম পুষ্টি পাওয়া ফসল: নাইট্রোজেন, ফসফরাস বা পটাশিয়ামের ঘাটতি, খরা, লবণাক্ত বা সমস্যাযুক্ত মাটি। সূত্র অনুযায়ী দুর্বল ফসলে রোগ বেশি হয়।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Mainly through infected seed. Spores are also blown by wind over short distances.",
+          "bn": "মূলত আক্রান্ত বীজের মাধ্যমে। রেণু বাতাসেও অল্প দূরত্বে ছড়ায়।"
+        },
+        {
+          "en": "The sources are from other rice countries. They say nothing specific about aus, aman or boro in Bangladesh.",
+          "bn": "সূত্রগুলো অন্য ধান-উৎপাদনকারী দেশের। বাংলাদেশের আউশ, আমন বা বোরো সম্পর্কে এতে আলাদা কিছু নেই।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Use clean, disease-free seed. Hot-water seed treatment is described in some sources; ask your agriculture office whether it suits your seed.",
+          "bn": "পরিষ্কার, রোগমুক্ত বীজ ব্যবহার করুন। কিছু সূত্রে গরম পানিতে বীজ শোধনের কথা আছে; এটি আপনার বীজের জন্য উপযোগী কি না কৃষি অফিসে জিজ্ঞাসা করুন।"
+        },
+        {
+          "en": "Keep the crop well fed with balanced fertiliser at the recommended rates, and add potassium where the soil lacks it.",
+          "bn": "সুপারিশ করা মাত্রায় সুষম সার দিয়ে ফসলকে সবল রাখুন; মাটিতে পটাশিয়ামের ঘাটতি থাকলে তা দিন।"
+        },
+        {
+          "en": "After harvest, plough in or remove straw and stubble and control weeds and wild grasses.",
+          "bn": "কাটার পর খড় ও গোড়া মাটিতে মিশিয়ে দিন বা সরিয়ে ফেলুন এবং আগাছা ও বুনো ঘাস দমন করুন।"
+        },
+        {
+          "en": "Where available, choose resistant varieties and rotate crops.",
+          "bn": "পাওয়া গেলে প্রতিরোধী জাত বেছে নিন এবং ফসলের চক্র বদলান।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Ask the local agriculture office for resistant varieties and for advice on any spray before you use it, and always follow the product label.",
+          "bn": "প্রতিরোধী জাত ও যেকোনো ওষুধ ছিটানোর আগে পরামর্শের জন্য স্থানীয় কৃষি অফিসে জিজ্ঞাসা করুন এবং সবসময় ওষুধের লেবেলের নির্দেশ মানুন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Blast spots are spindle-shaped with grey centres; brown spot is rounder and more scattered. Potassium shortage can also cause brown spots on older leaves.",
+          "bn": "ব্লাস্টের দাগ টাকুর মতো লম্বাটে ও ধূসর কেন্দ্রযুক্ত; ব্রাউন স্পট বেশি গোল ও ছড়ানো। পটাশিয়ামের অভাবেও পুরোনো পাতায় বাদামি দাগ হতে পারে।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Seed-protectant fungicide and, in some sources, a foliar fungicide",
+        "bn": "বীজ শোধনের ছত্রাকনাশক এবং কিছু সূত্রে পাতায় ছিটানোর ছত্রাকনাশক"
+      },
+      "sources": [
+        {
+          "title": "Rice brown leaf spot (Fact sheet 427)",
+          "url": "https://apps.lucidcentral.org/pppw_v10/text/web_full/entities/rice_brown_leaf_spot_427.htm",
+          "publisher": "Pacific Pests, Pathogens and Weeds online edition (Lucid Central); publisher not stated on the fetched page text"
+        },
+        {
+          "title": "Brown Spot of Rice",
+          "url": "https://doa.gov.lk/?p=25372",
+          "publisher": "Rice Research and Development Institute (RRDI), Department of Agriculture, Sri Lanka; publisher inferred from page label and domain"
+        },
+        {
+          "title": "Field Guide: Major Disorders of the Rice Plant - Diseases and Nutritional Deficiencies",
+          "url": "https://www.philrice.gov.ph/wp-content/uploads/2023/02/Field-Guide_-Major-Disorders-of-the-rice-plant-Diseases-and-Nutritional-Deficiencies.pdf",
+          "publisher": "DA-PhilRice (Philippines); publisher implied by the preface"
+        },
+        {
+          "title": "Rice disease management",
+          "url": "https://extension.missouri.edu/programs/rice-extension/rice-disease-management",
+          "publisher": "University of Missouri Extension"
+        }
+      ]
+    },
+    "rice_blast": {
+      "kind": "disease",
+      "crop": "rice",
+      "name": {
+        "en": "Blast",
+        "bn": "ব্লাস্ট (ধানের ঝলসানো রোগ)"
+      },
+      "cause": {
+        "en": "A fungus (Magnaporthe oryzae, also called Pyricularia oryzae). Its spores travel on wind and survive on seed, straw, stubble and grasses.",
+        "bn": "ম্যাগনাপোর্থে ওরাইজি (পাইরিকুলারিয়া ওরাইজি নামেও পরিচিত) নামের একটি ছত্রাক। এর রেণু বাতাসে ছড়ায় এবং বীজ, খড়, গোড়া ও ঘাসে টিকে থাকে।"
+      },
+      "symptoms": [
+        {
+          "en": "Spindle- or diamond-shaped leaf spots, about 5 to 15 mm long, with a brown edge, often a yellow halo and a grey or whitish centre.",
+          "bn": "টাকু বা হীরার মতো পাতার দাগ, প্রায় ৫ থেকে ১৫ মিলিমিটার লম্বা, বাদামি কিনারা, প্রায়ই হলুদ বলয় এবং ধূসর বা সাদাটে কেন্দ্রযুক্ত।"
+        },
+        {
+          "en": "Spots grow and join; badly hit leaves and fields can look scorched. Young spots start small and water-soaked.",
+          "bn": "দাগ বড় হয়ে মিলে যায়; মারাত্মক আক্রান্ত পাতা ও ক্ষেত ঝলসানোর মতো দেখায়। কচি দাগ ছোট ও পানি-ভেজা ভাব নিয়ে শুরু হয়।"
+        },
+        {
+          "en": "The same fungus can attack the neck of the panicle and the grain heads, which does much more damage than leaf spots.",
+          "bn": "একই ছত্রাক শীষের গলা ও শীষে আক্রমণ করতে পারে, যা পাতার দাগের চেয়ে অনেক বেশি ক্ষতি করে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Long wet periods (dew, fog, frequent light showers), very high humidity and cloudy skies.",
+          "bn": "দীর্ঘ সময় ভেজা পাতা (শিশির, কুয়াশা, ঘন ঘন হালকা বৃষ্টি), খুব উচ্চ আর্দ্রতা ও মেঘলা আকাশ।"
+        },
+        {
+          "en": "Too much nitrogen, dense planting, dry or drained fields, and susceptible varieties. BRRI, quoted in news reports, links Bangladesh outbreaks to warm, humid weather.",
+          "bn": "অতিরিক্ত নাইট্রোজেন, ঘন রোপণ, শুকনো বা পানি-সরানো জমি এবং সংবেদনশীল জাত। সংবাদ প্রতিবেদনে উদ্ধৃত ব্রি জানিয়েছে বাংলাদেশে প্রাদুর্ভাব উষ্ণ, আর্দ্র আবহাওয়ার সাথে যুক্ত।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Spores are carried by wind and irrigation water. The fungus survives between crops on infected seed, straw, stubble, volunteer rice and grasses.",
+          "bn": "রেণু বাতাস ও সেচের পানিতে ছড়ায়। ছত্রাক আক্রান্ত বীজ, খড়, গোড়া, আপনা-আপনি গজানো ধান ও ঘাসে এক ফসল থেকে আরেক ফসলে টিকে থাকে।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Resistant varieties are the main control in the sources. Ask your agriculture office which suit your area and season.",
+          "bn": "সূত্রে প্রতিরোধী জাতই প্রধান নিয়ন্ত্রণ। আপনার এলাকা ও মৌসুমে কোন জাত উপযোগী, কৃষি অফিসে জিজ্ঞাসা করুন।"
+        },
+        {
+          "en": "Use clean seed. Avoid too much nitrogen: split the fertiliser into several applications at the recommended total.",
+          "bn": "পরিষ্কার বীজ ব্যবহার করুন। অতিরিক্ত নাইট্রোজেন এড়ান: সুপারিশ করা মোট পরিমাণ কয়েক ভাগে ভাগ করে দিন।"
+        },
+        {
+          "en": "Avoid dense planting, keep the field flooded where possible and avoid long dry spells in the field.",
+          "bn": "ঘন রোপণ এড়ান, সম্ভব হলে জমিতে পানি ধরে রাখুন এবং জমি দীর্ঘ সময় শুকনো রাখা এড়ান।"
+        },
+        {
+          "en": "After harvest, bury or burn infected straw and stubble. Spotting it early and removing and burning badly infected plants is advised in Bangladesh news reports.",
+          "bn": "কাটার পর আক্রান্ত খড় ও গোড়া মাটিচাপা দিন বা পুড়িয়ে ফেলুন। বাংলাদেশের সংবাদ প্রতিবেদনে রোগ আগে ধরা এবং মারাত্মক আক্রান্ত গাছ তুলে পুড়িয়ে ফেলার পরামর্শ আছে।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Neck and panicle blast do great damage before they are noticed. If blast is known in your area, ask the local agriculture office about prevention early.",
+          "bn": "শীষের গলা ও শীষের ব্লাস্ট টের পাওয়ার আগেই অনেক ক্ষতি করে। আপনার এলাকায় ব্লাস্টের ইতিহাস থাকলে আগেভাগেই স্থানীয় কৃষি অফিসে প্রতিরোধের পরামর্শ নিন।"
+        },
+        {
+          "en": "Get the right product, dose and timing from the agriculture office, not from this site.",
+          "bn": "সঠিক ওষুধ, মাত্রা ও সময় এই সাইট থেকে নয়, কৃষি অফিস থেকে জেনে নিন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Brown spot is rounder with lighter centres and usually appears later. Sheath blight makes large irregular lesions on the sheaths near the water line.",
+          "bn": "ব্রাউন স্পট বেশি গোল, হালকা কেন্দ্রযুক্ত এবং সাধারণত দেরিতে দেখা দেয়। শিথ ব্লাইট পানির কাছাকাছি খোলে বড়, অনিয়মিত দাগ করে।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Seed treatment and a foliar fungicide around booting and heading",
+        "bn": "বীজ শোধন এবং থোড় ও শীষ বের হওয়ার সময়ের কাছাকাছি পাতায় ছিটানোর ছত্রাকনাশক"
+      },
+      "sources": [
+        {
+          "title": "Rice blast (Fact sheet 252)",
+          "url": "https://apps.lucidcentral.org/pppw_v10/text/web_full/entities/rice_blast_252.htm",
+          "publisher": "Pacific Pests, Pathogens and Weeds online edition (Lucid Central); publisher not stated on the fetched page text"
+        },
+        {
+          "title": "Agriculture: Rice Pest Management Guidelines - Rice blast",
+          "url": "https://ipm.ucanr.edu/agriculture/rice/rice-blast/",
+          "publisher": "University of California Statewide IPM Program (UC IPM)"
+        },
+        {
+          "title": "Blast management (LSU AgCenter PDF blastmanagement.pdf)",
+          "url": "https://www.lsuagcenter.com/~/media/system/7/4/7/1/747154045c7d7d11d292b15a75ec7846/blastmanagement.pdf",
+          "publisher": "LSU AgCenter"
+        },
+        {
+          "title": "Major diseases of the rice plant in the Philippines",
+          "url": "https://www.philrice.gov.ph/wp-content/uploads/2023/02/Major-diseases-of-the-rice-plant-in-the-Philippines.pdf",
+          "publisher": "PhilRice (Philippine Rice Research Institute); publisher inferred from the domain"
+        },
+        {
+          "title": "Blast disease eats into rice yields, BRRI looks for resilient varieties",
+          "url": "https://www.tbsnews.net/agriculture/blast-disease-eats-rice-yields-brri-looks-resilient-varieties-782534",
+          "publisher": "The Business Standard (Bangladesh), news article citing BRRI, 28 January 2024"
+        },
+        {
+          "title": "Scouting for rice leaf blast",
+          "url": "https://arkansascrops.uada.edu/posts/disease/scouting-rice-leaf-blast.aspx",
+          "publisher": "University of Arkansas System Division of Agriculture (Cooperative Extension)"
+        },
+        {
+          "title": "Prevention is best defense against Bangladesh crop diseases, researchers say",
+          "url": "https://news.mongabay.com/2024/01/prevention-is-best-defense-against-bangladesh-crop-diseases-researchers-say/",
+          "publisher": "Mongabay (news article quoting BRRI scientists)"
+        },
+        {
+          "title": "Rice disease management",
+          "url": "https://extension.missouri.edu/programs/rice-extension/rice-disease-management",
+          "publisher": "University of Missouri Extension"
+        }
+      ]
+    },
+    "rice_leaf_scald": {
+      "kind": "disease",
+      "crop": "rice",
+      "name": {
+        "en": "Leaf scald",
+        "bn": "লিফ স্কাল্ড (পাতা ঝলসানো রোগ)"
+      },
+      "cause": {
+        "en": "A fungus (Microdochium oryzae, also called Monographella albescens). One source says it survives between crops in infected seed.",
+        "bn": "মাইক্রোডোকিয়াম ওরাইজি (মোনোগ্রাফেলা অ্যালবেসেন্স নামেও পরিচিত) নামের একটি ছত্রাক। একটি সূত্র বলছে এটি আক্রান্ত বীজে এক ফসল থেকে আরেক ফসলে টিকে থাকে।"
+      },
+      "symptoms": [
+        {
+          "en": "Lesions start at the leaf tip or edges, with bands of light tan and darker reddish-brown, like chevrons.",
+          "bn": "দাগ পাতার ডগা বা কিনারায় শুরু হয়, হালকা বাদামি ও গাঢ় লালচে-বাদামি পর্যায়ক্রমিক ডোরা সহ, অনেকটা তীরচিহ্নের মতো।"
+        },
+        {
+          "en": "On older leaves the lesions are long, with a light brown halo; the front edge can be yellow to gold.",
+          "bn": "পুরোনো পাতায় দাগ লম্বাটে, হালকা বাদামি বলয়সহ; সামনের কিনারা হলুদ থেকে সোনালি হতে পারে।"
+        },
+        {
+          "en": "Joined lesions dry out much of the leaf blade to a scalded, straw-coloured look.",
+          "bn": "মিলে যাওয়া দাগ পাতার বড় অংশ শুকিয়ে ঝলসানো, খড়-রঙা করে দেয়।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "The sources we read do not describe the weather that favours leaf scald. One only advises against heavy fertiliser use.",
+          "bn": "আমাদের পড়া সূত্রগুলোতে কোন আবহাওয়ায় লিফ স্কাল্ড বাড়ে তা বলা নেই। একটি সূত্র শুধু বেশি সার না দিতে বলেছে।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Infected seed carries the fungus from one crop to the next (one source). The sources say little else about spread.",
+          "bn": "আক্রান্ত বীজ ছত্রাককে এক ফসল থেকে পরের ফসলে নিয়ে যায় (একটি সূত্র)। ছড়ানো নিয়ে সূত্রে আর বিশেষ কিছু নেই।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Avoid heavy fertiliser use; apply urea at the recommended rate or by the leaf colour chart.",
+          "bn": "বেশি সার দেওয়া এড়ান; ইউরিয়া সুপারিশ করা মাত্রায় বা পাতার রঙের চার্ট দেখে দিন।"
+        },
+        {
+          "en": "Next season use certified disease-free seed and control weeds. Do not reuse seed from an infected crop.",
+          "bn": "পরের মৌসুমে প্রত্যয়িত রোগমুক্ত বীজ ব্যবহার করুন ও আগাছা দমন করুন। আক্রান্ত ফসলের বীজ আবার ব্যবহার করবেন না।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "The sources are thin on this disease. Show the leaf to your local agriculture officer to confirm it before you act.",
+          "bn": "এই রোগ নিয়ে সূত্র কম। কিছু করার আগে নিশ্চিত হতে পাতাটি স্থানীয় কৃষি কর্মকর্তাকে দেখান।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "It can look like blast or brown spot at first. The sources we read do not say how to tell them apart, so confirm with an expert.",
+          "bn": "শুরুতে এটি ব্লাস্ট বা ব্রাউন স্পটের মতো দেখাতে পারে। আমাদের পড়া সূত্রে আলাদা করার উপায় বলা নেই, তাই বিশেষজ্ঞের সাথে নিশ্চিত হোন।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Seed treatment and foliar fungicide, in some sources",
+        "bn": "কিছু সূত্রে বীজ শোধন ও পাতায় ছিটানোর ছত্রাকনাশক"
+      },
+      "sources": [
+        {
+          "title": "Leaf Scald (Microdochium oryzae) - TNAU expert system, paddy",
+          "url": "https://agritech.tnau.ac.in/expert_system/paddy/cpdisleafscald.html",
+          "publisher": "Tamil Nadu Agricultural University (TNAU), India"
+        },
+        {
+          "title": "TNAU Agritech Portal: Crop Protection - Rice diseases (leaf scald)",
+          "url": "https://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_10.html",
+          "publisher": "Tamil Nadu Agricultural University (TNAU), India (same publisher as source 0, not independent)"
+        },
+        {
+          "title": "Leaf scald (RRDI rice diseases)",
+          "url": "https://doa.gov.lk/rrdi_ricediseases_leafscald",
+          "publisher": "Rice Research and Development Institute (RRDI), Department of Agriculture, Sri Lanka; publisher inferred from page label and domain"
+        },
+        {
+          "title": "Leaf scald (photo gallery)",
+          "url": "https://www.lsuagcenter.com/topics/crops/rice/diseases/photos/leaf_scald",
+          "publisher": "LSU AgCenter"
+        }
+      ]
+    },
+    "rice_sheath_blight": {
+      "kind": "disease",
+      "crop": "rice",
+      "name": {
+        "en": "Sheath blight",
+        "bn": "শিথ ব্লাইট (খোল পচা রোগ)"
+      },
+      "cause": {
+        "en": "A fungus (Rhizoctonia solani). It survives as hard resting bodies (sclerotia) in the soil and in crop residue, and floats on flood water to the plants.",
+        "bn": "রাইজোকটোনিয়া সোলানি নামের একটি ছত্রাক। এটি মাটিতে ও ফসলের অবশিষ্টাংশে শক্ত বিশ্রামকালীন দেহ (স্ক্লেরোশিয়া) হিসেবে টিকে থাকে এবং বন্যার পানিতে ভেসে গাছে পৌঁছায়।"
+      },
+      "symptoms": [
+        {
+          "en": "Oval to irregular, water-soaked, pale green or grey spots on the lower leaf sheaths near the water line, with grey-white centres and brown edges.",
+          "bn": "পানির কাছাকাছি নিচের পাতার খোলে ডিম্বাকার থেকে অনিয়মিত, পানি-ভেজা, ফিকে সবুজ বা ধূসর দাগ, ধূসর-সাদা কেন্দ্র ও বাদামি কিনারাসহ।"
+        },
+        {
+          "en": "Lesions climb up the sheaths and onto touching leaves. Leaf blades can turn yellow-orange and die.",
+          "bn": "দাগ খোল বেয়ে উপরে ও গায়ে লেগে থাকা পাতায় ওঠে। পাতা হলুদ-কমলা হয়ে মরে যেতে পারে।"
+        },
+        {
+          "en": "Badly hit tillers can weaken or fall over, and grain filling suffers.",
+          "bn": "মারাত্মক আক্রান্ত কুশি দুর্বল হয়ে বা ঢলে পড়তে পারে এবং দানা ভরাট ব্যাহত হয়।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Dense stands and close spacing, high nitrogen, warm weather with high humidity and frequent rain.",
+          "bn": "ঘন রোপণ ও কাছাকাছি দূরত্ব, বেশি নাইট্রোজেন, উষ্ণ আবহাওয়ার সাথে উচ্চ আর্দ্রতা ও ঘন ঘন বৃষ্টি।"
+        },
+        {
+          "en": "Susceptible varieties; the disease gets worse after heading.",
+          "bn": "সংবেদনশীল জাত; শীষ বের হওয়ার পর রোগ বাড়ে।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Resting bodies float on flood water and infect the sheaths at the water line. Inside the field it moves up the plant and between plants that touch each other.",
+          "bn": "বিশ্রামকালীন দেহ বন্যার পানিতে ভেসে পানির রেখায় খোলে সংক্রমণ ঘটায়। ক্ষেতের ভেতর এটি গাছ বেয়ে উপরে ও গায়ে গায়ে লেগে থাকা গাছে ছড়ায়।"
+        },
+        {
+          "en": "A Bangladesh (BRRI) trial combined several measures with a fungicide spray; the authors say it needs wider testing before it is recommended.",
+          "bn": "ব্রি-র একটি পরীক্ষায় কয়েকটি ব্যবস্থার সাথে ছত্রাকনাশক ছিটানো হয়েছিল; গবেষকেরা বলেছেন সুপারিশের আগে আরও বিস্তৃত পরীক্ষা দরকার।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Avoid dense planting and heavy seeding; use wider spacing.",
+          "bn": "ঘন রোপণ ও বেশি বীজ ফেলা এড়ান; একটু বেশি দূরত্বে লাগান।"
+        },
+        {
+          "en": "Avoid too much nitrogen: split it into several applications, and use the leaf colour chart. Potassium fertiliser can reduce the disease.",
+          "bn": "অতিরিক্ত নাইট্রোজেন এড়ান: কয়েক ভাগে ভাগ করে দিন এবং পাতার রঙের চার্ট ব্যবহার করুন। পটাশিয়াম সার রোগ কমাতে পারে।"
+        },
+        {
+          "en": "Remove floating debris from the water, control grasses and weeds, and bury stubble by deep ploughing after harvest.",
+          "bn": "পানিতে ভাসা আবর্জনা সরান, ঘাস ও আগাছা দমন করুন এবং কাটার পর গভীর চাষে গোড়া মাটিচাপা দিন।"
+        },
+        {
+          "en": "No variety is fully resistant. Scout regularly, because the disease appears in patches.",
+          "bn": "কোনো জাতই পুরোপুরি প্রতিরোধী নয়। নিয়মিত ক্ষেত দেখুন, কারণ রোগ থেকে থেকে ছোপে ছোপে দেখা দেয়।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Ask the local agriculture office for the current advice on sprays and timing; the sources say timing matters, and this site gives no product or dose.",
+          "bn": "ওষুধ ও সময় সম্পর্কে বর্তমান পরামর্শ স্থানীয় কৃষি অফিসে জিজ্ঞাসা করুন; সূত্র বলছে সময় গুরুত্বপূর্ণ, আর এই সাইট কোনো ওষুধ বা মাত্রা বলে না।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Blast makes spindle-shaped spots on leaves; sheath blight starts on the sheaths above the water line. Tungro causes yellowing, not lesions.",
+          "bn": "ব্লাস্ট পাতায় টাকু-আকৃতির দাগ করে; শিথ ব্লাইট পানির ওপরের খোল থেকে শুরু হয়। টুংরো হলুদ ভাব আনে, দাগ নয়।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Fungicide applied to the sheaths (timing matters)",
+        "bn": "খোলে ছিটানোর ছত্রাকনাশক (সময় গুরুত্বপূর্ণ)"
+      },
+      "sources": [
+        {
+          "title": "Sheath Blight of Rice (LSU AgCenter publication 3123)",
+          "url": "https://www.lsuagcenter.com/~/media/system/6/6/a/5/66a53754c9529a4f64afd5b9c57f9fed/pub3123shealthblightofricelowres.pdf",
+          "publisher": "LSU AgCenter"
+        },
+        {
+          "title": "Rice Sheath Blight (FSA7583)",
+          "url": "https://uaex.uada.edu/publications/pdf/FSA7583.pdf",
+          "publisher": "University of Arkansas System Division of Agriculture (Cooperative Extension)"
+        },
+        {
+          "title": "Major diseases of the rice plant in the Philippines",
+          "url": "https://www.philrice.gov.ph/wp-content/uploads/2023/02/Major-diseases-of-the-rice-plant-in-the-Philippines.pdf",
+          "publisher": "PhilRice (Philippine Rice Research Institute); publisher inferred from the domain"
+        },
+        {
+          "title": "Field Guide: Major Disorders of the Rice Plant - Diseases and Nutritional Deficiencies",
+          "url": "https://www.philrice.gov.ph/wp-content/uploads/2023/02/Field-Guide_-Major-Disorders-of-the-rice-plant-Diseases-and-Nutritional-Deficiencies.pdf",
+          "publisher": "DA-PhilRice (Philippines); publisher implied by the preface"
+        },
+        {
+          "title": "Rice disease management",
+          "url": "https://extension.missouri.edu/programs/rice-extension/rice-disease-management",
+          "publisher": "University of Missouri Extension"
+        },
+        {
+          "title": "Screening Rice Germplasm against Sheath Blight Disease of Rice and its Integrated Management in Bangladesh (Bangladesh Rice Journal 22(2), 2018)",
+          "url": "https://www.banglajol.info/index.php/BRJ/article/view/44047",
+          "publisher": "Bangladesh Rice Research Institute (BRRI), Bangladesh Rice Journal"
+        },
+        {
+          "title": "Scouting for rice leaf blast",
+          "url": "https://arkansascrops.uada.edu/posts/disease/scouting-rice-leaf-blast.aspx",
+          "publisher": "University of Arkansas System Division of Agriculture (Cooperative Extension)"
+        }
+      ]
+    },
+    "rice_tungro": {
+      "kind": "disease",
+      "crop": "rice",
+      "name": {
+        "en": "Tungro",
+        "bn": "টুংরো ভাইরাস রোগ"
+      },
+      "cause": {
+        "en": "Two viruses (rice tungro bacilliform virus and rice tungro spherical virus) that infect rice together. Green leafhoppers carry them from plant to plant.",
+        "bn": "দুটি ভাইরাস (রাইস টুংরো ব্যাসিলিফর্ম ভাইরাস ও রাইস টুংরো স্ফেরিক্যাল ভাইরাস) একসাথে ধানকে আক্রান্ত করে। সবুজ পাতা ফড়িং এগুলো গাছ থেকে গাছে বহন করে।"
+      },
+      "symptoms": [
+        {
+          "en": "Young leaves are mottled and older leaves turn yellow to yellow-orange.",
+          "bn": "কচি পাতায় ছোপ ছোপ দাগ হয় এবং পুরোনো পাতা হলুদ থেকে হলুদ-কমলা হয়ে যায়।"
+        },
+        {
+          "en": "Plants are stunted and make slightly fewer tillers. Infected plants often show up as yellow patches in the field.",
+          "bn": "গাছ খাটো থাকে এবং কুশি কিছুটা কম হয়। আক্রান্ত গাছ প্রায়ই ক্ষেতে হলুদ ছোপের মতো দেখা যায়।"
+        },
+        {
+          "en": "Early infection causes the biggest yield loss. Seedlings to tillering are the most vulnerable stage.",
+          "bn": "শুরুতে আক্রান্ত হলে ফলনের ক্ষতি সবচেয়ে বেশি হয়। চারা থেকে কুশি আসা পর্যন্ত সময় সবচেয়ে ঝুঁকিপূর্ণ।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Susceptible varieties, many green leafhoppers and infected plants nearby.",
+          "bn": "সংবেদনশীল জাত, প্রচুর সবুজ পাতা ফড়িং ও আশেপাশে আক্রান্ত গাছ।"
+        },
+        {
+          "en": "Planting at different times in the same area, overlapping crops with no rice-free break, and late planting.",
+          "bn": "একই এলাকায় আলাদা আলাদা সময়ে রোপণ, ধান-মুক্ত বিরতি ছাড়া ওভারল্যাপ করা ফসল এবং দেরিতে রোপণ।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Leafhoppers pick up the viruses by feeding on infected plants, stubble or volunteer rice and pass them to healthy plants. The viruses do not spread through water, air or soil.",
+          "bn": "পাতা ফড়িং আক্রান্ত গাছ, গোড়া বা আপনা-আপনি গজানো ধান থেকে রস খেয়ে ভাইরাস নেয় এবং সুস্থ গাছে ছড়ায়। ভাইরাস পানি, বাতাস বা মাটির মাধ্যমে ছড়ায় না।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "There is no cure for an infected plant. Control aims at prevention: BRRI, quoted in news reports, says prevention is the only option.",
+          "bn": "আক্রান্ত গাছের কোনো নিরাময় নেই। নিয়ন্ত্রণ মূলত প্রতিরোধে: সংবাদ প্রতিবেদনে উদ্ধৃত ব্রি বলেছে, প্রতিরোধই একমাত্র উপায়।"
+        },
+        {
+          "en": "Plant at the same time as your neighbours over a large area, and leave a rice-free gap of about a month between crops.",
+          "bn": "বড় এলাকাজুড়ে প্রতিবেশীদের সাথে একই সময়ে রোপণ করুন এবং দুই ফসলের মাঝে প্রায় এক মাস ধানমুক্ত বিরতি রাখুন।"
+        },
+        {
+          "en": "After harvest plough in stubble and remove weeds and volunteer rice, where the leafhoppers feed.",
+          "bn": "কাটার পর গোড়া মাটিতে মিশিয়ে দিন এবং আগাছা ও আপনা-আপনি গজানো ধান সরিয়ে ফেলুন, যেখানে ফড়িং খাবার পায়।"
+        },
+        {
+          "en": "Where tungro was a problem, ask about tolerant varieties. Remove and bury or burn a few infected plants early; this does not work once many plants are infected.",
+          "bn": "যেখানে টুংরো সমস্যা ছিল, সেখানে সহনশীল জাত সম্পর্কে জিজ্ঞাসা করুন। কয়েকটি আক্রান্ত গাছ আগেই তুলে মাটিচাপা দিন বা পুড়িয়ে ফেলুন; বেশি গাছ আক্রান্ত হয়ে গেলে এতে কাজ হয় না।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Yellowing can have other causes and tungro cannot be cured, so show a suspected field to the local agriculture office early.",
+          "bn": "হলুদ ভাবের অন্য কারণও থাকতে পারে এবং টুংরো সারানো যায় না, তাই সন্দেহজনক ক্ষেত আগেভাগেই স্থানীয় কৃষি অফিসকে দেখান।"
+        },
+        {
+          "en": "Sources disagree on spraying against the insect: some say only when needed, some say it often does not work. Ask before you spray.",
+          "bn": "পোকার বিরুদ্ধে ওষুধ ছিটানো নিয়ে সূত্রে মতভেদ আছে: কেউ বলে শুধু দরকার হলে, কেউ বলে প্রায়ই কাজ হয় না। ছিটানোর আগে জিজ্ঞাসা করুন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Tungro gives yellow to orange leaves and stunting, not spots. Blast, brown spot and sheath blight cause spots or lesions. Nutrient shortage can also yellow leaves.",
+          "bn": "টুংরোতে পাতা হলুদ থেকে কমলা হয় ও গাছ খাটো থাকে, দাগ হয় না। ব্লাস্ট, ব্রাউন স্পট ও শিথ ব্লাইটে দাগ বা ক্ষত হয়। পুষ্টির অভাবেও পাতা হলুদ হতে পারে।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Insecticide against the leafhopper (only where needed; sources disagree)",
+        "bn": "পাতা ফড়িংয়ের বিরুদ্ধে কীটনাশক (শুধু প্রয়োজনে; সূত্রে মতভেদ আছে)"
+      },
+      "sources": [
+        {
+          "title": "Beating tungro virus disease in rice (CPP45)",
+          "url": "https://assets.publishing.service.gov.uk/media/57a08bdde5274a31e0000e18/CPP45.pdf",
+          "publisher": "Crop Protection Programme / Natural Resources Institute, UK (via GOV.UK research outputs)"
+        },
+        {
+          "title": "The Epidemiology and Management of Rice Tungro Virus Disease (NRI Final Technical Report R6519)",
+          "url": "https://assets.publishing.service.gov.uk/media/57a08d9340f0b652dd001a4e/R6519_FTR.pdf",
+          "publisher": "Natural Resources Institute (NRI), UK (via GOV.UK research outputs); publisher not named explicitly in the text"
+        },
+        {
+          "title": "Major diseases of the rice plant in the Philippines",
+          "url": "https://www.philrice.gov.ph/wp-content/uploads/2023/02/Major-diseases-of-the-rice-plant-in-the-Philippines.pdf",
+          "publisher": "PhilRice (Philippine Rice Research Institute); publisher inferred from the domain"
+        },
+        {
+          "title": "Field Guide: Major Disorders of the Rice Plant - Diseases and Nutritional Deficiencies",
+          "url": "https://www.philrice.gov.ph/wp-content/uploads/2023/02/Field-Guide_-Major-Disorders-of-the-rice-plant-Diseases-and-Nutritional-Deficiencies.pdf",
+          "publisher": "DA-PhilRice (Philippines); publisher implied by the preface"
+        },
+        {
+          "title": "Palaycheck - Pest Management (Tungro)",
+          "url": "https://www.pinoyrice.com/tungro/",
+          "publisher": "Palaycheck; publisher not named on the page"
+        },
+        {
+          "title": "Rice green leafhopper (Fact sheet 417)",
+          "url": "https://apps.lucidcentral.org/ppp_v9/pdf/web_full/rice_green_leafhopper_417.pdf",
+          "publisher": "Pacific Pests, Pathogens and Weeds (Lucid Central); University of Queensland and Pacific Community with ACIAR support"
+        },
+        {
+          "title": "Prevention is best defense against Bangladesh crop diseases, researchers say",
+          "url": "https://news.mongabay.com/2024/01/prevention-is-best-defense-against-bangladesh-crop-diseases-researchers-say/",
+          "publisher": "Mongabay (news article quoting BRRI scientists)"
+        },
+        {
+          "title": "Recovering Ability of Upland and Rainfed Lowland Rice Varieties against Rice Tungro Disease (Bangladesh Rice Journal 21(1), 2017)",
+          "url": "https://www.banglajol.info/index.php/BRJ/article/view/37390",
+          "publisher": "Bangladesh Rice Research Institute (BRRI), Bangladesh Rice Journal"
+        }
+      ]
+    },
+    "eggplant_cercospora_leaf_spot": {
+      "kind": "disease",
+      "crop": "eggplant",
+      "name": {
+        "en": "Cercospora leaf spot",
+        "bn": "সারকোস্পোরা লিফ স্পট (পাতার দাগ রোগ)"
+      },
+      "cause": {
+        "en": "A fungus (mainly Cercospora melongenae). It survives for at least a year in infected plant debris and soil.",
+        "bn": "একটি ছত্রাক (মূলত সারকোস্পোরা মেলোনজেনি)। এটি আক্রান্ত গাছের অবশিষ্টাংশ ও মাটিতে অন্তত এক বছর টিকে থাকে।"
+      },
+      "symptoms": [
+        {
+          "en": "Spots start on the oldest leaves: small, yellowish, round to oval, turning grey to brown on top and lighter underneath.",
+          "bn": "দাগ সবচেয়ে পুরোনো পাতায় শুরু হয়: ছোট, হলদেটে, গোল থেকে ডিম্বাকার, ওপরের দিকে ধূসর থেকে বাদামি ও নিচে হালকা রঙের হয়ে যায়।"
+        },
+        {
+          "en": "Spots grow to about 4 mm to 1 cm, brown with a reddish-brown edge, often a clearer centre and a yellow halo. Rings can form.",
+          "bn": "দাগ বড় হয়ে প্রায় ৪ মিলিমিটার থেকে ১ সেন্টিমিটার হয়, বাদামি ও লালচে-বাদামি কিনারাসহ, প্রায়ই ফ্যাকাশে কেন্দ্র ও হলুদ বলয়সহ। বলয়ও দেখা দিতে পারে।"
+        },
+        {
+          "en": "Dead tissue can dry and fall out, leaving holes. Badly hit leaves yellow and drop early, and yield falls.",
+          "bn": "মরা অংশ শুকিয়ে খসে গিয়ে ফুটো হতে পারে। মারাত্মক আক্রান্ত পাতা হলুদ হয়ে আগেই ঝরে যায় এবং ফলন কমে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Wet leaves and high humidity.",
+          "bn": "ভেজা পাতা ও উচ্চ আর্দ্রতা।"
+        },
+        {
+          "en": "The sources we read give no temperature range or other conditions for eggplant.",
+          "bn": "আমাদের পড়া সূত্রে বেগুনের জন্য তাপমাত্রার সীমা বা অন্য অনুকূল অবস্থার কথা নেই।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "The fungus lives over in debris and soil. The sources we read do not describe how the spores move between plants.",
+          "bn": "ছত্রাক অবশিষ্টাংশ ও মাটিতে টিকে থাকে। রেণু কীভাবে এক গাছ থেকে আরেক গাছে যায় তা আমাদের পড়া সূত্রে বলা নেই।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Plant healthy, disease-free seedlings.",
+          "bn": "সুস্থ, রোগমুক্ত চারা লাগান।"
+        },
+        {
+          "en": "Keep leaves dry and the air moving: water at the base rather than over the leaves, give plants room, control weeds and do not overwater.",
+          "bn": "পাতা শুকনো ও বাতাস চলাচল ভালো রাখুন: পাতার ওপর নয়, গোড়ায় পানি দিন, গাছের মাঝে জায়গা রাখুন, আগাছা দমন করুন এবং বেশি পানি দেবেন না।"
+        },
+        {
+          "en": "Remove and destroy badly infected leaves, and bury or remove infected plant debris after the crop.",
+          "bn": "মারাত্মক আক্রান্ত পাতা তুলে নষ্ট করুন এবং ফসল শেষে আক্রান্ত অবশিষ্টাংশ মাটিচাপা দিন বা সরিয়ে ফেলুন।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Sources on this disease are limited and none is from Bangladesh. If spots keep spreading, show a leaf to your local agriculture officer and ask before spraying.",
+          "bn": "এই রোগ নিয়ে সূত্র সীমিত এবং কোনোটিই বাংলাদেশের নয়। দাগ ছড়াতে থাকলে পাতাটি স্থানীয় কৃষি কর্মকর্তাকে দেখান এবং ওষুধ ছিটানোর আগে জিজ্ঞাসা করুন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "It can look like a bacterial leaf disease or Alternaria early blight (both can have rings or holes). The sources we read do not say how to tell them apart.",
+          "bn": "এটি ব্যাকটেরিয়াজনিত পাতার রোগ বা অল্টারনারিয়া আর্লি ব্লাইটের মতো দেখাতে পারে (দুটিতেই বলয় বা ফুটো হতে পারে)। আলাদা করার উপায় আমাদের পড়া সূত্রে বলা নেই।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Foliar fungicide spray (rotate types; ask the agriculture office)",
+        "bn": "পাতায় ছিটানোর ছত্রাকনাশক (ধরন বদলে ব্যবহার করতে হয়; কৃষি অফিসে জিজ্ঞাসা করুন)"
+      },
+      "sources": [
+        {
+          "title": "Eggplant (Solanum melongena) - Cercospora Leaf Spot",
+          "url": "https://pnwhandbooks.org/plantdisease/host-disease/eggplant-solanum-melongena-cercospora-leaf-spot",
+          "publisher": "Pacific Northwest Plant Disease Management Handbook (pnwhandbooks.org); publisher inferred from site name, not stated in fetched text"
+        },
+        {
+          "title": "Symptoms on eggplant (Tropileg: Cercospora leaf spot)",
+          "url": "https://ephytia.inrae.fr/en/Contents/view/23070/Tropileg-Symptomes-Aubergine",
+          "publisher": "INRAE (Ephytia / Tropileg diagnostic site)"
+        },
+        {
+          "title": "Brinjal - Diseases (bri002)",
+          "url": "https://www.nhb.gov.in/pdf/vegetable/brinjal/bri002.pdf",
+          "publisher": "National Horticulture Board, India; publisher inferred from domain, page names no publisher"
+        },
+        {
+          "title": "ICT-AAS Brinjal",
+          "url": "https://agritech.tnau.ac.in/govt_schemes_services/aas/brinjal_ex.html",
+          "publisher": "Tamil Nadu Agricultural University (TNAU)"
+        }
+      ]
+    },
+    "eggplant_early_blight": {
+      "kind": "disease",
+      "crop": "eggplant",
+      "name": {
+        "en": "Early blight (Alternaria leaf spot)",
+        "bn": "আর্লি ব্লাইট (অল্টারনারিয়া পাতার দাগ)"
+      },
+      "cause": {
+        "en": "Fungi of the genus Alternaria (the sources name several species). They survive on seed, in soil and in plant debris.",
+        "bn": "অল্টারনারিয়া গণের ছত্রাক (সূত্রে কয়েকটি প্রজাতির নাম আছে)। এগুলো বীজে, মাটিতে ও গাছের অবশিষ্টাংশে টিকে থাকে।"
+      },
+      "symptoms": [
+        {
+          "en": "Leaf spots with rings, like a target, round or angular, brown, often with a yellow halo. Spots can join into big patches.",
+          "bn": "পাতায় বলয়সহ দাগ, লক্ষ্যবস্তুর মতো, গোল বা কোণাকার, বাদামি, প্রায়ই হলুদ বলয়সহ। দাগ মিলে বড় ছোপ হতে পারে।"
+        },
+        {
+          "en": "Dead tissue can fall out, so leaves look full of holes, and badly hit leaves drop.",
+          "bn": "মরা অংশ খসে গিয়ে পাতা ফুটোয় ভরা দেখায় এবং মারাত্মক আক্রান্ত পাতা ঝরে যায়।"
+        },
+        {
+          "en": "Fruit can get deep, large spots, turn yellow and drop early; fruit stalks can also be infected.",
+          "bn": "ফলে গভীর, বড় দাগ হতে পারে, ফল হলুদ হয়ে আগেই ঝরতে পারে; ফলের বোঁটাও আক্রান্ত হতে পারে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Warm weather (one source gives about 18 to 30 °C) with high humidity.",
+          "bn": "উষ্ণ আবহাওয়া (একটি সূত্রে প্রায় ১৮ থেকে ৩০ °সে.) ও উচ্চ আর্দ্রতা।"
+        },
+        {
+          "en": "Dew, light rain or sprinkler irrigation is enough for spread. Stressed, poorly fed or heavily fruiting plants are more at risk.",
+          "bn": "শিশির, হালকা বৃষ্টি বা স্প্রিংকলারের পানিই ছড়াতে যথেষ্ট। চাপে থাকা, কম পুষ্টি পাওয়া বা অনেক ফল ধরা গাছ বেশি ঝুঁকিতে থাকে।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Spores spread by wind, rain, sprinkler water, workers and tools. The fungi also attack potato, pepper and tomato, so avoid planting near them.",
+          "bn": "রেণু বাতাস, বৃষ্টি, স্প্রিংকলারের পানি, শ্রমিক ও যন্ত্রপাতির মাধ্যমে ছড়ায়। এই ছত্রাক আলু, মরিচ ও টমেটোকেও আক্রমণ করে, তাই এগুলোর কাছাকাছি লাগানো এড়ান।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Use healthy, certified seed. Rotate crops for 3 to 4 years away from eggplant, potato and pepper, and remove weeds.",
+          "bn": "সুস্থ, প্রত্যয়িত বীজ ব্যবহার করুন। ৩ থেকে ৪ বছর বেগুন, আলু ও মরিচ থেকে আলাদা ফসলের চক্র রাখুন এবং আগাছা সরান।"
+        },
+        {
+          "en": "Space plants for airflow, water at the base (drip if you can), use mulch, avoid waterlogging and avoid too much nitrogen.",
+          "bn": "বাতাস চলাচলের জন্য গাছের মাঝে জায়গা রাখুন, গোড়ায় পানি দিন (সম্ভব হলে ড্রিপ), মালচ ব্যবহার করুন, জলাবদ্ধতা এড়ান এবং বেশি নাইট্রোজেন দেবেন না।"
+        },
+        {
+          "en": "Remove affected leaves, and destroy or bury crop debris soon after harvest. Clean stakes and tools.",
+          "bn": "আক্রান্ত পাতা সরান এবং ফসল তোলার পরপরই অবশিষ্টাংশ নষ্ট করুন বা মাটিচাপা দিন। খুঁটি ও যন্ত্রপাতি পরিষ্কার করুন।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "One source says eggplant often needs less chemical protection than tomato, so start with these non-chemical steps. Ask the agriculture office before you spray.",
+          "bn": "একটি সূত্র বলছে টমেটোর তুলনায় বেগুনে প্রায়ই কম রাসায়নিক সুরক্ষা লাগে, তাই এই অরাসায়নিক ব্যবস্থা দিয়ে শুরু করুন। ছিটানোর আগে কৃষি অফিসে জিজ্ঞাসা করুন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Cercospora leaf spot can also have rings and holes; the sources we read do not say how to tell them apart. Mites can make this disease worse.",
+          "bn": "সারকোস্পোরা পাতার দাগেও বলয় ও ফুটো হতে পারে; আলাদা করার উপায় আমাদের পড়া সূত্রে বলা নেই। মাকড় এই রোগ আরও বাড়াতে পারে।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Protectant fungicide spray (non-chemical steps come first)",
+        "bn": "সুরক্ষামূলক ছত্রাকনাশক (আগে অরাসায়নিক ব্যবস্থা)"
+      },
+      "sources": [
+        {
+          "title": "Eggplant alternariosis (Alternaria spp.)",
+          "url": "https://ephytia.inrae.fr/en/C/24045/Tropileg-Eggplant-alternariosis-Alternaria-spp",
+          "publisher": "INRAE (Ephytia / Tropileg diagnostic site)"
+        },
+        {
+          "title": "2021 Florida Plant Disease Management Guide: Eggplant (PDMG-V3-39)",
+          "url": "https://ask.ifas.ufl.edu/publication/PG047/pdf",
+          "publisher": "UF/IFAS Extension, University of Florida"
+        },
+        {
+          "title": "Brinjal: Alternaria leaf spot (TNAU Agritech Portal)",
+          "url": "https://agritech.tnau.ac.in/crop_protection/brinjal_diseases_3.html",
+          "publisher": "Tamil Nadu Agricultural University (TNAU); publisher inferred from domain"
+        },
+        {
+          "title": "Brinjal - Diseases (bri002)",
+          "url": "https://www.nhb.gov.in/pdf/vegetable/brinjal/bri002.pdf",
+          "publisher": "National Horticulture Board, India; publisher inferred from domain, page names no publisher"
+        },
+        {
+          "title": "Early Blight (Utah Vegetable Production Guide)",
+          "url": "https://extension.usu.edu/vegetableguide/tomato-pepper-eggplant/early-blight",
+          "publisher": "Utah State University Extension"
+        },
+        {
+          "title": "Success Story on Bt Brinjal in Bangladesh",
+          "url": "https://apaari.org/web/download/31464",
+          "publisher": "Asia-Pacific Association of Agricultural Research Institutions (APAARI)"
+        }
+      ]
+    },
+    "eggplant_mosaic_virus": {
+      "kind": "disease",
+      "crop": "eggplant",
+      "name": {
+        "en": "Mosaic virus",
+        "bn": "মোজাইক ভাইরাস রোগ"
+      },
+      "cause": {
+        "en": "Plant viruses. The sources name several (for example cucumber mosaic virus and potato virus Y) and say field plants are often infected by more than one. We could not find which ones occur in Bangladesh.",
+        "bn": "উদ্ভিদের ভাইরাস। সূত্রে কয়েকটির নাম আছে (যেমন কিউকাম্বার মোজাইক ভাইরাস ও পটেটো ভাইরাস ওয়াই) এবং বলা হয়েছে মাঠের গাছ প্রায়ই একাধিক ভাইরাসে আক্রান্ত হয়। বাংলাদেশে কোনগুলো আছে তা আমরা খুঁজে পাইনি।"
+      },
+      "symptoms": [
+        {
+          "en": "Mottled leaves with light and dark green or yellow patches, often puckered, blistered, small, leathery or misshapen (long and thin or curled).",
+          "bn": "হালকা ও গাঢ় সবুজ বা হলুদ ছোপযুক্ত পাতা, প্রায়ই কুঁচকানো, ফোসকা পড়া, ছোট, চামড়ার মতো শক্ত বা বিকৃত (লম্বা ও সরু বা কোঁকড়ানো)।"
+        },
+        {
+          "en": "Plants infected early stay stunted and give very few fruits.",
+          "bn": "শুরুতে আক্রান্ত গাছ খাটো থাকে এবং খুব কম ফল দেয়।"
+        },
+        {
+          "en": "Fruit can be small, distorted or discoloured, sometimes with yellow blotches or brown rings.",
+          "bn": "ফল ছোট, বিকৃত বা বিবর্ণ হতে পারে, কখনও হলুদ ছোপ বা বাদামি বলয়সহ।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "More aphids mean more disease, according to one source. Weeds near the field can keep the viruses alive between crops.",
+          "bn": "একটি সূত্র অনুযায়ী যত বেশি জাব পোকা, তত বেশি রোগ। ক্ষেতের কাছের আগাছা ফসলের মাঝের সময়ে ভাইরাস বাঁচিয়ে রাখতে পারে।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "It depends on the virus: some are carried by aphids, some on hands, clothes and tools, and one paper reports seed and weeds as carriers.",
+          "bn": "ভাইরাসভেদে আলাদা: কিছু জাব পোকা বহন করে, কিছু হাত, কাপড় ও যন্ত্রপাতির মাধ্যমে ছড়ায়, আর একটি গবেষণাপত্রে বীজ ও আগাছাকে বাহক বলা হয়েছে।"
+        },
+        {
+          "en": "The sources do not agree on every route (none we read names whitefly), so treat this as a general picture only.",
+          "bn": "সব পথ নিয়ে সূত্রে মিল নেই (আমাদের পড়া কোনোটিতে সাদা মাছির কথা নেই), তাই এটিকে শুধু সাধারণ চিত্র হিসেবে নিন।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "There is no treatment for an infected plant. Remove and destroy infected plants and the weeds around the field.",
+          "bn": "আক্রান্ত গাছের কোনো চিকিৎসা নেই। আক্রান্ত গাছ ও ক্ষেতের চারপাশের আগাছা তুলে নষ্ট করুন।"
+        },
+        {
+          "en": "Keep aphid numbers low, especially in the seedbed.",
+          "bn": "জাব পোকার সংখ্যা কম রাখুন, বিশেষ করে বীজতলায়।"
+        },
+        {
+          "en": "Do not plant cucumber, pepper, tobacco or tomato next to brinjal seedbeds and fields.",
+          "bn": "বেগুনের বীজতলা ও ক্ষেতের পাশে শসা, মরিচ, তামাক বা টমেটো লাগাবেন না।"
+        },
+        {
+          "en": "Wash hands with soap and water before touching seedlings, and do not smoke or chew tobacco while handling them.",
+          "bn": "চারা ধরার আগে সাবান-পানিতে হাত ধুয়ে নিন এবং চারা নাড়াচাড়ার সময় ধূমপান বা তামাক চিবানো এড়ান।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Several other problems (for example nutrient shortage or herbicide damage) can look like mosaic. If many plants are affected, ask your agriculture office to confirm the cause.",
+          "bn": "আরও কিছু সমস্যা (যেমন পুষ্টির অভাব বা আগাছানাশকের ক্ষতি) মোজাইকের মতো দেখাতে পারে। অনেক গাছ আক্রান্ত হলে কারণ নিশ্চিত করতে কৃষি অফিসে জিজ্ঞাসা করুন।"
+        }
+      ],
+      "look_alikes": [],
+      "chemical_class": {
+        "en": "Insecticide against aphids (nothing treats the virus itself)",
+        "bn": "জাব পোকার বিরুদ্ধে কীটনাশক (ভাইরাসের নিজের কোনো চিকিৎসা নেই)"
+      },
+      "sources": [
+        {
+          "title": "Brinjal: mosaic (TNAU Agritech Portal)",
+          "url": "https://agritech.tnau.ac.in/crop_protection/brinjal_diseases_5.html",
+          "publisher": "Tamil Nadu Agricultural University (TNAU); publisher inferred from domain"
+        },
+        {
+          "title": "ICT-AAS Brinjal",
+          "url": "https://agritech.tnau.ac.in/govt_schemes_services/aas/brinjal_ex.html",
+          "publisher": "Tamil Nadu Agricultural University (TNAU)"
+        },
+        {
+          "title": "Brinjal - Diseases (bri002)",
+          "url": "https://www.nhb.gov.in/pdf/vegetable/brinjal/bri002.pdf",
+          "publisher": "National Horticulture Board, India; publisher inferred from domain, page names no publisher"
+        },
+        {
+          "title": "Weeds as Reservoirs for Viruses Infecting Brinjal in its Ecosystem",
+          "url": "https://masujournal.org/109/jlKbcQglZdRrgpBBqSOCTwrMkZ3HCf.pdf",
+          "publisher": "Madras Agricultural Journal (authors at TNAU, Coimbatore); publisher not named in fetched text"
+        },
+        {
+          "title": "Eggplant: leaves distorted (diagnostic page)",
+          "url": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/eggplant/leavesdistorted.html",
+          "publisher": "University of Minnesota Extension"
+        },
+        {
+          "title": "Status of major diseases of brinjal and tomato in charland of Jamalpur and Sherpur districts of Bangladesh",
+          "url": "https://core.ac.uk/download/386336034.pdf",
+          "publisher": "Plant Science Today (Horizon e-Publishing Group), 8(1), 2021; authors at BARI, BAU, BINA"
+        }
+      ]
+    },
+    "eggplant_phomopsis_blight": {
+      "kind": "disease",
+      "crop": "eggplant",
+      "name": {
+        "en": "Phomopsis blight",
+        "bn": "ফোমপসিস ব্লাইট (পাতা, কাণ্ড ও ফল পচা রোগ)"
+      },
+      "cause": {
+        "en": "A fungus (Phomopsis vexans). It is carried on seed and survives in soil on infected debris and on nightshade-family weeds.",
+        "bn": "ফোমপসিস ভেক্সান্স নামের একটি ছত্রাক। এটি বীজে থাকে এবং মাটিতে আক্রান্ত অবশিষ্টাংশ ও আলু-বেগুন পরিবারের আগাছায় টিকে থাকে।"
+      },
+      "symptoms": [
+        {
+          "en": "Round to oval grey or brown leaf spots, sometimes with a lighter centre and tiny black dots; leaves can yellow and die.",
+          "bn": "গোল থেকে ডিম্বাকার ধূসর বা বাদামি পাতার দাগ, কখনও হালকা কেন্দ্র ও ছোট কালো ফোঁটাসহ; পাতা হলুদ হয়ে মরতে পারে।"
+        },
+        {
+          "en": "Seedlings get dark lesions at the soil line and topple over. On older plants stems get brown to black cankers that can girdle them and cause dieback.",
+          "bn": "চারায় মাটির কাছে গাঢ় ক্ষত হয়ে চারা ঢলে পড়ে। বড় গাছে কাণ্ডে বাদামি থেকে কালো ক্ষত হয়ে ডগা মরে যেতে পারে।"
+        },
+        {
+          "en": "Fruit is the most serious problem: pale sunken spots spread over the fruit, which turns soft and watery, then black and shrivelled.",
+          "bn": "ফলই সবচেয়ে গুরুতর সমস্যা: ফ্যাকাশে বসা দাগ ফলজুড়ে ছড়ায়, ফল নরম ও পানিসিক্ত হয়, তারপর কালো ও কুঁচকে যায়।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Hot, humid weather. Spores germinate in water on leaves and fruit. Bangladeshi studies link severity to humidity, temperature, soil and area.",
+          "bn": "গরম, আর্দ্র আবহাওয়া। পাতা ও ফলের ওপর পানিতে রেণু অঙ্কুরিত হয়। বাংলাদেশের গবেষণায় রোগের তীব্রতা আর্দ্রতা, তাপমাত্রা, মাটি ও এলাকার সাথে যুক্ত বলা হয়েছে।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "On seed (outside and inside) and in soil on debris. Spores move by rain splash, wind, tools and workers' clothing.",
+          "bn": "বীজে (বাইরে ও ভেতরে) এবং মাটিতে অবশিষ্টাংশে। রেণু বৃষ্টির ছিটা, বাতাস, যন্ত্রপাতি ও শ্রমিকের কাপড়ের মাধ্যমে ছড়ায়।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Use healthy seed and clean seedlings. Hot-water seed treatment is described in some sources; ask your agriculture office whether it suits your seed.",
+          "bn": "সুস্থ বীজ ও পরিষ্কার চারা ব্যবহার করুন। কিছু সূত্রে গরম পানিতে বীজ শোধনের কথা আছে; আপনার বীজের জন্য উপযোগী কি না কৃষি অফিসে জিজ্ঞাসা করুন।"
+        },
+        {
+          "en": "Rotate with non-nightshade crops for at least 3 years, and remove nightshade weeds.",
+          "bn": "অন্তত ৩ বছর আলু-বেগুন পরিবারের বাইরের ফসলের সাথে চক্র করুন এবং এই পরিবারের আগাছা সরান।"
+        },
+        {
+          "en": "Pick and remove infected fruit often, and remove and destroy diseased parts and crop debris.",
+          "bn": "আক্রান্ত ফল ঘন ঘন তুলে সরান এবং রোগাক্রান্ত অংশ ও ফসলের অবশিষ্টাংশ নষ্ট করুন।"
+        },
+        {
+          "en": "Give good drainage and spacing, water at the base, avoid too much nitrogen and do not work in the field when plants are wet.",
+          "bn": "ভালো নিষ্কাশন ও দূরত্ব রাখুন, গোড়ায় পানি দিন, বেশি নাইট্রোজেন এড়ান এবং গাছ ভেজা থাকলে ক্ষেতে কাজ করবেন না।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "No variety is highly resistant. Scout regularly, especially where the disease has occurred before, and ask the agriculture office for current spray advice.",
+          "bn": "কোনো জাতই বেশি প্রতিরোধী নয়। নিয়মিত ক্ষেত দেখুন, বিশেষ করে যেখানে আগে রোগ হয়েছে, এবং ওষুধ ছিটানোর বর্তমান পরামর্শ কৃষি অফিসে জিজ্ঞাসা করুন।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Seedling damping-off from other fungi also darkens the base of the stem; Phomopsis also causes leaf and fruit spots. Phytophthora fruit rot lacks Phomopsis's rings and black dots.",
+          "bn": "অন্য ছত্রাকের কারণে চারা ঢলে পড়া রোগেও কাণ্ডের গোড়া কালচে হয়; ফোমপসিসে পাতা ও ফলেও দাগ হয়। ফাইটোফথোরার ফল পচায় ফোমপসিসের বলয় ও কালো ফোঁটা থাকে না।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Seed treatment and fungicide sprays; two Bangladeshi trials favoured a systemic type over a protectant type",
+        "bn": "বীজ শোধন ও ছত্রাকনাশক; বাংলাদেশের দুটি পরীক্ষায় প্রতিরোধী ধরনের চেয়ে অন্তর্বাহী ধরন ভালো ফল দিয়েছে"
+      },
+      "sources": [
+        {
+          "title": "Brinjal: Phomopsis fruit rot (TNAU Agritech Portal)",
+          "url": "https://agritech.tnau.ac.in/crop_protection/brinjal_phdiseases_2.html",
+          "publisher": "Tamil Nadu Agricultural University (TNAU); publisher inferred from domain"
+        },
+        {
+          "title": "Phomopsis vexans on eggplant (Tropileg)",
+          "url": "https://ephytia.inrae.fr/en/C/23061/Tropileg-Phomopsis-vexans",
+          "publisher": "INRAE (Ephytia / Tropileg diagnostic site)"
+        },
+        {
+          "title": "Phomopsis fruit rot in eggplant",
+          "url": "https://plant-pest-advisory.rutgers.edu/phomopsis-fruit-rot-in-eggplant/",
+          "publisher": "Rutgers Cooperative Extension (Plant & Pest Advisory, NJAES)"
+        },
+        {
+          "title": "2021 Florida Plant Disease Management Guide: Eggplant (PDMG-V3-39)",
+          "url": "https://ask.ifas.ufl.edu/publication/PG047/pdf",
+          "publisher": "UF/IFAS Extension, University of Florida"
+        },
+        {
+          "title": "Eggplant Insect Pests & Diseases (HGIC 2224)",
+          "url": "https://hgic.clemson.edu/factsheet/eggplant-insect-pests-diseases",
+          "publisher": "Clemson Cooperative Extension, Home & Garden Information Center"
+        },
+        {
+          "title": "Brinjal - Diseases (bri002)",
+          "url": "https://www.nhb.gov.in/pdf/vegetable/brinjal/bri002.pdf",
+          "publisher": "National Horticulture Board, India; publisher inferred from domain, page names no publisher"
+        },
+        {
+          "title": "Eggplant: seedling collapsed (diagnostic page)",
+          "url": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/eggplant/seedlingcollapsed.html",
+          "publisher": "University of Minnesota Extension"
+        },
+        {
+          "title": "Control of Phomopsis Blight of Egg Plant Through Fertilizer and Fungicide Management",
+          "url": "https://ageconsearch.umn.edu/record/305322/files/16095-Article%20Text-58404-1-10-20130805.pdf",
+          "publisher": "Int. J. Agril. Res. Innov. & Tech. 3(1), 2013 (Bangladesh; trials at Sher-e-Bangla Agricultural University); publisher not named in fetched text"
+        },
+        {
+          "title": "Environmental and Chemical Control of Phomopsis Blight and Fruit Rot of Eggplant Caused By Phomopsis vexans",
+          "url": "https://banglajol.info/index.php/JSF/article/view/52783/37307",
+          "publisher": "Journal of Science Foundation (Bangladesh), 18(2), 2020"
+        },
+        {
+          "title": "Status of major diseases of brinjal and tomato in charland of Jamalpur and Sherpur districts of Bangladesh",
+          "url": "https://core.ac.uk/download/386336034.pdf",
+          "publisher": "Plant Science Today (Horizon e-Publishing Group), 8(1), 2021; authors at BARI, BAU, BINA"
+        },
+        {
+          "title": "Vegetable Diseases Caused by Phytophthora capsici in Florida (PP-176)",
+          "url": "https://ask.ifas.ufl.edu/publication/VH045/pdf",
+          "publisher": "UF/IFAS Extension, University of Florida"
+        }
+      ]
+    },
+    "eggplant_phytophthora_blight": {
+      "kind": "disease",
+      "crop": "eggplant",
+      "name": {
+        "en": "Phytophthora blight",
+        "bn": "ফাইটোফথোরা ব্লাইট (পাতা ও ফল পচা রোগ)"
+      },
+      "cause": {
+        "en": "Water moulds of the genus Phytophthora (not true fungi). Different sources name different species. Their resting spores survive in soil and debris for years.",
+        "bn": "ফাইটোফথোরা গণের জলজ ছত্রাকসদৃশ জীব (প্রকৃত ছত্রাক নয়)। সূত্রভেদে প্রজাতির নাম আলাদা। এদের বিশ্রামকালীন রেণু মাটি ও অবশিষ্টাংশে বছরের পর বছর টিকে থাকে।"
+      },
+      "symptoms": [
+        {
+          "en": "Spots on lower leaves, decay at the base of older stems, and wilting or collapse of plants. Dark streaks on branches are followed by quick collapse.",
+          "bn": "নিচের পাতায় দাগ, বড় কাণ্ডের গোড়ায় পচন এবং গাছ নেতিয়ে পড়া বা ঢলে পড়া। ডালে গাঢ় রেখার পর দ্রুত গাছ ধসে যায়।"
+        },
+        {
+          "en": "Fruit rot is the main sign: a round dark-brown spot anywhere on the fruit, with a light tan area spreading fast around it, sometimes with white to grey growth in wet weather.",
+          "bn": "ফল পচাই প্রধান লক্ষণ: ফলের যেকোনো জায়গায় গোল গাঢ় বাদামি দাগ, চারপাশে দ্রুত ছড়ানো হালকা বাদামি অংশ, ভেজা আবহাওয়ায় কখনও সাদা থেকে ধূসর ছত্রাকের মতো আস্তরণসহ।"
+        },
+        {
+          "en": "Young seedlings can collapse with a soft, water-soaked stem base at soil level.",
+          "bn": "কচি চারা মাটির কাছে নরম, পানি-ভেজা গোড়াসহ ঢলে পড়তে পারে।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Too much soil moisture: heavy rain or irrigation, standing water and low, waterlogged parts of the field.",
+          "bn": "মাটিতে অতিরিক্ত আর্দ্রতা: ভারী বৃষ্টি বা সেচ, জমে থাকা পানি এবং ক্ষেতের নিচু, জলাবদ্ধ অংশ।"
+        },
+        {
+          "en": "Warm, wet weather in most sources (one says cool and wet). Spread slows when conditions turn dry.",
+          "bn": "বেশিরভাগ সূত্রে উষ্ণ, ভেজা আবহাওয়া (একটিতে ঠান্ডা ও ভেজা)। শুকনো হলে ছড়ানো কমে যায়।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "Swimming spores move in water films, splashed rain and infested soil, and arrive on infected seedlings, equipment and pond or canal irrigation water.",
+          "bn": "সাঁতারু রেণু পানির আস্তরণ, বৃষ্টির ছিটা ও সংক্রমিত মাটিতে চলে এবং আক্রান্ত চারা, যন্ত্রপাতি ও পুকুর বা খালের সেচের পানির সাথে আসে।"
+        },
+        {
+          "en": "Most of the evidence is from the USA and India. We found no source describing the disease in Bangladesh.",
+          "bn": "বেশিরভাগ তথ্য যুক্তরাষ্ট্র ও ভারতের। বাংলাদেশে রোগটি নিয়ে কোনো সূত্র আমরা পাইনি।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Avoid excess soil moisture: grow on raised, well-drained beds, water at the base early in the day and avoid overhead irrigation.",
+          "bn": "মাটিতে বেশি আর্দ্রতা এড়ান: উঁচু, ভালো নিষ্কাশনের বেডে লাগান, দিনের শুরুতে গোড়ায় পানি দিন এবং ওপর থেকে সেচ এড়ান।"
+        },
+        {
+          "en": "Use mulch so fruit does not touch the soil, and use clean water rather than pond or canal water if you can.",
+          "bn": "মালচ ব্যবহার করুন যাতে ফল মাটি না ছোঁয়, এবং সম্ভব হলে পুকুর বা খালের পানির বদলে পরিষ্কার পানি ব্যবহার করুন।"
+        },
+        {
+          "en": "Rotate: do not grow eggplant, pepper or tomato in the same field for 3 to 4 years. Use healthy seedlings and clean trays and tools.",
+          "bn": "চক্র করুন: ৩ থেকে ৪ বছর একই জমিতে বেগুন, মরিচ বা টমেটো লাগাবেন না। সুস্থ চারা এবং পরিষ্কার ট্রে ও যন্ত্রপাতি ব্যবহার করুন।"
+        },
+        {
+          "en": "Remove and destroy affected fruit (or bury it away from the field), control weeds, and plough debris deeply at the end of the season.",
+          "bn": "আক্রান্ত ফল তুলে নষ্ট করুন (বা ক্ষেত থেকে দূরে মাটিচাপা দিন), আগাছা দমন করুন এবং মৌসুম শেষে অবশিষ্টাংশ গভীর চাষে মাটির নিচে দিন।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Preventive treatments need the right product for water moulds. Ask your agriculture office; this site gives no product or dose.",
+          "bn": "প্রতিরোধমূলক ব্যবস্থায় জলজ ছত্রাকসদৃশ জীবের উপযোগী সঠিক ওষুধ লাগে। কৃষি অফিসে জিজ্ঞাসা করুন; এই সাইট কোনো ওষুধ বা মাত্রা বলে না।"
+        }
+      ],
+      "look_alikes": [
+        {
+          "en": "Phomopsis fruit rot shows rings and tiny black dots; Phytophthora fruit rot does not.",
+          "bn": "ফোমপসিসের ফল পচায় বলয় ও ছোট কালো ফোঁটা দেখা যায়; ফাইটোফথোরার ফল পচায় তা থাকে না।"
+        }
+      ],
+      "chemical_class": {
+        "en": "Preventive fungicide active against water moulds (ask the agriculture office)",
+        "bn": "জলজ ছত্রাকসদৃশ জীবের বিরুদ্ধে প্রতিরোধমূলক ছত্রাকনাশক (কৃষি অফিসে জিজ্ঞাসা করুন)"
+      },
+      "sources": [
+        {
+          "title": "Vegetable Diseases Caused by Phytophthora capsici in Florida (PP-176)",
+          "url": "https://ask.ifas.ufl.edu/publication/VH045/pdf",
+          "publisher": "UF/IFAS Extension, University of Florida"
+        },
+        {
+          "title": "Phytophthora Blight of Cucurbits & Solanaceous Vegetables (PPFS-VG-04)",
+          "url": "https://plantpathology.mgcafe.uky.edu/sites/plantpathology.ca.uky.edu/files/PPFS-VG-04.pdf",
+          "publisher": "University of Kentucky Extension Plant Pathology"
+        },
+        {
+          "title": "Eggplant Insect Pests & Diseases (HGIC 2224)",
+          "url": "https://hgic.clemson.edu/factsheet/eggplant-insect-pests-diseases",
+          "publisher": "Clemson Cooperative Extension, Home & Garden Information Center"
+        },
+        {
+          "title": "2021 Florida Plant Disease Management Guide: Eggplant (PDMG-V3-39)",
+          "url": "https://ask.ifas.ufl.edu/publication/PG047/pdf",
+          "publisher": "UF/IFAS Extension, University of Florida"
+        },
+        {
+          "title": "Brinjal - Diseases (bri002)",
+          "url": "https://www.nhb.gov.in/pdf/vegetable/brinjal/bri002.pdf",
+          "publisher": "National Horticulture Board, India; publisher inferred from domain, page names no publisher"
+        },
+        {
+          "title": "Eggplant: stem discolored (diagnostic page)",
+          "url": "https://apps.extension.umn.edu/garden/diagnose/plant/vegetable/eggplant/stemdiscolored.html",
+          "publisher": "University of Minnesota Extension"
+        }
+      ]
+    },
+    "eggplant_powdery_mildew": {
+      "kind": "disease",
+      "crop": "eggplant",
+      "name": {
+        "en": "Powdery mildew",
+        "bn": "পাউডারি মিলডিউ (গুঁড়া ছত্রাক রোগ)"
+      },
+      "cause": {
+        "en": "A fungus (Leveillula taurica, the 'internal' powdery mildew) with a very wide host range. Sources disagree on how often it affects eggplant.",
+        "bn": "একটি ছত্রাক (লেভেইলুলা টরিকা, 'অভ্যন্তরীণ' পাউডারি মিলডিউ), যার আশ্রয়দাতা গাছের তালিকা খুব বড়। বেগুনে এটি কতটা হয় তা নিয়ে সূত্রে মতভেদ আছে।"
+      },
+      "symptoms": [
+        {
+          "en": "Pale green spots on lower leaves, round to angular and stopped by the veins, slowly turning yellow.",
+          "bn": "নিচের দিকের পাতায় ফিকে সবুজ দাগ, গোল থেকে কোণাকার ও শিরায় আটকে থাকা, ধীরে ধীরে হলুদ হয়।"
+        },
+        {
+          "en": "Tissue then browns and dies. Spots can join and yellow the whole leaf; dead leaves stay on the plant.",
+          "bn": "এরপর কলা বাদামি হয়ে মরে যায়। দাগ মিলে পুরো পাতা হলুদ হতে পারে; মরা পাতা গাছেই থেকে যায়।"
+        },
+        {
+          "en": "A faint downy growth may show on the underside of the spots, and in humid weather also on top.",
+          "bn": "দাগের নিচের পিঠে হালকা তুলোর মতো আস্তরণ দেখা যেতে পারে, আর্দ্র আবহাওয়ায় ওপরেও।"
+        }
+      ],
+      "conditions": [
+        {
+          "en": "Hot, dry days followed by cool, humid nights with dew on the leaves. One source gives an optimum near 26 °C with 70 to 80% humidity.",
+          "bn": "গরম, শুকনো দিনের পর ঠান্ডা, আর্দ্র রাত ও পাতায় শিশির। একটি সূত্রে অনুকূল তাপমাত্রা প্রায় ২৬ °সে. ও ৭০ থেকে ৮০% আর্দ্রতা।"
+        }
+      ],
+      "spread": [
+        {
+          "en": "The fungus lives on living host plants, including pepper, onion, cotton and weeds. The sources we read do not say how spores travel between plants.",
+          "bn": "ছত্রাক জীবিত আশ্রয়দাতা গাছে বেঁচে থাকে, যেমন মরিচ, পেঁয়াজ, তুলা ও আগাছা। রেণু কীভাবে এক গাছ থেকে আরেক গাছে যায় তা আমাদের পড়া সূত্রে বলা নেই।"
+        },
+        {
+          "en": "All eggplant-specific detail here comes from a single source, so it is the least certain entry on this site.",
+          "bn": "এখানে বেগুন-নির্দিষ্ট সব তথ্য একটিমাত্র সূত্র থেকে, তাই এই সাইটের মধ্যে এটি সবচেয়ে কম নিশ্চিত এন্ট্রি।"
+        }
+      ],
+      "actions": [
+        {
+          "en": "Choose a sunny, airy plot away from affected plots and from affected pepper or tomato; use long rotations and balanced fertiliser.",
+          "bn": "রোদেলা, খোলামেলা জমি বেছে নিন, যা আক্রান্ত জমি এবং আক্রান্ত মরিচ বা টমেটো থেকে দূরে; দীর্ঘ চক্র ও সুষম সার ব্যবহার করুন।"
+        },
+        {
+          "en": "Remove weeds, avoid dense planting and take off the lowest leaves to improve airflow.",
+          "bn": "আগাছা সরান, ঘন রোপণ এড়ান এবং বাতাস চলাচল বাড়াতে সবচেয়ে নিচের পাতা ছেঁটে দিন।"
+        },
+        {
+          "en": "Check plants often. Remove the first diseased leaves and plant debris quickly and destroy or bury them deeply.",
+          "bn": "নিয়মিত গাছ দেখুন। প্রথম রোগাক্রান্ত পাতা ও অবশিষ্টাংশ দ্রুত সরিয়ে নষ্ট করুন বা গভীরে মাটিচাপা দিন।"
+        }
+      ],
+      "get_help": [
+        {
+          "en": "Because the sources disagree, ask your agriculture officer to confirm the diagnosis before you do more than the steps above.",
+          "bn": "সূত্রে মতভেদ থাকায় ওপরের ধাপের বেশি কিছু করার আগে রোগ নির্ণয় নিশ্চিত করতে কৃষি কর্মকর্তাকে জিজ্ঞাসা করুন।"
+        }
+      ],
+      "look_alikes": [],
+      "chemical_class": {
+        "en": "Fungicide where authorised (ask the agriculture office)",
+        "bn": "অনুমোদিত হলে ছত্রাকনাশক (কৃষি অফিসে জিজ্ঞাসা করুন)"
+      },
+      "sources": [
+        {
+          "title": "Leveillula taurica on eggplant (Aubergine - Oidium interne)",
+          "url": "https://ephytia.inrae.fr/en/C/26940/Aubergine-Oidium-interne",
+          "publisher": "INRAE (Ephytia diagnostic site)"
+        },
+        {
+          "title": "Powdery Mildew (Utah Vegetable Production Guide)",
+          "url": "https://extension.usu.edu/vegetableguide/tomato-pepper-eggplant/powdery-mildew",
+          "publisher": "Utah State University Extension"
+        },
+        {
+          "title": "Powdery Mildew of Pepper",
+          "url": "https://www.vegetables.cornell.edu/pest-management/disease-factsheets/powdery-mildew-of-pepper",
+          "publisher": "Cornell Vegetable Program (Cornell University)"
+        }
+      ]
+    },
     "tomato_healthy": {
       "kind": "healthy",
       "crop": "tomato",
@@ -1702,8 +2885,8 @@
         "bn": "সুস্থ টমেটো পাতা"
       },
       "message": {
-        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 19 conditions of four crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
-        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল চারটি ফসলের মাত্র ১৯টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
+        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 31 conditions of six crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
+        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল ছয়টি ফসলের মাত্র ৩১টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
       },
       "tips": [
         {
@@ -1725,8 +2908,8 @@
         "bn": "সুস্থ আলু পাতা"
       },
       "message": {
-        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 19 conditions of four crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
-        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল চারটি ফসলের মাত্র ১৯টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
+        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 31 conditions of six crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
+        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল ছয়টি ফসলের মাত্র ৩১টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
       },
       "tips": [
         {
@@ -1748,8 +2931,8 @@
         "bn": "সুস্থ ক্যাপসিকাম পাতা"
       },
       "message": {
-        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 19 conditions of four crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
-        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল চারটি ফসলের মাত্র ১৯টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
+        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 31 conditions of six crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
+        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল ছয়টি ফসলের মাত্র ৩১টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
       },
       "tips": [
         {
@@ -1771,8 +2954,31 @@
         "bn": "সুস্থ ভুট্টা পাতা"
       },
       "message": {
-        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 19 conditions of four crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
-        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল চারটি ফসলের মাত্র ১৯টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
+        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 31 conditions of six crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
+        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল ছয়টি ফসলের মাত্র ৩১টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
+      },
+      "tips": [
+        {
+          "en": "Keep checking your plants regularly, including the underside of leaves.",
+          "bn": "নিয়মিত গাছ পরীক্ষা করুন, পাতার নিচের দিকও দেখুন।"
+        },
+        {
+          "en": "If new spots, yellowing or curling appear, upload a new photo.",
+          "bn": "নতুন দাগ, হলুদ ভাব বা কোঁকড়ানো দেখা দিলে নতুন ছবি আপলোড করুন।"
+        }
+      ],
+      "sources": []
+    },
+    "eggplant_healthy": {
+      "kind": "healthy",
+      "crop": "eggplant",
+      "name": {
+        "en": "Healthy eggplant leaf",
+        "bn": "সুস্থ বেগুন পাতা"
+      },
+      "message": {
+        "en": "The model sees no sign of the diseases it knows on this leaf. That does not prove the plant is healthy: the model only knows 31 conditions of six crops, and it can miss problems such as nutrient shortage, pests or a very early infection.",
+        "bn": "এই পাতায় মডেল তার জানা রোগের কোনো লক্ষণ দেখছে না। তার মানে এই নয় যে গাছ নিশ্চিতভাবে সুস্থ: মডেল ছয়টি ফসলের মাত্র ৩১টি অবস্থা চেনে, তাই পুষ্টির অভাব, পোকামাকড় বা একদম শুরুর সংক্রমণ সে ধরতে নাও পারে।"
       },
       "tips": [
         {

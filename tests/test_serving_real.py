@@ -19,7 +19,7 @@ from app.inference import Classifier, preprocess  # noqa: E402
 from ml.config import ROOT, load_config  # noqa: E402
 from ml.transforms import build_eval_transform  # noqa: E402
 
-META = ROOT / "models" / "agriscan_mobilenet_v3_small.meta.json"
+META = ROOT / "models" / "agriscan_resnet18.meta.json"
 CFG = load_config()
 VAL_CSV = ROOT / CFG.paths["splits_dir"] / "val.csv"
 IMAGE_ROOT = ROOT / CFG.dataset["export_dir"]

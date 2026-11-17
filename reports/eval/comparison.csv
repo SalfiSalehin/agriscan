@@ -1,17 +1,9 @@
 run,arch,field_share,set,images,classes,accuracy,acc_ci95,macro_f1,f1_ci95,ece
-mobilenet_v3_small_mix,mobilenet_v3_small,0.25,val,4005,19,0.9623,,0.9528,,0.0617
-mobilenet_v3_small_mix,mobilenet_v3_small,0.25,test,3991,19,0.9717,"[0.9662, 0.9764]",0.9643,"[0.9566, 0.9711]",0.07
-mobilenet_v3_small_mix,mobilenet_v3_small,0.25,test_leaf_verified_only,2410,13,0.9689,,0.9669,,0.0776
-mobilenet_v3_small_mix,mobilenet_v3_small,0.25,test_fallback_grouping_only,1581,12,0.976,,0.8517,,0.061
-mobilenet_v3_small_mix,mobilenet_v3_small,0.25,field,134,14,0.4851,"[0.3955, 0.5746]",0.4707,"[0.3838, 0.5624]",0.2396
-mobilenet_v3_small_mix,mobilenet_v3_small,0.25,field_exact_mapping_only,92,10,0.4348,,0.4247,,0.244
-mobilenet_v3_small_mix,mobilenet_v3_small,0.25,test_crop_known,3991,19,0.9727,"[0.9674, 0.9772]",0.9662,"[0.9589, 0.9725]",0.0389
-mobilenet_v3_small_mix,mobilenet_v3_small,0.25,field_crop_known,134,14,0.6045,"[0.5222, 0.6866]",0.5896,"[0.503, 0.6822]",0.2251
-resnet18_mix,resnet18,0.25,val,4005,19,0.9743,,0.9653,,0.0453
-resnet18_mix,resnet18,0.25,test,3991,19,0.9754,"[0.9707, 0.98]",0.9686,"[0.9613, 0.975]",0.0451
-resnet18_mix,resnet18,0.25,test_leaf_verified_only,2410,13,0.9739,,0.9724,,0.046
-resnet18_mix,resnet18,0.25,test_fallback_grouping_only,1581,12,0.9779,,0.8689,,0.0444
-resnet18_mix,resnet18,0.25,field,134,14,0.5075,"[0.4254, 0.597]",0.5093,"[0.4226, 0.6056]",0.235
-resnet18_mix,resnet18,0.25,field_exact_mapping_only,92,10,0.4457,,0.459,,0.2588
-resnet18_mix,resnet18,0.25,test_crop_known,3991,19,0.9769,"[0.9724, 0.9815]",0.9685,"[0.9609, 0.9757]",0.0197
-resnet18_mix,resnet18,0.25,field_crop_known,134,14,0.6045,"[0.5224, 0.694]",0.6099,"[0.5189, 0.7017]",0.2138
+v2_r18_fs35,resnet18,0.35,val,4005,19,0.9825,,0.9744,,0.0469
+v2_r18_fs35,resnet18,0.35,test,3991,19,0.9837,"[0.9795, 0.9875]",0.98,"[0.9748, 0.9848]",0.0473
+v2_r18_fs35,resnet18,0.35,test_leaf_verified_only,2410,13,0.9838,,0.9872,,0.0516
+v2_r18_fs35,resnet18,0.35,test_fallback_grouping_only,1581,12,0.9836,,0.8497,,0.0418
+v2_r18_fs35,resnet18,0.35,field,711,26,0.7046,"[0.6709, 0.7398]",0.6137,"[0.5626, 0.6703]",0.1456
+v2_r18_fs35,resnet18,0.35,field_exact_mapping_only,669,22,0.707,,0.6111,,0.1482
+v2_r18_fs35,resnet18,0.35,test_crop_known,3991,19,0.9847,"[0.981, 0.9885]",0.981,"[0.976, 0.986]",0.0106
+v2_r18_fs35,resnet18,0.35,field_crop_known,711,26,0.7286,"[0.6962, 0.7623]",0.6842,"[0.6375, 0.7346]",0.1573

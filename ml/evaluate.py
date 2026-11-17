@@ -305,7 +305,7 @@ def main() -> int:
         results = analyse_run(
             logits,
             labels,
-            field[["mapping", "half"]],
+            field[["mapping", "half", "source"]],
             unknown[["half"]],
             class_ids,
             leaf_verified,

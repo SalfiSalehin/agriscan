@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "model_file": "agriscan_resnet18.onnx",
+  "sha256": "9342a7201a161383b22418f6c616d1ace74dffbf8db7b0fc742b359c5d59932e",
+  "size_mb": 42.69,
+  "source_run": "v2_r18_fs35",
+  "arch": "resnet18",
+  "input": {
+    "name": "input",
+    "layout": "NCHW float32, dynamic batch",
+    "size": 224,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "preprocessing": "RGB; resize the shorter side to 256 (bilinear); centre-crop 224x224; scale to 0-1; subtract mean; divide by std"
+  },
+  "output": {
+    "name": "logits",
+    "class_ids": [
+      "potato_early_blight",
+      "potato_late_blight",
+      "potato_healthy",
+      "tomato_bacterial_spot",
+      "tomato_early_blight",
+      "tomato_late_blight",
+      "tomato_leaf_mold",
+      "tomato_septoria",
+      "tomato_spider_mites",
+      "tomato_target_spot",
+      "tomato_yellow_leaf_curl",
+      "tomato_mosaic_virus",
+      "tomato_healthy",
+      "corn_gray_leaf_spot",
+      "corn_common_rust",
+      "corn_northern_leaf_blight",
+      "corn_healthy",
+      "pepper_bacterial_spot",
+      "pepper_healthy",
+      "rice_brown_spot",
+      "rice_blast",
+      "rice_leaf_scald",
+      "rice_sheath_blight",
+      "rice_tungro",
+      "eggplant_cercospora_leaf_spot",
+      "eggplant_early_blight",
+      "eggplant_healthy",
+      "eggplant_mosaic_virus",
+      "eggplant_phomopsis_blight",
+      "eggplant_phytophthora_blight",
+      "eggplant_powdery_mildew"
+    ]
+  },
+  "calibration": {
+    "temperature": 0.77,
+    "how_to_use": "probabilities = softmax(logits / temperature)",
+    "confidence_threshold": 0.91,
+    "threshold_source": "calibrated by ml.evaluate (metrics.json)",
+    "below_threshold": "answer 'not sure', do not name a disease"
+  },
+  "parity_vs_pytorch": {
+    "images": 64,
+    "max_abs_logit_diff": 5.7220458984375e-06,
+    "same_prediction_share": 1.0,
+    "passed": true,
+    "batch_of_one_matches_batch": true
+  },
+  "cpu_latency_batch1_model_only": [
+    {
+      "threads": 1,
+      "runs": 200,
+      "median_ms": 23.46,
+      "p95_ms": 26.56,
+      "mean_ms": 23.88
+    },
+    {
+      "threads": 2,
+      "runs": 200,
+      "median_ms": 11.88,
+      "p95_ms": 14.06,
+      "mean_ms": 12.2
+    }
+  ],
+  "environment": {
+    "torch": "2.6.0+cu124",
+    "onnxruntime": "1.31.1",
+    "python": "3.11.9",
+    "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "os": "Windows-10-10.0.26300-SP0"
+  },
+  "exported": "2026-11-16T17:04:31"
+}

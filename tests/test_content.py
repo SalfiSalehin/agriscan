@@ -11,6 +11,10 @@ REAL_CLASS_IDS = [
     "potato_late_blight", "tomato_bacterial_spot", "tomato_early_blight", "tomato_healthy",
     "tomato_late_blight", "tomato_leaf_mold", "tomato_mosaic_virus", "tomato_septoria",
     "tomato_spider_mites", "tomato_target_spot", "tomato_yellow_leaf_curl",
+    "rice_brown_spot", "rice_blast", "rice_leaf_scald", "rice_sheath_blight", "rice_tungro",
+    "eggplant_cercospora_leaf_spot", "eggplant_early_blight", "eggplant_healthy",
+    "eggplant_mosaic_virus", "eggplant_phomopsis_blight", "eggplant_phytophthora_blight",
+    "eggplant_powdery_mildew",
 ]  # fmt: skip
 
 

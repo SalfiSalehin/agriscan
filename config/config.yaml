@@ -43,6 +43,18 @@ classes:
   - { id: corn_healthy,           crop: Corn,   disease: Healthy,       raw_name: "Corn_(maize)___healthy" }
   - { id: pepper_bacterial_spot,  crop: Pepper, disease: Bacterial spot, raw_name: "Pepper,_bell___Bacterial_spot" }
   - { id: pepper_healthy,         crop: Pepper, disease: Healthy,       raw_name: "Pepper,_bell___healthy" }
+  - { id: rice_brown_spot, crop: Rice, disease: Brown spot, raw_name: "" }
+  - { id: rice_blast, crop: Rice, disease: Blast, raw_name: "" }
+  - { id: rice_leaf_scald, crop: Rice, disease: Leaf scald, raw_name: "" }
+  - { id: rice_sheath_blight, crop: Rice, disease: Sheath blight, raw_name: "" }
+  - { id: rice_tungro, crop: Rice, disease: Tungro, raw_name: "" }
+  - { id: eggplant_cercospora_leaf_spot, crop: Eggplant, disease: Cercospora leaf spot, raw_name: "" }
+  - { id: eggplant_early_blight, crop: Eggplant, disease: Early blight, raw_name: "" }
+  - { id: eggplant_healthy, crop: Eggplant, disease: Healthy, raw_name: "" }
+  - { id: eggplant_mosaic_virus, crop: Eggplant, disease: Mosaic virus, raw_name: "" }
+  - { id: eggplant_phomopsis_blight, crop: Eggplant, disease: Phomopsis blight, raw_name: "" }
+  - { id: eggplant_phytophthora_blight, crop: Eggplant, disease: Phytophthora blight, raw_name: "" }
+  - { id: eggplant_powdery_mildew, crop: Eggplant, disease: Powdery mildew, raw_name: "" }
 
 
 dataset:

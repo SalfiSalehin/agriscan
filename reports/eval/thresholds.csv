@@ -1,3 +1,2 @@
 run,arch,field_share,temperature,threshold,field_coverage,field_acc_answered,test_coverage,field_coverage_crop_known,field_acc_answered_crop_known,test_coverage_crop_known,unknown_false_accept,auroc_test_vs_unknown_held_out,auroc_field_held_out_vs_unknown_held_out
-mobilenet_v3_small_mix,mobilenet_v3_small,0.25,0.75,0.89,0.3947,0.7333,0.7567,0.3816,0.7586,0.7567,0.1071,0.909,0.735
-resnet18_mix,resnet18,0.25,0.8,0.95,0.3026,0.7391,0.5953,0.2763,0.8095,0.5953,0.0964,0.8947,0.6858
+v2_r18_fs35,resnet18,0.35,0.77,0.91,0.5514,0.8394,0.8614,0.5457,0.8482,0.8614,0.1125,0.9263,0.8169
